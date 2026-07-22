@@ -1,0 +1,9 @@
+Parsing testdata/real/modules/hyperion-k8s_openstack/plan_change0.json...
+Parsed, # of resources per layers in the Target and State :
+[r|s|k -> r|s|y|g|k]
+[r|s|k -> r|s|y|g|k]
+
+Writing Target graph into testdata/real/modules/hyperion-k8s_openstack/bplans/target_graph.mmd
+Writing State graph into testdata/real/modules/hyperion-k8s_openstack/bplans/state_graph.mmd
+Writing plan diff graph into testdata/real/modules/hyperion-k8s_openstack/bplans/plan_target_diff.mmd
+Writing Maude plan config into testdata/real/modules/hyperion-k8s_openstack/bplans/config_plan.maude

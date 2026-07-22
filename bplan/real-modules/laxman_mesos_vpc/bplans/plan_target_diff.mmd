@@ -1,0 +1,142 @@
+---
+title: Plan diff
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+classDef no-op  fill:#F5F5F5
+classDef create fill:#D5E8D4,stroke-width:2px,stroke-dasharray:5 5
+classDef delete fill:#FF9999,stroke-width:2px,stroke-dasharray:5 5
+classDef update fill:#FFF2CC
+classDef replace fill:#FF9999
+%% Nodes
+aws_eip.nat_eip:::no-op
+aws_internet_gateway.demo_igw:::no-op
+aws_main_route_table_association.demo_rta:::no-op
+aws_nat_gateway.nat_gw:::no-op
+aws_route.bastion_rt_igw:::no-op
+aws_route.demo_rt_igw:::no-op
+aws_route.mesos_master_rt_igw:::no-op
+aws_route.mesos_slave_rt_igw:::no-op
+aws_route.monitor_rt_igw:::no-op
+aws_route.nat_igw_route:::no-op
+aws_route.traefik_rt_igw:::no-op
+aws_route.zookeeper_rt_igw:::no-op
+aws_route53_zone_association.private-zone-association:::no-op
+aws_route_table.bastion_rt:::no-op
+aws_route_table.demo_rt:::no-op
+aws_route_table.mesos_master_rt:::no-op
+aws_route_table.mesos_slave_rt:::no-op
+aws_route_table.monitor_rt:::update
+aws_route_table.nat_gw_rt:::no-op
+aws_route_table.traefik_rt:::update
+aws_route_table.vpn_rt:::no-op
+aws_route_table.zookeeper_rt:::no-op
+aws_route_table_association.bastion_rta:::no-op
+aws_route_table_association.mesos_master_rta:::no-op
+aws_route_table_association.mesos_slave_rta:::no-op
+aws_route_table_association.monitor_rta:::no-op
+aws_route_table_association.traefik_rta:::no-op
+aws_route_table_association.vpn_rta:::no-op
+aws_route_table_association.zookeeper_rta:::no-op
+aws_security_group.bastion_sg:::no-op
+aws_security_group.elb_sg:::no-op
+aws_security_group.mesos_master_sg:::no-op
+aws_security_group.mesos_slave_sg:::no-op
+aws_security_group.monitor_sg:::no-op
+aws_security_group.traefik_sg:::no-op
+aws_security_group.vpn_sg:::no-op
+aws_security_group.zookeeper_sg:::no-op
+aws_security_group_rule.allow_from_master:::no-op
+aws_security_group_rule.allow_from_zookeeper:::no-op
+aws_subnet.bastion_subnet:::update
+aws_subnet.mesos_master_subnet:::no-op
+aws_subnet.mesos_slave_subnet:::no-op
+aws_subnet.monitor_subnet:::no-op
+aws_subnet.nat_gw_subnet:::no-op
+aws_subnet.traefik_subnet:::no-op
+aws_subnet.vpn_subnet:::no-op
+aws_subnet.zookeeper_subnet:::no-op
+aws_vpc.demo:::replace@{ shape: trap-b }
+%% Arcs
+aws_security_group.bastion_sg --> aws_security_group.vpn_sg
+aws_security_group.mesos_slave_sg --> aws_vpc.demo
+aws_security_group.mesos_master_sg --> aws_security_group.traefik_sg
+aws_security_group_rule.allow_from_zookeeper --> aws_security_group.zookeeper_sg
+aws_subnet.monitor_subnet --> aws_vpc.demo
+aws_security_group.monitor_sg --> aws_security_group.bastion_sg
+aws_route.nat_igw_route --> aws_route_table.nat_gw_rt
+aws_subnet.zookeeper_subnet --> aws_vpc.demo
+aws_security_group.traefik_sg --> aws_security_group.elb_sg
+aws_route.traefik_rt_igw --> aws_route_table.traefik_rt
+aws_route.mesos_master_rt_igw --> aws_internet_gateway.demo_igw
+aws_security_group_rule.allow_from_zookeeper --> aws_security_group.mesos_master_sg
+aws_route.demo_rt_igw --> aws_route_table.demo_rt
+aws_nat_gateway.nat_gw --> aws_internet_gateway.demo_igw
+aws_route.nat_igw_route --> aws_internet_gateway.demo_igw
+aws_route_table_association.mesos_master_rta --> aws_route_table.mesos_master_rt
+aws_route.demo_rt_igw --> aws_internet_gateway.demo_igw
+aws_subnet.vpn_subnet --> aws_vpc.demo
+aws_route.mesos_slave_rt_igw --> aws_route_table.mesos_slave_rt
+aws_route_table_association.vpn_rta --> aws_route_table.vpn_rt
+aws_route.zookeeper_rt_igw --> aws_internet_gateway.demo_igw
+aws_nat_gateway.nat_gw --> aws_subnet.nat_gw_subnet
+aws_route.mesos_master_rt_igw --> aws_route_table.mesos_master_rt
+aws_route.zookeeper_rt_igw --> aws_route_table.zookeeper_rt
+aws_security_group.bastion_sg --> aws_vpc.demo
+aws_route_table_association.traefik_rta --> aws_route_table.traefik_rt
+aws_security_group.traefik_sg --> aws_security_group.vpn_sg
+aws_route.traefik_rt_igw --> aws_internet_gateway.demo_igw
+aws_route_table_association.monitor_rta --> aws_route_table.monitor_rt
+aws_security_group_rule.allow_from_master --> aws_security_group.mesos_master_sg
+aws_route.monitor_rt_igw --> aws_route_table.monitor_rt
+aws_security_group.monitor_sg --> aws_security_group.vpn_sg
+aws_route_table_association.mesos_master_rta --> aws_subnet.mesos_master_subnet
+aws_nat_gateway.nat_gw --> aws_eip.nat_eip
+aws_route.mesos_slave_rt_igw --> aws_internet_gateway.demo_igw
+aws_subnet.elb_subnet --> aws_vpc.demo
+aws_main_route_table_association.demo_rta --> aws_vpc.demo
+aws_security_group.vpn_sg --> aws_vpc.demo
+aws_subnet.mesos_slave_subnet --> aws_vpc.demo
+aws_route_table.traefik_rt --> aws_vpc.demo
+aws_route.monitor_rt_igw --> aws_internet_gateway.demo_igw
+aws_subnet.traefik_subnet --> aws_vpc.demo
+aws_route_table.zookeeper_rt --> aws_vpc.demo
+aws_security_group.mesos_master_sg --> aws_security_group.vpn_sg
+aws_route_table.vpn_rt --> aws_vpc.demo
+aws_security_group.traefik_sg --> aws_vpc.demo
+aws_subnet.bastion_subnet --> aws_vpc.demo
+aws_subnet.mesos_master_subnet --> aws_vpc.demo
+aws_route_table_association.bastion_rta --> aws_subnet.bastion_subnet
+aws_security_group.zookeeper_sg --> aws_security_group.vpn_sg
+aws_route_table.vpn_rt --> aws_internet_gateway.demo_igw
+aws_route_table_association.mesos_slave_rta --> aws_subnet.mesos_slave_subnet
+aws_route_table.mesos_master_rt --> aws_vpc.demo
+aws_security_group.monitor_sg --> aws_vpc.demo
+aws_security_group_rule.allow_from_master --> aws_security_group.mesos_slave_sg
+aws_route_table_association.mesos_slave_rta --> aws_route_table.mesos_slave_rt
+aws_route_table_association.zookeeper_rta --> aws_subnet.zookeeper_subnet
+aws_security_group.elb_sg --> aws_vpc.demo
+aws_main_route_table_association.demo_rta --> aws_route_table.demo_rt
+aws_route53_zone_association.private-zone-association --> aws_vpc.demo
+aws_security_group.mesos_slave_sg --> aws_security_group.vpn_sg
+aws_route_table.bastion_rt --> aws_vpc.demo
+aws_route_table_association.vpn_rta --> aws_subnet.vpn_subnet
+aws_route_table_association.bastion_rta --> aws_route_table.bastion_rt
+aws_route_table_association.monitor_rta --> aws_subnet.monitor_subnet
+aws_security_group.mesos_master_sg --> aws_vpc.demo
+aws_route_table_association.zookeeper_rta --> aws_route_table.zookeeper_rt
+aws_route_table.nat_gw_rt --> aws_vpc.demo
+aws_route_table.monitor_rt --> aws_vpc.demo
+aws_subnet.nat_gw_subnet --> aws_vpc.demo
+aws_security_group.mesos_master_sg --> aws_security_group.mesos_slave_sg
+aws_security_group.zookeeper_sg --> aws_security_group.mesos_master_sg
+aws_route_table.demo_rt --> aws_vpc.demo
+aws_security_group.zookeeper_sg --> aws_vpc.demo
+aws_route_table.mesos_slave_rt --> aws_vpc.demo
+aws_route.bastion_rt_igw --> aws_internet_gateway.demo_igw
+aws_security_group.zookeeper_sg --> aws_security_group.mesos_slave_sg
+aws_route_table_association.traefik_rta --> aws_subnet.traefik_subnet
+aws_internet_gateway.demo_igw --> aws_vpc.demo
+aws_route.bastion_rt_igw --> aws_route_table.bastion_rt

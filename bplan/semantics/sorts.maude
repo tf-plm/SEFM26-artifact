@@ -1,0 +1,109 @@
+fmod BASICSORTS is
+
+    --- resources
+    --- sort Key .            *** attribute keys and resource names
+
+    --- program
+    sorts RDecl .           *** resource declaration (name, values, dependencies, etc.)
+    sort RTB .              *** replace-triggered-by
+    sort CB4D .             *** create-before-delete boolean
+    sort DND .              *** prevent-destroy boolean
+
+    --- state
+    sort Inst .            *** resource-instances (new or old)
+    sort RInst .           *** FIXME refactor RInst -> RSigma ?
+
+    sort DepInst .          *** set of r_\sigma, used on planning
+
+    --- operations
+    sort OP OPS POPS .
+
+    sort Act .   --- action, used as nodes
+    sort Nbhrs .   --- neighbors(...) with ... a set of actions
+    sort GraphAdj .   --- set of (action -> neighbors())
+    sort StageSubgraphs .   --- set of GraphAdj
+    sort StageTopNodes .    --- set of action-nodes
+
+    --- apply
+    sort Event .            *** start() or stop(). Trace is a List{Event}
+
+    sort Status .
+
+    sort T .    --- target
+    sort S .    --- state
+    sort On .   --- ongoing
+    sort Pl .   --- plan
+
+endfm
+
+--- view Key from TRIV to BASICSORTS is
+---   sort Elt to Key .
+--- endv
+
+--- view R from TRIV to BASICSORTS is
+---   sort Elt to R .
+--- endv
+
+view RDecl from TRIV to BASICSORTS is
+  sort Elt to RDecl .
+endv
+
+view RTB from TRIV to BASICSORTS is
+  sort Elt to RTB .
+endv
+
+view CB4D from TRIV to BASICSORTS is
+  sort Elt to CB4D .
+endv
+
+view DND from TRIV to BASICSORTS is
+  sort Elt to DND .
+endv
+
+view RInst from TRIV to BASICSORTS is
+  sort Elt to RInst .
+endv
+
+view DepInst from TRIV to BASICSORTS is
+  sort Elt to DepInst .
+endv
+
+view OP from TRIV to BASICSORTS is
+  sort Elt to OP .
+endv
+
+view OPS from TRIV to BASICSORTS is
+  sort Elt to OPS .
+endv
+
+view POPS from TRIV to BASICSORTS is
+  sort Elt to POPS .
+endv
+
+view Act from TRIV to BASICSORTS is
+  sort Elt to Act .
+endv
+
+view GraphAdj from TRIV to BASICSORTS is
+  sort Elt to GraphAdj .
+endv
+
+view Nbhrs from TRIV to BASICSORTS is
+  sort Elt to Nbhrs .
+endv
+
+view StageSubgraphs from TRIV to BASICSORTS is
+  sort Elt to StageSubgraphs .
+endv
+
+view StageTopNodes from TRIV to BASICSORTS is
+  sort Elt to StageTopNodes .
+endv
+
+view Event from TRIV to BASICSORTS is
+  sort Elt to Event .
+endv
+
+view Status from TRIV to BASICSORTS is
+  sort Elt to Status .
+endv

@@ -1,0 +1,54 @@
+newConfig(
+        target(
+            resources: (
+                'openstack_compute_floatingip_v2.fip-master
+                'openstack_compute_floatingip_v2.fip-nodes
+                'openstack_compute_instance_v2.hyperion-master
+                'openstack_compute_instance_v2.hyperion-nodes
+                'openstack_compute_keypair_v2.hyperion-key
+                'openstack_compute_secgroup_v2.hyperion-sg
+                'openstack_networking_network_v2.hyperion-network
+                'openstack_networking_subnet_v2.hyperion-network
+            ),
+            dependencies: (
+                'openstack_compute_instance_v2.hyperion-master -> 'openstack_compute_secgroup_v2.hyperion-sg
+                'openstack_compute_instance_v2.hyperion-master -> 'openstack_compute_floatingip_v2.fip-master
+                'openstack_compute_instance_v2.hyperion-master -> 'openstack_networking_network_v2.hyperion-network
+                'openstack_compute_instance_v2.hyperion-nodes -> 'openstack_compute_secgroup_v2.hyperion-sg
+                'openstack_compute_instance_v2.hyperion-nodes -> 'openstack_compute_floatingip_v2.fip-nodes
+                'openstack_compute_instance_v2.hyperion-nodes -> 'openstack_networking_network_v2.hyperion-network
+                'openstack_networking_subnet_v2.hyperion-network -> 'openstack_networking_network_v2.hyperion-network
+            )
+        ),
+        state(
+            resources: (
+                ri('openstack_compute_floatingip_v2.fip-master,old)
+                ri('openstack_compute_floatingip_v2.fip-nodes,old)
+                ri('openstack_compute_instance_v2.hyperion-master,old)
+                ri('openstack_compute_instance_v2.hyperion-nodes,old)
+                ri('openstack_compute_keypair_v2.hyperion-key,old)
+                ri('openstack_compute_secgroup_v2.hyperion-sg,old)
+                ri('openstack_networking_network_v2.hyperion-network,old)
+                ri('openstack_networking_subnet_v2.hyperion-network,old)
+            ),
+            dependencies: (
+                ri('openstack_compute_instance_v2.hyperion-master,old) -> ri('openstack_compute_secgroup_v2.hyperion-sg,old)
+                ri('openstack_compute_instance_v2.hyperion-master,old) -> ri('openstack_compute_floatingip_v2.fip-master,old)
+                ri('openstack_compute_instance_v2.hyperion-master,old) -> ri('openstack_networking_network_v2.hyperion-network,old)
+                ri('openstack_compute_instance_v2.hyperion-nodes,old) -> ri('openstack_compute_secgroup_v2.hyperion-sg,old)
+                ri('openstack_compute_instance_v2.hyperion-nodes,old) -> ri('openstack_compute_floatingip_v2.fip-nodes,old)
+                ri('openstack_compute_instance_v2.hyperion-nodes,old) -> ri('openstack_networking_network_v2.hyperion-network,old)
+                ri('openstack_networking_subnet_v2.hyperion-network,old) -> ri('openstack_networking_network_v2.hyperion-network,old)
+            )
+        ),
+        (
+            'openstack_compute_floatingip_v2.fip-master -> po(NO-OP)
+            'openstack_compute_floatingip_v2.fip-nodes -> po(NO-OP)
+            'openstack_compute_instance_v2.hyperion-master -> po(UPDATE)
+            'openstack_compute_instance_v2.hyperion-nodes -> po(UPDATE)
+            'openstack_compute_keypair_v2.hyperion-key -> po(NO-OP)
+            'openstack_compute_secgroup_v2.hyperion-sg -> po(NO-OP)
+            'openstack_networking_network_v2.hyperion-network -> po(CREATE ; DELETE)
+            'openstack_networking_subnet_v2.hyperion-network -> po(UPDATE)
+        )
+    )

@@ -1,0 +1,823 @@
+
+fmod FUNCTIONS is
+
+    pr NAT .
+
+    pr TUPLE-SET .
+
+    pr LIST{GraphAdj} * (op __ to _§_, op nil to niil) .
+    pr LIST{StageTopNodes} * (op __ to _§_) .
+    pr LIST{StageSubgraphs} * (op __ to _§_) .
+    pr TSET{GraphAdj} .
+
+    pr TSET{Qid} .
+    pr TSET{RInst} .
+    pr TSET{RDecl} .
+    pr TSET{OP} .
+    pr TSET{POPS} .
+    pr TSET{Act} .
+    pr TUPLE2-SET{Qid, Qid} .
+    pr TUPLE2-SET{RInst, RInst} .
+    pr TUPLE2-SET{Qid, String} .
+    pr TUPLE2-SET{Qid, OP} .
+    pr TUPLE3-SET{Qid, Qid, String} .
+    pr TUPLE3-SET{Qid, Qid, Qid} .
+    pr TUPLE3-SET{Qid, RInst, Qid} .
+    pr TUPLE3-SET{Qid, Qid, OP} .
+    pr TUPLE3-SET{RInst, Qid, String} .
+    pr TUPLE4-SET{Qid, Qid, Qid, Qid} .
+    pr TUPLE4-SET{RInst, Qid, RInst, Qid} .
+
+    pr CONFIGURATION .
+
+    var Res Res' Res'' : Qid .
+    var ResSet       : TSet{Qid} .
+    var ResInstSet   : TSet{RInst} .
+    var ResI ResI' ResI''  : RInst .
+    var RDeps RCoDeps : TSet{Qid} .
+
+    var TRes       : TSet{Qid} .
+    var TDeps      : TD .
+
+    var Deps Deps' Deps'' Deps0 CoDeps : Tuple2Set{Qid, Qid} .
+
+    var SRes     : TSet{RInst} .
+    var SDeps SDeps' SCoDeps : Tuple2Set{RInst, RInst} .
+
+    var Plan Plan' : Pl .
+    var Ongoing : On .
+    var Status : Status .
+
+    var B B' : Bool .
+    var M N : Nat .
+    var I I' J : Inst .
+    var Op Op' : OP .
+    var Ops : OPS .
+    var POps : POPS .
+    var POpsSet : TSet{POPS} .
+
+    var TransitiveTDeps TransitiveTCoDeps : Tuple2Set{Qid, Qid} .
+    var TransitiveSDeps TransitiveSCoDeps : Tuple2Set{Qid, Qid} .
+    var TransitiveDeps : Tuple2Set{Qid, Qid} .
+
+    var Act Act' : Act .
+    var Node Node1 Node2 Node3 : Act .
+    var Acts : TSet{Act} .
+    var Nodes : TSet{Act} .
+    var SinkNodes : TSet{Act} .
+    var Arcs : Tuple2Set{Act, Act} .
+
+    var Actions Actions' : Tuple2Set{Act, Nbhrs} .   --- GraphAdj
+    var ActionArcs : Tuple2Set{Act, Act} .
+    var BAct BAct' : Act .
+    var BActSet : TSet{Act} .
+    var Neighbors : TSet{Act} .
+
+    var SinkStage : Tuple2Set{Act, Nbhrs} .
+    var NextStages : Tuple2Set{Act, Nbhrs} .
+
+
+    --- returns all resource instances (R -> I) found in 2nd arg such that R is in the 1st arg.
+    --- skip instances not found
+    op newestInstances : TSet{Qid} TSet{RInst} -> TSet{RInst} .
+    eq newestInstances(eps, ResInstSet) = eps .
+    eq newestInstances((Res ResSet), (ri(Res, I) ResInstSet)) = newestInstance(Res, (ri(Res, I) ResInstSet)) newestInstances(ResSet, ResInstSet) .
+    eq newestInstances((Res ResSet), ResInstSet) = newestInstances(ResSet, ResInstSet) . --- skip
+
+    --- returns the newest instance ri(Res, I)
+    op newestInstance : Qid TSet{RInst} -> RInst .
+    eq newestInstance(Res, (ri(Res, new) ResInstSet)) = ri(Res, new) .
+    eq newestInstance(Res, (ri(Res, old) ResInstSet)) = ri(Res, (if ri(Res, new) in ResInstSet then new else old fi)) .
+    eq newestInstance(Res, ResInstSet) = nil [owise] .
+
+    op plannedRes : Pl -> TSet{Qid} .
+    eq plannedRes(Plan) = takeAll(1, Plan) .
+
+    op rmNoopActs : TSet{Act} -> TSet{Act} .
+    eq rmNoopActs((a(NO-OP, Res) Acts)) = rmNoopActs(Acts) .
+    eq rmNoopActs(Acts) = Acts [owise] .
+
+    --- create a(Act,Res) for all (Qid -> po(Op ; Op ; ...))
+    op plannedActs : Pl -> TSet{Act} .
+    eq plannedActs(((Res -> po(Op ; Ops)) Plan)) = a(Op, Res) plannedActs(((Res -> po(Ops)) Plan)) .
+    eq plannedActs(Plan) = eps [owise] .
+
+    op stateRes : TSet{RInst} -> TSet{Qid} .
+    eq stateRes((ri(Res, I) SRes)) = Res stateRes(SRes) .
+    eq stateRes(eps) = eps .
+
+    op ongoingRes : On -> TSet{Qid} .
+    eq ongoingRes(Ongoing) = takeAll(1, skipAll(1, Ongoing)) .
+
+    --- returns true iff there is a path from Res to Res'
+    op path : Qid Qid Tuple2Set{Qid, Qid} -> Bool .
+    eq path(Res, Res', eps) = false .
+    eq path(Res, Res', ((Res -> Res') TDeps)) = true .
+    eq path(Res, Res', TDeps) = $anyTPath(project(Res, TDeps), Res', TDeps) [owise] .
+    --- returns true if there is a path from any of #1 to #2
+    op $anyTPath : TSet{Qid} Qid Tuple2Set{Qid, Qid} -> Bool .
+    eq $anyTPath(eps, Res', TDeps) = false .
+    eq $anyTPath((Res ResSet), Res', TDeps) = path(Res, Res', TDeps) or $anyTPath(ResSet, Res', TDeps) [owise] .
+
+    --- same as above but for graph with Act nodes
+    op path : Act Act Tuple2Set{Act, Act} -> Bool .
+    eq path(BAct, BAct', eps) = false .
+    eq path(BAct, BAct', ((BAct -> BAct') ActionArcs)) = true .
+    eq path(BAct, BAct', ActionArcs) = $anyTPath(project(BAct, ActionArcs), BAct', ActionArcs) [owise] .
+    op $anyTPath : TSet{Act} Act Tuple2Set{Act, Act} -> Bool .
+    eq $anyTPath(eps, BAct', ActionArcs) = false .
+    eq $anyTPath((BAct BActSet), BAct', ActionArcs) = path(BAct, BAct', ActionArcs) or $anyTPath(BActSet, BAct', ActionArcs) [owise] .
+
+    --- project without instance
+    op rmI : Tuple2Set{RInst, RInst} -> Tuple2Set{Qid, Qid} .
+    eq rmI(((ri(Res, I) -> ri(Res', I')) SDeps)) = (Res -> Res') rmI(SDeps) .
+    eq rmI(eps) = eps .
+    --- project without instance
+    op rmRI : TSet{RInst} -> TSet{Qid} .
+    eq rmRI((ri(Res, I) SRes)) = Res rmRI(SRes) .
+    --- eq rmI(eps) = eps .
+
+    op depsDeployed : Qid Tuple2Set{Qid, Qid} Tuple2Set{RInst, RInst} Pl -> Bool .
+    eq depsDeployed(Res, TDeps, SDeps, ((Res' -> po(Ops)) Plan)) =
+        (
+            (path(Res, Res', TDeps) or path(Res, Res', rmI(SDeps))) implies
+            (not occurs(CREATE, Ops) and not occurs(UPDATE, Ops))
+        ) and depsDeployed(Res, TDeps, SDeps, Plan) .
+    eq depsDeployed(Res, TDeps, SDeps, eps) = true .
+
+    op codepsDeleted : Qid Tuple2Set{Qid, Qid} Tuple2Set{RInst, RInst} Pl -> Bool .
+    eq codepsDeleted(Res', TDeps, SDeps, ((Res -> po(Ops)) Plan)) =
+        (
+            (path(Res, Res', TDeps) or path(Res, Res', rmI(SDeps))) implies
+            not occurs(DELETE, Ops)
+        ) and codepsDeleted(Res', TDeps, SDeps, Plan) .
+    eq codepsDeleted(Res', TDeps, SDeps, eps) = true .
+
+    op delayDelete : Qid Pl -> Bool .
+    eq delayDelete(Res, ((Res -> po(DELETE)) (Res' -> po(Ops)) Plan)) =
+        (
+            occurs(CREATE, Ops) or occurs(UPDATE, Ops)
+        ) or delayDelete(Res, Plan) .
+    eq delayDelete(Res, Plan) = false [owise] .
+
+    op delayDeploy : Qid Tuple2Set{Qid, Qid} Tuple2Set{RInst, RInst} Pl -> Bool .
+    eq delayDeploy(Res, TDeps, SDeps, ((Res' -> po(Ops)) Plan)) =
+        (
+            (path(Res', Res, TDeps) or path(Res', Res, rmI(SDeps))) and
+            Ops == (DELETE ; CREATE)
+        ) or delayDeploy(Res, TDeps, SDeps, Plan) .
+    eq delayDeploy(Res, TDeps, SDeps, eps) = false .
+
+    op allDeps : Qid TR TD -> TSet{Qid} .
+    eq allDeps(Res, eps, TDeps) = eps .
+    eq allDeps(Res, (Res' ResSet), TDeps) =
+            allDeps(Res, ResSet, TDeps) ifthenelse(path(Res, Res', TDeps), Res', eps) .
+
+    op flattenOps : TSet{POPS} -> TSet{OP} .
+    eq flattenOps((po(Op ; Ops) POpsSet)) = Op flattenOps((po(Ops) POpsSet)) .
+    eq flattenOps((po(nil) POpsSet)) = flattenOps(POpsSet) .
+    eq flattenOps(eps) = eps .
+
+    --- FIXME look for transitive codeps
+    op hasCoDepPlanDC : Qid TD Pl -> Bool .
+    eq hasCoDepPlanDC(Res, ((Res' -> Res) TDeps), ((Res' -> po(DELETE ; CREATE)) Plan)) = true .
+    eq hasCoDepPlanDC(Res, TDeps, Plan) = false [owise] .
+    op hasCoDepPlanDC : Qid SD Pl -> Bool .
+    eq hasCoDepPlanDC(Res, ((ri(Res', J) -> ri(Res, I)) SDeps), ((Res' -> po(DELETE ; CREATE)) Plan)) = true .
+    eq hasCoDepPlanDC(Res, SDeps, Plan) = false [owise] .
+
+    --- FIXME look for transitive codeps
+    op hasCoDepPlanDelete : Qid TD Pl -> Bool .
+    --- eq hasCoDepPlanDelete(Res, ((Res' -> Res) TDeps), ((Res' -> po((Op ; Ops))) Plan)) =  if (Op == DELETE) then
+    eq hasCoDepPlanDelete(  Res,
+                            ((Res' -> Res) TDeps),
+                            ((Res' -> po((Op ; Ops))) Plan)
+                        ) =  if (Op == DELETE) then true else hasCoDepPlanDelete(Res, TDeps, Plan) fi .
+    eq hasCoDepPlanDelete(Res, TDeps, Plan) = false [owise] .
+    op hasCoDepPlanDelete : Qid SD Pl -> Bool .
+    eq hasCoDepPlanDelete(  Res,
+                            ((ri(Res', J) -> ri(Res, I)) SDeps),
+                            ((Res' -> po((Op ; Ops))) Plan)
+                        ) = if (Op == DELETE) then true else hasCoDepPlanDelete(Res, SDeps, Plan) fi .
+    eq hasCoDepPlanDelete(Res, SDeps, Plan) = false [owise] .
+
+    --- update all dependencies destination ri(Qid, old) to ri(Qid, new)
+    op updateCoDep : Qid SD -> SD .
+    eq updateCoDep(Res, ((ri(Res', I) -> ri(Res, old)) SDeps)) = (ri(Res', I) -> ri(Res, new)) updateCoDep(Res, SDeps) .
+    eq updateCoDep(Res, SDeps) = SDeps [owise] .
+
+    --- remove all Ri -> Ri'
+    op removeSDeps : RInst SD -> SD .
+    eq removeSDeps(ResI, ((ResI -> ResI') SDeps)) = removeSDeps(ResI, SDeps) .
+    eq removeSDeps(ResI, SDeps) = SDeps [owise] .
+
+    op transitiveDependencies : Qid TD -> TSet{Qid} .
+    eq transitiveDependencies(Res, Deps) = $transitiveDependencies(Res, Deps, Deps) .
+    op transitiveDependencies : Qid SD -> TSet{Qid} .
+    eq transitiveDependencies(Res, SDeps) = $transitiveDependencies(Res, rmI(SDeps), rmI(SDeps)) .
+
+    op $transitiveDependencies : Qid TD TD -> TSet{Qid} .
+    eq $transitiveDependencies(Res, Deps, Deps0) = eps [owise] .
+    eq $transitiveDependencies(
+            Res,
+            ((Res -> Res') Deps),
+            Deps0
+        ) = Res'
+            $transitiveDependencies(Res', Deps0, Deps0)
+            $transitiveDependencies(Res, Deps, Deps0)
+        .
+
+    op transitiveCoDependencies : Qid TD -> TSet{Qid} .
+    eq transitiveCoDependencies(Res, Deps) = $transitiveCoDependencies(Res, Deps, Deps) .
+
+    --- same as transitiveDependencies but revert Res and Res' when matching for a dep
+    op $transitiveCoDependencies : Qid TD TD -> TSet{Qid} .
+    eq $transitiveCoDependencies(Res, Deps, Deps0) = eps [owise] .
+    eq $transitiveCoDependencies(
+            Res,
+            ((Res' -> Res) Deps),
+            Deps0
+        ) = Res'
+            $transitiveCoDependencies(Res', Deps0, Deps0)
+            $transitiveCoDependencies(Res, Deps, Deps0)
+        .
+
+    op allTransitiveDependencies : TSet{Qid} TD -> Tuple2Set{Qid, Qid} .
+    eq allTransitiveDependencies((Res ResSet), Deps) =
+        times(Res, transitiveDependencies(Res, Deps))
+        allTransitiveDependencies(ResSet, Deps) .
+    eq allTransitiveDependencies(eps, Deps) = eps .
+
+    --- op allTransitiveSDependencies : TSet{RInst} SD -> Tuple2Set{Qid, Qid} .
+    --- eq allTransitiveSDependencies((ResI ResInstSet), SDeps) =
+    ---     times(ResI, transitiveDependencies(ResI, SDeps))
+    ---     allTransitiveDependencies(ResInstSet, SDeps) .
+    --- eq allTransitiveDependencies(eps, SDeps) = eps .
+
+    --- op allTransitiveCoDependencies : TSet{RInst} SD -> Tuple2Set{Qid, Qid} .
+    --- eq allTransitiveCoDependencies((ResI ResInstSet), SDeps) =
+    ---     times(ResI, transitiveCoDependencies(ResI, SDeps))
+    ---     allTransitiveCoDependencies(ResInstSet, SDeps) .
+    --- eq allTransitiveCoDependencies(eps, SDeps) = eps .
+
+    op removeTransitiveArcs : GraphVE -> GraphVE .
+    eq removeTransitiveArcs(graphVE(Nodes, Arcs)) = graphVE(Nodes, Arcs) [owise] .
+    ceq removeTransitiveArcs(graphVE(
+            Nodes, ((Node1 -> Node2) (Node1 -> Node3) Arcs)
+        ))
+        =
+        removeTransitiveArcs(graphVE(
+            Nodes, ((Node1 -> Node2) Arcs)
+        ))
+        if path(Node2, Node3, Arcs).
+
+
+    op getStagesTopNodes : GraphAdj -> List{StageTopNodes} .
+    ceq getStagesTopNodes(graphAdj(Actions))
+        = stageTopNodes(graphAdj(times(SinkNodes, neighbors(eps))))
+          § getStagesTopNodes(graphAdj(removeActionNodes(SinkNodes, Actions)))
+        if SinkNodes := getSinkNodes(Actions)
+        /\ SinkNodes =/= eps
+        .
+    eq getStagesTopNodes(graphAdj(Actions)) = nil [owise] .
+
+    --- from a DAG, get the list of subgraphs of all stages
+    op getStagesSubgraphs : GraphAdj -> List{StageSubgraphs} .
+    ceq getStagesSubgraphs(graphAdj(Actions))
+        = stageSubgraphs(getFirstStageSubgraphs(graphAdj(Actions)))
+          § getStagesSubgraphs(graphAdj(removeActionNodes(SinkNodes, Actions)))
+        if SinkNodes := getSinkNodes(Actions)
+        /\ SinkNodes =/= eps
+        .
+    eq getStagesSubgraphs(graphAdj(Actions)) = nil [owise] .
+
+    op getSinkNodes : Tuple2Set{Act, Nbhrs} -> TSet{Act} .
+    eq getSinkNodes(((Node -> neighbors(eps)) Actions)) = Node getSinkNodes(Actions) .
+    eq getSinkNodes(Actions) = eps [owise] .
+
+    --- get all subgraphs consisting of one node and its direct neighbors
+    --- if there is at least one neighbors and all of them are sinks
+    op getFirstStageSubgraphs : GraphAdj -> TSet{GraphAdj} .
+    ceq getFirstStageSubgraphs(graphAdj((
+            (Node -> neighbors(Nodes)) Actions
+        ))) = graphAdj((
+                (Node -> neighbors(Nodes)) times(Nodes, neighbors(eps)))
+            )
+            getFirstStageSubgraphs(graphAdj(Actions))
+        if Nodes =/= eps                                --- there is at least one neighbor
+        /\ projectAll(Nodes, Actions) == neighbors(eps) --- all neighbors are sinks
+        .
+    eq getFirstStageSubgraphs(graphAdj(Actions)) = eps [owise] .
+
+    --- returns the sequence of graphs at each stages, there will be no arcs
+    op getStages : GraphAdj -> List{GraphAdj} .
+    eq [getStageNil]: getStages(graphAdj(eps)) = niil .
+    ceq [getStageG]: getStages(graphAdj(Actions))
+        = graphAdj(getSinkStage(Actions))
+          § getStages(graphAdj(NextStages))
+        if Actions =/= eps
+        /\ SinkStage := getSinkStage(Actions)
+        /\ NextStages := removeActionNodes(takeAll(1, SinkStage), Actions)
+        .
+
+    op getSinkStage : Tuple2Set{Act, Nbhrs} -> Tuple2Set{Act, Nbhrs} .
+    eq getSinkStage(((Node -> neighbors(eps)) Actions)) = (Node -> neighbors(eps)) getSinkStage(Actions) .
+    eq getSinkStage(Actions) = eps [owise] .
+
+    --- remove all nodes #1 from the graph #2
+    op removeActionNodes : TSet{Act} Tuple2Set{Act, Nbhrs} -> Tuple2Set{Act, Nbhrs} .
+    eq removeActionNodes((BAct BActSet), Actions) = removeActionNodes(BActSet, removeActionNode(BAct, Actions)) .
+    eq removeActionNodes(eps, Actions) = Actions .
+
+    --- remove the action-node #1 from the action-graph #2
+    op removeActionNode : Act Tuple2Set{Act, Nbhrs} -> Tuple2Set{Act, Nbhrs} .
+    eq removeActionNode(BAct, ((BAct -> neighbors(BActSet)) Actions)) =           --- remove node BAct and all its arcs
+        removeActionNode(BAct, Actions) .
+    eq removeActionNode(BAct, ((BAct' -> neighbors(BAct BActSet)) Actions)) =     --- remove an arc pointing to BAct
+        removeActionNode(BAct, ((BAct' -> neighbors(BActSet)) Actions)) .
+    eq removeActionNode(BAct, Actions) = Actions [owise] .
+
+    --- from a set of nodes and a set of arcs, make a set of couples (node, set of neighbors)
+    op graphVEToAdjacency : GraphVE -> GraphAdj .
+    eq graphVEToAdjacency(graphVE(eps, ActionArcs)) = graphAdj(eps) .
+    ceq graphVEToAdjacency(graphVE((BAct BActSet), ActionArcs)) =
+            graphAdj((
+                    BAct -> neighbors(Neighbors)
+                    Actions
+            ))
+        if Neighbors := project(BAct, ActionArcs)
+        /\ graphAdj(Actions) := graphVEToAdjacency(graphVE(BActSet, ActionArcs))
+        .
+
+    --- from the config dependencies, create the action matrix: set of pairs of actions like 'a(CREATE, 'R)'
+    op mkActionGraphVE : Tuple2Set{Qid, Qid} Tuple2Set{RInst, RInst} Pl -> GraphVE .
+    ceq mkActionGraphVE(TDeps, SDeps, Plan) =
+        graphVE(
+            rmNoopActs(plannedActs(Plan)),
+            (
+                orderPlanned(Plan)
+                --- orderNoops(ResSet, TransitiveTDeps, reverseDeps(TransitiveTDeps), Plan)
+                orderDeploy(ResSet, TDeps, Plan)        --- depsDeployed
+                --- orderDelete(ResSet, reverseDeps(TransitiveDeps), Plan)        --- codepsDeleted
+                orderDelete(ResSet, union(TDeps, rmI(SDeps)), Plan)        --- codepsDeleted
+                --- orderDeployAfterDelete(ResSet, TransitiveDeps, Plan)    --- delayDeployed
+                --- orderDeleteAfterDeploy(ResSet, TransitiveTDeps, Plan)    --- delayDeleted
+            )
+        )
+        if true --- Deps := union(TDeps, rmI(SDeps))
+        /\ ResSet := plannedRes(Plan)
+        --- /\ TransitiveTDeps := allTransitiveDependencies(ResSet, TDeps)
+        --- /\ TransitiveSDeps := rmI(SDeps) \ TDeps
+        --- /\ TransitiveSDeps := allTransitiveDependencies(ResSet, rmI(SDeps))
+        --- /\ TransitiveDeps := mergeDeps(TransitiveTDeps, TransitiveSDeps)
+        .
+
+    --- version with full Target, State and Plan
+    op mkActionGraphVE : T S Pl -> GraphVE .
+    eq mkActionGraphVE(
+            target(resources: TRes, dependencies: TDeps),
+            state(resources: SRes, dependencies: SDeps),
+            Plan
+        ) = mkActionGraphVE(TDeps, SDeps, Plan) .
+
+    --- Merge #1 and #2 dependencies, prioritizing #1 in case of direct cycle
+    op mergeDeps : Tuple2Set{Qid, Qid} Tuple2Set{Qid, Qid} -> Tuple2Set{Qid, Qid} .
+    ceq mergeDeps(Deps, ((Res -> Res') Deps')) = (Res -> Res') mergeDeps(Deps, Deps')
+        if not (Res' -> Res) in Deps .
+    eq mergeDeps(Deps, Deps') = Deps [owise] .
+
+    --- Transform all (r1, r2) into (r2, r1)
+    op reverseDeps : Tuple2Set{Qid, Qid} -> Tuple2Set{Qid, Qid} .
+    eq reverseDeps(eps) = eps .
+    eq reverseDeps(((Res -> Res') Deps)) = (Res' -> Res) reverseDeps(Deps) .
+
+    --- for all planned Res and its actions [a1,a2,a3,...], return { (a2->a1) (a3->a2) ... }
+    op orderPlanned : Pl -> Tuple2Set{Act, Act} .
+    eq orderPlanned(((Res -> po(Op ; Op' ; Ops)) Plan)) =
+        a(Op', Res) -> a(Op, Res)
+        orderPlanned(((Res -> po(Op' ; Ops)) Plan)) .
+    eq orderPlanned(Plan) = eps [owise] .
+
+    op orderNoops : TSet{Qid} Tuple2Set{Qid, Qid} Tuple2Set{Qid, Qid} Pl -> Tuple2Set{Act, Act} .
+    eq orderNoops(eps, Deps, CoDeps, Plan) = eps .
+    ceq orderNoops((Res ResSet), Deps, CoDeps, Plan) =
+            times(
+                a(NO-OP, Res),
+                union(deployActions(RDeps, Plan), deleteActions(RDeps, Plan))
+            )
+            times(
+                union(deployActions(RCoDeps, Plan), deleteActions(RCoDeps, Plan)),
+                a(NO-OP, Res)
+            )
+            orderNoops(ResSet, Deps, CoDeps, Plan)
+        if ((Res -> po(NO-OP)) Plan') := Plan
+        /\ RDeps := project(Res, Deps)
+        /\ RCoDeps := project(Res, CoDeps)
+        .
+
+    --- for all planned Res and all its Deps Res', returns A(Res) -> A'(Res') for A,A' in (CREATE|UPDATE)
+    op orderDeploy : TSet{Qid} Tuple2Set{Qid, Qid} Pl -> Tuple2Set{Act, Act} .
+    eq orderDeploy(eps, Deps, Plan) = eps .
+    ceq orderDeploy((Res ResSet), Deps, Plan) =
+            times(deployActions(Res, Plan), deployActions(project(Res, Deps), Plan))
+            --- times(noopActions(Res, Plan), deployActions(project(Res, Deps), Plan))
+            --- times(deployActions(Res, Plan), noopActions(project(Res, Deps), Plan))
+            orderDeploy(ResSet, Deps, Plan)
+        if ((Res -> po(Ops)) Plan') := Plan
+        .
+
+    --- for all planned Res and all its deps Res', returns DELETE(Res') -> DELETE(Res)
+    op orderDelete : TSet{Qid} Tuple2Set{Qid, Qid} Pl -> Tuple2Set{Act, Act} .
+    eq orderDelete(eps, Deps, Plan) = eps .
+    ceq orderDelete((Res ResSet), Deps, Plan) =
+            times(deleteActions(project(Res, Deps), Plan), deleteActions(Res, Plan))
+            orderDelete(ResSet, Deps, Plan)
+        if true
+        .
+
+    --- order all UPDATE and CREATE of Res after the ending DELETE of dependencies Res' if exists
+    op orderDeployAfterDelete : TSet{Qid} Tuple2Set{Qid, Qid} Pl -> Tuple2Set{Act, Act} .
+    ceq orderDeployAfterDelete(ResSet, ((Res -> Res') Deps), Plan) =
+            times(deployActions(Res, Plan), a(DELETE, Res'))
+            orderDeployAfterDelete(ResSet, Deps, Plan)
+        if ((Res' -> po(Ops ; DELETE)) Plan') := Plan
+        .
+    eq orderDeployAfterDelete(ResSet, Deps, Plan) = eps [owise] .
+
+    --- --- for all planned Res __ending__ with DELETE, order DELETE(Res) after all other CREATE() or UPDATE()
+    --- op orderDeleteAfterDeploy : TSet{Qid} Tuple2Set{Qid, Qid} Pl -> Tuple2Set{Act, Act} .
+    --- ceq orderDeleteAfterDeploy((Res ResSet), Deps, Plan) =
+    ---         times(a(DELETE, Res), deployActions(project(Res, Deps), Plan))
+    ---         orderDeleteAfterDeploy(ResSet, Deps, Plan)
+    ---     if ((Res -> po(Ops ; DELETE)) Plan') := Plan
+    ---     .
+    --- eq orderDeleteAfterDeploy(ResSet, Deps, Plan) = eps [owise] .
+
+    --- returns all planned CREATE() or UPDATE() for all Res in #1
+    op deployActions : TSet{Qid} Pl -> TSet{Act} .
+    eq deployActions((Res ResSet), ((Res -> po(Ops)) Plan)) =
+        ifthenelse(occurs(CREATE, Ops), a(CREATE, Res), eps)
+        ifthenelse(occurs(UPDATE, Ops), a(UPDATE, Res), eps)
+        deployActions(ResSet, Plan) .
+    eq deployActions(ResSet, Plan) = eps [owise] .
+
+    --- returns all planned DELETE() for all Res in #1
+    op deleteActions : TSet{Qid} Pl -> TSet{Act} .
+    eq deleteActions((Res ResSet), ((Res -> po(Ops)) Plan)) =
+        ifthenelse(occurs(DELETE, Ops), a(DELETE, Res), eps)
+        deleteActions(ResSet, Plan) .
+    eq deleteActions(ResSet, Plan) = eps [owise] .
+
+---     --- returns the planned DELETE() of #1 if it is the last action (don't return DELETE from DELETE-CREATE)
+---     op deleteActionLast : Qid Pl -> TSet{Act} .
+---     eq deleteActionLast(Res, ((Res -> po(Ops ; DELETE)) Plan)) = a(DELETE, Res) .
+---     eq deleteActionLast(Res, Plan) = eps [owise] .
+
+    --- returns all planned NO-OP() for all Res in #1
+    op noopActions : TSet{Qid} Pl -> TSet{Act} .
+    eq noopActions((Res ResSet), ((Res -> po(Ops)) Plan)) =
+        ifthenelse(occurs(NO-OP, Ops), a(NO-OP, Res), eps)
+        noopActions(ResSet, Plan) .
+    eq noopActions(ResSet, Plan) = eps [owise] .
+
+    op addTransitiveEdges : Tuple2Set{RInst, RInst} -> Tuple2Set{RInst, RInst} .
+    ceq addTransitiveEdges(SDeps) = addTransitiveEdges(((ResI -> ResI'') SDeps))
+        if (ResI -> ResI') (ResI -> ResI'') SDeps' := SDeps
+        /\ not (ResI -> ResI'') in SDeps
+        .
+    eq addTransitiveEdges(SDeps) = SDeps [owise] .
+
+endfm
+
+mod RULES is
+
+    inc TUPLE2-SET{Qid, Qid} .
+    inc TUPLE3-SET{Qid, Qid, Qid} .
+    inc TUPLE3-SET{Qid, RInst, Qid} .
+    inc TUPLE4-SET{RInst, Qid, RInst, Qid} .
+
+    inc PLAN .
+    inc STATE .
+    inc OPERATIONS .
+    inc CONFIGURATION .
+    inc FUNCTIONS .
+
+    --- components of resource declarations
+    var R R' : Qid .
+    var DepInsts : TSet{RInst} .
+
+    var Target : T .
+    --- components of the target
+    var RT RT' : TR .
+    var DT DT' : TD .
+
+    --- target deps of a specific resource
+    var DTr  : TSet{Qid} .
+
+    var State : S .
+    --- components of the state
+    var RS RS' RS'' : SR .
+    var DS DS' : SD .
+
+    --- state of a specific resource
+    --- var Outputs : Tuple2Set{Qid, String} .
+    var DSr  : TSet{RInst} .
+
+    var Plan Plan' Plan'' : Pl .                 --- set of tuples OP r_\sigma D_\sigma
+    var Ongoing Ongoing' Ongoing'' : On .
+
+    var Op : OP .
+    var Ops : OPS .
+
+    var Act Act' : Act .        --- constants CREATE, NO-OP, ...
+    var BAct BAct' : Act . --- e.g. a(CREATE,'R)
+    var BActSet : TSet{Act} .
+    var Neighbors : TSet{Act} .
+    var Actions Actions' Actions'' : Tuple2Set{Act, Nbhrs} .   --- GraphAdj
+
+    var Status Status' : Status .
+    var Trace Trace' : List{Event} .
+
+    var Config : Conf .
+    --- Config contains almost all the above + what comes next
+
+    var Cpt : Nat .                 --- counter for new instances
+    var M N : Nat .
+    var I J : Inst .
+    var B B' : Bool .
+
+    crl [PlanToActionGraph] :
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(eps),
+            state: state(
+                        resources: RS,
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: bplanning,
+            trace: Trace
+        >
+        =>
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions:    graphVEToAdjacency(
+                            --- removeTransitiveArcs(
+                                mkActionGraphVE(DT, DS, Plan)
+                            --- )
+                        ),
+            state: state(
+                        resources: RS,
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: executing,
+            trace: Trace
+        >
+        if true
+        .
+    --- crl [PlanToActionGraph] :
+
+    ***
+    *** Execution rules (apply?) from the Action Graph
+    ***
+
+    crl [StartAction] :
+        <   target: Target,
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: State,
+            ongoing: Ongoing,
+            phase: executing,
+            trace: Trace
+        >
+        =>
+        <   target: Target,
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: State,
+            ongoing: Ongoing',
+            phase: executing,
+            trace: Trace'
+        >
+        if (Act -> neighbors(eps)) Actions' := Actions
+        /\ a(Op, R) := Act
+        /\ NO-OP =/= Op
+        /\ not (Act) in Ongoing
+        /\ Ongoing' := Ongoing (Act)
+        /\ Trace' := Trace start(Act)
+        .
+    --- crl [StartAction]
+
+    crl [EndCreate] :
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: state(
+                        resources: RS,
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: executing,
+            trace: Trace
+        >
+        =>
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(Actions'),
+            state: state(
+                        resources: RS',
+                        dependencies: DS'
+                    ),
+            ongoing: Ongoing',
+            phase: executing,
+            trace: Trace'
+        >
+        if a(CREATE, R) Ongoing' := Ongoing
+        /\ Actions' := removeActionNode(a(CREATE, R), Actions)
+        /\ RS' := RS ri(R, new)
+        /\ DSr := newestInstances(project(R, DT), RS)
+        /\ DS' := updateCoDep(R, DS) times(ri(R, new), DSr)
+        /\ Trace' := Trace end(a(CREATE, R))
+        .
+    --- crl [EndCreate]
+
+    crl [EndUpdate] :
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: state(
+                        resources: RS,
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: executing,
+            trace: Trace
+        >
+        =>
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(Actions'),
+            state: state(
+                        resources: RS,
+                        dependencies: DS'
+                    ),
+            ongoing: Ongoing',
+            phase: executing,
+            trace: Trace'
+        >
+        if a(UPDATE, R) Ongoing' := Ongoing
+        /\ Actions' := removeActionNode(a(UPDATE, R), Actions)
+        /\ DSr := newestInstances(project(R, DT), RS)
+        --- /\ DS' := (DS \ times(ri(R, old), project(ri(R, old), DS))) times(ri(R, old), DSr)
+        /\ DS' := removeSDeps(ri(R, old), DS) times(ri(R, old), DSr)
+        /\ Trace' := Trace end(a(UPDATE, R))
+        .
+    --- crl [EndUpdate]
+
+    crl [EndDelete] :
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: state(
+                        resources: RS,
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: executing,
+            trace: Trace
+        >
+        =>
+        <   target: target(
+                        resources: RT,
+                        dependencies: DT
+                    ),
+            planned: Plan,
+            actions: graphAdj(Actions'),
+            state: state(
+                        resources: RS',
+                        dependencies: DS'
+                    ),
+            ongoing: Ongoing',
+            phase: executing,
+            trace: Trace'
+        >
+        if a(DELETE, R) Ongoing' := Ongoing
+        /\ Actions' := removeActionNode(a(DELETE, R), Actions)
+        /\ RS' := delete(ri(R, old), RS)
+        --- /\ DS' := DS \ times(ri(R, old), project(ri(R, old), DS))
+        /\ DS' := removeSDeps(ri(R, old), DS)
+        /\ Trace' := Trace end(a(DELETE, R))
+        .
+    --- crl [EndDelete]
+
+    --- crl [Noop] :
+    ---     <   target: target(
+    ---                     resources: RT,
+    ---                     dependencies: DT
+    ---                 ),
+    ---         planned: Plan,
+    ---         actions: graphAdj(Actions),
+    ---         state: state(
+    ---                     resources: RS,
+    ---                     dependencies: DS
+    ---                 ),
+    ---         ongoing: Ongoing,
+    ---         phase: executing,
+    ---         trace: Trace
+    ---     >
+    ---     =>
+    ---     <   target: target(
+    ---                     resources: RT,
+    ---                     dependencies: DT
+    ---                 ),
+    ---         planned: Plan,
+    ---         actions: graphAdj(Actions'),
+    ---         state: state(
+    ---                     resources: RS,
+    ---                     dependencies: DS'
+    ---                 ),
+    ---         ongoing: Ongoing,
+    ---         phase: executing,
+    ---         trace: Trace
+    ---     >
+    ---     if (a(NO-OP, R) -> neighbors(eps)) Actions'' := Actions
+    ---     /\ Actions' := removeActionNode(a(NO-OP, R), Actions)
+    ---     /\ DSr := newestInstances(project(R, DT), RS)   --- update dep instances (it may have changed)
+    ---     /\ DS' := removeSDeps(ri(R, old), DS) times(ri(R, old), DSr)
+    ---     --- /\ DS' := (DS \ times(ri(R, old), project(ri(R, old), DS))) times(ri(R, old), DSr)
+    ---     --- /\ Actions' := Actions
+    ---     .
+    --- --- crl [Noop]
+
+    crl [FinishExec] :
+        <   target: Target,
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: state(
+                        resources: RS,
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: executing,    --- from executing
+            trace: Trace
+        >
+        =>
+        <   target: Target,
+            planned: Plan,
+            actions: graphAdj(Actions),
+            state: state(
+                        resources: RS,
+                        --- dependencies: addTransitiveEdges(DS)
+                        dependencies: DS
+                    ),
+            ongoing: Ongoing,
+            phase: done,       --- to done
+            trace: Trace
+        >
+        if Actions == eps
+        .
+    --- rl [FinishExec] :
+
+endm
+
+smod STRATEGIES is
+    inc CONFIGURATION .
+    inc RULES .
+
+    strats execEvent exec oneExec @ Conf .
+    sd execEvent := StartAction | EndCreate | EndDelete | EndUpdate  .
+    sd exec := execEvent ! ; FinishExec .
+    sd oneExec := one(execEvent) ! ; FinishExec .
+
+    var N : Nat .
+    strat execNEvents oneExecNEvents : Nat @ Conf .
+    sd execNEvents(0) := idle .
+    sd execNEvents(N) := execEvent ; execNEvents(N - 1) .
+    sd oneExecNEvents(0) := idle .
+    sd oneExecNEvents(N) := one(execEvent) ; execNEvents(N - 1) .
+
+endsm
+
+select RULES .  --- to reuse variables in the interpreter

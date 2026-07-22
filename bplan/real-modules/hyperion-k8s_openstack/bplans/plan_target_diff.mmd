@@ -1,0 +1,29 @@
+---
+title: Plan diff
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+classDef no-op  fill:#F5F5F5
+classDef create fill:#D5E8D4,stroke-width:2px,stroke-dasharray:5 5
+classDef delete fill:#FF9999,stroke-width:2px,stroke-dasharray:5 5
+classDef update fill:#FFF2CC
+classDef replace fill:#FF9999
+%% Nodes
+openstack_compute_floatingip_v2.fip-master:::no-op
+openstack_compute_floatingip_v2.fip-nodes:::no-op
+openstack_compute_instance_v2.hyperion-master:::update
+openstack_compute_instance_v2.hyperion-nodes:::update
+openstack_compute_keypair_v2.hyperion-key:::no-op
+openstack_compute_secgroup_v2.hyperion-sg:::no-op
+openstack_networking_network_v2.hyperion-network:::replace@{ shape: trap-t }
+openstack_networking_subnet_v2.hyperion-network:::update
+%% Arcs
+openstack_compute_instance_v2.hyperion-master --> openstack_compute_floatingip_v2.fip-master
+openstack_compute_instance_v2.hyperion-nodes --> openstack_networking_network_v2.hyperion-network
+openstack_compute_instance_v2.hyperion-master --> openstack_compute_secgroup_v2.hyperion-sg
+openstack_compute_instance_v2.hyperion-master --> openstack_networking_network_v2.hyperion-network
+openstack_compute_instance_v2.hyperion-nodes --> openstack_compute_floatingip_v2.fip-nodes
+openstack_networking_subnet_v2.hyperion-network --> openstack_networking_network_v2.hyperion-network
+openstack_compute_instance_v2.hyperion-nodes --> openstack_compute_secgroup_v2.hyperion-sg

@@ -1,0 +1,27 @@
+---
+title: Actions
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart TB
+classDef NO-OP  fill:#F5F5F5;
+classDef CREATE fill:#D5E8D4;
+classDef UPDATE fill:#FFF2CC;
+classDef DELETE fill:#FF9999;
+%% Nodes
+CREATE-'aws_route53_zone.root('aws_route53_zone.root):::CREATE;
+UPDATE-'aws_cloudwatch_log_group.json_logs('aws_cloudwatch_log_group.json_logs):::UPDATE;
+UPDATE-'aws_route53_record.antivirus_api_acm_validation('aws_route53_record.antivirus_api_acm_validation):::UPDATE;
+UPDATE-'aws_route53_record.api_acm_validation('aws_route53_record.api_acm_validation):::UPDATE;
+UPDATE-'aws_route53_record.assets_acm_validation('aws_route53_record.assets_acm_validation):::UPDATE;
+UPDATE-'aws_route53_record.search_api_acm_validation('aws_route53_record.search_api_acm_validation):::UPDATE;
+UPDATE-'aws_route53_record.www_acm_validation('aws_route53_record.www_acm_validation):::UPDATE;
+DELETE-'aws_route53_zone.root('aws_route53_zone.root):::DELETE;
+%% Arcs
+CREATE-'aws_route53_zone.root('aws_route53_zone.root) --> UPDATE-'aws_route53_record.antivirus_api_acm_validation;
+CREATE-'aws_route53_zone.root('aws_route53_zone.root) --> UPDATE-'aws_route53_record.api_acm_validation;
+CREATE-'aws_route53_zone.root('aws_route53_zone.root) --> UPDATE-'aws_route53_record.assets_acm_validation;
+CREATE-'aws_route53_zone.root('aws_route53_zone.root) --> UPDATE-'aws_route53_record.search_api_acm_validation;
+CREATE-'aws_route53_zone.root('aws_route53_zone.root) --> UPDATE-'aws_route53_record.www_acm_validation;
+CREATE-'aws_route53_zone.root('aws_route53_zone.root) --> DELETE-'aws_route53_zone.root;

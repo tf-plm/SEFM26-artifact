@@ -1,0 +1,6 @@
+vpc_cidr    = "10.0.0.0/16"
+access_key  = ""
+db_name     = ""
+db_username = ""
+db_password = ""
+secret_key  = ""

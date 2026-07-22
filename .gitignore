@@ -1,0 +1,17 @@
+.RData
+.Rhistory
+
+__pycache__/
+.ipynb_checkpoints/
+**.DS_Store
+
+go.mod.sum
+go.work.sum
+go.sum
+
+**/.terraform/*
+**/.terraform.lock*
+*.tfstate
+*.tfstate.*
+
+**/README.html

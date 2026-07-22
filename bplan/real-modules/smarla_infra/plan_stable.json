@@ -1,0 +1,3118 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.13.4",
+  "variables": {
+    "access_key": {
+      "value": ""
+    },
+    "azs": {
+      "value": "eu-west-1a,eu-west-1b"
+    },
+    "db_engine_version": {
+      "value": "9.5.2"
+    },
+    "db_instance_class": {
+      "value": "db.t2.medium"
+    },
+    "db_name": {
+      "value": ""
+    },
+    "db_password": {
+      "value": ""
+    },
+    "db_username": {
+      "value": ""
+    },
+    "environment": {
+      "value": "hydrogen"
+    },
+    "private_subnet_cidr": {
+      "value": "10.0.0.0/16,10.1.0.0/16,10.2.0.0/16"
+    },
+    "region": {
+      "value": "eu-west-1"
+    },
+    "secret_key": {
+      "value": ""
+    },
+    "vpc_cidr": {
+      "value": "10.0.0.0/16"
+    }
+  },
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "aws_api_gateway_integration_response.login_ko_integration",
+          "mode": "managed",
+          "type": "aws_api_gateway_integration_response",
+          "name": "login_ko_integration",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "content_handling": null,
+            "http_method": "POST",
+            "region": "eu-west-1",
+            "response_parameters": null,
+            "response_templates": null,
+            "selection_pattern": null,
+            "status_code": "401"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_api_gateway_integration_response.login_ok_integration",
+          "mode": "managed",
+          "type": "aws_api_gateway_integration_response",
+          "name": "login_ok_integration",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "content_handling": null,
+            "http_method": "POST",
+            "region": "eu-west-1",
+            "response_parameters": null,
+            "response_templates": null,
+            "selection_pattern": null,
+            "status_code": "200"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_api_gateway_method.login",
+          "mode": "managed",
+          "type": "aws_api_gateway_method",
+          "name": "login",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "api_key_required": false,
+            "authorization": "NONE",
+            "authorization_scopes": null,
+            "authorizer_id": null,
+            "http_method": "POST",
+            "operation_name": null,
+            "region": "eu-west-1",
+            "request_models": null,
+            "request_parameters": null,
+            "request_validator_id": null
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_api_gateway_method_response.login_ko",
+          "mode": "managed",
+          "type": "aws_api_gateway_method_response",
+          "name": "login_ko",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "http_method": "POST",
+            "region": "eu-west-1",
+            "response_models": null,
+            "response_parameters": null,
+            "status_code": "401"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_api_gateway_method_response.login_ok",
+          "mode": "managed",
+          "type": "aws_api_gateway_method_response",
+          "name": "login_ok",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "http_method": "POST",
+            "region": "eu-west-1",
+            "response_models": null,
+            "response_parameters": null,
+            "status_code": "200"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_api_gateway_resource.auth",
+          "mode": "managed",
+          "type": "aws_api_gateway_resource",
+          "name": "auth",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "path_part": "auth",
+            "region": "eu-west-1"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_api_gateway_rest_api.connect",
+          "mode": "managed",
+          "type": "aws_api_gateway_rest_api",
+          "name": "connect",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "body": null,
+            "description": "Connect API Gateway for environment hydrogen",
+            "fail_on_warnings": null,
+            "name": "connect-hydrogen",
+            "parameters": null,
+            "put_rest_api_mode": null,
+            "region": "eu-west-1",
+            "tags": null
+          },
+          "sensitive_values": {
+            "binary_media_types": [],
+            "endpoint_configuration": [],
+            "tags_all": {}
+          }
+        },
+        {
+          "address": "aws_db_instance.default",
+          "mode": "managed",
+          "type": "aws_db_instance",
+          "name": "default",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "allocated_storage": 5,
+            "allow_major_version_upgrade": null,
+            "apply_immediately": false,
+            "auto_minor_version_upgrade": true,
+            "blue_green_update": [],
+            "copy_tags_to_snapshot": false,
+            "custom_iam_instance_profile": null,
+            "customer_owned_ip_enabled": null,
+            "db_subnet_group_name": "smarla-sg-hydrogen",
+            "dedicated_log_volume": false,
+            "delete_automated_backups": true,
+            "deletion_protection": null,
+            "domain": null,
+            "domain_auth_secret_arn": null,
+            "domain_dns_ips": null,
+            "domain_iam_role_name": null,
+            "domain_ou": null,
+            "enabled_cloudwatch_logs_exports": null,
+            "engine": "postgres",
+            "engine_version": "9.5.2",
+            "final_snapshot_identifier": null,
+            "iam_database_authentication_enabled": null,
+            "instance_class": "db.t2.medium",
+            "manage_master_user_password": null,
+            "max_allocated_storage": null,
+            "monitoring_interval": 0,
+            "multi_az": true,
+            "password": "",
+            "password_wo": null,
+            "password_wo_version": null,
+            "performance_insights_enabled": false,
+            "publicly_accessible": false,
+            "region": "eu-west-1",
+            "replicate_source_db": null,
+            "restore_to_point_in_time": [],
+            "s3_import": [],
+            "skip_final_snapshot": false,
+            "storage_encrypted": null,
+            "tags": null,
+            "timeouts": null,
+            "upgrade_storage_config": null
+          },
+          "sensitive_values": {
+            "blue_green_update": [],
+            "listener_endpoint": [],
+            "master_user_secret": [],
+            "password": true,
+            "password_wo": true,
+            "replicas": [],
+            "restore_to_point_in_time": [],
+            "s3_import": [],
+            "tags_all": {},
+            "vpc_security_group_ids": []
+          }
+        },
+        {
+          "address": "aws_db_subnet_group.default",
+          "mode": "managed",
+          "type": "aws_db_subnet_group",
+          "name": "default",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "description": "Subnet for the hydrogen RDS",
+            "name": "smarla-sg-hydrogen",
+            "region": "eu-west-1",
+            "tags": null
+          },
+          "sensitive_values": {
+            "subnet_ids": [],
+            "supported_network_types": [],
+            "tags_all": {}
+          }
+        },
+        {
+          "address": "aws_elastic_beanstalk_application.application",
+          "mode": "managed",
+          "type": "aws_elastic_beanstalk_application",
+          "name": "application",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "appversion_lifecycle": [],
+            "description": "Beanstalk application for environment hydrogen",
+            "name": "application-hydrogen",
+            "region": "eu-west-1",
+            "tags": null
+          },
+          "sensitive_values": {
+            "appversion_lifecycle": [],
+            "tags_all": {}
+          }
+        },
+        {
+          "address": "aws_elastic_beanstalk_environment.environment",
+          "mode": "managed",
+          "type": "aws_elastic_beanstalk_environment",
+          "name": "environment",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 1,
+          "values": {
+            "application": "application-hydrogen",
+            "description": null,
+            "name": "hydrogen",
+            "poll_interval": null,
+            "region": "eu-west-1",
+            "setting": [],
+            "solution_stack_name": "64bit Amazon Linux 2016.03 v2.1.3 running Node.js",
+            "tags": null,
+            "template_name": null,
+            "tier": "WebServer",
+            "wait_for_ready_timeout": "20m"
+          },
+          "sensitive_values": {
+            "all_settings": [],
+            "autoscaling_groups": [],
+            "instances": [],
+            "launch_configurations": [],
+            "load_balancers": [],
+            "queues": [],
+            "setting": [],
+            "tags_all": {},
+            "triggers": []
+          }
+        },
+        {
+          "address": "aws_iam_role.smarla_login_iam",
+          "mode": "managed",
+          "type": "aws_iam_role",
+          "name": "smarla_login_iam",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Sid\":\"\"}],\"Version\":\"2012-10-17\"}",
+            "description": null,
+            "force_detach_policies": false,
+            "max_session_duration": 3600,
+            "name": "iam_for_lambda",
+            "path": "/",
+            "permissions_boundary": null,
+            "tags": null
+          },
+          "sensitive_values": {
+            "inline_policy": [],
+            "managed_policy_arns": [],
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null
+          }
+        },
+        {
+          "address": "aws_internet_gateway.internet",
+          "mode": "managed",
+          "type": "aws_internet_gateway",
+          "name": "internet",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "region": "eu-west-1",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "tags_all": {}
+          }
+        },
+        {
+          "address": "aws_nat_gateway.default",
+          "mode": "managed",
+          "type": "aws_nat_gateway",
+          "name": "default",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "allocation_id": null,
+            "connectivity_type": "public",
+            "region": "eu-west-1",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "secondary_allocation_ids": [],
+            "secondary_private_ip_addresses": [],
+            "tags_all": {}
+          }
+        },
+        {
+          "address": "aws_route.private_internet",
+          "mode": "managed",
+          "type": "aws_route",
+          "name": "private_internet",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "carrier_gateway_id": null,
+            "core_network_arn": null,
+            "destination_cidr_block": "0.0.0.0/0",
+            "destination_ipv6_cidr_block": null,
+            "destination_prefix_list_id": null,
+            "egress_only_gateway_id": null,
+            "gateway_id": null,
+            "local_gateway_id": null,
+            "region": "eu-west-1",
+            "timeouts": null,
+            "transit_gateway_id": null,
+            "vpc_endpoint_id": null,
+            "vpc_peering_connection_id": null
+          },
+          "sensitive_values": {},
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "destination_cidr_block": null,
+            "destination_ipv6_cidr_block": null,
+            "destination_prefix_list_id": null,
+            "region": null,
+            "route_table_id": null
+          }
+        },
+        {
+          "address": "aws_route.public_internet",
+          "mode": "managed",
+          "type": "aws_route",
+          "name": "public_internet",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "carrier_gateway_id": null,
+            "core_network_arn": null,
+            "destination_cidr_block": "0.0.0.0/0",
+            "destination_ipv6_cidr_block": null,
+            "destination_prefix_list_id": null,
+            "egress_only_gateway_id": null,
+            "local_gateway_id": null,
+            "nat_gateway_id": null,
+            "region": "eu-west-1",
+            "timeouts": null,
+            "transit_gateway_id": null,
+            "vpc_endpoint_id": null,
+            "vpc_peering_connection_id": null
+          },
+          "sensitive_values": {},
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "destination_cidr_block": null,
+            "destination_ipv6_cidr_block": null,
+            "destination_prefix_list_id": null,
+            "region": null,
+            "route_table_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.pesama_main",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "pesama_main",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "pesama.org",
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 3600,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.pesama_www",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "pesama_www",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "www.pesama.org",
+            "records": [
+              "pesama.org"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 3600,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.smarla_connect-ns",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "smarla_connect-ns",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "connect.smarla.com",
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 60,
+            "type": "NS",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.smarla_main-eb",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "smarla_main-eb",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "smarla.com",
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 3600,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.smarla_www-eb",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "smarla_www-eb",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "www.smarla.com",
+            "records": [
+              "smarla.com"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 3600,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_zone.pesama_main",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "pesama_main",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "comment": "Managed by Terraform",
+            "delegation_set_id": null,
+            "force_destroy": false,
+            "name": "pesama.org",
+            "tags": null,
+            "timeouts": null,
+            "vpc": []
+          },
+          "sensitive_values": {
+            "name_servers": [],
+            "tags_all": {},
+            "vpc": []
+          }
+        },
+        {
+          "address": "aws_route53_zone.smarla_connect",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "smarla_connect",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "comment": "Managed by Terraform",
+            "delegation_set_id": null,
+            "force_destroy": false,
+            "name": "connect.smarla.com",
+            "tags": null,
+            "timeouts": null,
+            "vpc": []
+          },
+          "sensitive_values": {
+            "name_servers": [],
+            "tags_all": {},
+            "vpc": []
+          }
+        },
+        {
+          "address": "aws_route53_zone.smarla_main",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "smarla_main",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "comment": "Managed by Terraform",
+            "delegation_set_id": null,
+            "force_destroy": false,
+            "name": "smarla.com",
+            "tags": null,
+            "timeouts": null,
+            "vpc": []
+          },
+          "sensitive_values": {
+            "name_servers": [],
+            "tags_all": {},
+            "vpc": []
+          }
+        },
+        {
+          "address": "aws_route_table.private",
+          "mode": "managed",
+          "type": "aws_route_table",
+          "name": "private",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "region": "eu-west-1",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "propagating_vgws": [],
+            "route": [],
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "id": null,
+            "region": null
+          }
+        },
+        {
+          "address": "aws_route_table.public",
+          "mode": "managed",
+          "type": "aws_route_table",
+          "name": "public",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "region": "eu-west-1",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "propagating_vgws": [],
+            "route": [],
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "id": null,
+            "region": null
+          }
+        },
+        {
+          "address": "aws_route_table_association.private",
+          "mode": "managed",
+          "type": "aws_route_table_association",
+          "name": "private",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "gateway_id": null,
+            "region": "eu-west-1",
+            "timeouts": null
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_route_table_association.public",
+          "mode": "managed",
+          "type": "aws_route_table_association",
+          "name": "public",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "gateway_id": null,
+            "region": "eu-west-1",
+            "timeouts": null
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "aws_subnet.private",
+          "mode": "managed",
+          "type": "aws_subnet",
+          "name": "private",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 1,
+          "values": {
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-west-1a",
+            "cidr_block": "10.0.0.0/16",
+            "customer_owned_ipv4_pool": null,
+            "enable_dns64": false,
+            "enable_lni_at_device_index": null,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "ipv6_cidr_block": null,
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": null,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": null,
+            "region": "eu-west-1",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "id": null,
+            "region": null
+          }
+        },
+        {
+          "address": "aws_subnet.public",
+          "mode": "managed",
+          "type": "aws_subnet",
+          "name": "public",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 1,
+          "values": {
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "eu-west-1a",
+            "cidr_block": "10.0.0.0/24",
+            "customer_owned_ipv4_pool": null,
+            "enable_dns64": false,
+            "enable_lni_at_device_index": null,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "ipv6_cidr_block": null,
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": null,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": null,
+            "region": "eu-west-1",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "id": null,
+            "region": null
+          }
+        },
+        {
+          "address": "aws_vpc.smarla",
+          "mode": "managed",
+          "type": "aws_vpc",
+          "name": "smarla",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 1,
+          "values": {
+            "assign_generated_ipv6_cidr_block": null,
+            "cidr_block": "10.0.0.0/16",
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "instance_tenancy": "default",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_ipam_pool_id": null,
+            "ipv6_netmask_length": null,
+            "region": "eu-west-1",
+            "tags": null
+          },
+          "sensitive_values": {
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "id": null,
+            "region": null
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "aws_api_gateway_integration_response.login_ko_integration",
+      "mode": "managed",
+      "type": "aws_api_gateway_integration_response",
+      "name": "login_ko_integration",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "content_handling": null,
+          "http_method": "POST",
+          "region": "eu-west-1",
+          "response_parameters": null,
+          "response_templates": null,
+          "selection_pattern": null,
+          "status_code": "401"
+        },
+        "after_unknown": {
+          "id": true,
+          "resource_id": true,
+          "rest_api_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_api_gateway_integration_response.login_ok_integration",
+      "mode": "managed",
+      "type": "aws_api_gateway_integration_response",
+      "name": "login_ok_integration",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "content_handling": null,
+          "http_method": "POST",
+          "region": "eu-west-1",
+          "response_parameters": null,
+          "response_templates": null,
+          "selection_pattern": null,
+          "status_code": "200"
+        },
+        "after_unknown": {
+          "id": true,
+          "resource_id": true,
+          "rest_api_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_api_gateway_method.login",
+      "mode": "managed",
+      "type": "aws_api_gateway_method",
+      "name": "login",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "api_key_required": false,
+          "authorization": "NONE",
+          "authorization_scopes": null,
+          "authorizer_id": null,
+          "http_method": "POST",
+          "operation_name": null,
+          "region": "eu-west-1",
+          "request_models": null,
+          "request_parameters": null,
+          "request_validator_id": null
+        },
+        "after_unknown": {
+          "id": true,
+          "resource_id": true,
+          "rest_api_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_api_gateway_method_response.login_ko",
+      "mode": "managed",
+      "type": "aws_api_gateway_method_response",
+      "name": "login_ko",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "http_method": "POST",
+          "region": "eu-west-1",
+          "response_models": null,
+          "response_parameters": null,
+          "status_code": "401"
+        },
+        "after_unknown": {
+          "id": true,
+          "resource_id": true,
+          "rest_api_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_api_gateway_method_response.login_ok",
+      "mode": "managed",
+      "type": "aws_api_gateway_method_response",
+      "name": "login_ok",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "http_method": "POST",
+          "region": "eu-west-1",
+          "response_models": null,
+          "response_parameters": null,
+          "status_code": "200"
+        },
+        "after_unknown": {
+          "id": true,
+          "resource_id": true,
+          "rest_api_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_api_gateway_resource.auth",
+      "mode": "managed",
+      "type": "aws_api_gateway_resource",
+      "name": "auth",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "path_part": "auth",
+          "region": "eu-west-1"
+        },
+        "after_unknown": {
+          "id": true,
+          "parent_id": true,
+          "path": true,
+          "rest_api_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_api_gateway_rest_api.connect",
+      "mode": "managed",
+      "type": "aws_api_gateway_rest_api",
+      "name": "connect",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create", "delete"
+        ],
+        "before": null,
+        "after": {
+          "body": null,
+          "description": "Connect API Gateway for environment hydrogen",
+          "fail_on_warnings": null,
+          "name": "connect-hydrogen",
+          "parameters": null,
+          "put_rest_api_mode": null,
+          "region": "eu-west-1",
+          "tags": null
+        },
+        "after_unknown": {
+          "api_key_source": true,
+          "arn": true,
+          "binary_media_types": true,
+          "created_date": true,
+          "disable_execute_api_endpoint": true,
+          "endpoint_configuration": true,
+          "execution_arn": true,
+          "id": true,
+          "minimum_compression_size": true,
+          "policy": true,
+          "root_resource_id": true,
+          "tags_all": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "binary_media_types": [],
+          "endpoint_configuration": [],
+          "tags_all": {}
+        }
+      }
+    },
+    {
+      "address": "aws_db_instance.default",
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "default",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "allocated_storage": 5,
+          "allow_major_version_upgrade": null,
+          "apply_immediately": false,
+          "auto_minor_version_upgrade": true,
+          "blue_green_update": [],
+          "copy_tags_to_snapshot": false,
+          "custom_iam_instance_profile": null,
+          "customer_owned_ip_enabled": null,
+          "db_subnet_group_name": "smarla-sg-hydrogen",
+          "dedicated_log_volume": false,
+          "delete_automated_backups": true,
+          "deletion_protection": null,
+          "domain": null,
+          "domain_auth_secret_arn": null,
+          "domain_dns_ips": null,
+          "domain_iam_role_name": null,
+          "domain_ou": null,
+          "enabled_cloudwatch_logs_exports": null,
+          "engine": "postgres",
+          "engine_version": "9.5.2",
+          "final_snapshot_identifier": null,
+          "iam_database_authentication_enabled": null,
+          "instance_class": "db.t2.medium",
+          "manage_master_user_password": null,
+          "max_allocated_storage": null,
+          "monitoring_interval": 0,
+          "multi_az": true,
+          "password": "",
+          "password_wo": null,
+          "password_wo_version": null,
+          "performance_insights_enabled": false,
+          "publicly_accessible": false,
+          "region": "eu-west-1",
+          "replicate_source_db": null,
+          "restore_to_point_in_time": [],
+          "s3_import": [],
+          "skip_final_snapshot": false,
+          "storage_encrypted": null,
+          "tags": null,
+          "timeouts": null,
+          "upgrade_storage_config": null
+        },
+        "after_unknown": {
+          "address": true,
+          "arn": true,
+          "availability_zone": true,
+          "backup_retention_period": true,
+          "backup_target": true,
+          "backup_window": true,
+          "blue_green_update": [],
+          "ca_cert_identifier": true,
+          "character_set_name": true,
+          "database_insights_mode": true,
+          "db_name": true,
+          "domain_fqdn": true,
+          "endpoint": true,
+          "engine_lifecycle_support": true,
+          "engine_version_actual": true,
+          "hosted_zone_id": true,
+          "id": true,
+          "identifier": true,
+          "identifier_prefix": true,
+          "iops": true,
+          "kms_key_id": true,
+          "latest_restorable_time": true,
+          "license_model": true,
+          "listener_endpoint": true,
+          "maintenance_window": true,
+          "master_user_secret": true,
+          "master_user_secret_kms_key_id": true,
+          "monitoring_role_arn": true,
+          "nchar_character_set_name": true,
+          "network_type": true,
+          "option_group_name": true,
+          "parameter_group_name": true,
+          "performance_insights_kms_key_id": true,
+          "performance_insights_retention_period": true,
+          "port": true,
+          "replica_mode": true,
+          "replicas": true,
+          "resource_id": true,
+          "restore_to_point_in_time": [],
+          "s3_import": [],
+          "snapshot_identifier": true,
+          "status": true,
+          "storage_throughput": true,
+          "storage_type": true,
+          "tags_all": true,
+          "timezone": true,
+          "username": true,
+          "vpc_security_group_ids": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "blue_green_update": [],
+          "listener_endpoint": [],
+          "master_user_secret": [],
+          "password": true,
+          "password_wo": true,
+          "replicas": [],
+          "restore_to_point_in_time": [],
+          "s3_import": [],
+          "tags_all": {},
+          "vpc_security_group_ids": []
+        }
+      }
+    },
+    {
+      "address": "aws_db_subnet_group.default",
+      "mode": "managed",
+      "type": "aws_db_subnet_group",
+      "name": "default",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "description": "Subnet for the hydrogen RDS",
+          "name": "smarla-sg-hydrogen",
+          "region": "eu-west-1",
+          "tags": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "name_prefix": true,
+          "subnet_ids": true,
+          "supported_network_types": true,
+          "tags_all": true,
+          "vpc_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "subnet_ids": [],
+          "supported_network_types": [],
+          "tags_all": {}
+        }
+      }
+    },
+    {
+      "address": "aws_elastic_beanstalk_application.application",
+      "mode": "managed",
+      "type": "aws_elastic_beanstalk_application",
+      "name": "application",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "appversion_lifecycle": [],
+          "description": "Beanstalk application for environment hydrogen",
+          "name": "application-hydrogen",
+          "region": "eu-west-1",
+          "tags": null
+        },
+        "after_unknown": {
+          "appversion_lifecycle": [],
+          "arn": true,
+          "id": true,
+          "tags_all": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "appversion_lifecycle": [],
+          "tags_all": {}
+        }
+      }
+    },
+    {
+      "address": "aws_elastic_beanstalk_environment.environment",
+      "mode": "managed",
+      "type": "aws_elastic_beanstalk_environment",
+      "name": "environment",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "application": "application-hydrogen",
+          "description": null,
+          "name": "hydrogen",
+          "poll_interval": null,
+          "region": "eu-west-1",
+          "setting": [],
+          "solution_stack_name": "64bit Amazon Linux 2016.03 v2.1.3 running Node.js",
+          "tags": null,
+          "template_name": null,
+          "tier": "WebServer",
+          "wait_for_ready_timeout": "20m"
+        },
+        "after_unknown": {
+          "all_settings": true,
+          "arn": true,
+          "autoscaling_groups": true,
+          "cname": true,
+          "cname_prefix": true,
+          "endpoint_url": true,
+          "id": true,
+          "instances": true,
+          "launch_configurations": true,
+          "load_balancers": true,
+          "platform_arn": true,
+          "queues": true,
+          "setting": [],
+          "tags_all": true,
+          "triggers": true,
+          "version_label": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "all_settings": [],
+          "autoscaling_groups": [],
+          "instances": [],
+          "launch_configurations": [],
+          "load_balancers": [],
+          "queues": [],
+          "setting": [],
+          "tags_all": {},
+          "triggers": []
+        }
+      }
+    },
+    {
+      "address": "aws_iam_role.smarla_login_iam",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "smarla_login_iam",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"},\"Sid\":\"\"}],\"Version\":\"2012-10-17\"}",
+          "description": null,
+          "force_detach_policies": false,
+          "max_session_duration": 3600,
+          "name": "iam_for_lambda",
+          "path": "/",
+          "permissions_boundary": null,
+          "tags": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "create_date": true,
+          "id": true,
+          "inline_policy": true,
+          "managed_policy_arns": true,
+          "name_prefix": true,
+          "tags_all": true,
+          "unique_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "inline_policy": [],
+          "managed_policy_arns": [],
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null
+        }
+      }
+    },
+    {
+      "address": "aws_internet_gateway.internet",
+      "mode": "managed",
+      "type": "aws_internet_gateway",
+      "name": "internet",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "region": "eu-west-1",
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "owner_id": true,
+          "tags_all": true,
+          "vpc_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags_all": {}
+        }
+      }
+    },
+    {
+      "address": "aws_nat_gateway.default",
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "default",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "allocation_id": null,
+          "connectivity_type": "public",
+          "region": "eu-west-1",
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "association_id": true,
+          "id": true,
+          "network_interface_id": true,
+          "private_ip": true,
+          "public_ip": true,
+          "secondary_allocation_ids": true,
+          "secondary_private_ip_address_count": true,
+          "secondary_private_ip_addresses": true,
+          "subnet_id": true,
+          "tags_all": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "secondary_allocation_ids": [],
+          "secondary_private_ip_addresses": [],
+          "tags_all": {}
+        }
+      }
+    },
+    {
+      "address": "aws_route.private_internet",
+      "mode": "managed",
+      "type": "aws_route",
+      "name": "private_internet",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "carrier_gateway_id": null,
+          "core_network_arn": null,
+          "destination_cidr_block": "0.0.0.0/0",
+          "destination_ipv6_cidr_block": null,
+          "destination_prefix_list_id": null,
+          "egress_only_gateway_id": null,
+          "gateway_id": null,
+          "local_gateway_id": null,
+          "region": "eu-west-1",
+          "timeouts": null,
+          "transit_gateway_id": null,
+          "vpc_endpoint_id": null,
+          "vpc_peering_connection_id": null
+        },
+        "after_unknown": {
+          "id": true,
+          "instance_id": true,
+          "instance_owner_id": true,
+          "nat_gateway_id": true,
+          "network_interface_id": true,
+          "origin": true,
+          "route_table_id": true,
+          "state": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {},
+        "after_identity": {
+          "account_id": null,
+          "destination_cidr_block": null,
+          "destination_ipv6_cidr_block": null,
+          "destination_prefix_list_id": null,
+          "region": null,
+          "route_table_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route.public_internet",
+      "mode": "managed",
+      "type": "aws_route",
+      "name": "public_internet",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "carrier_gateway_id": null,
+          "core_network_arn": null,
+          "destination_cidr_block": "0.0.0.0/0",
+          "destination_ipv6_cidr_block": null,
+          "destination_prefix_list_id": null,
+          "egress_only_gateway_id": null,
+          "local_gateway_id": null,
+          "nat_gateway_id": null,
+          "region": "eu-west-1",
+          "timeouts": null,
+          "transit_gateway_id": null,
+          "vpc_endpoint_id": null,
+          "vpc_peering_connection_id": null
+        },
+        "after_unknown": {
+          "gateway_id": true,
+          "id": true,
+          "instance_id": true,
+          "instance_owner_id": true,
+          "network_interface_id": true,
+          "origin": true,
+          "route_table_id": true,
+          "state": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {},
+        "after_identity": {
+          "account_id": null,
+          "destination_cidr_block": null,
+          "destination_ipv6_cidr_block": null,
+          "destination_prefix_list_id": null,
+          "region": null,
+          "route_table_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.pesama_main",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "pesama_main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "pesama.org",
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 3600,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": true,
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.pesama_www",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "pesama_www",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "www.pesama.org",
+          "records": [
+            "pesama.org"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 3600,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.smarla_connect-ns",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "smarla_connect-ns",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "connect.smarla.com",
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 60,
+          "type": "NS",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": true,
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.smarla_main-eb",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "smarla_main-eb",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "smarla.com",
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 3600,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": true,
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.smarla_www-eb",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "smarla_www-eb",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "www.smarla.com",
+          "records": [
+            "smarla.com"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 3600,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_zone.pesama_main",
+      "mode": "managed",
+      "type": "aws_route53_zone",
+      "name": "pesama_main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "comment": "Managed by Terraform",
+          "delegation_set_id": null,
+          "force_destroy": false,
+          "name": "pesama.org",
+          "tags": null,
+          "timeouts": null,
+          "vpc": []
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "name_servers": true,
+          "primary_name_server": true,
+          "tags_all": true,
+          "vpc": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "name_servers": [],
+          "tags_all": {},
+          "vpc": []
+        }
+      }
+    },
+    {
+      "address": "aws_route53_zone.smarla_connect",
+      "mode": "managed",
+      "type": "aws_route53_zone",
+      "name": "smarla_connect",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "comment": "Managed by Terraform",
+          "delegation_set_id": null,
+          "force_destroy": false,
+          "name": "connect.smarla.com",
+          "tags": null,
+          "timeouts": null,
+          "vpc": []
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "name_servers": true,
+          "primary_name_server": true,
+          "tags_all": true,
+          "vpc": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "name_servers": [],
+          "tags_all": {},
+          "vpc": []
+        }
+      }
+    },
+    {
+      "address": "aws_route53_zone.smarla_main",
+      "mode": "managed",
+      "type": "aws_route53_zone",
+      "name": "smarla_main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "comment": "Managed by Terraform",
+          "delegation_set_id": null,
+          "force_destroy": false,
+          "name": "smarla.com",
+          "tags": null,
+          "timeouts": null,
+          "vpc": []
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "name_servers": true,
+          "primary_name_server": true,
+          "tags_all": true,
+          "vpc": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "name_servers": [],
+          "tags_all": {},
+          "vpc": []
+        }
+      }
+    },
+    {
+      "address": "aws_route_table.private",
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "private",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "region": "eu-west-1",
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "owner_id": true,
+          "propagating_vgws": true,
+          "route": true,
+          "tags_all": true,
+          "vpc_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "propagating_vgws": [],
+          "route": [],
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "id": null,
+          "region": null
+        }
+      }
+    },
+    {
+      "address": "aws_route_table.public",
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "public",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "region": "eu-west-1",
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "owner_id": true,
+          "propagating_vgws": true,
+          "route": true,
+          "tags_all": true,
+          "vpc_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "propagating_vgws": [],
+          "route": [],
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "id": null,
+          "region": null
+        }
+      }
+    },
+    {
+      "address": "aws_route_table_association.private",
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "private",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "gateway_id": null,
+          "region": "eu-west-1",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "route_table_id": true,
+          "subnet_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_route_table_association.public",
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "public",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "gateway_id": null,
+          "region": "eu-west-1",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "route_table_id": true,
+          "subnet_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "aws_subnet.private",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "private",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "assign_ipv6_address_on_creation": false,
+          "availability_zone": "eu-west-1a",
+          "cidr_block": "10.0.0.0/16",
+          "customer_owned_ipv4_pool": null,
+          "enable_dns64": false,
+          "enable_lni_at_device_index": null,
+          "enable_resource_name_dns_a_record_on_launch": false,
+          "enable_resource_name_dns_aaaa_record_on_launch": false,
+          "ipv6_cidr_block": null,
+          "ipv6_native": false,
+          "map_customer_owned_ip_on_launch": null,
+          "map_public_ip_on_launch": false,
+          "outpost_arn": null,
+          "region": "eu-west-1",
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "availability_zone_id": true,
+          "id": true,
+          "ipv6_cidr_block_association_id": true,
+          "owner_id": true,
+          "private_dns_hostname_type_on_launch": true,
+          "tags_all": true,
+          "vpc_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "id": null,
+          "region": null
+        }
+      }
+    },
+    {
+      "address": "aws_subnet.public",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "public",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "assign_ipv6_address_on_creation": false,
+          "availability_zone": "eu-west-1a",
+          "cidr_block": "10.0.0.0/24",
+          "customer_owned_ipv4_pool": null,
+          "enable_dns64": false,
+          "enable_lni_at_device_index": null,
+          "enable_resource_name_dns_a_record_on_launch": false,
+          "enable_resource_name_dns_aaaa_record_on_launch": false,
+          "ipv6_cidr_block": null,
+          "ipv6_native": false,
+          "map_customer_owned_ip_on_launch": null,
+          "map_public_ip_on_launch": false,
+          "outpost_arn": null,
+          "region": "eu-west-1",
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "availability_zone_id": true,
+          "id": true,
+          "ipv6_cidr_block_association_id": true,
+          "owner_id": true,
+          "private_dns_hostname_type_on_launch": true,
+          "tags_all": true,
+          "vpc_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "id": null,
+          "region": null
+        }
+      }
+    },
+    {
+      "address": "aws_vpc.smarla",
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "smarla",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "assign_generated_ipv6_cidr_block": null,
+          "cidr_block": "10.0.0.0/16",
+          "enable_dns_hostnames": true,
+          "enable_dns_support": true,
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_ipam_pool_id": null,
+          "ipv6_netmask_length": null,
+          "region": "eu-west-1",
+          "tags": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "default_network_acl_id": true,
+          "default_route_table_id": true,
+          "default_security_group_id": true,
+          "dhcp_options_id": true,
+          "enable_network_address_usage_metrics": true,
+          "id": true,
+          "ipv6_association_id": true,
+          "ipv6_cidr_block": true,
+          "ipv6_cidr_block_network_border_group": true,
+          "main_route_table_id": true,
+          "owner_id": true,
+          "tags_all": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "id": null,
+          "region": null
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "aws": {
+        "name": "aws",
+        "full_name": "registry.terraform.io/hashicorp/aws",
+        "expressions": {
+          "access_key": {
+            "references": [
+              "var.access_key"
+            ]
+          },
+          "region": {
+            "references": [
+              "var.region"
+            ]
+          },
+          "secret_key": {
+            "references": [
+              "var.secret_key"
+            ]
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "aws_api_gateway_integration_response.login_ko_integration",
+          "mode": "managed",
+          "type": "aws_api_gateway_integration_response",
+          "name": "login_ko_integration",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_api_gateway_resource.auth",
+            "aws_api_gateway_method.login",
+            "aws_api_gateway_method_response.login_ko",
+            "aws_api_gateway_rest_api.connect"
+          ]
+        },
+        {
+          "address": "aws_api_gateway_integration_response.login_ok_integration",
+          "mode": "managed",
+          "type": "aws_api_gateway_integration_response",
+          "name": "login_ok_integration",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_api_gateway_resource.auth",
+            "aws_api_gateway_method.login",
+            "aws_api_gateway_method_response.login_ok",
+            "aws_api_gateway_rest_api.connect"
+          ]
+        },
+        {
+          "address": "aws_api_gateway_method.login",
+          "mode": "managed",
+          "type": "aws_api_gateway_method",
+          "name": "login",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_api_gateway_resource.auth",
+            "aws_api_gateway_rest_api.connect"
+          ]
+        },
+        {
+          "address": "aws_api_gateway_method_response.login_ko",
+          "mode": "managed",
+          "type": "aws_api_gateway_method_response",
+          "name": "login_ko",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_api_gateway_resource.auth",
+            "aws_api_gateway_method.login",
+            "aws_api_gateway_rest_api.connect"
+          ]
+        },
+        {
+          "address": "aws_api_gateway_method_response.login_ok",
+          "mode": "managed",
+          "type": "aws_api_gateway_method_response",
+          "name": "login_ok",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_api_gateway_resource.auth",
+            "aws_api_gateway_method.login",
+            "aws_api_gateway_rest_api.connect"
+          ]
+        },
+        {
+          "address": "aws_api_gateway_resource.auth",
+          "mode": "managed",
+          "type": "aws_api_gateway_resource",
+          "name": "auth",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_api_gateway_rest_api.connect"
+          ]
+        },
+        {
+          "address": "aws_api_gateway_rest_api.connect",
+          "mode": "managed",
+          "type": "aws_api_gateway_rest_api",
+          "name": "connect",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_db_instance.default",
+          "mode": "managed",
+          "type": "aws_db_instance",
+          "name": "default",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_db_subnet_group.default"
+          ]
+        },
+        {
+          "address": "aws_db_subnet_group.default",
+          "mode": "managed",
+          "type": "aws_db_subnet_group",
+          "name": "default",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_subnet.private"
+          ]
+        },
+        {
+          "address": "aws_elastic_beanstalk_application.application",
+          "mode": "managed",
+          "type": "aws_elastic_beanstalk_application",
+          "name": "application",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_elastic_beanstalk_environment.environment",
+          "mode": "managed",
+          "type": "aws_elastic_beanstalk_environment",
+          "name": "environment",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_elastic_beanstalk_application.application"
+          ]
+        },
+        {
+          "address": "aws_iam_role.smarla_login_iam",
+          "mode": "managed",
+          "type": "aws_iam_role",
+          "name": "smarla_login_iam",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_internet_gateway.internet",
+          "mode": "managed",
+          "type": "aws_internet_gateway",
+          "name": "internet",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_vpc.smarla"
+          ]
+        },
+        {
+          "address": "aws_nat_gateway.default",
+          "mode": "managed",
+          "type": "aws_nat_gateway",
+          "name": "default",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_vpc.smarla"
+          ]
+        },
+        {
+          "address": "aws_route.private_internet",
+          "mode": "managed",
+          "type": "aws_route",
+          "name": "private_internet",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route_table.private",
+            "aws_nat_gateway.default"
+          ]
+        },
+        {
+          "address": "aws_route.public_internet",
+          "mode": "managed",
+          "type": "aws_route",
+          "name": "public_internet",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_internet_gateway.internet",
+            "aws_route_table.public"
+          ]
+        },
+        {
+          "address": "aws_route53_record.pesama_main",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "pesama_main",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.smarla_main",
+            "aws_elastic_beanstalk_environment.environment"
+          ]
+        },
+        {
+          "address": "aws_route53_record.pesama_www",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "pesama_www",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_record.pesama_main",
+            "aws_route53_zone.pesama_main"
+          ]
+        },
+        {
+          "address": "aws_route53_record.smarla_connect-ns",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "smarla_connect-ns",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.smarla_main",
+            "aws_route53_zone.smarla_connect"
+          ]
+        },
+        {
+          "address": "aws_route53_record.smarla_main-eb",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "smarla_main-eb",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.smarla_main",
+            "aws_elastic_beanstalk_environment.environment"
+          ]
+        },
+        {
+          "address": "aws_route53_record.smarla_www-eb",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "smarla_www-eb",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.smarla_main",
+            "aws_route53_record.smarla_main-eb"
+          ]
+        },
+        {
+          "address": "aws_route53_zone.pesama_main",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "pesama_main",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_route53_zone.smarla_connect",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "smarla_connect",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_route53_zone.smarla_main",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "smarla_main",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_route_table.private",
+          "mode": "managed",
+          "type": "aws_route_table",
+          "name": "private",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_vpc.smarla"
+          ]
+        },
+        {
+          "address": "aws_route_table.public",
+          "mode": "managed",
+          "type": "aws_route_table",
+          "name": "public",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_vpc.smarla"
+          ]
+        },
+        {
+          "address": "aws_route_table_association.private",
+          "mode": "managed",
+          "type": "aws_route_table_association",
+          "name": "private",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_subnet.private",
+            "aws_route_table.private"
+          ]
+        },
+        {
+          "address": "aws_route_table_association.public",
+          "mode": "managed",
+          "type": "aws_route_table_association",
+          "name": "public",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_subnet.public",
+            "aws_route_table.public"
+          ]
+        },
+        {
+          "address": "aws_subnet.private",
+          "mode": "managed",
+          "type": "aws_subnet",
+          "name": "private",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_vpc.smarla"
+          ]
+        },
+        {
+          "address": "aws_subnet.public",
+          "mode": "managed",
+          "type": "aws_subnet",
+          "name": "public",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_vpc.smarla"
+          ]
+        },
+        {
+          "address": "aws_vpc.smarla",
+          "mode": "managed",
+          "type": "aws_vpc",
+          "name": "smarla",
+          "provider_config_key": "aws",
+          "depends_on": []
+        }
+      ],
+      "variables": {
+        "access_key": {},
+        "azs": {
+          "default": "eu-west-1a,eu-west-1b"
+        },
+        "db_engine_version": {
+          "default": "9.5.2"
+        },
+        "db_instance_class": {
+          "default": "db.t2.medium"
+        },
+        "db_name": {},
+        "db_password": {},
+        "db_username": {},
+        "environment": {
+          "default": "hydrogen"
+        },
+        "private_subnet_cidr": {
+          "default": "10.0.0.0/16,10.1.0.0/16,10.2.0.0/16"
+        },
+        "region": {
+          "default": "eu-west-1"
+        },
+        "secret_key": {},
+        "vpc_cidr": {
+          "default": "10.0.0.0/8"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "aws_api_gateway_method_response.login_ko",
+      "attribute": [
+        "status_code"
+      ]
+    },
+    {
+      "resource": "aws_api_gateway_method_response.login_ok",
+      "attribute": [
+        "status_code"
+      ]
+    },
+    {
+      "resource": "aws_elastic_beanstalk_environment.environment",
+      "attribute": [
+        "cname"
+      ]
+    },
+    {
+      "resource": "aws_route53_record.pesama_main",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "aws_api_gateway_rest_api.connect",
+      "attribute": [
+        "root_resource_id"
+      ]
+    },
+    {
+      "resource": "aws_internet_gateway.internet",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_route53_record.smarla_main-eb",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.smarla_connect",
+      "attribute": [
+        "name_servers",
+        0
+      ]
+    },
+    {
+      "resource": "aws_api_gateway_resource.auth",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.pesama_main",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_db_subnet_group.default",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.smarla_connect",
+      "attribute": [
+        "name_servers",
+        3
+      ]
+    },
+    {
+      "resource": "aws_route_table.public",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.smarla_connect",
+      "attribute": [
+        "name_servers",
+        2
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.smarla_main",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_api_gateway_rest_api.connect",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_nat_gateway.default",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_subnet.public",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_elastic_beanstalk_application.application",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "aws_vpc.smarla",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.smarla_connect",
+      "attribute": [
+        "name_servers",
+        1
+      ]
+    },
+    {
+      "resource": "aws_route_table.private",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "aws_api_gateway_method.login",
+      "attribute": [
+        "http_method"
+      ]
+    },
+    {
+      "resource": "aws_subnet.private",
+      "attribute": [
+        "id"
+      ]
+    }
+  ],
+  "timestamp": "2025-11-23T10:59:42Z",
+  "applyable": true,
+  "complete": true,
+  "errored": false,
+  "prior_state": {
+    "format_version": "1.0",
+    "terraform_version": "1.13.1",
+    "values": {
+      "outputs": {},
+      "root_module": {
+        "resources": [
+          {
+            "address": "aws_api_gateway_integration_response.login_ko_integration",
+            "mode": "managed",
+            "type": "aws_api_gateway_integration_response",
+            "name": "login_ko_integration",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_api_gateway_resource.auth",
+              "aws_api_gateway_method.login",
+              "aws_api_gateway_method_response.login_ko",
+              "aws_api_gateway_rest_api.connect"
+            ]
+          },
+          {
+            "address": "aws_api_gateway_integration_response.login_ok_integration",
+            "mode": "managed",
+            "type": "aws_api_gateway_integration_response",
+            "name": "login_ok_integration",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_api_gateway_resource.auth",
+              "aws_api_gateway_method.login",
+              "aws_api_gateway_method_response.login_ok",
+              "aws_api_gateway_rest_api.connect"
+            ]
+          },
+          {
+            "address": "aws_api_gateway_method.login",
+            "mode": "managed",
+            "type": "aws_api_gateway_method",
+            "name": "login",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_api_gateway_resource.auth",
+              "aws_api_gateway_rest_api.connect"
+            ]
+          },
+          {
+            "address": "aws_api_gateway_method_response.login_ko",
+            "mode": "managed",
+            "type": "aws_api_gateway_method_response",
+            "name": "login_ko",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_api_gateway_resource.auth",
+              "aws_api_gateway_method.login",
+              "aws_api_gateway_rest_api.connect"
+            ]
+          },
+          {
+            "address": "aws_api_gateway_method_response.login_ok",
+            "mode": "managed",
+            "type": "aws_api_gateway_method_response",
+            "name": "login_ok",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_api_gateway_resource.auth",
+              "aws_api_gateway_method.login",
+              "aws_api_gateway_rest_api.connect"
+            ]
+          },
+          {
+            "address": "aws_api_gateway_resource.auth",
+            "mode": "managed",
+            "type": "aws_api_gateway_resource",
+            "name": "auth",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_api_gateway_rest_api.connect"
+            ]
+          },
+          {
+            "address": "aws_api_gateway_rest_api.connect",
+            "mode": "managed",
+            "type": "aws_api_gateway_rest_api",
+            "name": "connect",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_db_instance.default",
+            "mode": "managed",
+            "type": "aws_db_instance",
+            "name": "default",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_db_subnet_group.default"
+            ]
+          },
+          {
+            "address": "aws_db_subnet_group.default",
+            "mode": "managed",
+            "type": "aws_db_subnet_group",
+            "name": "default",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_subnet.private"
+            ]
+          },
+          {
+            "address": "aws_elastic_beanstalk_application.application",
+            "mode": "managed",
+            "type": "aws_elastic_beanstalk_application",
+            "name": "application",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_elastic_beanstalk_environment.environment",
+            "mode": "managed",
+            "type": "aws_elastic_beanstalk_environment",
+            "name": "environment",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_elastic_beanstalk_application.application"
+            ]
+          },
+          {
+            "address": "aws_iam_role.smarla_login_iam",
+            "mode": "managed",
+            "type": "aws_iam_role",
+            "name": "smarla_login_iam",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_internet_gateway.internet",
+            "mode": "managed",
+            "type": "aws_internet_gateway",
+            "name": "internet",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_vpc.smarla"
+            ]
+          },
+          {
+            "address": "aws_nat_gateway.default",
+            "mode": "managed",
+            "type": "aws_nat_gateway",
+            "name": "default",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_vpc.smarla"
+            ]
+          },
+          {
+            "address": "aws_route.private_internet",
+            "mode": "managed",
+            "type": "aws_route",
+            "name": "private_internet",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route_table.private",
+              "aws_nat_gateway.default"
+            ]
+          },
+          {
+            "address": "aws_route.public_internet",
+            "mode": "managed",
+            "type": "aws_route",
+            "name": "public_internet",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_internet_gateway.internet",
+              "aws_route_table.public"
+            ]
+          },
+          {
+            "address": "aws_route53_record.pesama_main",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "pesama_main",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.smarla_main",
+              "aws_elastic_beanstalk_environment.environment"
+            ]
+          },
+          {
+            "address": "aws_route53_record.pesama_www",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "pesama_www",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_record.pesama_main",
+              "aws_route53_zone.pesama_main"
+            ]
+          },
+          {
+            "address": "aws_route53_record.smarla_connect-ns",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "smarla_connect-ns",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.smarla_main",
+              "aws_route53_zone.smarla_connect"
+            ]
+          },
+          {
+            "address": "aws_route53_record.smarla_main-eb",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "smarla_main-eb",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.smarla_main",
+              "aws_elastic_beanstalk_environment.environment"
+            ]
+          },
+          {
+            "address": "aws_route53_record.smarla_www-eb",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "smarla_www-eb",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.smarla_main",
+              "aws_route53_record.smarla_main-eb"
+            ]
+          },
+          {
+            "address": "aws_route53_zone.pesama_main",
+            "mode": "managed",
+            "type": "aws_route53_zone",
+            "name": "pesama_main",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_route53_zone.smarla_connect",
+            "mode": "managed",
+            "type": "aws_route53_zone",
+            "name": "smarla_connect",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_route53_zone.smarla_main",
+            "mode": "managed",
+            "type": "aws_route53_zone",
+            "name": "smarla_main",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_route_table.private",
+            "mode": "managed",
+            "type": "aws_route_table",
+            "name": "private",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_vpc.smarla"
+            ]
+          },
+          {
+            "address": "aws_route_table.public",
+            "mode": "managed",
+            "type": "aws_route_table",
+            "name": "public",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_vpc.smarla"
+            ]
+          },
+          {
+            "address": "aws_route_table_association.private",
+            "mode": "managed",
+            "type": "aws_route_table_association",
+            "name": "private",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_subnet.private",
+              "aws_route_table.private"
+            ]
+          },
+          {
+            "address": "aws_route_table_association.public",
+            "mode": "managed",
+            "type": "aws_route_table_association",
+            "name": "public",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_subnet.public",
+              "aws_route_table.public"
+            ]
+          },
+          {
+            "address": "aws_subnet.private",
+            "mode": "managed",
+            "type": "aws_subnet",
+            "name": "private",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_vpc.smarla"
+            ]
+          },
+          {
+            "address": "aws_subnet.public",
+            "mode": "managed",
+            "type": "aws_subnet",
+            "name": "public",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_vpc.smarla"
+            ]
+          },
+          {
+            "address": "aws_vpc.smarla",
+            "mode": "managed",
+            "type": "aws_vpc",
+            "name": "smarla",
+            "provider_config_key": "aws",
+            "depends_on": []
+          }
+        ]
+      }
+    }
+  }
+}

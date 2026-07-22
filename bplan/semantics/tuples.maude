@@ -1,0 +1,257 @@
+
+fmod TUPLE is
+    sorts TupleItem Tuple .
+    subsort TupleItem < Tuple .
+    op etuple : -> Tuple [ctor] .
+    op _->_ : [Tuple] [Tuple] -> [Tuple] [ctor assoc id: etuple prec 21 format (d d s d)] .
+endfm
+
+view TupleItem from TRIV to TUPLE is
+  sort Elt to TupleItem .
+endv
+
+view Tuple from TRIV to TUPLE is
+  sort Elt to Tuple .
+endv
+
+***
+*** Imported SET{X :: TRIV} from prelude.maude with the folling modifications
+***     - rename Set{X} to TupleSet and NeSet{X} to TupleNeSet
+***     - keep only one __ constructor at the kind level for specialized TupleN{}
+***     - rename empty with eps and make it also an EmptySet so that eps have a least sort
+***     - rewrite $intersect and $diff to remove if_then_else_ because Tuple and EmptySet have no common subsort
+***
+
+fmod TUPLE-SET is
+    protecting EXT-BOOL .
+    protecting NAT .
+    pr INT .
+    pr TUPLE .
+
+    sorts TupleNeSet TupleSet .
+    subsort Tuple < TupleNeSet < TupleSet .
+
+    sort EmptySet .
+    subsort EmptySet < TupleSet .
+    op eps : -> EmptySet [ctor] .
+    op eps : -> TupleSet [ctor] .
+    op __ : [TupleSet] [TupleSet] -> [TupleSet] [ctor assoc comm id: eps prec 121 format (d nis d)] .
+
+    var E : Tuple .
+    var N : TupleNeSet .
+    vars A S S' : TupleSet .
+    var C : Nat .
+
+    eq N N = N .
+
+    op ifthenelse : Bool TupleSet TupleSet -> TupleSet .
+    eq ifthenelse(true, S, S') = S .
+    eq ifthenelse(false, S, S') = S' .
+
+    op insert : Tuple TupleSet -> TupleSet .
+    eq insert(E, S) = E S .
+
+    op delete : Tuple TupleSet -> TupleSet .
+    eq delete(E, (E S)) = delete(E, S) .
+    eq delete(E, S) = S [owise] .
+
+    op _in_ : Tuple TupleSet -> Bool .
+    eq E in (E S) = true .
+    eq E in S = false [owise] .
+
+    op |_| : TupleSet -> Nat .
+    op |_| : TupleNeSet -> NzNat .
+    eq | S | = $card(S, 0) .
+
+    op $card : TupleSet Nat -> Nat .
+    eq $card(eps, C) = C .
+    eq $card((N N S), C) = $card((N S), C) .
+    eq $card((E S), C) = $card(S, C + 1) [owise] .
+
+    op union : TupleSet TupleSet -> TupleSet .
+    op union : TupleNeSet TupleSet -> TupleNeSet .
+    op union : TupleSet TupleNeSet -> TupleNeSet .
+    eq union(S, S') = S S' .
+
+    op intersection : TupleSet TupleSet -> TupleSet .
+    eq intersection(S, eps) = eps .
+    eq intersection(S, N) = $intersect(S, N, eps) .
+
+    op $intersect : TupleSet TupleSet TupleSet -> TupleSet .
+    eq $intersect(eps, S', A) = A .
+    eq $intersect((E S), (E S'), A) = $intersect(S, (E S'), (E A)) .
+    eq $intersect((E S), S', A) = $intersect(S, (E S'), A) [owise] .
+
+    op _\_ : TupleSet TupleSet -> TupleSet  [gather (E e)] .
+    eq S \ eps = S .
+    eq S \ N = $diff(S, N, eps) .
+
+    op $diff : TupleSet TupleSet TupleSet -> TupleSet .
+    eq $diff(eps, S', A) = A .
+    eq $diff((E S), (E S'), A) = $diff(S, (E S'), A) .
+    eq $diff((E S), S', A) = $diff(S, (E S'), (E A)) [owise] .
+
+    op _subset_ : TupleSet TupleSet -> Bool .
+    eq eps subset S' = true .
+    eq (E S) subset S' = E in S' and-then S subset S' .
+
+    op _psubset_ : TupleSet TupleSet -> Bool .
+    eq S psubset S' = S =/= S' and-then S subset S' .
+
+    --- Our custom functions manipulating tuples inside a set
+    --- FIXME another module ?
+
+    vars I J : Nat .
+    vars It : TupleItem .
+    vars T U : Tuple .
+    vars Ts Us : TupleSet .
+
+    --- op project : TupleItem TupleSet -> TupleSet .
+    --- eq project(It, ((It -> T) Ts)) = T project(It, Ts) .
+    --- eq project(It, Ts) = eps [owise] .
+
+    op project : TupleItem TupleSet -> TupleSet .
+    op project : Tuple TupleSet -> TupleSet .
+    eq project(It, ((It -> T) Ts)) = T project(It, Ts) .
+    --- eq project(It, Ts) = eps [owise] .
+    eq project(U, ((U -> T) Ts)) = T project(U, Ts) .
+    eq project(U, Ts) = eps [owise] .
+
+    op projectAll : TupleSet TupleSet -> TupleSet .
+    eq projectAll((T Ts), Us) = project(T, Us) projectAll(Ts, Us) .
+    eq projectAll(eps, Us) = eps [owise] .
+
+    --- cartesian product of Tuples x Tuples or Tuple x Tuples
+    op times : TupleSet TupleSet -> TupleSet .
+    op times : Tuple TupleSet -> TupleSet .
+    eq times(eps, Us) = eps .
+    eq times(Ts, eps) = eps .
+    eq times(T, (U Ts)) = (T -> U) times(T, Ts) .
+    eq times((T Ts), Us) = times(T, Us) times(Ts, Us) .
+
+    --- slice a single tuple
+    op slice : Nat Nat Tuple -> Tuple .
+    cq slice(I, J, T) = take(J - I, skip(I, T)) if J - I < $len(T) .
+    eq slice(I, J, T) = eps [owise] .
+
+    --- skip the J first elements of a Tuple
+    op skip : Nat Tuple -> Tuple .
+    eq skip(0, T) = T .
+    eq skip(J, It -> T) = skip(J - 1, T) .
+
+    --- take the J first elements of a Tuple
+    op take : Nat Tuple -> Tuple .
+    eq take(1, It) = It .
+    eq take(1, It -> T) = It .
+    eq take(J, It -> T) = It -> take(J - 1, T) [owise] .
+
+    --- slice each Tuple in a TupleSet
+    op sliceAll : Nat Nat TupleSet -> TupleSet .
+    eq sliceAll(I, J, eps) = eps .
+    eq sliceAll(I, J, (T Ts)) = slice(I, J, T) sliceAll(I, J, Ts) .
+
+    --- skip the J first elements of each Tuple in a TupleSet
+    op skipAll : Nat TupleSet -> TupleSet .
+    eq skipAll(J, eps) = eps .
+    eq skipAll(J, (T Ts)) = skip(J, T) skipAll(J, Ts) .
+
+    --- take the J first elements of each Tuple in a TupleSet
+    op takeAll : Nat TupleSet -> TupleSet .
+    eq takeAll(J, eps) = eps .
+    eq takeAll(J, (T Ts)) = take(J, T) takeAll(J, Ts) .
+
+    --- the length of tuples within a set of tuples
+    op len : TupleSet -> Nat .
+    eq len((T Ts)) = $len(T) .
+
+    --- the len of a single tuple
+    op $len : Tuple -> Nat .
+    eq $len(It) = 1 .
+    eq $len(T -> It) = $len(T) + 1 .
+
+endfm
+
+fmod TSET{X :: TRIV} is
+    pr TUPLE-SET .
+    sort NeTSet{X} TSet{X} .
+    subsort X$Elt < TupleItem < Tuple < NeTSet{X} < TSet{X} .
+    subsort NeTSet{X} < TupleNeSet .
+    subsort EmptySet < TSet{X} < TupleSet .
+    mb _:X$Elt Ts:TSet{X} : NeTSet{X} .
+    --- op __ : TSet{X} TSet{X} ~> TSet{X} [ctor assoc comm id: eps prec 121 format (d d d)] .
+    --- op eps : -> TSet{X} [ctor] .
+endfm
+
+fmod TUPLE2{X :: TRIV, Y :: TRIV} is
+    pr TUPLE .
+    sort Tuple2{X,Y} .
+    subsort X$Elt Y$Elt < TupleItem .
+    subsort Tuple2{X,Y} < Tuple .
+    var Ex : X$Elt .
+    var Ey : Y$Elt .
+    mb Ex -> Ey : Tuple2{X,Y} .
+endfm
+
+fmod TUPLE2-SET{X :: TRIV, Y :: TRIV} is
+    pr TUPLE-SET .
+    pr TUPLE2{X,Y} .
+    sort Tuple2NeSet{X,Y} Tuple2Set{X,Y} .
+    subsort Tuple2{X,Y} < Tuple < Tuple2NeSet{X,Y} < Tuple2Set{X,Y} .
+    subsort Tuple2NeSet{X,Y} < TupleNeSet .
+    subsort EmptySet < Tuple2Set{X,Y} < TupleSet .
+    mb T:Tuple2{X,Y} TSet:Tuple2Set{X,Y} : Tuple2NeSet{X,Y} .
+    --- op eps : -> Tuple2Set{X,Y} [ctor] .
+endfm
+
+fmod TUPLE3{X :: TRIV, Y :: TRIV, Z :: TRIV} is
+    pr TUPLE .
+    --- pr TUPLE2{X,Y} .
+    --- pr TUPLE2{Y,Z} .
+    --- pr TUPLE2{X,Z} .
+    sort Tuple3{X,Y,Z} .
+    subsort X$Elt Y$Elt Z$Elt < TupleItem .
+    subsort Tuple3{X,Y,Z} < Tuple .
+    var Ex : X$Elt .
+    var Ey : Y$Elt .
+    var Ez : Z$Elt .
+    mb Ex -> Ey -> Ez : Tuple3{X,Y,Z} .
+endfm
+
+fmod TUPLE3-SET{X :: TRIV, Y :: TRIV, Z :: TRIV} is
+    pr TUPLE-SET .
+    pr TUPLE3{X,Y,Z} .
+    sort Tuple3NeSet{X,Y,Z} Tuple3Set{X,Y,Z} .
+    subsort Tuple3{X,Y,Z} < Tuple < Tuple3NeSet{X,Y,Z} < Tuple3Set{X,Y,Z} .
+    subsort Tuple3NeSet{X,Y,Z} < TupleNeSet .
+    subsort EmptySet < Tuple3Set{X,Y,Z} < TupleSet .
+    mb T:Tuple3{X,Y,Z} TSet:Tuple3Set{X,Y,Z} : Tuple3NeSet{X,Y,Z} .
+    --- op eps : -> Tuple3Set{X,Y,Z} [ctor] .
+endfm
+
+fmod TUPLE4{X :: TRIV, Y :: TRIV, Z :: TRIV, T :: TRIV} is
+    pr TUPLE .
+    --- pr TUPLE3{Y,Z,T} .
+    --- pr TUPLE3{X,Z,T} .
+    --- pr TUPLE3{X,Y,T} .
+    --- pr TUPLE3{X,Y,Z} .
+    sort Tuple4{X,Y,Z,T} .
+    subsort X$Elt Y$Elt Z$Elt T$Elt < TupleItem .
+    subsort Tuple4{X,Y,Z,T} < Tuple .
+    var Ex : X$Elt .
+    var Ey : Y$Elt .
+    var Ez : Z$Elt .
+    var Et : T$Elt .
+    mb Ex -> Ey -> Ez -> Et : Tuple4{X,Y,Z,T} .
+endfm
+
+fmod TUPLE4-SET{X :: TRIV, Y :: TRIV, Z :: TRIV, T :: TRIV} is
+    pr TUPLE-SET .
+    pr TUPLE4{X,Y,Z,T} .
+    sort Tuple4NeSet{X,Y,Z,T} Tuple4Set{X,Y,Z,T} .
+    subsort Tuple4{X,Y,Z,T} < Tuple < Tuple4NeSet{X,Y,Z,T} < Tuple4Set{X,Y,Z,T} .
+    subsort Tuple4NeSet{X,Y,Z,T} < TupleNeSet .
+    subsort EmptySet < Tuple4Set{X,Y,Z,T} < TupleSet .
+    mb T:Tuple4{X,Y,Z,T} TSet:Tuple4Set{X,Y,Z,T} : Tuple4NeSet{X,Y,Z,T} .
+    --- op eps : -> Tuple4Set{X,Y,Z} [ctor] .
+endfm
+

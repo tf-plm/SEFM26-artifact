@@ -1,0 +1,26 @@
+---
+title: Actions
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart TB
+classDef NO-OP  fill:#F5F5F5;
+classDef CREATE fill:#D5E8D4;
+classDef UPDATE fill:#FFF2CC;
+classDef DELETE fill:#FF9999;
+%% Nodes
+CREATE-'aws_vpc.vpc('aws_vpc.vpc):::CREATE;
+UPDATE-'aws_nat_gateway.private_subnet('aws_nat_gateway.private_subnet):::UPDATE;
+UPDATE-'aws_route_table.public_subnet('aws_route_table.public_subnet):::UPDATE;
+UPDATE-'aws_route_table_association.public_subnet('aws_route_table_association.public_subnet):::UPDATE;
+UPDATE-'aws_subnet.private_subnet('aws_subnet.private_subnet):::UPDATE;
+UPDATE-'aws_subnet.public_subnet('aws_subnet.public_subnet):::UPDATE;
+DELETE-'aws_vpc.vpc('aws_vpc.vpc):::DELETE;
+%% Arcs
+UPDATE-'aws_subnet.public_subnet('aws_subnet.public_subnet) --> UPDATE-'aws_nat_gateway.private_subnet;
+CREATE-'aws_vpc.vpc('aws_vpc.vpc) --> UPDATE-'aws_route_table.public_subnet;
+UPDATE-'aws_subnet.public_subnet('aws_subnet.public_subnet) & UPDATE-'aws_route_table.public_subnet('aws_route_table.public_subnet) --> UPDATE-'aws_route_table_association.public_subnet;
+CREATE-'aws_vpc.vpc('aws_vpc.vpc) --> UPDATE-'aws_subnet.private_subnet;
+CREATE-'aws_vpc.vpc('aws_vpc.vpc) --> UPDATE-'aws_subnet.public_subnet;
+CREATE-'aws_vpc.vpc('aws_vpc.vpc) --> DELETE-'aws_vpc.vpc;

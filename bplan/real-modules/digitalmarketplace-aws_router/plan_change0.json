@@ -1,0 +1,1182 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.13.4",
+  "variables": {
+    "antivirus_api_acm_name": {
+      "value": "val"
+    },
+    "antivirus_api_acm_value": {
+      "value": "val"
+    },
+    "api_acm_name": {
+      "value": "val"
+    },
+    "api_acm_value": {
+      "value": "val"
+    },
+    "assets_acm_name": {
+      "value": "val"
+    },
+    "assets_acm_value": {
+      "value": "val"
+    },
+    "cname_domain": {
+      "value": ""
+    },
+    "domain": {
+      "value": "dom"
+    },
+    "log_retention_days": {
+      "value": 3
+    },
+    "name": {
+      "value": "name"
+    },
+    "search_api_acm_name": {
+      "value": "val"
+    },
+    "search_api_acm_value": {
+      "value": "val"
+    },
+    "www_acm_name": {
+      "value": "val"
+    },
+    "www_acm_value": {
+      "value": "val"
+    }
+  },
+  "planned_values": {
+    "outputs": {
+      "json_log_groups": {
+        "sensitive": false,
+        "type": [
+          "tuple",
+          [
+            "string"
+          ]
+        ],
+        "value": [
+          "name-nginx"
+        ]
+      },
+      "route53_zone_id": {
+        "sensitive": false
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "aws_cloudwatch_log_group.json_logs",
+          "mode": "managed",
+          "type": "aws_cloudwatch_log_group",
+          "name": "json_logs",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "kms_key_id": null,
+            "name": "name-nginx",
+            "region": "eu-west-1",
+            "retention_in_days": 3,
+            "skip_destroy": false,
+            "tags": null
+          },
+          "sensitive_values": {
+            "tags_all": {}
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "region": null
+          }
+        },
+        {
+          "address": "aws_route53_record.antivirus_api_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "antivirus_api_acm_validation",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "valdom",
+            "records": [
+              "val"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 86400,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.api_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "api_acm_validation",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "valdom",
+            "records": [
+              "val"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 86400,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.assets_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "assets_acm_validation",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "valdom",
+            "records": [
+              "val"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 86400,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.search_api_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "search_api_acm_validation",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "valdom",
+            "records": [
+              "val"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 86400,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_record.www_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "www_acm_validation",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 2,
+          "values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "health_check_id": null,
+            "latency_routing_policy": [],
+            "multivalue_answer_routing_policy": null,
+            "name": "valdom",
+            "records": [
+              "val"
+            ],
+            "set_identifier": null,
+            "timeouts": null,
+            "ttl": 86400,
+            "type": "CNAME",
+            "weighted_routing_policy": []
+          },
+          "sensitive_values": {
+            "alias": [],
+            "cidr_routing_policy": [],
+            "failover_routing_policy": [],
+            "geolocation_routing_policy": [],
+            "geoproximity_routing_policy": [],
+            "latency_routing_policy": [],
+            "records": [
+              false
+            ],
+            "weighted_routing_policy": []
+          },
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": null,
+            "name": null,
+            "set_identifier": null,
+            "type": null,
+            "zone_id": null
+          }
+        },
+        {
+          "address": "aws_route53_zone.root",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "root",
+          "provider_name": "registry.terraform.io/hashicorp/aws",
+          "schema_version": 0,
+          "values": {
+            "comment": "Managed by Terraform",
+            "delegation_set_id": null,
+            "force_destroy": false,
+            "name": "dom",
+            "tags": null,
+            "timeouts": null,
+            "vpc": []
+          },
+          "sensitive_values": {
+            "name_servers": [],
+            "tags_all": {},
+            "vpc": []
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "aws_cloudwatch_log_group.json_logs",
+      "mode": "managed",
+      "type": "aws_cloudwatch_log_group",
+      "name": "json_logs",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "kms_key_id": null,
+          "name": "name-nginx",
+          "region": "eu-west-1",
+          "retention_in_days": 3,
+          "skip_destroy": false,
+          "tags": null
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "log_group_class": true,
+          "name_prefix": true,
+          "tags_all": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags_all": {}
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "region": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.antivirus_api_acm_validation",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "antivirus_api_acm_validation",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "valdom",
+          "records": [
+            "val"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 86400,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.api_acm_validation",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "api_acm_validation",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "valdom",
+          "records": [
+            "val"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 86400,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.assets_acm_validation",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "assets_acm_validation",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "valdom",
+          "records": [
+            "val"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 86400,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.search_api_acm_validation",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "search_api_acm_validation",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "valdom",
+          "records": [
+            "val"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 86400,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_record.www_acm_validation",
+      "mode": "managed",
+      "type": "aws_route53_record",
+      "name": "www_acm_validation",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "health_check_id": null,
+          "latency_routing_policy": [],
+          "multivalue_answer_routing_policy": null,
+          "name": "valdom",
+          "records": [
+            "val"
+          ],
+          "set_identifier": null,
+          "timeouts": null,
+          "ttl": 86400,
+          "type": "CNAME",
+          "weighted_routing_policy": []
+        },
+        "after_unknown": {
+          "alias": [],
+          "allow_overwrite": true,
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "fqdn": true,
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "id": true,
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "alias": [],
+          "cidr_routing_policy": [],
+          "failover_routing_policy": [],
+          "geolocation_routing_policy": [],
+          "geoproximity_routing_policy": [],
+          "latency_routing_policy": [],
+          "records": [
+            false
+          ],
+          "weighted_routing_policy": []
+        },
+        "after_identity": {
+          "account_id": null,
+          "name": null,
+          "set_identifier": null,
+          "type": null,
+          "zone_id": null
+        }
+      }
+    },
+    {
+      "address": "aws_route53_zone.root",
+      "mode": "managed",
+      "type": "aws_route53_zone",
+      "name": "root",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "comment": "Managed by Terraform",
+          "delegation_set_id": null,
+          "force_destroy": false,
+          "name": "dom",
+          "tags": null,
+          "timeouts": null,
+          "vpc": []
+        },
+        "after_unknown": {
+          "arn": true,
+          "id": true,
+          "name_servers": true,
+          "primary_name_server": true,
+          "tags_all": true,
+          "vpc": [],
+          "zone_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "name_servers": [],
+          "tags_all": {},
+          "vpc": []
+        }
+      }
+    }
+  ],
+  "output_changes": {
+    "json_log_groups": {
+      "actions": [
+        "create"
+      ],
+      "before": null,
+      "after": [
+        "name-nginx"
+      ],
+      "after_unknown": false,
+      "before_sensitive": false,
+      "after_sensitive": false
+    },
+    "route53_zone_id": {
+      "actions": [
+        "create"
+      ],
+      "before": null,
+      "after_unknown": true,
+      "before_sensitive": false,
+      "after_sensitive": false
+    }
+  },
+  "prior_state": {
+    "format_version": "1.0",
+    "terraform_version": "1.13.1",
+    "values": {
+      "outputs": {},
+      "root_module": {
+        "resources": [
+          {
+            "address": "aws_cloudwatch_log_group.json_logs",
+            "mode": "managed",
+            "type": "aws_cloudwatch_log_group",
+            "name": "json_logs",
+            "provider_config_key": "aws",
+            "depends_on": []
+          },
+          {
+            "address": "aws_route53_record.antivirus_api",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "antivirus_api",
+            "provider_config_key": "aws",
+            "count_expression": {
+              "references": [
+                "var.cname_domain"
+              ]
+            },
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.antivirus_api_acm_validation",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "antivirus_api_acm_validation",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.api",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "api",
+            "provider_config_key": "aws",
+            "count_expression": {
+              "references": [
+                "var.cname_domain"
+              ]
+            },
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.api_acm_validation",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "api_acm_validation",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.assets",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "assets",
+            "provider_config_key": "aws",
+            "count_expression": {
+              "references": [
+                "var.cname_domain"
+              ]
+            },
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.assets_acm_validation",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "assets_acm_validation",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.search_api",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "search_api",
+            "provider_config_key": "aws",
+            "count_expression": {
+              "references": [
+                "var.cname_domain"
+              ]
+            },
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.search_api_acm_validation",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "search_api_acm_validation",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.www",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "www",
+            "provider_config_key": "aws",
+            "count_expression": {
+              "references": [
+                "var.cname_domain"
+              ]
+            },
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_record.www_acm_validation",
+            "mode": "managed",
+            "type": "aws_route53_record",
+            "name": "www_acm_validation",
+            "provider_config_key": "aws",
+            "depends_on": [
+              "aws_route53_zone.root"
+            ]
+          },
+          {
+            "address": "aws_route53_zone.root",
+            "mode": "managed",
+            "type": "aws_route53_zone",
+            "name": "root",
+            "provider_config_key": "aws",
+            "depends_on": []
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "aws": {
+        "name": "aws",
+        "full_name": "registry.terraform.io/hashicorp/aws",
+        "expressions": {
+          "region": {
+            "constant_value": "eu-west-1"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "outputs": {
+        "json_log_groups": {
+          "expression": {
+            "references": [
+              "aws_cloudwatch_log_group.json_logs.name",
+              "aws_cloudwatch_log_group.json_logs"
+            ]
+          }
+        },
+        "route53_zone_id": {
+          "expression": {
+            "references": [
+              "aws_route53_zone.root.zone_id",
+              "aws_route53_zone.root"
+            ]
+          }
+        }
+      },
+      "resources": [
+        {
+          "address": "aws_cloudwatch_log_group.json_logs",
+          "mode": "managed",
+          "type": "aws_cloudwatch_log_group",
+          "name": "json_logs",
+          "provider_config_key": "aws",
+          "depends_on": []
+        },
+        {
+          "address": "aws_route53_record.antivirus_api",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "antivirus_api",
+          "provider_config_key": "aws",
+          "count_expression": {
+            "references": [
+              "var.cname_domain"
+            ]
+          },
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.antivirus_api_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "antivirus_api_acm_validation",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.api",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "api",
+          "provider_config_key": "aws",
+          "count_expression": {
+            "references": [
+              "var.cname_domain"
+            ]
+          },
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.api_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "api_acm_validation",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.assets",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "assets",
+          "provider_config_key": "aws",
+          "count_expression": {
+            "references": [
+              "var.cname_domain"
+            ]
+          },
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.assets_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "assets_acm_validation",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.search_api",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "search_api",
+          "provider_config_key": "aws",
+          "count_expression": {
+            "references": [
+              "var.cname_domain"
+            ]
+          },
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.search_api_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "search_api_acm_validation",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.www",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "www",
+          "provider_config_key": "aws",
+          "count_expression": {
+            "references": [
+              "var.cname_domain"
+            ]
+          },
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_record.www_acm_validation",
+          "mode": "managed",
+          "type": "aws_route53_record",
+          "name": "www_acm_validation",
+          "provider_config_key": "aws",
+          "depends_on": [
+            "aws_route53_zone.root"
+          ]
+        },
+        {
+          "address": "aws_route53_zone.root",
+          "mode": "managed",
+          "type": "aws_route53_zone",
+          "name": "root",
+          "provider_config_key": "aws",
+          "depends_on": []
+        }
+      ],
+      "variables": {
+        "antivirus_api_acm_name": {
+          "default": "val"
+        },
+        "antivirus_api_acm_value": {
+          "default": "val"
+        },
+        "api_acm_name": {
+          "default": "val"
+        },
+        "api_acm_value": {
+          "default": "val"
+        },
+        "assets_acm_name": {
+          "default": "val"
+        },
+        "assets_acm_value": {
+          "default": "val"
+        },
+        "cname_domain": {
+          "default": ""
+        },
+        "domain": {
+          "default": "dom"
+        },
+        "log_retention_days": {
+          "default": 3
+        },
+        "name": {
+          "default": "name"
+        },
+        "search_api_acm_name": {
+          "default": "val"
+        },
+        "search_api_acm_value": {
+          "default": "val"
+        },
+        "www_acm_name": {
+          "default": "val"
+        },
+        "www_acm_value": {
+          "default": "val"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "aws_cloudwatch_log_group.json_logs",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "aws_route53_zone.root",
+      "attribute": [
+        "zone_id"
+      ]
+    }
+  ],
+  "timestamp": "2025-11-23T10:58:46Z",
+  "applyable": true,
+  "complete": true,
+  "errored": false
+}

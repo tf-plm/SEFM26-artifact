@@ -1,0 +1,106 @@
+---
+title: "ecoop26.rmd"
+author: "Jolan Philippe"
+date: "2025-11-12"
+output: pdf_document
+---
+
+Libs:
+```{r}
+library(ggplot2)
+library(scales)
+```
+
+Resource / repository
+```{r}
+# Resource et repository
+data <- read.csv("resource_distribution.csv")
+plot1 <- ggplot(data, aes(x = resource_count, y = repository_count)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  scale_x_continuous(limits = c(0, 1000)) +
+  scale_y_continuous(
+    trans = pseudo_log_trans(base = 10),
+    labels = comma
+  ) +
+  labs(
+    title = "Distribution of resources per repository",
+    x = "Resource count",
+    y = "Repository count"
+  ) 
+
+plot1
+ggsave("resource_distribution.pdf", plot = plot1, width = 7, height = 4, units = "in")
+
+
+```
+
+
+
+
+Resource / module
+```{r}
+# Resource et module
+data <- read.csv("module_resource_distribution.csv")
+
+data_binned <- data %>%
+  mutate(
+    bin_start = 
+      case_when ( 
+        resource_count < 200 ~ floor(resource_count / 10) * 10,
+      )
+  ) %>%
+  group_by(bin_start) %>%
+  summarise(
+    module_count = sum(module_count),
+    .groups = "drop"
+  )
+
+plot2 <- ggplot(data_binned, aes(x = bin_start, y = module_count)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(
+    trans = pseudo_log_trans(base = 10),
+    labels = comma
+  ) +
+  labs(
+    title = "Distribution of resources per module",
+    x = "Resource count",
+    y = "Module count"
+  ) 
+
+# for i in range(0,200,5):
+#   sum(resource_count)
+
+plot2 
+ggsave("module_resource_distribution.pdf", plot = plot2, width = 7, height = 4, units = "in")
+```
+
+```{r}
+curve_estable <- ggplot(data_binned, aes(x = bin_start ,y = module_count)) + 
+  geom_line() +
+  scale_x_continuous(limits = c(0, 200)) +
+  labs(
+    x = "# resources",
+    y = "# Nb modules"
+  ) +
+  scale_y_continuous(
+    trans = pseudo_log_trans(base = 10),
+    labels = comma
+  )
+curve_estable 
+
+# for X in c(6, 10, 20, 25, 30, 40, 50)
+#  - one bar on X, with Y = for case stable=FALSE, 100 - pct_timeout_stable (style = plain color)
+#  -  one bar on X, with Y = for case stable=TRUE, 100 - pct_timeout_estable (style = dashed black border)
+#  - static estable ? (# treated by static)
+#  -
+```
+
+
+
+```{r}
+data_results_
+
+
+
+```

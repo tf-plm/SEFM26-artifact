@@ -1,0 +1,6616 @@
+{
+  "google_access_context_manager_access_level": [
+    "name",
+    "parent"
+  ],
+  "google_access_context_manager_access_level_condition": [
+    "device_policy",
+    "vpc_network_sources",
+    "negate",
+    "regions",
+    "required_access_levels",
+    "access_level",
+    "ip_subnetworks",
+    "members"
+  ],
+  "google_access_context_manager_access_levels": [
+    "parent",
+    "access_levels"
+  ],
+  "google_access_context_manager_access_policy": [
+    "parent"
+  ],
+  "google_access_context_manager_access_policy_iam_binding": [
+    "condition",
+    "role",
+    "name"
+  ],
+  "google_access_context_manager_access_policy_iam_member": [
+    "condition",
+    "name",
+    "role",
+    "member"
+  ],
+  "google_access_context_manager_access_policy_iam_policy": [
+    "name"
+  ],
+  "google_access_context_manager_authorized_orgs_desc": [
+    "name",
+    "parent",
+    "asset_type",
+    "authorization_direction",
+    "authorization_type"
+  ],
+  "google_access_context_manager_egress_policy": [
+    "egress_policy_name",
+    "resource"
+  ],
+  "google_access_context_manager_gcp_user_access_binding": [
+    "group_key",
+    "organization_id"
+  ],
+  "google_access_context_manager_ingress_policy": [
+    "ingress_policy_name",
+    "resource"
+  ],
+  "google_access_context_manager_service_perimeter": [
+    "parent",
+    "perimeter_type",
+    "name"
+  ],
+  "google_access_context_manager_service_perimeter_dry_run_egress_policy": [
+    "egress_to",
+    "title",
+    "perimeter",
+    "egress_from"
+  ],
+  "google_access_context_manager_service_perimeter_dry_run_ingress_policy": [
+    "perimeter",
+    "ingress_from",
+    "ingress_to",
+    "title"
+  ],
+  "google_access_context_manager_service_perimeter_dry_run_resource": [
+    "perimeter_name",
+    "resource"
+  ],
+  "google_access_context_manager_service_perimeter_egress_policy": [
+    "perimeter",
+    "egress_from",
+    "egress_to",
+    "title"
+  ],
+  "google_access_context_manager_service_perimeter_ingress_policy": [
+    "perimeter",
+    "ingress_from",
+    "ingress_to",
+    "title"
+  ],
+  "google_access_context_manager_service_perimeter_resource": [
+    "perimeter_name",
+    "resource"
+  ],
+  "google_access_context_manager_service_perimeters": [
+    "parent",
+    "service_perimeters"
+  ],
+  "google_active_directory_domain": [
+    "project",
+    "domain_name",
+    "reserved_ip_range",
+    "admin"
+  ],
+  "google_active_directory_domain_trust": [
+    "trust_direction",
+    "trust_handshake_secret",
+    "trust_type",
+    "selective_authentication",
+    "project",
+    "domain"
+  ],
+  "google_alloydb_backup": [
+    "project",
+    "encryption_config",
+    "location",
+    "backup_id",
+    "cluster_name"
+  ],
+  "google_alloydb_cluster": [
+    "encryption_config",
+    "location",
+    "restore_continuous_backup_source",
+    "restore_backup_source",
+    "project",
+    "cluster_id"
+  ],
+  "google_alloydb_instance": [
+    "instance_type",
+    "instance_id",
+    "cluster"
+  ],
+  "google_alloydb_user": [
+    "user_id",
+    "user_type",
+    "cluster"
+  ],
+  "google_apigee_addons_config": [
+    "org"
+  ],
+  "google_apigee_api": [
+    "name",
+    "org_id"
+  ],
+  "google_apigee_app_group": [
+    "org_id",
+    "name"
+  ],
+  "google_apigee_control_plane_access": [
+    "name"
+  ],
+  "google_apigee_developer": [
+    "org_id",
+    "email"
+  ],
+  "google_apigee_dns_zone": [
+    "description",
+    "dns_zone_id",
+    "domain",
+    "org_id",
+    "peering_config"
+  ],
+  "google_apigee_endpoint_attachment": [
+    "service_attachment",
+    "endpoint_attachment_id",
+    "location",
+    "org_id"
+  ],
+  "google_apigee_env_keystore": [
+    "env_id",
+    "name"
+  ],
+  "google_apigee_env_references": [
+    "env_id",
+    "name",
+    "resource_type",
+    "description"
+  ],
+  "google_apigee_envgroup": [
+    "name",
+    "org_id"
+  ],
+  "google_apigee_envgroup_attachment": [
+    "envgroup_id",
+    "environment"
+  ],
+  "google_apigee_environment": [
+    "org_id",
+    "deployment_type",
+    "name",
+    "api_proxy_type"
+  ],
+  "google_apigee_environment_addons_config": [
+    "env_id"
+  ],
+  "google_apigee_environment_iam_binding": [
+    "condition",
+    "org_id",
+    "env_id",
+    "role"
+  ],
+  "google_apigee_environment_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "org_id",
+    "env_id"
+  ],
+  "google_apigee_environment_iam_policy": [
+    "org_id",
+    "env_id"
+  ],
+  "google_apigee_environment_keyvaluemaps": [
+    "env_id",
+    "name"
+  ],
+  "google_apigee_environment_keyvaluemaps_entries": [
+    "env_keyvaluemap_id",
+    "name",
+    "value"
+  ],
+  "google_apigee_flowhook": [
+    "description",
+    "environment",
+    "flow_hook_point",
+    "org_id",
+    "sharedflow",
+    "continue_on_error"
+  ],
+  "google_apigee_instance": [
+    "name",
+    "display_name",
+    "ip_range",
+    "location",
+    "org_id",
+    "description",
+    "disk_encryption_key_name",
+    "peering_cidr_range"
+  ],
+  "google_apigee_instance_attachment": [
+    "environment",
+    "instance_id"
+  ],
+  "google_apigee_keystores_aliases_key_cert_file": [
+    "org_id",
+    "key",
+    "alias",
+    "environment",
+    "keystore"
+  ],
+  "google_apigee_keystores_aliases_pkcs12": [
+    "alias",
+    "file",
+    "environment",
+    "keystore",
+    "org_id",
+    "filehash"
+  ],
+  "google_apigee_keystores_aliases_self_signed_cert": [
+    "environment",
+    "org_id",
+    "cert_validity_in_days",
+    "alias",
+    "keystore",
+    "sig_alg",
+    "subject",
+    "key_size",
+    "subject_alternative_dns_names"
+  ],
+  "google_apigee_nat_address": [
+    "instance_id",
+    "name"
+  ],
+  "google_apigee_organization": [
+    "api_consumer_data_encryption_key_name",
+    "api_consumer_data_location",
+    "runtime_type",
+    "analytics_region",
+    "billing_type",
+    "control_plane_encryption_key_name",
+    "runtime_database_encryption_key_name",
+    "project_id"
+  ],
+  "google_apigee_security_monitoring_condition": [
+    "condition_id",
+    "org_id"
+  ],
+  "google_apigee_security_profile_v2": [
+    "org_id",
+    "profile_id"
+  ],
+  "google_apigee_sharedflow": [
+    "name",
+    "org_id"
+  ],
+  "google_apigee_sharedflow_deployment": [
+    "environment",
+    "org_id",
+    "service_account",
+    "sharedflow_id"
+  ],
+  "google_apigee_sync_authorization": [
+    "name"
+  ],
+  "google_apigee_target_server": [
+    "env_id",
+    "name",
+    "protocol"
+  ],
+  "google_apihub_api_hub_instance": [
+    "effective_labels",
+    "config",
+    "api_hub_instance_id",
+    "project",
+    "location",
+    "description"
+  ],
+  "google_apihub_host_project_registration": [
+    "gcp_project",
+    "host_project_registration_id",
+    "location",
+    "project"
+  ],
+  "google_apikeys_key": [
+    "name",
+    "project"
+  ],
+  "google_app_engine_application": [
+    "project"
+  ],
+  "google_app_engine_application_url_dispatch_rules": [
+    "project"
+  ],
+  "google_app_engine_domain_mapping": [
+    "domain_name",
+    "project"
+  ],
+  "google_app_engine_firewall_rule": [
+    "project"
+  ],
+  "google_app_engine_flexible_app_version": [
+    "project",
+    "version_id"
+  ],
+  "google_app_engine_service_network_settings": [
+    "project"
+  ],
+  "google_app_engine_service_split_traffic": [
+    "project"
+  ],
+  "google_app_engine_standard_app_version": [
+    "version_id",
+    "project"
+  ],
+  "google_apphub_application": [
+    "project",
+    "application_id",
+    "location"
+  ],
+  "google_apphub_service": [
+    "project",
+    "service_id",
+    "location",
+    "application_id",
+    "discovered_service"
+  ],
+  "google_apphub_service_project_attachment": [
+    "service_project",
+    "project",
+    "service_project_attachment_id"
+  ],
+  "google_apphub_workload": [
+    "location",
+    "workload_id",
+    "project",
+    "application_id",
+    "discovered_workload"
+  ],
+  "google_artifact_registry_repository": [
+    "location",
+    "maven_config",
+    "project",
+    "repository_id",
+    "mode",
+    "format",
+    "kms_key_name",
+    "remote_repository_config"
+  ],
+  "google_artifact_registry_repository_iam_binding": [
+    "condition",
+    "repository",
+    "project",
+    "location",
+    "role"
+  ],
+  "google_artifact_registry_repository_iam_member": [
+    "project",
+    "location",
+    "repository",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_artifact_registry_repository_iam_policy": [
+    "location",
+    "repository",
+    "project"
+  ],
+  "google_assured_workloads_workload": [
+    "organization",
+    "enable_sovereign_controls",
+    "provisioned_resources_parent",
+    "partner_permissions",
+    "partner_services_billing_account",
+    "resource_settings",
+    "violation_notifications_enabled",
+    "workload_options",
+    "location",
+    "billing_account",
+    "partner",
+    "compliance_regime",
+    "kms_settings"
+  ],
+  "google_backup_dr_backup_plan": [
+    "backup_vault",
+    "resource_type",
+    "description",
+    "project",
+    "backup_rules",
+    "backup_plan_id",
+    "location"
+  ],
+  "google_backup_dr_backup_plan_association": [
+    "backup_plan_association_id",
+    "resource_type",
+    "project",
+    "backup_plan",
+    "location",
+    "resource"
+  ],
+  "google_backup_dr_backup_vault": [
+    "access_restriction",
+    "project",
+    "backup_vault_id",
+    "location"
+  ],
+  "google_backup_dr_management_server": [
+    "project",
+    "location",
+    "name",
+    "networks",
+    "type"
+  ],
+  "google_beyondcorp_app_connection": [
+    "type",
+    "region",
+    "name",
+    "project"
+  ],
+  "google_beyondcorp_app_connector": [
+    "name",
+    "region",
+    "project"
+  ],
+  "google_beyondcorp_app_gateway": [
+    "name",
+    "region",
+    "type",
+    "project",
+    "display_name",
+    "host_type",
+    "effective_labels"
+  ],
+  "google_beyondcorp_application": [
+    "project",
+    "application_id",
+    "security_gateways_id"
+  ],
+  "google_beyondcorp_application_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "security_gateways_id",
+    "application_id"
+  ],
+  "google_beyondcorp_application_iam_member": [
+    "project",
+    "security_gateways_id",
+    "application_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_beyondcorp_application_iam_policy": [
+    "project",
+    "security_gateways_id",
+    "application_id"
+  ],
+  "google_beyondcorp_security_gateway": [
+    "location",
+    "project",
+    "security_gateway_id"
+  ],
+  "google_beyondcorp_security_gateway_application": [
+    "application_id",
+    "project",
+    "security_gateway_id"
+  ],
+  "google_beyondcorp_security_gateway_application_iam_binding": [
+    "condition",
+    "project",
+    "security_gateway_id",
+    "application_id",
+    "role"
+  ],
+  "google_beyondcorp_security_gateway_application_iam_member": [
+    "member",
+    "project",
+    "security_gateway_id",
+    "application_id",
+    "condition",
+    "role"
+  ],
+  "google_beyondcorp_security_gateway_application_iam_policy": [
+    "project",
+    "security_gateway_id",
+    "application_id"
+  ],
+  "google_beyondcorp_security_gateway_iam_binding": [
+    "location",
+    "security_gateway_id",
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_beyondcorp_security_gateway_iam_member": [
+    "project",
+    "location",
+    "security_gateway_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_beyondcorp_security_gateway_iam_policy": [
+    "project",
+    "location",
+    "security_gateway_id"
+  ],
+  "google_biglake_catalog": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_biglake_database": [
+    "name",
+    "catalog"
+  ],
+  "google_biglake_table": [
+    "name",
+    "database"
+  ],
+  "google_bigquery_analytics_hub_data_exchange": [
+    "data_exchange_id",
+    "sharing_environment_config",
+    "location",
+    "project"
+  ],
+  "google_bigquery_analytics_hub_data_exchange_iam_binding": [
+    "location",
+    "data_exchange_id",
+    "condition",
+    "role",
+    "project"
+  ],
+  "google_bigquery_analytics_hub_data_exchange_iam_member": [
+    "project",
+    "location",
+    "data_exchange_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_bigquery_analytics_hub_data_exchange_iam_policy": [
+    "data_exchange_id",
+    "project",
+    "location"
+  ],
+  "google_bigquery_analytics_hub_listing": [
+    "bigquery_dataset",
+    "data_exchange_id",
+    "listing_id",
+    "location",
+    "project"
+  ],
+  "google_bigquery_analytics_hub_listing_iam_binding": [
+    "location",
+    "data_exchange_id",
+    "listing_id",
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_bigquery_analytics_hub_listing_iam_member": [
+    "data_exchange_id",
+    "listing_id",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_bigquery_analytics_hub_listing_iam_policy": [
+    "project",
+    "location",
+    "data_exchange_id",
+    "listing_id"
+  ],
+  "google_bigquery_analytics_hub_listing_subscription": [
+    "destination_dataset",
+    "location",
+    "project",
+    "data_exchange_id",
+    "listing_id"
+  ],
+  "google_bigquery_bi_reservation": [
+    "project",
+    "location"
+  ],
+  "google_bigquery_capacity_commitment": [
+    "enforce_single_admin_project_per_org",
+    "project",
+    "capacity_commitment_id",
+    "slot_count",
+    "edition",
+    "location"
+  ],
+  "google_bigquery_connection": [
+    "location",
+    "project",
+    "connection_id"
+  ],
+  "google_bigquery_connection_iam_binding": [
+    "condition",
+    "connection_id",
+    "project",
+    "location",
+    "role"
+  ],
+  "google_bigquery_connection_iam_member": [
+    "condition",
+    "project",
+    "location",
+    "connection_id",
+    "role",
+    "member"
+  ],
+  "google_bigquery_connection_iam_policy": [
+    "connection_id",
+    "project",
+    "location"
+  ],
+  "google_bigquery_data_transfer_config": [
+    "location",
+    "project",
+    "data_source_id"
+  ],
+  "google_bigquery_datapolicy_data_policy": [
+    "data_policy_id",
+    "location",
+    "project"
+  ],
+  "google_bigquery_datapolicy_data_policy_iam_binding": [
+    "project",
+    "location",
+    "data_policy_id",
+    "role",
+    "condition"
+  ],
+  "google_bigquery_datapolicy_data_policy_iam_member": [
+    "data_policy_id",
+    "project",
+    "location",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_bigquery_datapolicy_data_policy_iam_policy": [
+    "project",
+    "location",
+    "data_policy_id"
+  ],
+  "google_bigquery_dataset": [
+    "external_dataset_reference",
+    "location",
+    "project",
+    "dataset_id"
+  ],
+  "google_bigquery_dataset_access": [
+    "iam_member",
+    "special_group",
+    "view",
+    "dataset_id",
+    "condition",
+    "dataset",
+    "domain",
+    "group_by_email",
+    "project",
+    "role",
+    "routine",
+    "user_by_email"
+  ],
+  "google_bigquery_dataset_iam_binding": [
+    "condition",
+    "project",
+    "dataset_id",
+    "role"
+  ],
+  "google_bigquery_dataset_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "dataset_id",
+    "project"
+  ],
+  "google_bigquery_dataset_iam_policy": [
+    "dataset_id",
+    "project"
+  ],
+  "google_bigquery_job": [
+    "copy",
+    "project",
+    "extract",
+    "job_id",
+    "job_timeout_ms",
+    "load",
+    "query",
+    "effective_labels",
+    "location"
+  ],
+  "google_bigquery_reservation": [
+    "project",
+    "name",
+    "edition",
+    "location"
+  ],
+  "google_bigquery_reservation_assignment": [
+    "assignee",
+    "job_type",
+    "reservation",
+    "location",
+    "project"
+  ],
+  "google_bigquery_routine": [
+    "routine_id",
+    "dataset_id",
+    "routine_type",
+    "project"
+  ],
+  "google_bigquery_row_access_policy": [
+    "policy_id",
+    "table_id",
+    "project",
+    "dataset_id"
+  ],
+  "google_bigquery_table": [
+    "project",
+    "materialized_view",
+    "external_data_configuration",
+    "range_partitioning",
+    "encryption_configuration",
+    "table_id",
+    "schema_foreign_type_info",
+    "time_partitioning",
+    "dataset_id",
+    "biglake_configuration",
+    "table_replication_info"
+  ],
+  "google_bigquery_table_iam_binding": [
+    "dataset_id",
+    "table_id",
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_bigquery_table_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "dataset_id",
+    "table_id"
+  ],
+  "google_bigquery_table_iam_policy": [
+    "table_id",
+    "project",
+    "dataset_id"
+  ],
+  "google_bigtable_app_profile": [
+    "app_profile_id",
+    "project",
+    "instance"
+  ],
+  "google_bigtable_authorized_view": [
+    "project",
+    "instance_name",
+    "table_name",
+    "name"
+  ],
+  "google_bigtable_gc_policy": [
+    "project",
+    "table",
+    "column_family",
+    "mode",
+    "max_age",
+    "instance_name",
+    "max_version"
+  ],
+  "google_bigtable_instance": [
+    "name",
+    "project",
+    "cluster"
+  ],
+  "google_bigtable_instance_iam_binding": [
+    "condition",
+    "instance",
+    "project",
+    "role"
+  ],
+  "google_bigtable_instance_iam_member": [
+    "condition",
+    "instance",
+    "project",
+    "role",
+    "member"
+  ],
+  "google_bigtable_instance_iam_policy": [
+    "instance",
+    "project"
+  ],
+  "google_bigtable_logical_view": [
+    "project",
+    "logical_view_id",
+    "instance"
+  ],
+  "google_bigtable_materialized_view": [
+    "query",
+    "instance",
+    "project",
+    "materialized_view_id"
+  ],
+  "google_bigtable_table": [
+    "project",
+    "name",
+    "instance_name",
+    "split_keys"
+  ],
+  "google_bigtable_table_iam_binding": [
+    "project",
+    "table",
+    "condition",
+    "role",
+    "instance"
+  ],
+  "google_bigtable_table_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "instance",
+    "project",
+    "table"
+  ],
+  "google_bigtable_table_iam_policy": [
+    "table",
+    "instance",
+    "project"
+  ],
+  "google_billing_account_iam_binding": [
+    "billing_account_id",
+    "role",
+    "condition"
+  ],
+  "google_billing_account_iam_member": [
+    "condition",
+    "role",
+    "member",
+    "billing_account_id"
+  ],
+  "google_billing_account_iam_policy": [
+    "billing_account_id"
+  ],
+  "google_billing_budget": [
+    "billing_account"
+  ],
+  "google_billing_project_info": [
+    "project"
+  ],
+  "google_billing_subaccount": [
+    "master_billing_account"
+  ],
+  "google_binary_authorization_attestor": [
+    "attestation_authority_note",
+    "name",
+    "project"
+  ],
+  "google_binary_authorization_attestor_iam_binding": [
+    "condition",
+    "project",
+    "attestor",
+    "role"
+  ],
+  "google_binary_authorization_attestor_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "attestor"
+  ],
+  "google_binary_authorization_attestor_iam_policy": [
+    "attestor",
+    "project"
+  ],
+  "google_binary_authorization_policy": [
+    "project"
+  ],
+  "google_blockchain_node_engine_blockchain_nodes": [
+    "project",
+    "location",
+    "ethereum_details",
+    "blockchain_type"
+  ],
+  "google_certificate_manager_certificate": [
+    "project",
+    "name",
+    "managed",
+    "scope",
+    "self_managed",
+    "location"
+  ],
+  "google_certificate_manager_certificate_issuance_config": [
+    "certificate_authority_config",
+    "key_algorithm",
+    "lifetime",
+    "rotation_window_percentage",
+    "location",
+    "project",
+    "name",
+    "description",
+    "effective_labels"
+  ],
+  "google_certificate_manager_certificate_map": [
+    "project",
+    "name"
+  ],
+  "google_certificate_manager_certificate_map_entry": [
+    "map",
+    "name",
+    "project",
+    "hostname",
+    "matcher"
+  ],
+  "google_certificate_manager_dns_authorization": [
+    "location",
+    "type",
+    "project",
+    "domain",
+    "name"
+  ],
+  "google_certificate_manager_trust_config": [
+    "location",
+    "project",
+    "name"
+  ],
+  "google_chronicle_data_access_label": [
+    "location",
+    "data_access_label_id",
+    "instance",
+    "project"
+  ],
+  "google_chronicle_data_access_scope": [
+    "data_access_scope_id",
+    "instance",
+    "project",
+    "location"
+  ],
+  "google_chronicle_reference_list": [
+    "reference_list_id",
+    "instance",
+    "location",
+    "project"
+  ],
+  "google_chronicle_retrohunt": [
+    "location",
+    "rule",
+    "project",
+    "instance",
+    "process_interval",
+    "retrohunt"
+  ],
+  "google_chronicle_rule": [
+    "project",
+    "location",
+    "instance"
+  ],
+  "google_chronicle_rule_deployment": [
+    "location",
+    "project",
+    "rule",
+    "instance"
+  ],
+  "google_chronicle_watchlist": [
+    "location",
+    "instance",
+    "watchlist_id",
+    "project"
+  ],
+  "google_cloud_asset_folder_feed": [
+    "billing_project",
+    "folder",
+    "feed_id"
+  ],
+  "google_cloud_asset_organization_feed": [
+    "billing_project",
+    "feed_id",
+    "org_id"
+  ],
+  "google_cloud_asset_project_feed": [
+    "feed_id",
+    "billing_project",
+    "project"
+  ],
+  "google_cloud_identity_group": [
+    "group_key",
+    "initial_group_config",
+    "parent"
+  ],
+  "google_cloud_identity_group_membership": [
+    "group",
+    "preferred_member_key"
+  ],
+  "google_cloud_ids_endpoint": [
+    "network",
+    "project",
+    "location",
+    "name",
+    "severity",
+    "description"
+  ],
+  "google_cloud_quotas_quota_preference": [
+    "parent"
+  ],
+  "google_cloud_run_domain_mapping": [
+    "project",
+    "location",
+    "name",
+    "spec",
+    "metadata"
+  ],
+  "google_cloud_run_service": [
+    "project",
+    "location",
+    "name",
+    "template"
+  ],
+  "google_cloud_run_service_iam_binding": [
+    "condition",
+    "role",
+    "project",
+    "location",
+    "service"
+  ],
+  "google_cloud_run_service_iam_member": [
+    "member",
+    "condition",
+    "project",
+    "location",
+    "service",
+    "role"
+  ],
+  "google_cloud_run_service_iam_policy": [
+    "project",
+    "location",
+    "service"
+  ],
+  "google_cloud_run_v2_job": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_cloud_run_v2_job_iam_binding": [
+    "project",
+    "condition",
+    "role",
+    "location",
+    "name"
+  ],
+  "google_cloud_run_v2_job_iam_member": [
+    "name",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_cloud_run_v2_job_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_cloud_run_v2_service": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_cloud_run_v2_service_iam_binding": [
+    "project",
+    "role",
+    "condition",
+    "location",
+    "name"
+  ],
+  "google_cloud_run_v2_service_iam_member": [
+    "location",
+    "name",
+    "project",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_cloud_run_v2_service_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_cloud_run_v2_worker_pool": [
+    "project",
+    "name",
+    "location"
+  ],
+  "google_cloud_run_v2_worker_pool_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role"
+  ],
+  "google_cloud_run_v2_worker_pool_iam_member": [
+    "name",
+    "member",
+    "condition",
+    "role",
+    "project",
+    "location"
+  ],
+  "google_cloud_run_v2_worker_pool_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_cloud_scheduler_job": [
+    "name",
+    "project",
+    "region"
+  ],
+  "google_cloud_tasks_queue": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_cloud_tasks_queue_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role"
+  ],
+  "google_cloud_tasks_queue_iam_member": [
+    "location",
+    "name",
+    "role",
+    "member",
+    "condition",
+    "project"
+  ],
+  "google_cloud_tasks_queue_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_cloudbuild_bitbucket_server_config": [
+    "location",
+    "config_id",
+    "secrets",
+    "api_key",
+    "project"
+  ],
+  "google_cloudbuild_trigger": [
+    "project",
+    "location"
+  ],
+  "google_cloudbuild_worker_pool": [
+    "project",
+    "name",
+    "location",
+    "network_config",
+    "private_service_connect"
+  ],
+  "google_cloudbuildv2_connection": [
+    "name",
+    "bitbucket_data_center_config",
+    "location",
+    "project",
+    "gitlab_config",
+    "bitbucket_cloud_config"
+  ],
+  "google_cloudbuildv2_connection_iam_binding": [
+    "location",
+    "role",
+    "condition",
+    "name",
+    "project"
+  ],
+  "google_cloudbuildv2_connection_iam_member": [
+    "name",
+    "condition",
+    "role",
+    "member",
+    "project",
+    "location"
+  ],
+  "google_cloudbuildv2_connection_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_cloudbuildv2_repository": [
+    "name",
+    "parent_connection",
+    "location",
+    "remote_uri",
+    "annotations",
+    "effective_annotations",
+    "project"
+  ],
+  "google_clouddeploy_automation": [
+    "delivery_pipeline",
+    "location",
+    "name",
+    "project"
+  ],
+  "google_clouddeploy_custom_target_type": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_clouddeploy_custom_target_type_iam_binding": [
+    "project",
+    "location",
+    "name",
+    "role",
+    "condition"
+  ],
+  "google_clouddeploy_custom_target_type_iam_member": [
+    "project",
+    "location",
+    "name",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_clouddeploy_custom_target_type_iam_policy": [
+    "name",
+    "project",
+    "location"
+  ],
+  "google_clouddeploy_delivery_pipeline": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_clouddeploy_delivery_pipeline_iam_binding": [
+    "project",
+    "role",
+    "condition",
+    "location",
+    "name"
+  ],
+  "google_clouddeploy_delivery_pipeline_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_clouddeploy_delivery_pipeline_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_clouddeploy_deploy_policy": [
+    "location",
+    "project",
+    "name"
+  ],
+  "google_clouddeploy_target": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_clouddeploy_target_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role"
+  ],
+  "google_clouddeploy_target_iam_member": [
+    "name",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_clouddeploy_target_iam_policy": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_clouddomains_registration": [
+    "yearly_price",
+    "domain_name",
+    "location",
+    "effective_labels",
+    "contact_settings",
+    "contact_notices",
+    "dns_settings",
+    "domain_notices",
+    "management_settings",
+    "project"
+  ],
+  "google_cloudfunctions2_function": [
+    "location",
+    "build_config",
+    "name",
+    "project"
+  ],
+  "google_cloudfunctions2_function_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "location",
+    "cloud_function"
+  ],
+  "google_cloudfunctions2_function_iam_member": [
+    "project",
+    "location",
+    "role",
+    "member",
+    "condition",
+    "cloud_function"
+  ],
+  "google_cloudfunctions2_function_iam_policy": [
+    "project",
+    "location",
+    "cloud_function"
+  ],
+  "google_cloudfunctions_function": [
+    "service_account_email",
+    "name",
+    "project",
+    "trigger_http",
+    "event_trigger",
+    "region",
+    "entry_point"
+  ],
+  "google_cloudfunctions_function_iam_binding": [
+    "cloud_function",
+    "condition",
+    "role",
+    "project",
+    "region"
+  ],
+  "google_cloudfunctions_function_iam_member": [
+    "project",
+    "region",
+    "cloud_function",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_cloudfunctions_function_iam_policy": [
+    "cloud_function",
+    "project",
+    "region"
+  ],
+  "google_colab_notebook_execution": [
+    "display_name",
+    "dataform_repository_source",
+    "direct_notebook_source",
+    "gcs_notebook_source",
+    "notebook_execution_job_id",
+    "service_account",
+    "gcs_output_uri",
+    "location",
+    "execution_timeout",
+    "execution_user",
+    "notebook_runtime_template_resource_name",
+    "project"
+  ],
+  "google_colab_runtime": [
+    "project",
+    "display_name",
+    "location",
+    "runtime_user",
+    "description",
+    "name",
+    "notebook_runtime_template_ref"
+  ],
+  "google_colab_runtime_template": [
+    "location",
+    "network_tags",
+    "effective_labels",
+    "project",
+    "idle_shutdown_config",
+    "name",
+    "network_spec",
+    "shielded_vm_config",
+    "software_config",
+    "display_name",
+    "data_persistent_disk_spec",
+    "encryption_spec",
+    "euc_config",
+    "description",
+    "machine_spec"
+  ],
+  "google_colab_runtime_template_iam_binding": [
+    "project",
+    "role",
+    "condition",
+    "location",
+    "runtime_template"
+  ],
+  "google_colab_runtime_template_iam_member": [
+    "role",
+    "member",
+    "project",
+    "location",
+    "runtime_template",
+    "condition"
+  ],
+  "google_colab_runtime_template_iam_policy": [
+    "project",
+    "location",
+    "runtime_template"
+  ],
+  "google_colab_schedule": [
+    "project",
+    "create_notebook_execution_job_request"
+  ],
+  "google_composer_environment": [
+    "storage_config",
+    "name",
+    "region",
+    "project",
+    "config"
+  ],
+  "google_composer_user_workloads_config_map": [
+    "environment",
+    "name",
+    "region",
+    "project"
+  ],
+  "google_composer_user_workloads_secret": [
+    "name",
+    "region",
+    "project",
+    "environment"
+  ],
+  "google_compute_address": [
+    "project",
+    "description",
+    "ipv6_endpoint_type",
+    "purpose",
+    "address",
+    "address_type",
+    "ip_version",
+    "network",
+    "region",
+    "subnetwork",
+    "prefix_length",
+    "name",
+    "network_tier"
+  ],
+  "google_compute_attached_disk": [
+    "instance",
+    "project",
+    "zone",
+    "device_name",
+    "mode",
+    "interface",
+    "disk"
+  ],
+  "google_compute_autoscaler": [
+    "project",
+    "name",
+    "zone"
+  ],
+  "google_compute_backend_bucket": [
+    "project",
+    "name"
+  ],
+  "google_compute_backend_bucket_signed_url_key": [
+    "project",
+    "backend_bucket",
+    "key_value",
+    "name"
+  ],
+  "google_compute_backend_service": [
+    "name",
+    "project"
+  ],
+  "google_compute_backend_service_signed_url_key": [
+    "project",
+    "backend_service",
+    "key_value",
+    "name"
+  ],
+  "google_compute_disk": [
+    "name",
+    "physical_block_size_bytes",
+    "source_snapshot_encryption_key",
+    "disk_encryption_key",
+    "enable_confidential_compute",
+    "project",
+    "architecture",
+    "async_primary_disk",
+    "guest_os_features",
+    "licenses",
+    "source_storage_object",
+    "zone",
+    "params",
+    "storage_pool",
+    "description",
+    "snapshot",
+    "source_disk",
+    "source_instant_snapshot",
+    "type",
+    "image",
+    "source_image_encryption_key"
+  ],
+  "google_compute_disk_async_replication": [
+    "primary_disk",
+    "secondary_disk"
+  ],
+  "google_compute_disk_iam_binding": [
+    "zone",
+    "name",
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_compute_disk_iam_member": [
+    "member",
+    "condition",
+    "role",
+    "project",
+    "zone",
+    "name"
+  ],
+  "google_compute_disk_iam_policy": [
+    "project",
+    "zone",
+    "name"
+  ],
+  "google_compute_disk_resource_policy_attachment": [
+    "disk",
+    "name",
+    "zone",
+    "project"
+  ],
+  "google_compute_external_vpn_gateway": [
+    "name",
+    "interface",
+    "redundancy_type",
+    "project",
+    "description"
+  ],
+  "google_compute_firewall": [
+    "project",
+    "name",
+    "direction"
+  ],
+  "google_compute_firewall_policy": [
+    "parent",
+    "short_name"
+  ],
+  "google_compute_firewall_policy_association": [
+    "name",
+    "attachment_target"
+  ],
+  "google_compute_firewall_policy_rule": [
+    "firewall_policy",
+    "priority"
+  ],
+  "google_compute_firewall_policy_with_rules": [
+    "parent",
+    "short_name"
+  ],
+  "google_compute_forwarding_rule": [
+    "name",
+    "description",
+    "port_range",
+    "ports",
+    "ip_version",
+    "is_mirroring_collector",
+    "network_tier",
+    "service_directory_registrations",
+    "ip_collection",
+    "network",
+    "source_ip_ranges",
+    "ip_address",
+    "backend_service",
+    "ip_protocol",
+    "no_automate_dns_zone",
+    "service_label",
+    "subnetwork",
+    "project",
+    "all_ports",
+    "load_balancing_scheme",
+    "region"
+  ],
+  "google_compute_global_address": [
+    "ip_version",
+    "address",
+    "description",
+    "name",
+    "address_type",
+    "network",
+    "purpose",
+    "project",
+    "prefix_length"
+  ],
+  "google_compute_global_forwarding_rule": [
+    "ip_protocol",
+    "project",
+    "ip_address",
+    "port_range",
+    "source_ip_ranges",
+    "ip_version",
+    "subnetwork",
+    "metadata_filters",
+    "network",
+    "service_directory_registrations",
+    "description",
+    "network_tier",
+    "no_automate_dns_zone",
+    "name"
+  ],
+  "google_compute_global_network_endpoint": [
+    "global_network_endpoint_group",
+    "port",
+    "fqdn",
+    "ip_address",
+    "project"
+  ],
+  "google_compute_global_network_endpoint_group": [
+    "default_port",
+    "description",
+    "project",
+    "name",
+    "network_endpoint_type"
+  ],
+  "google_compute_ha_vpn_gateway": [
+    "description",
+    "stack_type",
+    "vpn_interfaces",
+    "project",
+    "name",
+    "network",
+    "gateway_ip_version",
+    "region"
+  ],
+  "google_compute_health_check": [
+    "project",
+    "name"
+  ],
+  "google_compute_http_health_check": [
+    "project",
+    "name"
+  ],
+  "google_compute_https_health_check": [
+    "project",
+    "name"
+  ],
+  "google_compute_image": [
+    "storage_locations",
+    "description",
+    "family",
+    "image_encryption_key",
+    "raw_disk",
+    "source_disk",
+    "source_image",
+    "guest_os_features",
+    "licenses",
+    "shielded_instance_initial_state",
+    "source_snapshot",
+    "project",
+    "name",
+    "disk_size_gb",
+    "source_disk_encryption_key",
+    "source_image_encryption_key",
+    "source_snapshot_encryption_key"
+  ],
+  "google_compute_image_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "image"
+  ],
+  "google_compute_image_iam_member": [
+    "condition",
+    "project",
+    "image",
+    "role",
+    "member"
+  ],
+  "google_compute_image_iam_policy": [
+    "image",
+    "project"
+  ],
+  "google_compute_instance": [
+    "hostname",
+    "name",
+    "network_performance_config",
+    "scheduling",
+    "guest_accelerator",
+    "confidential_instance_config",
+    "key_revocation_action_type",
+    "zone",
+    "reservation_affinity",
+    "network_interface",
+    "attached_disk",
+    "params",
+    "advanced_machine_features",
+    "instance_encryption_key",
+    "boot_disk",
+    "project",
+    "scratch_disk"
+  ],
+  "google_compute_instance_from_template": [
+    "name",
+    "network_performance_config",
+    "guest_accelerator",
+    "hostname",
+    "network_interface",
+    "project",
+    "zone",
+    "source_instance_template",
+    "key_revocation_action_type",
+    "instance_encryption_key",
+    "params",
+    "scheduling",
+    "scratch_disk",
+    "reservation_affinity",
+    "boot_disk",
+    "attached_disk",
+    "advanced_machine_features",
+    "confidential_instance_config"
+  ],
+  "google_compute_instance_group": [
+    "name",
+    "project",
+    "zone",
+    "description",
+    "network"
+  ],
+  "google_compute_instance_group_manager": [
+    "base_instance_name",
+    "zone",
+    "name",
+    "project"
+  ],
+  "google_compute_instance_group_membership": [
+    "instance",
+    "instance_group",
+    "zone",
+    "project"
+  ],
+  "google_compute_instance_group_named_port": [
+    "zone",
+    "project",
+    "group",
+    "name",
+    "port"
+  ],
+  "google_compute_instance_iam_binding": [
+    "role",
+    "project",
+    "zone",
+    "instance_name",
+    "condition"
+  ],
+  "google_compute_instance_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "zone",
+    "instance_name"
+  ],
+  "google_compute_instance_iam_policy": [
+    "project",
+    "zone",
+    "instance_name"
+  ],
+  "google_compute_instance_settings": [
+    "project"
+  ],
+  "google_compute_instance_template": [
+    "tags",
+    "tags_fingerprint",
+    "effective_labels",
+    "resource_policies",
+    "description",
+    "project",
+    "creation_timestamp",
+    "min_cpu_platform",
+    "reservation_affinity",
+    "disk",
+    "can_ip_forward",
+    "resource_manager_tags",
+    "self_link_unique",
+    "confidential_instance_config",
+    "advanced_machine_features",
+    "name",
+    "machine_type",
+    "metadata_startup_script",
+    "guest_accelerator",
+    "instance_description",
+    "network_interface",
+    "self_link",
+    "service_account",
+    "name_prefix",
+    "key_revocation_action_type",
+    "metadata_fingerprint",
+    "network_performance_config",
+    "numeric_id",
+    "metadata",
+    "region",
+    "scheduling",
+    "shielded_instance_config"
+  ],
+  "google_compute_instance_template_iam_binding": [
+    "condition",
+    "name",
+    "project",
+    "role"
+  ],
+  "google_compute_instance_template_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "name"
+  ],
+  "google_compute_instance_template_iam_policy": [
+    "project",
+    "name"
+  ],
+  "google_compute_instant_snapshot": [
+    "name",
+    "zone",
+    "project",
+    "source_disk",
+    "description"
+  ],
+  "google_compute_instant_snapshot_iam_binding": [
+    "zone",
+    "name",
+    "project",
+    "role",
+    "condition"
+  ],
+  "google_compute_instant_snapshot_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "zone",
+    "name"
+  ],
+  "google_compute_instant_snapshot_iam_policy": [
+    "project",
+    "zone",
+    "name"
+  ],
+  "google_compute_interconnect": [
+    "location",
+    "requested_features",
+    "link_type",
+    "requested_link_count",
+    "name",
+    "customer_name",
+    "interconnect_type",
+    "remote_location",
+    "project"
+  ],
+  "google_compute_interconnect_attachment": [
+    "candidate_subnets",
+    "project",
+    "subnet_length",
+    "encryption",
+    "router",
+    "edge_availability_domain",
+    "vlan_tag8021q",
+    "interconnect",
+    "ipsec_internal_addresses",
+    "type",
+    "name"
+  ],
+  "google_compute_managed_ssl_certificate": [
+    "project",
+    "name",
+    "description",
+    "managed",
+    "type"
+  ],
+  "google_compute_network": [
+    "internal_ipv6_range",
+    "project",
+    "auto_create_subnetworks",
+    "description",
+    "name",
+    "enable_ula_internal_ipv6",
+    "network_profile"
+  ],
+  "google_compute_network_attachment": [
+    "region",
+    "connection_preference",
+    "project",
+    "name"
+  ],
+  "google_compute_network_endpoint": [
+    "project",
+    "ip_address",
+    "network_endpoint_group",
+    "instance",
+    "port",
+    "zone"
+  ],
+  "google_compute_network_endpoint_group": [
+    "default_port",
+    "network_endpoint_type",
+    "project",
+    "network",
+    "description",
+    "subnetwork",
+    "zone",
+    "name"
+  ],
+  "google_compute_network_endpoints": [
+    "project"
+  ],
+  "google_compute_network_firewall_policy": [
+    "name",
+    "project"
+  ],
+  "google_compute_network_firewall_policy_association": [
+    "project",
+    "attachment_target",
+    "firewall_policy",
+    "name"
+  ],
+  "google_compute_network_firewall_policy_rule": [
+    "priority",
+    "project",
+    "firewall_policy"
+  ],
+  "google_compute_network_firewall_policy_with_rules": [
+    "name",
+    "project"
+  ],
+  "google_compute_network_peering": [
+    "network",
+    "peer_network",
+    "export_subnet_routes_with_public_ip",
+    "import_subnet_routes_with_public_ip",
+    "name"
+  ],
+  "google_compute_network_peering_routes_config": [
+    "project"
+  ],
+  "google_compute_node_group": [
+    "project"
+  ],
+  "google_compute_node_template": [
+    "cpu_overcommit_type",
+    "description",
+    "name",
+    "node_type",
+    "node_type_flexibility",
+    "region",
+    "accelerators",
+    "disks",
+    "node_affinity_labels",
+    "server_binding",
+    "project"
+  ],
+  "google_compute_packet_mirroring": [
+    "project",
+    "network",
+    "description"
+  ],
+  "google_compute_per_instance_config": [
+    "zone",
+    "project",
+    "instance_group_manager",
+    "name"
+  ],
+  "google_compute_project_cloud_armor_tier": [
+    "project"
+  ],
+  "google_compute_project_default_network_tier": [
+    "project"
+  ],
+  "google_compute_project_metadata": [
+    "project"
+  ],
+  "google_compute_project_metadata_item": [
+    "key",
+    "project"
+  ],
+  "google_compute_public_advertised_prefix": [
+    "pdp_scope",
+    "project",
+    "dns_verification_ip",
+    "ip_cidr_range",
+    "name",
+    "description"
+  ],
+  "google_compute_public_delegated_prefix": [
+    "project",
+    "name",
+    "parent_prefix",
+    "region",
+    "allocatable_prefix_length",
+    "is_live_migration",
+    "mode",
+    "ip_cidr_range",
+    "description"
+  ],
+  "google_compute_region_autoscaler": [
+    "name",
+    "region",
+    "project"
+  ],
+  "google_compute_region_backend_service": [
+    "project",
+    "name",
+    "load_balancing_scheme"
+  ],
+  "google_compute_region_commitment": [
+    "license_resource",
+    "region",
+    "resources",
+    "name",
+    "plan",
+    "auto_renew",
+    "category",
+    "existing_reservations",
+    "type",
+    "project",
+    "description"
+  ],
+  "google_compute_region_disk": [
+    "replica_zones",
+    "type",
+    "snapshot",
+    "name",
+    "source_snapshot_encryption_key",
+    "async_primary_disk",
+    "guest_os_features",
+    "physical_block_size_bytes",
+    "project",
+    "description",
+    "disk_encryption_key",
+    "licenses",
+    "region",
+    "source_disk"
+  ],
+  "google_compute_region_disk_iam_binding": [
+    "region",
+    "name",
+    "condition",
+    "role",
+    "project"
+  ],
+  "google_compute_region_disk_iam_member": [
+    "region",
+    "name",
+    "condition",
+    "role",
+    "member",
+    "project"
+  ],
+  "google_compute_region_disk_iam_policy": [
+    "region",
+    "name",
+    "project"
+  ],
+  "google_compute_region_disk_resource_policy_attachment": [
+    "region",
+    "project",
+    "disk",
+    "name"
+  ],
+  "google_compute_region_health_check": [
+    "name",
+    "project",
+    "region"
+  ],
+  "google_compute_region_instance_group_manager": [
+    "region",
+    "project",
+    "distribution_policy_zones",
+    "description",
+    "name",
+    "base_instance_name"
+  ],
+  "google_compute_region_instance_template": [
+    "advanced_machine_features",
+    "name_prefix",
+    "self_link",
+    "metadata_fingerprint",
+    "network_interface",
+    "guest_accelerator",
+    "tags_fingerprint",
+    "effective_labels",
+    "name",
+    "metadata",
+    "resource_manager_tags",
+    "scheduling",
+    "creation_timestamp",
+    "shielded_instance_config",
+    "key_revocation_action_type",
+    "machine_type",
+    "can_ip_forward",
+    "resource_policies",
+    "disk",
+    "metadata_startup_script",
+    "service_account",
+    "numeric_id",
+    "confidential_instance_config",
+    "min_cpu_platform",
+    "region",
+    "description",
+    "reservation_affinity",
+    "project",
+    "tags",
+    "instance_description",
+    "network_performance_config"
+  ],
+  "google_compute_region_network_endpoint": [
+    "project",
+    "port",
+    "region_network_endpoint_group",
+    "fqdn",
+    "ip_address",
+    "region"
+  ],
+  "google_compute_region_network_endpoint_group": [
+    "app_engine",
+    "description",
+    "network",
+    "psc_target_service",
+    "subnetwork",
+    "project",
+    "name",
+    "cloud_function",
+    "cloud_run",
+    "network_endpoint_type",
+    "psc_data",
+    "region"
+  ],
+  "google_compute_region_network_firewall_policy": [
+    "name",
+    "region",
+    "project"
+  ],
+  "google_compute_region_network_firewall_policy_association": [
+    "name",
+    "region",
+    "project",
+    "attachment_target",
+    "firewall_policy"
+  ],
+  "google_compute_region_network_firewall_policy_rule": [
+    "priority",
+    "region",
+    "project",
+    "firewall_policy"
+  ],
+  "google_compute_region_network_firewall_policy_with_rules": [
+    "name",
+    "region",
+    "project"
+  ],
+  "google_compute_region_per_instance_config": [
+    "name",
+    "region_instance_group_manager",
+    "region",
+    "project"
+  ],
+  "google_compute_region_security_policy": [
+    "project",
+    "name",
+    "type",
+    "region"
+  ],
+  "google_compute_region_security_policy_rule": [
+    "region",
+    "security_policy",
+    "project",
+    "priority"
+  ],
+  "google_compute_region_ssl_certificate": [
+    "certificate",
+    "region",
+    "name_prefix",
+    "project",
+    "private_key",
+    "description",
+    "name"
+  ],
+  "google_compute_region_ssl_policy": [
+    "description",
+    "name",
+    "region",
+    "project"
+  ],
+  "google_compute_region_target_http_proxy": [
+    "description",
+    "http_keep_alive_timeout_sec",
+    "region",
+    "project",
+    "name"
+  ],
+  "google_compute_region_target_https_proxy": [
+    "name",
+    "description",
+    "project",
+    "http_keep_alive_timeout_sec",
+    "region"
+  ],
+  "google_compute_region_target_tcp_proxy": [
+    "backend_service",
+    "proxy_bind",
+    "region",
+    "name",
+    "description",
+    "proxy_header",
+    "project"
+  ],
+  "google_compute_region_url_map": [
+    "project",
+    "name"
+  ],
+  "google_compute_reservation": [
+    "share_settings",
+    "specific_reservation",
+    "description",
+    "specific_reservation_required",
+    "project",
+    "name",
+    "zone"
+  ],
+  "google_compute_resize_request": [
+    "name",
+    "resize_by",
+    "description",
+    "zone",
+    "instance_group_manager",
+    "requested_run_duration",
+    "project"
+  ],
+  "google_compute_resource_policy": [
+    "disk_consistency_group_policy",
+    "region",
+    "project"
+  ],
+  "google_compute_resource_policy_attachment": [
+    "instance",
+    "name",
+    "zone",
+    "project"
+  ],
+  "google_compute_route": [
+    "network",
+    "priority",
+    "dest_range",
+    "next_hop_ilb",
+    "tags",
+    "next_hop_gateway",
+    "next_hop_instance",
+    "next_hop_vpn_tunnel",
+    "next_hop_instance_zone",
+    "name",
+    "next_hop_ip",
+    "project",
+    "description"
+  ],
+  "google_compute_router": [
+    "name",
+    "encrypted_interconnect_router",
+    "network",
+    "region",
+    "project"
+  ],
+  "google_compute_router_interface": [
+    "ip_version",
+    "project",
+    "redundant_interface",
+    "ip_range",
+    "private_ip_address",
+    "subnetwork",
+    "region",
+    "name",
+    "router",
+    "vpn_tunnel",
+    "interconnect_attachment"
+  ],
+  "google_compute_router_nat": [
+    "endpoint_types",
+    "initial_nat_ips",
+    "name",
+    "type",
+    "project",
+    "router",
+    "region"
+  ],
+  "google_compute_router_nat_address": [
+    "router",
+    "router_nat",
+    "region",
+    "project"
+  ],
+  "google_compute_router_peer": [
+    "router",
+    "name",
+    "project",
+    "region",
+    "interface"
+  ],
+  "google_compute_router_route_policy": [
+    "project",
+    "name",
+    "router",
+    "terms",
+    "region"
+  ],
+  "google_compute_security_policy": [
+    "name",
+    "project",
+    "type"
+  ],
+  "google_compute_security_policy_rule": [
+    "security_policy",
+    "priority",
+    "project"
+  ],
+  "google_compute_service_attachment": [
+    "name",
+    "region",
+    "target_service",
+    "domain_names",
+    "project"
+  ],
+  "google_compute_shared_vpc_host_project": [
+    "project"
+  ],
+  "google_compute_shared_vpc_service_project": [
+    "host_project",
+    "service_project"
+  ],
+  "google_compute_snapshot": [
+    "name",
+    "source_disk",
+    "project",
+    "zone",
+    "description",
+    "source_disk_encryption_key",
+    "chain_name",
+    "snapshot_encryption_key",
+    "storage_locations"
+  ],
+  "google_compute_snapshot_iam_binding": [
+    "condition",
+    "project",
+    "name",
+    "role"
+  ],
+  "google_compute_snapshot_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "name",
+    "project"
+  ],
+  "google_compute_snapshot_iam_policy": [
+    "project",
+    "name"
+  ],
+  "google_compute_ssl_certificate": [
+    "private_key",
+    "project",
+    "certificate",
+    "description",
+    "name",
+    "name_prefix"
+  ],
+  "google_compute_ssl_policy": [
+    "description",
+    "project",
+    "name"
+  ],
+  "google_compute_storage_pool": [
+    "name",
+    "storage_pool_type",
+    "capacity_provisioning_type",
+    "performance_provisioning_type",
+    "description",
+    "project"
+  ],
+  "google_compute_storage_pool_iam_binding": [
+    "condition",
+    "project",
+    "zone",
+    "name",
+    "role"
+  ],
+  "google_compute_storage_pool_iam_member": [
+    "project",
+    "zone",
+    "name",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_compute_storage_pool_iam_policy": [
+    "zone",
+    "name",
+    "project"
+  ],
+  "google_compute_subnetwork": [
+    "description",
+    "network",
+    "external_ipv6_prefix",
+    "reserved_internal_range",
+    "name",
+    "enable_flow_logs",
+    "project",
+    "region",
+    "ip_collection"
+  ],
+  "google_compute_subnetwork_iam_binding": [
+    "role",
+    "region",
+    "subnetwork",
+    "project",
+    "condition"
+  ],
+  "google_compute_subnetwork_iam_member": [
+    "subnetwork",
+    "project",
+    "condition",
+    "role",
+    "member",
+    "region"
+  ],
+  "google_compute_subnetwork_iam_policy": [
+    "project",
+    "region",
+    "subnetwork"
+  ],
+  "google_compute_target_grpc_proxy": [
+    "validate_for_proxyless",
+    "name",
+    "url_map",
+    "project"
+  ],
+  "google_compute_target_http_proxy": [
+    "name",
+    "proxy_bind",
+    "project",
+    "description",
+    "http_keep_alive_timeout_sec"
+  ],
+  "google_compute_target_https_proxy": [
+    "name",
+    "description",
+    "http_keep_alive_timeout_sec",
+    "proxy_bind",
+    "project",
+    "tls_early_data"
+  ],
+  "google_compute_target_instance": [
+    "instance",
+    "name",
+    "description",
+    "nat_policy",
+    "zone",
+    "project"
+  ],
+  "google_compute_target_pool": [
+    "project",
+    "session_affinity",
+    "name",
+    "failover_ratio",
+    "region",
+    "description"
+  ],
+  "google_compute_target_ssl_proxy": [
+    "description",
+    "name",
+    "project"
+  ],
+  "google_compute_target_tcp_proxy": [
+    "name",
+    "proxy_bind",
+    "description",
+    "project"
+  ],
+  "google_compute_url_map": [
+    "name",
+    "project"
+  ],
+  "google_compute_vpn_gateway": [
+    "description",
+    "region",
+    "project",
+    "name",
+    "network"
+  ],
+  "google_compute_vpn_tunnel": [
+    "project",
+    "peer_external_gateway",
+    "region",
+    "remote_traffic_selector",
+    "router",
+    "vpn_gateway_interface",
+    "description",
+    "peer_external_gateway_interface",
+    "peer_ip",
+    "shared_secret",
+    "peer_gcp_gateway",
+    "vpn_gateway",
+    "local_traffic_selector",
+    "target_vpn_gateway",
+    "name",
+    "ike_version"
+  ],
+  "google_container_analysis_note": [
+    "project",
+    "name"
+  ],
+  "google_container_analysis_note_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "note"
+  ],
+  "google_container_analysis_note_iam_member": [
+    "member",
+    "condition",
+    "project",
+    "note",
+    "role"
+  ],
+  "google_container_analysis_note_iam_policy": [
+    "project",
+    "note"
+  ],
+  "google_container_analysis_occurrence": [
+    "resource_uri",
+    "note_name",
+    "project"
+  ],
+  "google_container_attached_cluster": [
+    "distribution",
+    "location",
+    "fleet",
+    "name",
+    "oidc_config",
+    "project"
+  ],
+  "google_container_aws_cluster": [
+    "location",
+    "project",
+    "control_plane",
+    "name",
+    "aws_region",
+    "fleet",
+    "networking"
+  ],
+  "google_container_aws_node_pool": [
+    "subnet_id",
+    "cluster",
+    "location",
+    "name",
+    "kubelet_config",
+    "project",
+    "config",
+    "max_pods_constraint"
+  ],
+  "google_container_azure_client": [
+    "location",
+    "name",
+    "tenant_id",
+    "project",
+    "application_id"
+  ],
+  "google_container_azure_cluster": [
+    "networking",
+    "resource_group_id",
+    "annotations",
+    "location",
+    "effective_annotations",
+    "fleet",
+    "azure_region",
+    "name",
+    "project",
+    "control_plane"
+  ],
+  "google_container_azure_node_pool": [
+    "config",
+    "location",
+    "max_pods_constraint",
+    "name",
+    "subnet_id",
+    "azure_availability_zone",
+    "cluster",
+    "project"
+  ],
+  "google_container_cluster": [
+    "datapath_provider",
+    "name",
+    "location",
+    "default_max_pods_per_node",
+    "project",
+    "network",
+    "subnetwork",
+    "initial_node_count",
+    "user_managed_keys_config",
+    "node_config",
+    "enable_autopilot",
+    "description",
+    "enable_kubernetes_alpha",
+    "master_auth",
+    "ip_allocation_policy",
+    "cluster_autoscaling",
+    "private_cluster_config",
+    "confidential_nodes",
+    "networking_mode",
+    "cluster_ipv4_cidr",
+    "enable_tpu",
+    "node_pool"
+  ],
+  "google_container_node_pool": [
+    "initial_node_count",
+    "cluster",
+    "location",
+    "queued_provisioning",
+    "name_prefix",
+    "network_config",
+    "node_config",
+    "project",
+    "placement_policy",
+    "max_pods_per_node",
+    "name"
+  ],
+  "google_container_registry": [
+    "project",
+    "location"
+  ],
+  "google_data_catalog_entry": [
+    "entry_group",
+    "type",
+    "entry_id"
+  ],
+  "google_data_catalog_entry_group": [
+    "region",
+    "project",
+    "entry_group_id"
+  ],
+  "google_data_catalog_entry_group_iam_binding": [
+    "entry_group",
+    "project",
+    "condition",
+    "role",
+    "region"
+  ],
+  "google_data_catalog_entry_group_iam_member": [
+    "region",
+    "entry_group",
+    "role",
+    "member",
+    "condition",
+    "project"
+  ],
+  "google_data_catalog_entry_group_iam_policy": [
+    "project",
+    "region",
+    "entry_group"
+  ],
+  "google_data_catalog_policy_tag": [
+    "taxonomy"
+  ],
+  "google_data_catalog_policy_tag_iam_binding": [
+    "condition",
+    "policy_tag",
+    "role"
+  ],
+  "google_data_catalog_policy_tag_iam_member": [
+    "policy_tag",
+    "condition",
+    "role",
+    "member"
+  ],
+  "google_data_catalog_policy_tag_iam_policy": [
+    "policy_tag"
+  ],
+  "google_data_catalog_tag": [
+    "template",
+    "parent"
+  ],
+  "google_data_catalog_tag_template": [
+    "region",
+    "project",
+    "tag_template_id"
+  ],
+  "google_data_catalog_tag_template_iam_binding": [
+    "project",
+    "region",
+    "tag_template",
+    "role",
+    "condition"
+  ],
+  "google_data_catalog_tag_template_iam_member": [
+    "member",
+    "condition",
+    "role",
+    "project",
+    "region",
+    "tag_template"
+  ],
+  "google_data_catalog_tag_template_iam_policy": [
+    "tag_template",
+    "project",
+    "region"
+  ],
+  "google_data_catalog_taxonomy": [
+    "region",
+    "project"
+  ],
+  "google_data_catalog_taxonomy_iam_binding": [
+    "project",
+    "region",
+    "taxonomy",
+    "condition",
+    "role"
+  ],
+  "google_data_catalog_taxonomy_iam_member": [
+    "region",
+    "taxonomy",
+    "project",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_data_catalog_taxonomy_iam_policy": [
+    "project",
+    "region",
+    "taxonomy"
+  ],
+  "google_data_fusion_instance": [
+    "event_publish_config",
+    "network_config",
+    "type",
+    "dataproc_service_account",
+    "private_instance",
+    "region",
+    "name",
+    "project",
+    "crypto_key_config",
+    "display_name",
+    "options",
+    "description",
+    "tags",
+    "zone"
+  ],
+  "google_data_fusion_instance_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "region",
+    "name"
+  ],
+  "google_data_fusion_instance_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "region",
+    "name"
+  ],
+  "google_data_fusion_instance_iam_policy": [
+    "region",
+    "name",
+    "project"
+  ],
+  "google_data_loss_prevention_deidentify_template": [
+    "template_id",
+    "parent"
+  ],
+  "google_data_loss_prevention_discovery_config": [
+    "location",
+    "parent"
+  ],
+  "google_data_loss_prevention_inspect_template": [
+    "parent",
+    "inspect_config",
+    "template_id"
+  ],
+  "google_data_loss_prevention_job_trigger": [
+    "trigger_id",
+    "parent"
+  ],
+  "google_data_loss_prevention_stored_info_type": [
+    "stored_info_type_id",
+    "parent"
+  ],
+  "google_data_pipeline_pipeline": [
+    "scheduler_service_account_email",
+    "project",
+    "name",
+    "state",
+    "pipeline_sources"
+  ],
+  "google_database_migration_service_connection_profile": [
+    "mysql",
+    "cloudsql",
+    "oracle",
+    "alloydb",
+    "project",
+    "connection_profile_id",
+    "postgresql",
+    "location"
+  ],
+  "google_database_migration_service_migration_job": [
+    "source",
+    "location",
+    "project",
+    "destination",
+    "migration_job_id",
+    "type"
+  ],
+  "google_database_migration_service_private_connection": [
+    "display_name",
+    "effective_labels",
+    "project",
+    "location",
+    "private_connection_id",
+    "vpc_peering_config",
+    "create_without_validation"
+  ],
+  "google_dataflow_job": [
+    "name",
+    "max_workers",
+    "zone",
+    "region",
+    "project"
+  ],
+  "google_dataplex_aspect_type": [
+    "location",
+    "aspect_type_id",
+    "project"
+  ],
+  "google_dataplex_aspect_type_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "aspect_type_id",
+    "role"
+  ],
+  "google_dataplex_aspect_type_iam_member": [
+    "member",
+    "condition",
+    "project",
+    "location",
+    "aspect_type_id",
+    "role"
+  ],
+  "google_dataplex_aspect_type_iam_policy": [
+    "project",
+    "location",
+    "aspect_type_id"
+  ],
+  "google_dataplex_asset": [
+    "dataplex_zone",
+    "resource_spec",
+    "lake",
+    "location",
+    "project"
+  ],
+  "google_dataplex_asset_iam_binding": [
+    "condition",
+    "role",
+    "asset",
+    "project",
+    "location",
+    "lake",
+    "dataplex_zone"
+  ],
+  "google_dataplex_asset_iam_member": [
+    "condition",
+    "dataplex_zone",
+    "asset",
+    "role",
+    "member",
+    "project",
+    "location",
+    "lake"
+  ],
+  "google_dataplex_asset_iam_policy": [
+    "asset",
+    "project",
+    "location",
+    "lake",
+    "dataplex_zone"
+  ],
+  "google_dataplex_datascan": [
+    "data_scan_id",
+    "execution_spec",
+    "location",
+    "project",
+    "data"
+  ],
+  "google_dataplex_datascan_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "data_scan_id",
+    "role"
+  ],
+  "google_dataplex_datascan_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "data_scan_id"
+  ],
+  "google_dataplex_datascan_iam_policy": [
+    "data_scan_id",
+    "project",
+    "location"
+  ],
+  "google_dataplex_entry": [
+    "entry_source",
+    "location",
+    "entry_group_id",
+    "entry_id",
+    "parent_entry",
+    "project",
+    "entry_type"
+  ],
+  "google_dataplex_entry_group": [
+    "entry_group_id",
+    "project",
+    "location"
+  ],
+  "google_dataplex_entry_group_iam_binding": [
+    "entry_group_id",
+    "role",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_dataplex_entry_group_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "entry_group_id"
+  ],
+  "google_dataplex_entry_group_iam_policy": [
+    "project",
+    "location",
+    "entry_group_id"
+  ],
+  "google_dataplex_entry_type": [
+    "location",
+    "project",
+    "entry_type_id"
+  ],
+  "google_dataplex_entry_type_iam_binding": [
+    "location",
+    "entry_type_id",
+    "condition",
+    "role",
+    "project"
+  ],
+  "google_dataplex_entry_type_iam_member": [
+    "project",
+    "location",
+    "entry_type_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_dataplex_entry_type_iam_policy": [
+    "project",
+    "location",
+    "entry_type_id"
+  ],
+  "google_dataplex_glossary": [
+    "project",
+    "glossary_id",
+    "location"
+  ],
+  "google_dataplex_glossary_category": [
+    "project",
+    "category_id",
+    "location",
+    "glossary_id"
+  ],
+  "google_dataplex_glossary_iam_binding": [
+    "role",
+    "condition",
+    "glossary_id",
+    "project",
+    "location"
+  ],
+  "google_dataplex_glossary_iam_member": [
+    "glossary_id",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_dataplex_glossary_iam_policy": [
+    "project",
+    "location",
+    "glossary_id"
+  ],
+  "google_dataplex_glossary_term": [
+    "glossary_id",
+    "project",
+    "term_id",
+    "location"
+  ],
+  "google_dataplex_lake": [
+    "project",
+    "location"
+  ],
+  "google_dataplex_lake_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "location",
+    "lake"
+  ],
+  "google_dataplex_lake_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "location",
+    "lake",
+    "project"
+  ],
+  "google_dataplex_lake_iam_policy": [
+    "project",
+    "location",
+    "lake"
+  ],
+  "google_dataplex_task": [
+    "lake",
+    "location",
+    "task_id",
+    "trigger_spec",
+    "project"
+  ],
+  "google_dataplex_task_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "lake",
+    "task_id",
+    "role"
+  ],
+  "google_dataplex_task_iam_member": [
+    "task_id",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "lake"
+  ],
+  "google_dataplex_task_iam_policy": [
+    "project",
+    "location",
+    "lake",
+    "task_id"
+  ],
+  "google_dataplex_zone": [
+    "project",
+    "location",
+    "type",
+    "resource_spec",
+    "lake"
+  ],
+  "google_dataplex_zone_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "lake",
+    "dataplex_zone",
+    "role"
+  ],
+  "google_dataplex_zone_iam_member": [
+    "dataplex_zone",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "lake"
+  ],
+  "google_dataplex_zone_iam_policy": [
+    "project",
+    "location",
+    "lake",
+    "dataplex_zone"
+  ],
+  "google_dataproc_autoscaling_policy": [
+    "location",
+    "project"
+  ],
+  "google_dataproc_autoscaling_policy_iam_binding": [
+    "policy_id",
+    "condition",
+    "role",
+    "project",
+    "location"
+  ],
+  "google_dataproc_autoscaling_policy_iam_member": [
+    "project",
+    "location",
+    "policy_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_dataproc_autoscaling_policy_iam_policy": [
+    "policy_id",
+    "project",
+    "location"
+  ],
+  "google_dataproc_batch": [
+    "batch_id",
+    "spark_sql_batch",
+    "environment_config",
+    "location",
+    "pyspark_batch",
+    "project",
+    "effective_labels",
+    "runtime_config",
+    "spark_batch",
+    "spark_r_batch"
+  ],
+  "google_dataproc_cluster": [
+    "name",
+    "region",
+    "project",
+    "virtual_cluster_config",
+    "cluster_config"
+  ],
+  "google_dataproc_cluster_iam_binding": [
+    "region",
+    "role",
+    "condition",
+    "cluster",
+    "project"
+  ],
+  "google_dataproc_cluster_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "cluster",
+    "project",
+    "region"
+  ],
+  "google_dataproc_cluster_iam_policy": [
+    "cluster",
+    "project",
+    "region"
+  ],
+  "google_dataproc_gdc_application_environment": [
+    "project",
+    "serviceinstance",
+    "application_environment_id",
+    "location"
+  ],
+  "google_dataproc_gdc_service_instance": [
+    "project",
+    "effective_labels",
+    "location",
+    "display_name",
+    "spark_service_instance_config",
+    "service_instance_id",
+    "gdce_cluster",
+    "service_account"
+  ],
+  "google_dataproc_gdc_spark_application": [
+    "spark_application_id",
+    "namespace",
+    "spark_r_application_config",
+    "project",
+    "serviceinstance",
+    "application_environment",
+    "effective_labels",
+    "spark_application_config",
+    "location",
+    "pyspark_application_config",
+    "spark_sql_application_config",
+    "effective_annotations",
+    "dependency_images",
+    "display_name",
+    "properties",
+    "version",
+    "annotations"
+  ],
+  "google_dataproc_job": [
+    "hadoop_config",
+    "hive_config",
+    "placement",
+    "scheduling",
+    "sparksql_config",
+    "project",
+    "effective_labels",
+    "pig_config",
+    "pyspark_config",
+    "spark_config",
+    "presto_config",
+    "region",
+    "reference"
+  ],
+  "google_dataproc_job_iam_binding": [
+    "role",
+    "condition",
+    "region",
+    "job_id",
+    "project"
+  ],
+  "google_dataproc_job_iam_member": [
+    "role",
+    "member",
+    "job_id",
+    "project",
+    "region",
+    "condition"
+  ],
+  "google_dataproc_job_iam_policy": [
+    "job_id",
+    "project",
+    "region"
+  ],
+  "google_dataproc_metastore_database_iam_binding": [
+    "project",
+    "location",
+    "service_id",
+    "database",
+    "role",
+    "condition"
+  ],
+  "google_dataproc_metastore_database_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "service_id",
+    "database"
+  ],
+  "google_dataproc_metastore_database_iam_policy": [
+    "project",
+    "location",
+    "service_id",
+    "database"
+  ],
+  "google_dataproc_metastore_federation": [
+    "federation_id",
+    "location",
+    "project",
+    "version"
+  ],
+  "google_dataproc_metastore_federation_iam_binding": [
+    "role",
+    "federation_id",
+    "project",
+    "location",
+    "condition"
+  ],
+  "google_dataproc_metastore_federation_iam_member": [
+    "condition",
+    "role",
+    "member",
+    "project",
+    "location",
+    "federation_id"
+  ],
+  "google_dataproc_metastore_federation_iam_policy": [
+    "project",
+    "location",
+    "federation_id"
+  ],
+  "google_dataproc_metastore_service": [
+    "database_type",
+    "encryption_config",
+    "network_config",
+    "service_id",
+    "hive_metastore_config",
+    "location",
+    "network",
+    "release_channel",
+    "project"
+  ],
+  "google_dataproc_metastore_service_iam_binding": [
+    "service_id",
+    "role",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_dataproc_metastore_service_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "service_id"
+  ],
+  "google_dataproc_metastore_service_iam_policy": [
+    "project",
+    "location",
+    "service_id"
+  ],
+  "google_dataproc_metastore_table_iam_binding": [
+    "database_id",
+    "condition",
+    "service_id",
+    "role",
+    "table",
+    "project",
+    "location"
+  ],
+  "google_dataproc_metastore_table_iam_member": [
+    "table",
+    "member",
+    "condition",
+    "location",
+    "service_id",
+    "database_id",
+    "role",
+    "project"
+  ],
+  "google_dataproc_metastore_table_iam_policy": [
+    "database_id",
+    "table",
+    "project",
+    "location",
+    "service_id"
+  ],
+  "google_dataproc_workflow_template": [
+    "effective_labels",
+    "project",
+    "jobs",
+    "name",
+    "placement",
+    "encryption_config",
+    "version",
+    "location",
+    "dag_timeout",
+    "parameters"
+  ],
+  "google_datastream_connection_profile": [
+    "connection_profile_id",
+    "location",
+    "forward_ssh_connectivity",
+    "mysql_profile",
+    "project",
+    "create_without_validation"
+  ],
+  "google_datastream_private_connection": [
+    "private_connection_id",
+    "create_without_validation",
+    "psc_interface_config",
+    "display_name",
+    "location",
+    "vpc_peering_config",
+    "effective_labels",
+    "project"
+  ],
+  "google_datastream_stream": [
+    "destination_config",
+    "source_config",
+    "project",
+    "location",
+    "stream_id",
+    "create_without_validation",
+    "customer_managed_encryption_key"
+  ],
+  "google_deployment_manager_deployment": [
+    "delete_policy",
+    "project",
+    "create_policy",
+    "name"
+  ],
+  "google_developer_connect_account_connector": [
+    "account_connector_id",
+    "provider_oauth_config",
+    "location",
+    "project"
+  ],
+  "google_developer_connect_connection": [
+    "project",
+    "location",
+    "bitbucket_data_center_config",
+    "github_config",
+    "connection_id",
+    "bitbucket_cloud_config",
+    "gitlab_config",
+    "gitlab_enterprise_config"
+  ],
+  "google_developer_connect_git_repository_link": [
+    "annotations",
+    "etag",
+    "effective_labels",
+    "project",
+    "clone_uri",
+    "location",
+    "effective_annotations",
+    "git_repository_link_id",
+    "parent_connection"
+  ],
+  "google_dialogflow_agent": [
+    "project",
+    "default_language_code"
+  ],
+  "google_dialogflow_cx_agent": [
+    "project",
+    "default_language_code",
+    "location"
+  ],
+  "google_dialogflow_cx_entity_type": [
+    "language_code",
+    "parent"
+  ],
+  "google_dialogflow_cx_environment": [
+    "parent"
+  ],
+  "google_dialogflow_cx_flow": [
+    "parent",
+    "is_default_start_flow",
+    "language_code"
+  ],
+  "google_dialogflow_cx_intent": [
+    "is_default_welcome_intent",
+    "language_code",
+    "parent",
+    "is_default_negative_intent"
+  ],
+  "google_dialogflow_cx_page": [
+    "parent",
+    "language_code"
+  ],
+  "google_dialogflow_cx_security_settings": [
+    "project",
+    "location"
+  ],
+  "google_dialogflow_cx_test_case": [
+    "parent"
+  ],
+  "google_dialogflow_cx_version": [
+    "parent"
+  ],
+  "google_dialogflow_cx_webhook": [
+    "parent",
+    "generic_web_service",
+    "service_directory"
+  ],
+  "google_dialogflow_entity_type": [
+    "project"
+  ],
+  "google_dialogflow_fulfillment": [
+    "project"
+  ],
+  "google_dialogflow_intent": [
+    "parent_followup_intent_name",
+    "project"
+  ],
+  "google_discovery_engine_chat_engine": [
+    "common_config",
+    "project",
+    "chat_engine_config",
+    "collection_id",
+    "engine_id",
+    "location",
+    "industry_vertical"
+  ],
+  "google_discovery_engine_data_store": [
+    "content_config",
+    "advanced_site_search_config",
+    "document_processing_config",
+    "data_store_id",
+    "industry_vertical",
+    "project",
+    "solution_types",
+    "location"
+  ],
+  "google_discovery_engine_schema": [
+    "data_store_id",
+    "location",
+    "schema_id",
+    "json_schema",
+    "project"
+  ],
+  "google_discovery_engine_search_engine": [
+    "location",
+    "common_config",
+    "collection_id",
+    "industry_vertical",
+    "project",
+    "engine_id"
+  ],
+  "google_discovery_engine_sitemap": [
+    "project",
+    "data_store_id",
+    "location",
+    "uri"
+  ],
+  "google_discovery_engine_target_site": [
+    "project",
+    "provided_uri_pattern",
+    "exact_match",
+    "data_store_id",
+    "location",
+    "type"
+  ],
+  "google_dns_managed_zone": [
+    "project",
+    "dns_name",
+    "name",
+    "visibility"
+  ],
+  "google_dns_managed_zone_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "managed_zone"
+  ],
+  "google_dns_managed_zone_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "managed_zone"
+  ],
+  "google_dns_managed_zone_iam_policy": [
+    "managed_zone",
+    "project"
+  ],
+  "google_dns_policy": [
+    "dns64_config",
+    "project",
+    "name"
+  ],
+  "google_dns_record_set": [
+    "managed_zone",
+    "name",
+    "routing_policy",
+    "project"
+  ],
+  "google_dns_response_policy": [
+    "response_policy_name",
+    "project"
+  ],
+  "google_dns_response_policy_rule": [
+    "rule_name",
+    "project"
+  ],
+  "google_document_ai_processor": [
+    "project",
+    "display_name",
+    "location",
+    "type",
+    "kms_key_name"
+  ],
+  "google_document_ai_processor_default_version": [
+    "processor",
+    "version"
+  ],
+  "google_document_ai_warehouse_document_schema": [
+    "project_number",
+    "property_definitions",
+    "document_is_folder",
+    "display_name",
+    "location"
+  ],
+  "google_document_ai_warehouse_location": [
+    "database_type",
+    "location",
+    "project_number",
+    "document_creator_default_role",
+    "kms_key",
+    "access_control_mode"
+  ],
+  "google_edgecontainer_cluster": [
+    "project",
+    "control_plane_encryption",
+    "authorization",
+    "name",
+    "control_plane",
+    "fleet",
+    "location",
+    "networking"
+  ],
+  "google_edgecontainer_node_pool": [
+    "name",
+    "cluster",
+    "node_location",
+    "location",
+    "local_disk_encryption",
+    "project"
+  ],
+  "google_edgecontainer_vpn_connection": [
+    "vpc_project",
+    "vpc",
+    "project",
+    "enable_high_availability",
+    "name",
+    "nat_gateway_ip",
+    "cluster",
+    "effective_labels",
+    "location"
+  ],
+  "google_edgenetwork_interconnect_attachment": [
+    "description",
+    "mtu",
+    "location",
+    "zone",
+    "project",
+    "interconnect",
+    "vlan_id",
+    "effective_labels",
+    "interconnect_attachment_id",
+    "network"
+  ],
+  "google_edgenetwork_network": [
+    "effective_labels",
+    "network_id",
+    "zone",
+    "project",
+    "location",
+    "description",
+    "mtu"
+  ],
+  "google_edgenetwork_subnet": [
+    "description",
+    "zone",
+    "effective_labels",
+    "network",
+    "ipv4_cidr",
+    "ipv6_cidr",
+    "vlan_id",
+    "project",
+    "location",
+    "subnet_id"
+  ],
+  "google_endpoints_service": [
+    "service_name",
+    "project"
+  ],
+  "google_endpoints_service_consumers_iam_binding": [
+    "role",
+    "condition",
+    "service_name",
+    "consumer_project"
+  ],
+  "google_endpoints_service_consumers_iam_member": [
+    "service_name",
+    "consumer_project",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_endpoints_service_consumers_iam_policy": [
+    "service_name",
+    "consumer_project"
+  ],
+  "google_endpoints_service_iam_binding": [
+    "role",
+    "condition",
+    "service_name"
+  ],
+  "google_endpoints_service_iam_member": [
+    "service_name",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_endpoints_service_iam_policy": [
+    "service_name"
+  ],
+  "google_essential_contacts_contact": [
+    "parent",
+    "email"
+  ],
+  "google_eventarc_channel": [
+    "third_party_provider",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_eventarc_enrollment": [
+    "message_bus",
+    "enrollment_id",
+    "location",
+    "project"
+  ],
+  "google_eventarc_google_api_source": [
+    "project",
+    "location",
+    "google_api_source_id"
+  ],
+  "google_eventarc_google_channel_config": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_eventarc_message_bus": [
+    "message_bus_id",
+    "project",
+    "location"
+  ],
+  "google_eventarc_pipeline": [
+    "location",
+    "pipeline_id",
+    "project"
+  ],
+  "google_eventarc_trigger": [
+    "matching_criteria",
+    "project",
+    "transport",
+    "location",
+    "name",
+    "channel"
+  ],
+  "google_filestore_backup": [
+    "location",
+    "name",
+    "source_file_share",
+    "project",
+    "tags"
+  ],
+  "google_filestore_instance": [
+    "project",
+    "zone",
+    "initial_replication",
+    "kms_key_name",
+    "location",
+    "protocol",
+    "tags",
+    "networks",
+    "tier",
+    "file_shares"
+  ],
+  "google_filestore_snapshot": [
+    "project",
+    "name",
+    "instance",
+    "location"
+  ],
+  "google_firebase_app_check_app_attest_config": [
+    "app_id",
+    "project"
+  ],
+  "google_firebase_app_check_debug_token": [
+    "project",
+    "app_id",
+    "token"
+  ],
+  "google_firebase_app_check_device_check_config": [
+    "app_id",
+    "project"
+  ],
+  "google_firebase_app_check_play_integrity_config": [
+    "app_id",
+    "project"
+  ],
+  "google_firebase_app_check_recaptcha_enterprise_config": [
+    "project",
+    "app_id"
+  ],
+  "google_firebase_app_check_recaptcha_v3_config": [
+    "project",
+    "app_id"
+  ],
+  "google_firebase_app_check_service_config": [
+    "service_id",
+    "project"
+  ],
+  "google_firebase_app_hosting_backend": [
+    "backend_id",
+    "location",
+    "serving_locality",
+    "project"
+  ],
+  "google_firebase_app_hosting_build": [
+    "build_id",
+    "effective_annotations",
+    "source",
+    "annotations",
+    "display_name",
+    "backend",
+    "effective_labels",
+    "project",
+    "location"
+  ],
+  "google_firebase_app_hosting_default_domain": [
+    "project",
+    "backend",
+    "domain_id",
+    "location"
+  ],
+  "google_firebase_app_hosting_domain": [
+    "backend",
+    "domain_id",
+    "location",
+    "project"
+  ],
+  "google_firebase_app_hosting_traffic": [
+    "location",
+    "project",
+    "backend"
+  ],
+  "google_firebase_data_connect_service": [
+    "location",
+    "service_id",
+    "project"
+  ],
+  "google_firebaserules_release": [
+    "ruleset_name",
+    "project",
+    "name"
+  ],
+  "google_firebaserules_ruleset": [
+    "source",
+    "project"
+  ],
+  "google_firestore_backup_schedule": [
+    "weekly_recurrence",
+    "project",
+    "daily_recurrence",
+    "database"
+  ],
+  "google_firestore_database": [
+    "name",
+    "cmek_config",
+    "project",
+    "location_id",
+    "database_edition"
+  ],
+  "google_firestore_document": [
+    "project",
+    "database",
+    "collection",
+    "document_id"
+  ],
+  "google_firestore_field": [
+    "collection",
+    "field",
+    "database",
+    "project"
+  ],
+  "google_firestore_index": [
+    "density",
+    "fields",
+    "api_scope",
+    "database",
+    "project",
+    "collection",
+    "multikey",
+    "query_scope"
+  ],
+  "google_folder": [
+    "tags"
+  ],
+  "google_folder_access_approval_settings": [
+    "folder_id"
+  ],
+  "google_folder_iam_audit_config": [
+    "folder"
+  ],
+  "google_folder_iam_binding": [
+    "folder",
+    "role",
+    "condition"
+  ],
+  "google_folder_iam_member": [
+    "condition",
+    "folder",
+    "role",
+    "member"
+  ],
+  "google_folder_iam_policy": [
+    "folder"
+  ],
+  "google_folder_organization_policy": [
+    "folder",
+    "constraint"
+  ],
+  "google_gemini_code_repository_index": [
+    "code_repository_index_id",
+    "location",
+    "kms_key",
+    "project"
+  ],
+  "google_gemini_code_tools_setting": [
+    "location",
+    "project",
+    "code_tools_setting_id"
+  ],
+  "google_gemini_code_tools_setting_binding": [
+    "location",
+    "project",
+    "code_tools_setting_id",
+    "setting_binding_id"
+  ],
+  "google_gemini_data_sharing_with_google_setting": [
+    "data_sharing_with_google_setting_id",
+    "project",
+    "location"
+  ],
+  "google_gemini_data_sharing_with_google_setting_binding": [
+    "project",
+    "data_sharing_with_google_setting_id",
+    "setting_binding_id",
+    "location"
+  ],
+  "google_gemini_gemini_gcp_enablement_setting": [
+    "project",
+    "gemini_gcp_enablement_setting_id",
+    "location"
+  ],
+  "google_gemini_gemini_gcp_enablement_setting_binding": [
+    "gemini_gcp_enablement_setting_id",
+    "project",
+    "setting_binding_id",
+    "location"
+  ],
+  "google_gemini_logging_setting": [
+    "project",
+    "logging_setting_id",
+    "location"
+  ],
+  "google_gemini_logging_setting_binding": [
+    "project",
+    "logging_setting_id",
+    "setting_binding_id",
+    "location"
+  ],
+  "google_gemini_release_channel_setting": [
+    "location",
+    "release_channel_setting_id",
+    "project"
+  ],
+  "google_gemini_release_channel_setting_binding": [
+    "setting_binding_id",
+    "location",
+    "release_channel_setting_id",
+    "project"
+  ],
+  "google_gemini_repository_group": [
+    "repository_group_id",
+    "code_repository_index",
+    "location",
+    "project"
+  ],
+  "google_gemini_repository_group_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "code_repository_index",
+    "repository_group_id",
+    "role"
+  ],
+  "google_gemini_repository_group_iam_member": [
+    "member",
+    "condition",
+    "project",
+    "location",
+    "code_repository_index",
+    "repository_group_id",
+    "role"
+  ],
+  "google_gemini_repository_group_iam_policy": [
+    "project",
+    "location",
+    "code_repository_index",
+    "repository_group_id"
+  ],
+  "google_gke_backup_backup_channel": [
+    "destination_project",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_gke_backup_backup_plan": [
+    "location",
+    "name",
+    "cluster",
+    "project"
+  ],
+  "google_gke_backup_backup_plan_iam_binding": [
+    "role",
+    "project",
+    "location",
+    "name",
+    "condition"
+  ],
+  "google_gke_backup_backup_plan_iam_member": [
+    "condition",
+    "role",
+    "member",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_gke_backup_backup_plan_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_gke_backup_restore_channel": [
+    "destination_project",
+    "location",
+    "name",
+    "project"
+  ],
+  "google_gke_backup_restore_plan": [
+    "location",
+    "name",
+    "backup_plan",
+    "cluster",
+    "project"
+  ],
+  "google_gke_backup_restore_plan_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_gke_backup_restore_plan_iam_member": [
+    "member",
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role"
+  ],
+  "google_gke_backup_restore_plan_iam_policy": [
+    "name",
+    "project",
+    "location"
+  ],
+  "google_gke_hub_feature": [
+    "name",
+    "location",
+    "project"
+  ],
+  "google_gke_hub_feature_iam_binding": [
+    "name",
+    "role",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_gke_hub_feature_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_gke_hub_feature_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_gke_hub_feature_membership": [
+    "membership_location",
+    "project",
+    "feature",
+    "location",
+    "membership"
+  ],
+  "google_gke_hub_fleet": [
+    "project"
+  ],
+  "google_gke_hub_membership": [
+    "membership_id",
+    "authority",
+    "project",
+    "endpoint",
+    "location"
+  ],
+  "google_gke_hub_membership_binding": [
+    "location",
+    "membership_id",
+    "project",
+    "membership_binding_id"
+  ],
+  "google_gke_hub_membership_iam_binding": [
+    "project",
+    "location",
+    "membership_id",
+    "role",
+    "condition"
+  ],
+  "google_gke_hub_membership_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location",
+    "membership_id"
+  ],
+  "google_gke_hub_membership_iam_policy": [
+    "project",
+    "location",
+    "membership_id"
+  ],
+  "google_gke_hub_namespace": [
+    "scope",
+    "project",
+    "scope_namespace_id",
+    "scope_id"
+  ],
+  "google_gke_hub_scope": [
+    "project",
+    "scope_id"
+  ],
+  "google_gke_hub_scope_iam_binding": [
+    "scope_id",
+    "condition",
+    "role",
+    "project"
+  ],
+  "google_gke_hub_scope_iam_member": [
+    "scope_id",
+    "role",
+    "member",
+    "condition",
+    "project"
+  ],
+  "google_gke_hub_scope_iam_policy": [
+    "project",
+    "scope_id"
+  ],
+  "google_gke_hub_scope_rbac_role_binding": [
+    "scope_rbac_role_binding_id",
+    "project",
+    "scope_id"
+  ],
+  "google_gkeonprem_bare_metal_admin_cluster": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_gkeonprem_bare_metal_cluster": [
+    "project",
+    "admin_cluster_membership",
+    "name",
+    "location"
+  ],
+  "google_gkeonprem_bare_metal_node_pool": [
+    "name",
+    "bare_metal_cluster",
+    "project",
+    "location"
+  ],
+  "google_gkeonprem_vmware_cluster": [
+    "network_config",
+    "project",
+    "admin_cluster_membership",
+    "location",
+    "name"
+  ],
+  "google_gkeonprem_vmware_node_pool": [
+    "location",
+    "project",
+    "name"
+  ],
+  "google_healthcare_consent_store": [
+    "name",
+    "dataset"
+  ],
+  "google_healthcare_consent_store_iam_binding": [
+    "role",
+    "condition",
+    "dataset",
+    "consent_store_id"
+  ],
+  "google_healthcare_consent_store_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "consent_store_id",
+    "dataset"
+  ],
+  "google_healthcare_consent_store_iam_policy": [
+    "dataset",
+    "consent_store_id"
+  ],
+  "google_healthcare_dataset": [
+    "project",
+    "location",
+    "name",
+    "encryption_spec"
+  ],
+  "google_healthcare_dataset_iam_binding": [
+    "role",
+    "dataset_id",
+    "condition"
+  ],
+  "google_healthcare_dataset_iam_member": [
+    "dataset_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_healthcare_dataset_iam_policy": [
+    "dataset_id"
+  ],
+  "google_healthcare_dicom_store": [
+    "dataset",
+    "name"
+  ],
+  "google_healthcare_dicom_store_iam_binding": [
+    "condition",
+    "role",
+    "dicom_store_id"
+  ],
+  "google_healthcare_dicom_store_iam_member": [
+    "member",
+    "condition",
+    "dicom_store_id",
+    "role"
+  ],
+  "google_healthcare_dicom_store_iam_policy": [
+    "dicom_store_id"
+  ],
+  "google_healthcare_fhir_store": [
+    "name",
+    "disable_referential_integrity",
+    "enable_history_import",
+    "dataset",
+    "version",
+    "disable_resource_versioning"
+  ],
+  "google_healthcare_fhir_store_iam_binding": [
+    "role",
+    "condition",
+    "fhir_store_id"
+  ],
+  "google_healthcare_fhir_store_iam_member": [
+    "condition",
+    "role",
+    "member",
+    "fhir_store_id"
+  ],
+  "google_healthcare_fhir_store_iam_policy": [
+    "fhir_store_id"
+  ],
+  "google_healthcare_hl7_v2_store": [
+    "dataset",
+    "name",
+    "parser_config"
+  ],
+  "google_healthcare_hl7_v2_store_iam_binding": [
+    "role",
+    "condition",
+    "hl7_v2_store_id"
+  ],
+  "google_healthcare_hl7_v2_store_iam_member": [
+    "condition",
+    "role",
+    "member",
+    "hl7_v2_store_id"
+  ],
+  "google_healthcare_hl7_v2_store_iam_policy": [
+    "hl7_v2_store_id"
+  ],
+  "google_healthcare_pipeline_job": [
+    "dataset",
+    "location"
+  ],
+  "google_healthcare_workspace": [
+    "dataset",
+    "name"
+  ],
+  "google_iam_access_boundary_policy": [
+    "name",
+    "parent"
+  ],
+  "google_iam_deny_policy": [
+    "parent",
+    "name"
+  ],
+  "google_iam_folders_policy_binding": [
+    "folder",
+    "location",
+    "target",
+    "policy",
+    "policy_kind",
+    "policy_binding_id"
+  ],
+  "google_iam_oauth_client": [
+    "oauth_client_id",
+    "project",
+    "location",
+    "client_type"
+  ],
+  "google_iam_oauth_client_credential": [
+    "location",
+    "oauth_client_credential_id",
+    "oauthclient",
+    "project"
+  ],
+  "google_iam_organizations_policy_binding": [
+    "location",
+    "organization",
+    "policy",
+    "policy_binding_id",
+    "target",
+    "policy_kind"
+  ],
+  "google_iam_principal_access_boundary_policy": [
+    "location",
+    "organization",
+    "principal_access_boundary_policy_id"
+  ],
+  "google_iam_projects_policy_binding": [
+    "project",
+    "location",
+    "policy",
+    "target",
+    "policy_kind",
+    "policy_binding_id"
+  ],
+  "google_iam_workforce_pool": [
+    "access_restrictions",
+    "location",
+    "parent",
+    "workforce_pool_id"
+  ],
+  "google_iam_workforce_pool_provider": [
+    "workforce_pool_id",
+    "provider_id",
+    "location"
+  ],
+  "google_iam_workforce_pool_provider_key": [
+    "provider_id",
+    "location",
+    "use",
+    "workforce_pool_id",
+    "key_data",
+    "key_id"
+  ],
+  "google_iam_workload_identity_pool": [
+    "project",
+    "workload_identity_pool_id"
+  ],
+  "google_iam_workload_identity_pool_provider": [
+    "project",
+    "workload_identity_pool_provider_id",
+    "workload_identity_pool_id"
+  ],
+  "google_iap_app_engine_service_iam_binding": [
+    "condition",
+    "project",
+    "app_id",
+    "service",
+    "role"
+  ],
+  "google_iap_app_engine_service_iam_member": [
+    "role",
+    "member",
+    "service",
+    "project",
+    "app_id",
+    "condition"
+  ],
+  "google_iap_app_engine_service_iam_policy": [
+    "project",
+    "app_id",
+    "service"
+  ],
+  "google_iap_app_engine_version_iam_binding": [
+    "version_id",
+    "project",
+    "app_id",
+    "service",
+    "role",
+    "condition"
+  ],
+  "google_iap_app_engine_version_iam_member": [
+    "project",
+    "app_id",
+    "service",
+    "version_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_iap_app_engine_version_iam_policy": [
+    "service",
+    "version_id",
+    "project",
+    "app_id"
+  ],
+  "google_iap_brand": [
+    "application_title",
+    "support_email",
+    "project"
+  ],
+  "google_iap_client": [
+    "brand",
+    "display_name"
+  ],
+  "google_iap_settings": [
+    "name"
+  ],
+  "google_iap_tunnel_dest_group": [
+    "project",
+    "group_name",
+    "region"
+  ],
+  "google_iap_tunnel_dest_group_iam_binding": [
+    "dest_group",
+    "project",
+    "region",
+    "role",
+    "condition"
+  ],
+  "google_iap_tunnel_dest_group_iam_member": [
+    "project",
+    "region",
+    "dest_group",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_iap_tunnel_dest_group_iam_policy": [
+    "region",
+    "dest_group",
+    "project"
+  ],
+  "google_iap_tunnel_iam_binding": [
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_iap_tunnel_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project"
+  ],
+  "google_iap_tunnel_iam_policy": [
+    "project"
+  ],
+  "google_iap_tunnel_instance_iam_binding": [
+    "zone",
+    "instance",
+    "project",
+    "role",
+    "condition"
+  ],
+  "google_iap_tunnel_instance_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "zone",
+    "instance",
+    "project"
+  ],
+  "google_iap_tunnel_instance_iam_policy": [
+    "project",
+    "zone",
+    "instance"
+  ],
+  "google_iap_web_backend_service_iam_binding": [
+    "project",
+    "web_backend_service",
+    "role",
+    "condition"
+  ],
+  "google_iap_web_backend_service_iam_member": [
+    "project",
+    "web_backend_service",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_iap_web_backend_service_iam_policy": [
+    "project",
+    "web_backend_service"
+  ],
+  "google_iap_web_cloud_run_service_iam_binding": [
+    "project",
+    "location",
+    "cloud_run_service_name",
+    "role",
+    "condition"
+  ],
+  "google_iap_web_cloud_run_service_iam_member": [
+    "cloud_run_service_name",
+    "role",
+    "member",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_iap_web_cloud_run_service_iam_policy": [
+    "project",
+    "location",
+    "cloud_run_service_name"
+  ],
+  "google_iap_web_iam_binding": [
+    "project",
+    "role",
+    "condition"
+  ],
+  "google_iap_web_iam_member": [
+    "project",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_iap_web_iam_policy": [
+    "project"
+  ],
+  "google_iap_web_region_backend_service_iam_binding": [
+    "role",
+    "condition",
+    "region",
+    "web_region_backend_service",
+    "project"
+  ],
+  "google_iap_web_region_backend_service_iam_member": [
+    "region",
+    "web_region_backend_service",
+    "project",
+    "condition",
+    "role",
+    "member"
+  ],
+  "google_iap_web_region_backend_service_iam_policy": [
+    "web_region_backend_service",
+    "project",
+    "region"
+  ],
+  "google_iap_web_type_app_engine_iam_binding": [
+    "project",
+    "app_id",
+    "role",
+    "condition"
+  ],
+  "google_iap_web_type_app_engine_iam_member": [
+    "project",
+    "app_id",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_iap_web_type_app_engine_iam_policy": [
+    "project",
+    "app_id"
+  ],
+  "google_iap_web_type_compute_iam_binding": [
+    "condition",
+    "role",
+    "project"
+  ],
+  "google_iap_web_type_compute_iam_member": [
+    "role",
+    "member",
+    "project",
+    "condition"
+  ],
+  "google_iap_web_type_compute_iam_policy": [
+    "project"
+  ],
+  "google_identity_platform_config": [
+    "project"
+  ],
+  "google_identity_platform_default_supported_idp_config": [
+    "idp_id",
+    "project"
+  ],
+  "google_identity_platform_inbound_saml_config": [
+    "name",
+    "project"
+  ],
+  "google_identity_platform_oauth_idp_config": [
+    "project",
+    "name"
+  ],
+  "google_identity_platform_tenant": [
+    "project"
+  ],
+  "google_identity_platform_tenant_default_supported_idp_config": [
+    "idp_id",
+    "tenant",
+    "project"
+  ],
+  "google_identity_platform_tenant_inbound_saml_config": [
+    "project",
+    "name",
+    "tenant"
+  ],
+  "google_identity_platform_tenant_oauth_idp_config": [
+    "tenant",
+    "project",
+    "name"
+  ],
+  "google_integration_connectors_connection": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_integration_connectors_endpoint_attachment": [
+    "location",
+    "service_attachment",
+    "project",
+    "name"
+  ],
+  "google_integration_connectors_managed_zone": [
+    "project",
+    "name"
+  ],
+  "google_integrations_auth_config": [
+    "location",
+    "project"
+  ],
+  "google_integrations_client": [
+    "location",
+    "cloud_kms_config",
+    "create_sample_integrations",
+    "run_as_service_account",
+    "project"
+  ],
+  "google_kms_crypto_key": [
+    "name",
+    "destroy_scheduled_duration",
+    "key_ring",
+    "import_only",
+    "purpose",
+    "skip_initial_version_creation",
+    "version_template",
+    "crypto_key_backend"
+  ],
+  "google_kms_crypto_key_iam_binding": [
+    "condition",
+    "role",
+    "crypto_key_id"
+  ],
+  "google_kms_crypto_key_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "crypto_key_id"
+  ],
+  "google_kms_crypto_key_iam_policy": [
+    "crypto_key_id"
+  ],
+  "google_kms_crypto_key_version": [
+    "crypto_key"
+  ],
+  "google_kms_ekm_connection": [
+    "name",
+    "project",
+    "location"
+  ],
+  "google_kms_ekm_connection_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role"
+  ],
+  "google_kms_ekm_connection_iam_member": [
+    "location",
+    "name",
+    "project",
+    "condition",
+    "role",
+    "member"
+  ],
+  "google_kms_ekm_connection_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_kms_key_ring": [
+    "location",
+    "name",
+    "project"
+  ],
+  "google_kms_key_ring_iam_binding": [
+    "condition",
+    "key_ring_id",
+    "role"
+  ],
+  "google_kms_key_ring_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "key_ring_id"
+  ],
+  "google_kms_key_ring_iam_policy": [
+    "key_ring_id"
+  ],
+  "google_kms_key_ring_import_job": [
+    "protection_level",
+    "import_job_id",
+    "import_method",
+    "key_ring"
+  ],
+  "google_kms_secret_ciphertext": [
+    "additional_authenticated_data",
+    "crypto_key",
+    "plaintext"
+  ],
+  "google_logging_billing_account_bucket_config": [
+    "bucket_id",
+    "billing_account",
+    "location"
+  ],
+  "google_logging_billing_account_exclusion": [
+    "billing_account",
+    "name"
+  ],
+  "google_logging_billing_account_sink": [
+    "name",
+    "billing_account"
+  ],
+  "google_logging_folder_bucket_config": [
+    "location",
+    "bucket_id",
+    "folder"
+  ],
+  "google_logging_folder_exclusion": [
+    "name",
+    "folder"
+  ],
+  "google_logging_folder_settings": [
+    "folder"
+  ],
+  "google_logging_folder_sink": [
+    "name",
+    "folder"
+  ],
+  "google_logging_linked_dataset": [
+    "bucket",
+    "link_id",
+    "description",
+    "parent",
+    "location"
+  ],
+  "google_logging_log_scope": [
+    "location",
+    "parent",
+    "name"
+  ],
+  "google_logging_log_view": [
+    "location",
+    "parent",
+    "bucket",
+    "name"
+  ],
+  "google_logging_log_view_iam_binding": [
+    "name",
+    "condition",
+    "role",
+    "parent",
+    "location",
+    "bucket"
+  ],
+  "google_logging_log_view_iam_member": [
+    "bucket",
+    "name",
+    "condition",
+    "role",
+    "member",
+    "parent",
+    "location"
+  ],
+  "google_logging_log_view_iam_policy": [
+    "parent",
+    "location",
+    "bucket",
+    "name"
+  ],
+  "google_logging_metric": [
+    "metric_descriptor",
+    "project"
+  ],
+  "google_logging_organization_bucket_config": [
+    "location",
+    "organization",
+    "bucket_id"
+  ],
+  "google_logging_organization_exclusion": [
+    "org_id",
+    "name"
+  ],
+  "google_logging_organization_settings": [
+    "organization"
+  ],
+  "google_logging_organization_sink": [
+    "name"
+  ],
+  "google_logging_project_bucket_config": [
+    "project",
+    "location",
+    "bucket_id"
+  ],
+  "google_logging_project_exclusion": [
+    "name",
+    "project"
+  ],
+  "google_logging_project_sink": [
+    "name",
+    "project"
+  ],
+  "google_looker_instance": [
+    "project",
+    "platform_edition",
+    "name",
+    "region"
+  ],
+  "google_lustre_instance": [
+    "location",
+    "network",
+    "project",
+    "filesystem",
+    "instance_id"
+  ],
+  "google_managed_kafka_acl": [
+    "acl_id",
+    "cluster",
+    "project",
+    "location"
+  ],
+  "google_managed_kafka_cluster": [
+    "cluster_id",
+    "gcp_config",
+    "project",
+    "location"
+  ],
+  "google_managed_kafka_topic": [
+    "project",
+    "cluster",
+    "location",
+    "replication_factor",
+    "topic_id"
+  ],
+  "google_memcache_instance": [
+    "node_config",
+    "authorized_network",
+    "region",
+    "reserved_ip_range_id",
+    "project",
+    "name",
+    "zones",
+    "memcache_parameters"
+  ],
+  "google_memorystore_instance": [
+    "desired_psc_auto_connections",
+    "mode",
+    "zone_distribution_config",
+    "desired_auto_created_endpoints",
+    "gcs_source",
+    "project",
+    "transit_encryption_mode",
+    "authorization_mode",
+    "managed_backup_source",
+    "location",
+    "instance_id"
+  ],
+  "google_memorystore_instance_desired_user_created_endpoints": [
+    "project"
+  ],
+  "google_migration_center_group": [
+    "project",
+    "group_id",
+    "location"
+  ],
+  "google_migration_center_preference_set": [
+    "project",
+    "location",
+    "preference_set_id"
+  ],
+  "google_ml_engine_model": [
+    "regions",
+    "project",
+    "name",
+    "default_version",
+    "description",
+    "online_prediction_console_logging",
+    "online_prediction_logging",
+    "effective_labels"
+  ],
+  "google_monitoring_alert_policy": [
+    "project"
+  ],
+  "google_monitoring_custom_service": [
+    "project",
+    "service_id"
+  ],
+  "google_monitoring_dashboard": [
+    "project"
+  ],
+  "google_monitoring_group": [
+    "project"
+  ],
+  "google_monitoring_metric_descriptor": [
+    "labels",
+    "display_name",
+    "metric_kind",
+    "value_type",
+    "unit",
+    "project",
+    "description",
+    "type",
+    "launch_stage"
+  ],
+  "google_monitoring_monitored_project": [
+    "metrics_scope",
+    "name"
+  ],
+  "google_monitoring_notification_channel": [
+    "project"
+  ],
+  "google_monitoring_service": [
+    "project",
+    "service_id",
+    "basic_service"
+  ],
+  "google_monitoring_slo": [
+    "project",
+    "service",
+    "slo_id"
+  ],
+  "google_monitoring_uptime_check_config": [
+    "resource_group",
+    "synthetic_monitor",
+    "project",
+    "http_check",
+    "checker_type",
+    "monitored_resource"
+  ],
+  "google_netapp_active_directory": [
+    "location",
+    "project",
+    "name"
+  ],
+  "google_netapp_backup": [
+    "name",
+    "project",
+    "location",
+    "source_volume",
+    "vault_name"
+  ],
+  "google_netapp_backup_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_netapp_backup_vault": [
+    "name",
+    "project",
+    "location"
+  ],
+  "google_netapp_kmsconfig": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_netapp_storage_pool": [
+    "service_level",
+    "allow_auto_tiering",
+    "kms_config",
+    "project",
+    "name",
+    "custom_performance_enabled",
+    "ldap_enabled",
+    "network",
+    "location"
+  ],
+  "google_netapp_volume": [
+    "security_style",
+    "project",
+    "restore_parameters",
+    "name",
+    "share_name",
+    "location",
+    "protocols",
+    "kerberos_enabled"
+  ],
+  "google_netapp_volume_quota_rule": [
+    "volume_name",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_netapp_volume_replication": [
+    "volume_name",
+    "location",
+    "project",
+    "name",
+    "destination_volume_parameters"
+  ],
+  "google_netapp_volume_snapshot": [
+    "volume_name",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_network_connectivity_group": [
+    "hub",
+    "name",
+    "project"
+  ],
+  "google_network_connectivity_hub": [
+    "preset_topology",
+    "project",
+    "name",
+    "policy_mode"
+  ],
+  "google_network_connectivity_internal_range": [
+    "migration",
+    "project",
+    "name",
+    "immutable"
+  ],
+  "google_network_connectivity_policy_based_route": [
+    "name",
+    "priority",
+    "filter",
+    "description",
+    "network",
+    "interconnect_attachment",
+    "next_hop_ilb_ip",
+    "next_hop_other_routes",
+    "virtual_machine",
+    "effective_labels",
+    "project"
+  ],
+  "google_network_connectivity_regional_endpoint": [
+    "name",
+    "effective_labels",
+    "project",
+    "location",
+    "address",
+    "access_type",
+    "target_google_api",
+    "description",
+    "network",
+    "subnetwork"
+  ],
+  "google_network_connectivity_service_connection_policy": [
+    "network",
+    "service_class",
+    "location",
+    "name",
+    "project"
+  ],
+  "google_network_connectivity_spoke": [
+    "name",
+    "linked_interconnect_attachments",
+    "linked_producer_vpc_network",
+    "project",
+    "group",
+    "linked_router_appliance_instances",
+    "linked_vpc_network",
+    "hub",
+    "location",
+    "linked_vpn_tunnels"
+  ],
+  "google_network_management_connectivity_test": [
+    "name",
+    "source",
+    "project"
+  ],
+  "google_network_management_vpc_flow_logs_config": [
+    "project",
+    "location",
+    "vpc_flow_logs_config_id"
+  ],
+  "google_network_security_address_group": [
+    "parent"
+  ],
+  "google_network_security_address_group_iam_binding": [
+    "location",
+    "name",
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_network_security_address_group_iam_member": [
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role",
+    "member"
+  ],
+  "google_network_security_address_group_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_network_security_authz_policy": [
+    "project"
+  ],
+  "google_network_security_client_tls_policy": [
+    "name",
+    "project"
+  ],
+  "google_network_security_firewall_endpoint": [
+    "location",
+    "name",
+    "parent"
+  ],
+  "google_network_security_firewall_endpoint_association": [
+    "location",
+    "name",
+    "parent"
+  ],
+  "google_network_security_gateway_security_policy": [
+    "project"
+  ],
+  "google_network_security_gateway_security_policy_rule": [
+    "project",
+    "gateway_security_policy",
+    "location",
+    "name"
+  ],
+  "google_network_security_intercept_deployment": [
+    "project",
+    "intercept_deployment_id",
+    "forwarding_rule",
+    "intercept_deployment_group",
+    "location"
+  ],
+  "google_network_security_intercept_deployment_group": [
+    "intercept_deployment_group_id",
+    "network",
+    "project",
+    "location"
+  ],
+  "google_network_security_intercept_endpoint_group": [
+    "intercept_endpoint_group_id",
+    "location",
+    "intercept_deployment_group",
+    "project"
+  ],
+  "google_network_security_intercept_endpoint_group_association": [
+    "network",
+    "location",
+    "intercept_endpoint_group",
+    "project",
+    "intercept_endpoint_group_association_id"
+  ],
+  "google_network_security_mirroring_deployment": [
+    "mirroring_deployment_group",
+    "mirroring_deployment_id",
+    "forwarding_rule",
+    "location",
+    "project"
+  ],
+  "google_network_security_mirroring_deployment_group": [
+    "location",
+    "network",
+    "mirroring_deployment_group_id",
+    "project"
+  ],
+  "google_network_security_mirroring_endpoint_group": [
+    "mirroring_endpoint_group_id",
+    "project",
+    "location",
+    "mirroring_deployment_group"
+  ],
+  "google_network_security_mirroring_endpoint_group_association": [
+    "project",
+    "mirroring_endpoint_group",
+    "mirroring_endpoint_group_association_id",
+    "location",
+    "network"
+  ],
+  "google_network_security_security_profile": [
+    "name",
+    "parent",
+    "type",
+    "location"
+  ],
+  "google_network_security_security_profile_group": [
+    "location",
+    "parent",
+    "name"
+  ],
+  "google_network_security_server_tls_policy": [
+    "mtls_policy",
+    "project",
+    "name"
+  ],
+  "google_network_security_tls_inspection_policy": [
+    "project"
+  ],
+  "google_network_security_url_lists": [
+    "project"
+  ],
+  "google_network_services_authz_extension": [
+    "project"
+  ],
+  "google_network_services_edge_cache_keyset": [
+    "name",
+    "project"
+  ],
+  "google_network_services_edge_cache_origin": [
+    "name",
+    "project"
+  ],
+  "google_network_services_edge_cache_service": [
+    "project",
+    "name"
+  ],
+  "google_network_services_endpoint_policy": [
+    "name",
+    "project"
+  ],
+  "google_network_services_gateway": [
+    "scope",
+    "subnetwork",
+    "project",
+    "type",
+    "addresses",
+    "network"
+  ],
+  "google_network_services_grpc_route": [
+    "location",
+    "project",
+    "name"
+  ],
+  "google_network_services_http_route": [
+    "project",
+    "name"
+  ],
+  "google_network_services_lb_route_extension": [
+    "load_balancing_scheme",
+    "project",
+    "location",
+    "name"
+  ],
+  "google_network_services_lb_traffic_extension": [
+    "load_balancing_scheme",
+    "location",
+    "name",
+    "project"
+  ],
+  "google_network_services_mesh": [
+    "project",
+    "location"
+  ],
+  "google_network_services_service_binding": [
+    "project",
+    "name",
+    "service",
+    "description",
+    "effective_labels"
+  ],
+  "google_network_services_tcp_route": [
+    "name",
+    "project"
+  ],
+  "google_network_services_tls_route": [
+    "project",
+    "name"
+  ],
+  "google_notebooks_environment": [
+    "project",
+    "name"
+  ],
+  "google_notebooks_instance": [
+    "project",
+    "install_gpu_driver",
+    "shielded_instance_config",
+    "boot_disk_type",
+    "kms_key",
+    "service_account_scopes",
+    "no_public_ip",
+    "service_account",
+    "vm_image",
+    "location",
+    "nic_type",
+    "no_remove_data_disk",
+    "tags",
+    "machine_type",
+    "name",
+    "instance_owners",
+    "container_image",
+    "disk_encryption",
+    "reservation_affinity",
+    "post_startup_script",
+    "custom_gpu_driver_path",
+    "data_disk_type",
+    "network",
+    "no_proxy_access",
+    "subnet",
+    "accelerator_config",
+    "boot_disk_size_gb",
+    "data_disk_size_gb"
+  ],
+  "google_notebooks_instance_iam_binding": [
+    "role",
+    "project",
+    "location",
+    "instance_name",
+    "condition"
+  ],
+  "google_notebooks_instance_iam_member": [
+    "role",
+    "project",
+    "location",
+    "instance_name",
+    "member",
+    "condition"
+  ],
+  "google_notebooks_instance_iam_policy": [
+    "project",
+    "location",
+    "instance_name"
+  ],
+  "google_notebooks_location": [
+    "project"
+  ],
+  "google_notebooks_runtime": [
+    "location",
+    "project",
+    "name",
+    "virtual_machine"
+  ],
+  "google_notebooks_runtime_iam_binding": [
+    "runtime_name",
+    "project",
+    "location",
+    "role",
+    "condition"
+  ],
+  "google_notebooks_runtime_iam_member": [
+    "member",
+    "condition",
+    "role",
+    "project",
+    "location",
+    "runtime_name"
+  ],
+  "google_notebooks_runtime_iam_policy": [
+    "runtime_name",
+    "project",
+    "location"
+  ],
+  "google_oracle_database_autonomous_database": [
+    "database",
+    "admin_password",
+    "display_name",
+    "effective_labels",
+    "autonomous_database_id",
+    "cidr",
+    "network",
+    "project",
+    "location",
+    "properties"
+  ],
+  "google_oracle_database_cloud_exadata_infrastructure": [
+    "effective_labels",
+    "project",
+    "cloud_exadata_infrastructure_id",
+    "location",
+    "display_name",
+    "gcp_oracle_zone",
+    "properties"
+  ],
+  "google_oracle_database_cloud_vm_cluster": [
+    "exadata_infrastructure",
+    "project",
+    "location",
+    "network",
+    "backup_subnet_cidr",
+    "cidr",
+    "display_name",
+    "effective_labels",
+    "cloud_vm_cluster_id",
+    "properties"
+  ],
+  "google_org_policy_custom_constraint": [
+    "parent",
+    "name",
+    "resource_types"
+  ],
+  "google_org_policy_policy": [
+    "name",
+    "parent"
+  ],
+  "google_organization_access_approval_settings": [
+    "organization_id"
+  ],
+  "google_organization_iam_audit_config": [
+    "org_id"
+  ],
+  "google_organization_iam_binding": [
+    "role",
+    "condition",
+    "org_id"
+  ],
+  "google_organization_iam_custom_role": [
+    "role_id",
+    "org_id"
+  ],
+  "google_organization_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "org_id"
+  ],
+  "google_organization_iam_policy": [
+    "org_id"
+  ],
+  "google_organization_policy": [
+    "org_id",
+    "constraint"
+  ],
+  "google_os_config_os_policy_assignment": [
+    "name",
+    "location",
+    "project"
+  ],
+  "google_os_config_patch_deployment": [
+    "duration",
+    "one_time_schedule",
+    "project",
+    "instance_filter",
+    "description",
+    "patch_config",
+    "recurring_schedule",
+    "rollout",
+    "patch_deployment_id"
+  ],
+  "google_os_config_v2_policy_orchestrator": [
+    "policy_orchestrator_id",
+    "project"
+  ],
+  "google_os_config_v2_policy_orchestrator_for_folder": [
+    "folder_id",
+    "policy_orchestrator_id"
+  ],
+  "google_os_config_v2_policy_orchestrator_for_organization": [
+    "organization_id",
+    "policy_orchestrator_id"
+  ],
+  "google_os_login_ssh_public_key": [
+    "project",
+    "key",
+    "user"
+  ],
+  "google_parallelstore_instance": [
+    "capacity_gib",
+    "location",
+    "project",
+    "instance_id",
+    "network",
+    "reserved_ip_range"
+  ],
+  "google_parameter_manager_parameter": [
+    "format",
+    "project",
+    "parameter_id"
+  ],
+  "google_parameter_manager_parameter_version": [
+    "parameter_data",
+    "parameter",
+    "parameter_version_id"
+  ],
+  "google_parameter_manager_regional_parameter": [
+    "location",
+    "format",
+    "project",
+    "parameter_id"
+  ],
+  "google_parameter_manager_regional_parameter_version": [
+    "parameter",
+    "parameter_version_id",
+    "parameter_data"
+  ],
+  "google_privateca_ca_pool": [
+    "location",
+    "name",
+    "tier",
+    "project"
+  ],
+  "google_privateca_ca_pool_iam_binding": [
+    "role",
+    "condition",
+    "location",
+    "ca_pool",
+    "project"
+  ],
+  "google_privateca_ca_pool_iam_member": [
+    "location",
+    "ca_pool",
+    "role",
+    "member",
+    "condition",
+    "project"
+  ],
+  "google_privateca_ca_pool_iam_policy": [
+    "project",
+    "location",
+    "ca_pool"
+  ],
+  "google_privateca_certificate": [
+    "config",
+    "pem_csr",
+    "project",
+    "lifetime",
+    "location",
+    "certificate_template",
+    "name",
+    "pool",
+    "certificate_authority"
+  ],
+  "google_privateca_certificate_authority": [
+    "pool",
+    "certificate_authority_id",
+    "gcs_bucket",
+    "lifetime",
+    "type",
+    "project",
+    "config",
+    "key_spec",
+    "location"
+  ],
+  "google_privateca_certificate_template": [
+    "project",
+    "name",
+    "location"
+  ],
+  "google_privateca_certificate_template_iam_binding": [
+    "certificate_template",
+    "role",
+    "condition",
+    "project",
+    "location"
+  ],
+  "google_privateca_certificate_template_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "certificate_template",
+    "project",
+    "location"
+  ],
+  "google_privateca_certificate_template_iam_policy": [
+    "certificate_template",
+    "project",
+    "location"
+  ],
+  "google_privileged_access_manager_entitlement": [
+    "parent",
+    "location",
+    "approval_workflow",
+    "entitlement_id"
+  ],
+  "google_project": [
+    "tags",
+    "project_id"
+  ],
+  "google_project_access_approval_settings": [
+    "project_id"
+  ],
+  "google_project_default_service_accounts": [
+    "project",
+    "action"
+  ],
+  "google_project_iam_audit_config": [
+    "project"
+  ],
+  "google_project_iam_binding": [
+    "role",
+    "project",
+    "condition"
+  ],
+  "google_project_iam_custom_role": [
+    "project",
+    "role_id"
+  ],
+  "google_project_iam_member": [
+    "project",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_project_iam_member_remove": [
+    "project",
+    "role",
+    "member"
+  ],
+  "google_project_iam_policy": [
+    "project"
+  ],
+  "google_project_organization_policy": [
+    "constraint",
+    "project"
+  ],
+  "google_project_service": [
+    "service",
+    "project"
+  ],
+  "google_project_usage_export_bucket": [
+    "bucket_name",
+    "prefix",
+    "project"
+  ],
+  "google_public_ca_external_account_key": [
+    "project",
+    "location"
+  ],
+  "google_pubsub_lite_reservation": [
+    "name",
+    "project"
+  ],
+  "google_pubsub_lite_subscription": [
+    "project",
+    "name",
+    "topic"
+  ],
+  "google_pubsub_lite_topic": [
+    "name",
+    "project"
+  ],
+  "google_pubsub_schema": [
+    "name",
+    "project"
+  ],
+  "google_pubsub_schema_iam_binding": [
+    "role",
+    "condition",
+    "schema",
+    "project"
+  ],
+  "google_pubsub_schema_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "project",
+    "schema"
+  ],
+  "google_pubsub_schema_iam_policy": [
+    "project",
+    "schema"
+  ],
+  "google_pubsub_subscription": [
+    "name",
+    "topic",
+    "enable_message_ordering",
+    "filter",
+    "project"
+  ],
+  "google_pubsub_subscription_iam_binding": [
+    "condition",
+    "project",
+    "subscription",
+    "role"
+  ],
+  "google_pubsub_subscription_iam_member": [
+    "condition",
+    "project",
+    "subscription",
+    "role",
+    "member"
+  ],
+  "google_pubsub_subscription_iam_policy": [
+    "project",
+    "subscription"
+  ],
+  "google_pubsub_topic": [
+    "project",
+    "name"
+  ],
+  "google_pubsub_topic_iam_binding": [
+    "project",
+    "topic",
+    "role",
+    "condition"
+  ],
+  "google_pubsub_topic_iam_member": [
+    "member",
+    "condition",
+    "project",
+    "topic",
+    "role"
+  ],
+  "google_pubsub_topic_iam_policy": [
+    "project",
+    "topic"
+  ],
+  "google_recaptcha_enterprise_key": [
+    "waf_settings",
+    "project",
+    "testing_options",
+    "web_settings"
+  ],
+  "google_redis_cluster": [
+    "name",
+    "authorization_mode",
+    "gcs_source",
+    "region",
+    "zone_distribution_config",
+    "project",
+    "transit_encryption_mode",
+    "managed_backup_source"
+  ],
+  "google_redis_cluster_user_created_connections": [
+    "project"
+  ],
+  "google_redis_instance": [
+    "authorized_network",
+    "location_id",
+    "region",
+    "alternative_location_id",
+    "connect_mode",
+    "tier",
+    "reserved_ip_range",
+    "transit_encryption_mode",
+    "project",
+    "name",
+    "customer_managed_key"
+  ],
+  "google_resource_manager_lien": [
+    "restrictions",
+    "origin",
+    "parent",
+    "reason"
+  ],
+  "google_scc_event_threat_detection_custom_module": [
+    "organization",
+    "type"
+  ],
+  "google_scc_folder_custom_module": [
+    "display_name",
+    "folder"
+  ],
+  "google_scc_folder_notification_config": [
+    "config_id",
+    "folder"
+  ],
+  "google_scc_folder_scc_big_query_export": [
+    "folder",
+    "big_query_export_id"
+  ],
+  "google_scc_management_folder_security_health_analytics_custom_module": [
+    "folder",
+    "display_name",
+    "location"
+  ],
+  "google_scc_management_organization_event_threat_detection_custom_module": [
+    "type",
+    "organization",
+    "location"
+  ],
+  "google_scc_management_organization_security_health_analytics_custom_module": [
+    "display_name",
+    "organization",
+    "location"
+  ],
+  "google_scc_management_project_security_health_analytics_custom_module": [
+    "display_name",
+    "location",
+    "project"
+  ],
+  "google_scc_mute_config": [
+    "parent",
+    "mute_config_id"
+  ],
+  "google_scc_notification_config": [
+    "config_id",
+    "organization"
+  ],
+  "google_scc_organization_custom_module": [
+    "organization",
+    "display_name"
+  ],
+  "google_scc_organization_scc_big_query_export": [
+    "organization",
+    "big_query_export_id"
+  ],
+  "google_scc_project_custom_module": [
+    "project",
+    "display_name"
+  ],
+  "google_scc_project_notification_config": [
+    "project",
+    "config_id"
+  ],
+  "google_scc_project_scc_big_query_export": [
+    "project",
+    "big_query_export_id"
+  ],
+  "google_scc_source": [
+    "organization"
+  ],
+  "google_scc_source_iam_binding": [
+    "role",
+    "organization",
+    "source",
+    "condition"
+  ],
+  "google_scc_source_iam_member": [
+    "organization",
+    "source",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_scc_source_iam_policy": [
+    "organization",
+    "source"
+  ],
+  "google_scc_v2_folder_mute_config": [
+    "folder",
+    "mute_config_id",
+    "location"
+  ],
+  "google_scc_v2_folder_notification_config": [
+    "location",
+    "config_id",
+    "folder"
+  ],
+  "google_scc_v2_folder_scc_big_query_export": [
+    "location",
+    "folder",
+    "big_query_export_id"
+  ],
+  "google_scc_v2_organization_mute_config": [
+    "organization",
+    "mute_config_id",
+    "location"
+  ],
+  "google_scc_v2_organization_notification_config": [
+    "config_id",
+    "organization",
+    "location"
+  ],
+  "google_scc_v2_organization_scc_big_query_export": [
+    "location",
+    "organization",
+    "big_query_export_id"
+  ],
+  "google_scc_v2_organization_scc_big_query_exports": [
+    "organization",
+    "location",
+    "big_query_export_id"
+  ],
+  "google_scc_v2_organization_source": [
+    "organization"
+  ],
+  "google_scc_v2_organization_source_iam_binding": [
+    "condition",
+    "role",
+    "organization",
+    "source"
+  ],
+  "google_scc_v2_organization_source_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "organization",
+    "source"
+  ],
+  "google_scc_v2_organization_source_iam_policy": [
+    "organization",
+    "source"
+  ],
+  "google_scc_v2_project_mute_config": [
+    "project",
+    "mute_config_id",
+    "location"
+  ],
+  "google_scc_v2_project_notification_config": [
+    "project",
+    "config_id",
+    "location"
+  ],
+  "google_scc_v2_project_scc_big_query_export": [
+    "big_query_export_id",
+    "location",
+    "project"
+  ],
+  "google_secret_manager_regional_secret": [
+    "secret_id",
+    "project",
+    "location"
+  ],
+  "google_secret_manager_regional_secret_iam_binding": [
+    "project",
+    "condition",
+    "role",
+    "location",
+    "secret_id"
+  ],
+  "google_secret_manager_regional_secret_iam_member": [
+    "condition",
+    "project",
+    "location",
+    "secret_id",
+    "role",
+    "member"
+  ],
+  "google_secret_manager_regional_secret_iam_policy": [
+    "project",
+    "location",
+    "secret_id"
+  ],
+  "google_secret_manager_regional_secret_version": [
+    "is_secret_data_base64",
+    "secret_data",
+    "secret"
+  ],
+  "google_secret_manager_secret": [
+    "replication",
+    "secret_id",
+    "project"
+  ],
+  "google_secret_manager_secret_iam_binding": [
+    "secret_id",
+    "role",
+    "condition",
+    "project"
+  ],
+  "google_secret_manager_secret_iam_member": [
+    "condition",
+    "project",
+    "secret_id",
+    "role",
+    "member"
+  ],
+  "google_secret_manager_secret_iam_policy": [
+    "secret_id",
+    "project"
+  ],
+  "google_secret_manager_secret_version": [
+    "secret_data_wo_version",
+    "secret_data",
+    "secret",
+    "is_secret_data_base64"
+  ],
+  "google_secure_source_manager_branch_rule": [
+    "project"
+  ],
+  "google_secure_source_manager_instance": [
+    "project",
+    "instance_id",
+    "location",
+    "kms_key",
+    "effective_labels",
+    "private_config",
+    "workforce_identity_federation_config"
+  ],
+  "google_secure_source_manager_instance_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "instance_id",
+    "role"
+  ],
+  "google_secure_source_manager_instance_iam_member": [
+    "condition",
+    "project",
+    "location",
+    "instance_id",
+    "role",
+    "member"
+  ],
+  "google_secure_source_manager_instance_iam_policy": [
+    "project",
+    "location",
+    "instance_id"
+  ],
+  "google_secure_source_manager_repository": [
+    "instance",
+    "location",
+    "project",
+    "repository_id",
+    "description",
+    "initial_config"
+  ],
+  "google_secure_source_manager_repository_iam_binding": [
+    "role",
+    "condition",
+    "project",
+    "location",
+    "repository_id"
+  ],
+  "google_secure_source_manager_repository_iam_member": [
+    "role",
+    "location",
+    "repository_id",
+    "project",
+    "member",
+    "condition"
+  ],
+  "google_secure_source_manager_repository_iam_policy": [
+    "project",
+    "location",
+    "repository_id"
+  ],
+  "google_securityposture_posture": [
+    "location",
+    "parent",
+    "posture_id"
+  ],
+  "google_securityposture_posture_deployment": [
+    "location",
+    "parent",
+    "target_resource",
+    "posture_deployment_id"
+  ],
+  "google_service_account": [
+    "account_id",
+    "project"
+  ],
+  "google_service_account_iam_binding": [
+    "condition",
+    "role",
+    "service_account_id"
+  ],
+  "google_service_account_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "service_account_id"
+  ],
+  "google_service_account_iam_policy": [
+    "service_account_id"
+  ],
+  "google_service_account_key": [
+    "public_key",
+    "public_key_type",
+    "keepers",
+    "name",
+    "public_key_data",
+    "service_account_id",
+    "key_algorithm",
+    "private_key_type"
+  ],
+  "google_service_networking_connection": [
+    "network",
+    "service"
+  ],
+  "google_service_networking_peered_dns_domain": [
+    "dns_suffix",
+    "service",
+    "network",
+    "project",
+    "name"
+  ],
+  "google_service_networking_vpc_service_controls": [
+    "network",
+    "service",
+    "project"
+  ],
+  "google_site_verification_owner": [
+    "email",
+    "web_resource_id"
+  ],
+  "google_site_verification_web_resource": [
+    "site",
+    "verification_method"
+  ],
+  "google_sourcerepo_repository": [
+    "project",
+    "name"
+  ],
+  "google_sourcerepo_repository_iam_binding": [
+    "role",
+    "project",
+    "repository",
+    "condition"
+  ],
+  "google_sourcerepo_repository_iam_member": [
+    "member",
+    "condition",
+    "role",
+    "repository",
+    "project"
+  ],
+  "google_sourcerepo_repository_iam_policy": [
+    "project",
+    "repository"
+  ],
+  "google_spanner_backup_schedule": [
+    "full_backup_spec",
+    "name",
+    "project",
+    "database",
+    "instance",
+    "incremental_backup_spec"
+  ],
+  "google_spanner_database": [
+    "instance",
+    "project",
+    "name",
+    "database_dialect",
+    "encryption_config"
+  ],
+  "google_spanner_database_iam_binding": [
+    "instance",
+    "database",
+    "project",
+    "condition",
+    "role"
+  ],
+  "google_spanner_database_iam_member": [
+    "member",
+    "condition",
+    "role",
+    "instance",
+    "database",
+    "project"
+  ],
+  "google_spanner_database_iam_policy": [
+    "instance",
+    "database",
+    "project"
+  ],
+  "google_spanner_instance": [
+    "config",
+    "name",
+    "project"
+  ],
+  "google_spanner_instance_config": [
+    "replicas",
+    "base_config",
+    "name",
+    "project"
+  ],
+  "google_spanner_instance_iam_binding": [
+    "project",
+    "instance",
+    "role",
+    "condition"
+  ],
+  "google_spanner_instance_iam_member": [
+    "condition",
+    "instance",
+    "project",
+    "role",
+    "member"
+  ],
+  "google_spanner_instance_iam_policy": [
+    "instance",
+    "project"
+  ],
+  "google_spanner_instance_partition": [
+    "project",
+    "config",
+    "instance",
+    "name"
+  ],
+  "google_sql_database": [
+    "instance",
+    "name",
+    "project"
+  ],
+  "google_sql_database_instance": [
+    "encryption_key_name",
+    "name",
+    "project",
+    "region",
+    "settings",
+    "replica_configuration"
+  ],
+  "google_sql_source_representation_instance": [
+    "password",
+    "port",
+    "username",
+    "project",
+    "database_version",
+    "host",
+    "client_certificate",
+    "dump_file_path",
+    "name",
+    "ca_certificate",
+    "client_key",
+    "region"
+  ],
+  "google_sql_ssl_cert": [
+    "project",
+    "common_name",
+    "instance"
+  ],
+  "google_sql_user": [
+    "host",
+    "instance",
+    "project",
+    "name",
+    "type"
+  ],
+  "google_storage_anywhere_cache": [
+    "bucket",
+    "zone"
+  ],
+  "google_storage_batch_operations_job": [
+    "job_id",
+    "put_metadata",
+    "bucket_list",
+    "delete_object",
+    "project",
+    "put_object_hold",
+    "rewrite_object"
+  ],
+  "google_storage_bucket": [
+    "location",
+    "custom_placement_config",
+    "enable_object_retention",
+    "hierarchical_namespace",
+    "name",
+    "project"
+  ],
+  "google_storage_bucket_access_control": [
+    "bucket",
+    "entity"
+  ],
+  "google_storage_bucket_acl": [
+    "bucket",
+    "predefined_acl"
+  ],
+  "google_storage_bucket_iam_binding": [
+    "condition",
+    "role",
+    "bucket"
+  ],
+  "google_storage_bucket_iam_member": [
+    "bucket",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_storage_bucket_iam_policy": [
+    "bucket"
+  ],
+  "google_storage_bucket_object": [
+    "content_disposition",
+    "kms_key_name",
+    "bucket",
+    "content_type",
+    "source",
+    "storage_class",
+    "metadata",
+    "cache_control",
+    "customer_encryption",
+    "content_encoding",
+    "content_language",
+    "name"
+  ],
+  "google_storage_control_folder_intelligence_config": [
+    "name"
+  ],
+  "google_storage_control_organization_intelligence_config": [
+    "name"
+  ],
+  "google_storage_control_project_intelligence_config": [
+    "name"
+  ],
+  "google_storage_default_object_access_control": [],
+  "google_storage_default_object_acl": [
+    "bucket"
+  ],
+  "google_storage_folder": [
+    "bucket",
+    "name"
+  ],
+  "google_storage_hmac_key": [
+    "service_account_email",
+    "project"
+  ],
+  "google_storage_insights_report_config": [
+    "object_metadata_report_options",
+    "project",
+    "location"
+  ],
+  "google_storage_managed_folder": [
+    "bucket",
+    "name"
+  ],
+  "google_storage_managed_folder_iam_binding": [
+    "role",
+    "condition",
+    "bucket",
+    "managed_folder"
+  ],
+  "google_storage_managed_folder_iam_member": [
+    "managed_folder",
+    "bucket",
+    "condition",
+    "role",
+    "member"
+  ],
+  "google_storage_managed_folder_iam_policy": [
+    "bucket",
+    "managed_folder"
+  ],
+  "google_storage_notification": [
+    "payload_format",
+    "topic",
+    "custom_attributes",
+    "event_types",
+    "object_name_prefix",
+    "bucket"
+  ],
+  "google_storage_object_access_control": [],
+  "google_storage_object_acl": [
+    "bucket",
+    "object"
+  ],
+  "google_storage_transfer_agent_pool": [
+    "project",
+    "name"
+  ],
+  "google_storage_transfer_job": [
+    "project",
+    "transfer_spec"
+  ],
+  "google_tags_location_tag_binding": [
+    "parent",
+    "tag_value",
+    "location"
+  ],
+  "google_tags_tag_binding": [
+    "parent",
+    "tag_value"
+  ],
+  "google_tags_tag_key": [
+    "purpose_data",
+    "parent",
+    "short_name",
+    "purpose"
+  ],
+  "google_tags_tag_key_iam_binding": [
+    "tag_key",
+    "role",
+    "condition"
+  ],
+  "google_tags_tag_key_iam_member": [
+    "tag_key",
+    "role",
+    "member",
+    "condition"
+  ],
+  "google_tags_tag_key_iam_policy": [
+    "tag_key"
+  ],
+  "google_tags_tag_value": [
+    "parent",
+    "short_name"
+  ],
+  "google_tags_tag_value_iam_binding": [
+    "role",
+    "condition",
+    "tag_value"
+  ],
+  "google_tags_tag_value_iam_member": [
+    "role",
+    "member",
+    "condition",
+    "tag_value"
+  ],
+  "google_tags_tag_value_iam_policy": [
+    "tag_value"
+  ],
+  "google_tpu_node": [
+    "scheduling_config",
+    "use_service_networking",
+    "cidr_block",
+    "zone",
+    "effective_labels",
+    "project",
+    "accelerator_type",
+    "description",
+    "network",
+    "name"
+  ],
+  "google_transcoder_job": [
+    "location",
+    "effective_labels",
+    "config",
+    "template_id",
+    "project"
+  ],
+  "google_transcoder_job_template": [
+    "config",
+    "effective_labels",
+    "project",
+    "job_template_id",
+    "location"
+  ],
+  "google_vertex_ai_dataset": [
+    "region",
+    "metadata_schema_uri",
+    "encryption_spec",
+    "project"
+  ],
+  "google_vertex_ai_deployment_resource_pool": [
+    "name",
+    "dedicated_resources",
+    "region",
+    "project"
+  ],
+  "google_vertex_ai_endpoint": [
+    "private_service_connect_config",
+    "region",
+    "location",
+    "network",
+    "name",
+    "encryption_spec",
+    "project"
+  ],
+  "google_vertex_ai_feature_group": [
+    "project",
+    "big_query",
+    "region"
+  ],
+  "google_vertex_ai_feature_group_feature": [
+    "feature_group",
+    "project",
+    "name",
+    "region"
+  ],
+  "google_vertex_ai_feature_online_store": [
+    "name",
+    "region",
+    "project"
+  ],
+  "google_vertex_ai_feature_online_store_featureview": [
+    "project",
+    "name",
+    "feature_online_store",
+    "region"
+  ],
+  "google_vertex_ai_featurestore": [
+    "project",
+    "name",
+    "region"
+  ],
+  "google_vertex_ai_featurestore_entitytype": [
+    "featurestore",
+    "name"
+  ],
+  "google_vertex_ai_featurestore_entitytype_feature": [
+    "value_type",
+    "entitytype",
+    "name"
+  ],
+  "google_vertex_ai_index": [
+    "region",
+    "index_update_method",
+    "metadata",
+    "project"
+  ],
+  "google_vertex_ai_index_endpoint": [
+    "public_endpoint_enabled",
+    "region",
+    "network",
+    "project",
+    "private_service_connect_config"
+  ],
+  "google_vertex_ai_index_endpoint_deployed_index": [
+    "enable_access_logging",
+    "display_name",
+    "deployed_index_auth_config",
+    "deployment_group",
+    "reserved_ip_ranges",
+    "index",
+    "index_endpoint",
+    "dedicated_resources",
+    "deployed_index_id"
+  ],
+  "google_vertex_ai_tensorboard": [
+    "project",
+    "encryption_spec",
+    "region"
+  ],
+  "google_vmwareengine_cluster": [
+    "name",
+    "parent"
+  ],
+  "google_vmwareengine_external_access_rule": [
+    "parent",
+    "name"
+  ],
+  "google_vmwareengine_external_address": [
+    "name",
+    "parent"
+  ],
+  "google_vmwareengine_network": [
+    "project",
+    "location",
+    "name",
+    "type"
+  ],
+  "google_vmwareengine_network_peering": [
+    "name",
+    "project"
+  ],
+  "google_vmwareengine_network_policy": [
+    "location",
+    "vmware_engine_network",
+    "project",
+    "name"
+  ],
+  "google_vmwareengine_private_cloud": [
+    "project",
+    "network_config",
+    "name",
+    "location",
+    "type"
+  ],
+  "google_vmwareengine_subnet": [
+    "name",
+    "parent"
+  ],
+  "google_vpc_access_connector": [
+    "max_throughput",
+    "network",
+    "region",
+    "name",
+    "min_throughput",
+    "project",
+    "ip_cidr_range",
+    "subnet"
+  ],
+  "google_workbench_instance": [
+    "name",
+    "gce_setup",
+    "instance_id",
+    "instance_owners",
+    "location",
+    "project",
+    "disable_proxy_access"
+  ],
+  "google_workbench_instance_iam_binding": [
+    "condition",
+    "project",
+    "location",
+    "name",
+    "role"
+  ],
+  "google_workbench_instance_iam_member": [
+    "location",
+    "role",
+    "member",
+    "condition",
+    "name",
+    "project"
+  ],
+  "google_workbench_instance_iam_policy": [
+    "project",
+    "location",
+    "name"
+  ],
+  "google_workflows_workflow": [
+    "tags",
+    "region",
+    "name_prefix",
+    "project",
+    "name"
+  ]
+}

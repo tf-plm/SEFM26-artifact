@@ -1,0 +1,197 @@
+newConfig(
+        target(
+            resources: (
+                'aws_api_gateway_integration_response.login_ko_integration
+                'aws_api_gateway_integration_response.login_ok_integration
+                'aws_api_gateway_method.login
+                'aws_api_gateway_method_response.login_ko
+                'aws_api_gateway_method_response.login_ok
+                'aws_api_gateway_resource.auth
+                'aws_api_gateway_rest_api.connect
+                'aws_db_instance.default
+                'aws_db_subnet_group.default
+                'aws_elastic_beanstalk_application.application
+                'aws_elastic_beanstalk_environment.environment
+                'aws_iam_role.smarla_login_iam
+                'aws_internet_gateway.internet
+                'aws_nat_gateway.default
+                'aws_route.private_internet
+                'aws_route.public_internet
+                'aws_route53_record.pesama_main
+                'aws_route53_record.pesama_www
+                'aws_route53_record.smarla_connect-ns
+                'aws_route53_record.smarla_main-eb
+                'aws_route53_record.smarla_www-eb
+                'aws_route53_zone.pesama_main
+                'aws_route53_zone.smarla_connect
+                'aws_route53_zone.smarla_main
+                'aws_route_table.private
+                'aws_route_table.public
+                'aws_route_table_association.private
+                'aws_route_table_association.public
+                'aws_subnet.private
+                'aws_subnet.public
+                'aws_vpc.smarla
+            ),
+            dependencies: (
+                'aws_api_gateway_integration_response.login_ko_integration -> 'aws_api_gateway_method_response.login_ko
+                'aws_api_gateway_integration_response.login_ko_integration -> 'aws_api_gateway_rest_api.connect
+                'aws_api_gateway_integration_response.login_ko_integration -> 'aws_api_gateway_method.login
+                'aws_api_gateway_integration_response.login_ko_integration -> 'aws_api_gateway_resource.auth
+                'aws_api_gateway_integration_response.login_ok_integration -> 'aws_api_gateway_rest_api.connect
+                'aws_api_gateway_integration_response.login_ok_integration -> 'aws_api_gateway_method.login
+                'aws_api_gateway_integration_response.login_ok_integration -> 'aws_api_gateway_resource.auth
+                'aws_api_gateway_integration_response.login_ok_integration -> 'aws_api_gateway_method_response.login_ok
+                'aws_api_gateway_method.login -> 'aws_api_gateway_rest_api.connect
+                'aws_api_gateway_method.login -> 'aws_api_gateway_resource.auth
+                'aws_api_gateway_method_response.login_ko -> 'aws_api_gateway_rest_api.connect
+                'aws_api_gateway_method_response.login_ko -> 'aws_api_gateway_method.login
+                'aws_api_gateway_method_response.login_ko -> 'aws_api_gateway_resource.auth
+                'aws_api_gateway_method_response.login_ok -> 'aws_api_gateway_rest_api.connect
+                'aws_api_gateway_method_response.login_ok -> 'aws_api_gateway_method.login
+                'aws_api_gateway_method_response.login_ok -> 'aws_api_gateway_resource.auth
+                'aws_api_gateway_resource.auth -> 'aws_api_gateway_rest_api.connect
+                'aws_db_instance.default -> 'aws_db_subnet_group.default
+                'aws_db_subnet_group.default -> 'aws_subnet.private
+                'aws_elastic_beanstalk_environment.environment -> 'aws_elastic_beanstalk_application.application
+                'aws_internet_gateway.internet -> 'aws_vpc.smarla
+                'aws_nat_gateway.default -> 'aws_vpc.smarla
+                'aws_route.private_internet -> 'aws_nat_gateway.default
+                'aws_route.private_internet -> 'aws_route_table.private
+                'aws_route.public_internet -> 'aws_route_table.public
+                'aws_route.public_internet -> 'aws_internet_gateway.internet
+                'aws_route53_record.pesama_main -> 'aws_route53_zone.smarla_main
+                'aws_route53_record.pesama_main -> 'aws_elastic_beanstalk_environment.environment
+                'aws_route53_record.pesama_www -> 'aws_route53_record.pesama_main
+                'aws_route53_record.pesama_www -> 'aws_route53_zone.pesama_main
+                'aws_route53_record.smarla_connect-ns -> 'aws_route53_zone.smarla_connect
+                'aws_route53_record.smarla_connect-ns -> 'aws_route53_zone.smarla_main
+                'aws_route53_record.smarla_main-eb -> 'aws_route53_zone.smarla_main
+                'aws_route53_record.smarla_main-eb -> 'aws_elastic_beanstalk_environment.environment
+                'aws_route53_record.smarla_www-eb -> 'aws_route53_zone.smarla_main
+                'aws_route53_record.smarla_www-eb -> 'aws_route53_record.smarla_main-eb
+                'aws_route_table.private -> 'aws_vpc.smarla
+                'aws_route_table.public -> 'aws_vpc.smarla
+                'aws_route_table_association.private -> 'aws_subnet.private
+                'aws_route_table_association.private -> 'aws_route_table.private
+                'aws_route_table_association.public -> 'aws_route_table.public
+                'aws_route_table_association.public -> 'aws_subnet.public
+                'aws_subnet.private -> 'aws_vpc.smarla
+                'aws_subnet.public -> 'aws_vpc.smarla
+            )
+        ),
+        state(
+            resources: (
+                ri('aws_api_gateway_integration_response.login_ko_integration,old)
+                ri('aws_api_gateway_integration_response.login_ok_integration,old)
+                ri('aws_api_gateway_method.login,old)
+                ri('aws_api_gateway_method_response.login_ko,old)
+                ri('aws_api_gateway_method_response.login_ok,old)
+                ri('aws_api_gateway_resource.auth,old)
+                ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_db_instance.default,old)
+                ri('aws_db_subnet_group.default,old)
+                ri('aws_elastic_beanstalk_application.application,old)
+                ri('aws_elastic_beanstalk_environment.environment,old)
+                ri('aws_iam_role.smarla_login_iam,old)
+                ri('aws_internet_gateway.internet,old)
+                ri('aws_nat_gateway.default,old)
+                ri('aws_route.private_internet,old)
+                ri('aws_route.public_internet,old)
+                ri('aws_route53_record.pesama_main,old)
+                ri('aws_route53_record.pesama_www,old)
+                ri('aws_route53_record.smarla_connect-ns,old)
+                ri('aws_route53_record.smarla_main-eb,old)
+                ri('aws_route53_record.smarla_www-eb,old)
+                ri('aws_route53_zone.pesama_main,old)
+                ri('aws_route53_zone.smarla_connect,old)
+                ri('aws_route53_zone.smarla_main,old)
+                ri('aws_route_table.private,old)
+                ri('aws_route_table.public,old)
+                ri('aws_route_table_association.private,old)
+                ri('aws_route_table_association.public,old)
+                ri('aws_subnet.private,old)
+                ri('aws_subnet.public,old)
+                ri('aws_vpc.smarla,old)
+            ),
+            dependencies: (
+                ri('aws_api_gateway_integration_response.login_ko_integration,old) -> ri('aws_api_gateway_method_response.login_ko,old)
+                ri('aws_api_gateway_integration_response.login_ko_integration,old) -> ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_api_gateway_integration_response.login_ko_integration,old) -> ri('aws_api_gateway_method.login,old)
+                ri('aws_api_gateway_integration_response.login_ko_integration,old) -> ri('aws_api_gateway_resource.auth,old)
+                ri('aws_api_gateway_integration_response.login_ok_integration,old) -> ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_api_gateway_integration_response.login_ok_integration,old) -> ri('aws_api_gateway_method.login,old)
+                ri('aws_api_gateway_integration_response.login_ok_integration,old) -> ri('aws_api_gateway_resource.auth,old)
+                ri('aws_api_gateway_integration_response.login_ok_integration,old) -> ri('aws_api_gateway_method_response.login_ok,old)
+                ri('aws_api_gateway_method.login,old) -> ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_api_gateway_method.login,old) -> ri('aws_api_gateway_resource.auth,old)
+                ri('aws_api_gateway_method_response.login_ko,old) -> ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_api_gateway_method_response.login_ko,old) -> ri('aws_api_gateway_method.login,old)
+                ri('aws_api_gateway_method_response.login_ko,old) -> ri('aws_api_gateway_resource.auth,old)
+                ri('aws_api_gateway_method_response.login_ok,old) -> ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_api_gateway_method_response.login_ok,old) -> ri('aws_api_gateway_method.login,old)
+                ri('aws_api_gateway_method_response.login_ok,old) -> ri('aws_api_gateway_resource.auth,old)
+                ri('aws_api_gateway_resource.auth,old) -> ri('aws_api_gateway_rest_api.connect,old)
+                ri('aws_db_instance.default,old) -> ri('aws_db_subnet_group.default,old)
+                ri('aws_db_subnet_group.default,old) -> ri('aws_subnet.private,old)
+                ri('aws_elastic_beanstalk_environment.environment,old) -> ri('aws_elastic_beanstalk_application.application,old)
+                ri('aws_internet_gateway.internet,old) -> ri('aws_vpc.smarla,old)
+                ri('aws_nat_gateway.default,old) -> ri('aws_vpc.smarla,old)
+                ri('aws_route.private_internet,old) -> ri('aws_nat_gateway.default,old)
+                ri('aws_route.private_internet,old) -> ri('aws_route_table.private,old)
+                ri('aws_route.public_internet,old) -> ri('aws_route_table.public,old)
+                ri('aws_route.public_internet,old) -> ri('aws_internet_gateway.internet,old)
+                ri('aws_route53_record.pesama_main,old) -> ri('aws_route53_zone.smarla_main,old)
+                ri('aws_route53_record.pesama_main,old) -> ri('aws_elastic_beanstalk_environment.environment,old)
+                ri('aws_route53_record.pesama_www,old) -> ri('aws_route53_record.pesama_main,old)
+                ri('aws_route53_record.pesama_www,old) -> ri('aws_route53_zone.pesama_main,old)
+                ri('aws_route53_record.smarla_connect-ns,old) -> ri('aws_route53_zone.smarla_connect,old)
+                ri('aws_route53_record.smarla_connect-ns,old) -> ri('aws_route53_zone.smarla_main,old)
+                ri('aws_route53_record.smarla_main-eb,old) -> ri('aws_route53_zone.smarla_main,old)
+                ri('aws_route53_record.smarla_main-eb,old) -> ri('aws_elastic_beanstalk_environment.environment,old)
+                ri('aws_route53_record.smarla_www-eb,old) -> ri('aws_route53_zone.smarla_main,old)
+                ri('aws_route53_record.smarla_www-eb,old) -> ri('aws_route53_record.smarla_main-eb,old)
+                ri('aws_route_table.private,old) -> ri('aws_vpc.smarla,old)
+                ri('aws_route_table.public,old) -> ri('aws_vpc.smarla,old)
+                ri('aws_route_table_association.private,old) -> ri('aws_subnet.private,old)
+                ri('aws_route_table_association.private,old) -> ri('aws_route_table.private,old)
+                ri('aws_route_table_association.public,old) -> ri('aws_route_table.public,old)
+                ri('aws_route_table_association.public,old) -> ri('aws_subnet.public,old)
+                ri('aws_subnet.private,old) -> ri('aws_vpc.smarla,old)
+                ri('aws_subnet.public,old) -> ri('aws_vpc.smarla,old)
+            )
+        ),
+        (
+            'aws_api_gateway_integration_response.login_ko_integration -> po(UPDATE)
+            'aws_api_gateway_integration_response.login_ok_integration -> po(UPDATE)
+            'aws_api_gateway_method.login -> po(UPDATE)
+            'aws_api_gateway_method_response.login_ko -> po(UPDATE)
+            'aws_api_gateway_method_response.login_ok -> po(UPDATE)
+            'aws_api_gateway_resource.auth -> po(UPDATE)
+            'aws_api_gateway_rest_api.connect -> po(DELETE ; CREATE)
+            'aws_db_instance.default -> po(NO-OP)
+            'aws_db_subnet_group.default -> po(NO-OP)
+            'aws_elastic_beanstalk_application.application -> po(NO-OP)
+            'aws_elastic_beanstalk_environment.environment -> po(NO-OP)
+            'aws_iam_role.smarla_login_iam -> po(NO-OP)
+            'aws_internet_gateway.internet -> po(NO-OP)
+            'aws_nat_gateway.default -> po(NO-OP)
+            'aws_route.private_internet -> po(NO-OP)
+            'aws_route.public_internet -> po(NO-OP)
+            'aws_route53_record.pesama_main -> po(NO-OP)
+            'aws_route53_record.pesama_www -> po(NO-OP)
+            'aws_route53_record.smarla_connect-ns -> po(NO-OP)
+            'aws_route53_record.smarla_main-eb -> po(NO-OP)
+            'aws_route53_record.smarla_www-eb -> po(NO-OP)
+            'aws_route53_zone.pesama_main -> po(NO-OP)
+            'aws_route53_zone.smarla_connect -> po(NO-OP)
+            'aws_route53_zone.smarla_main -> po(NO-OP)
+            'aws_route_table.private -> po(NO-OP)
+            'aws_route_table.public -> po(NO-OP)
+            'aws_route_table_association.private -> po(NO-OP)
+            'aws_route_table_association.public -> po(NO-OP)
+            'aws_subnet.private -> po(NO-OP)
+            'aws_subnet.public -> po(NO-OP)
+            'aws_vpc.smarla -> po(NO-OP)
+        )
+    )

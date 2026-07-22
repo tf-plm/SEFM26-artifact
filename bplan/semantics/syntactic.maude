@@ -1,0 +1,171 @@
+
+---
+fmod OPERATIONS is
+
+    pr QID .
+    inc BASICSORTS .
+    inc TSET{Act} .
+
+    --- Operations
+    op NO-OP         : -> OP [ctor] .
+    op CREATE        : -> OP [ctor] .
+    op UPDATE        : -> OP [ctor] .
+    op DELETE        : -> OP [ctor] .
+
+    --- --- trace actions
+    --- op NOOP   : Qid -> Act [ctor] .
+    --- op CREATE : Qid -> Act [ctor] .
+    --- op UPDATE : Qid -> Act [ctor] .
+    --- op DELETE : Qid -> Act [ctor] .
+
+    op a ( _ , _ )   : OP Qid -> Act [ctor format
+     ( d d d d d d d)] .
+
+    subsort TSet{Act} < On .
+
+    ops start(_) end(_) : Act -> Event [ctor] .
+    --- op end : Act -> Event [ctor] .
+
+endfm
+
+fmod PLAN is
+
+    inc BASICSORTS .
+    inc OPERATIONS .
+
+    pr QID .
+    inc TUPLE2-SET{Qid, POPS} .
+    inc LIST{OP} * (op __ to _;_) .
+
+    --- adjacency list
+    pr TSET{Act} .
+    --- inc LIST{Act} * (op __ to _;_, op nil to emptyAList) .
+
+    --- stage subgraphs
+    pr TSET{GraphAdj} .
+    --- graph as mapping 'action -> set of direct neighbor actions'
+    pr TUPLE2-SET{Act, Nbhrs} .
+    --- set of arcs
+    pr TUPLE2-SET{Act, Act} .
+
+
+    subsort List{OP} < OPS .                    --- Operations === Actions
+    op po : OPS -> POPS [ctor] .                --- Planned Operations, po(noop), po(create ; delete), ...
+
+    --- subsort Tuple2Set{OP, Qid} < Pl .
+    subsort Tuple2Set{Qid, POPS} < Pl .           --- Plan: a map of planned operations list
+
+    --- constructor for adjacency list    --- e.g. neighbors(a(CREATE, 'R) ; a(UPDATE('R2)))
+    op neighbors(_) : TSet{Act} -> Nbhrs [ctor format(r d d d o)] .
+    --- subsort TSet{Act} < Nbhrs .
+
+    --- graph as adjacency lists
+    op graphAdj(_) : Tuple2Set{Act, Nbhrs} -> GraphAdj [ctor format(n d n n d)] .
+    --- subsort Tuple2Set{Act, Nbhrs} < GraphAdj .
+
+    --- graph as (V,E)
+    sort GraphVE .
+    op graphVE : TSet{Act} Tuple2Set{Act, Act} -> GraphVE [ctor] .
+
+    op stageTopNodes : TSet{GraphAdj} -> StageTopNodes [ctor] .
+    op stageSubgraphs : TSet{GraphAdj} -> StageSubgraphs [ctor] .
+
+endfm
+
+------
+fmod STATE is
+
+    pr QID .
+    pr TSET{RInst} .
+    pr TSET{Qid} .
+    pr TUPLE2-SET{RInst, RInst} .
+    pr TUPLE2-SET{Qid, Qid} .
+
+    sort TR TD .
+    subsort TSet{Qid} < TR .                          --- Resource names
+    subsort Tuple2Set{Qid, Qid} < TD .                  --- Dependencies
+
+    op target (  resources: _  ,  dependencies: _      )
+     :                     TR                  TD           -> T [ctor format
+     ( d    ++ ni      n++is -- ni         n++is n--i-- d  )] .
+
+    sort SR SD .
+    subsort TSet{RInst} < SR .                          --- state resources (set of R ^ Int === $r\sigma$)
+    subsort Tuple2Set{RInst, RInst} < SD .              --- state dependencies
+
+    op ri(_,_) : Qid Inst -> RInst [ctor] .
+    ops old new : -> Inst [ctor] .
+
+    op state (  resources: _  ,  dependencies: _      )
+     :                    SR                  SD           -> S [ctor format
+     ( d    ++ ni      n++is -- ni         n++is n--i-- d  )] .
+
+    op emptyState : -> S .
+    eq emptyState = state (
+            resources: eps,
+            dependencies: eps
+        ) .
+
+endfm
+
+---
+fmod CONFIGURATION is
+
+    --- pr PROGRAM .
+    --- pr TARGET .
+    pr PLAN .
+    pr STATE .
+
+    pr LIST{Event} .                        --- trace
+
+    ops bplanning executing done : -> Status .
+
+    sort Trace .
+    subsort List{Event} < Trace .
+
+    sort Conf .
+    op <  target:   _  ,  planned:   _     ,  actions:  _      ,   state: _  ,  ongoing:  _      ,   phase: _    ,  trace: _  >
+     :              T               Pl           GraphAdj                 S              On            Status          Trace         -> Conf [ctor format
+     ( ! ni        og o! ni    on++ism o!--i ni    on++is  o!--i  ni     oy o! ni   on++ism  o!--i ni on++isc o!-- ni      o !n --   )] .
+
+    var Conf : Conf .
+    var Target : T .
+    var Plan : Pl .
+    var ActGraph : GraphAdj .
+    var State : S .
+    var Ongoing : On .
+
+    op initConf : T Pl -> Conf .
+    eq initConf(Target, Plan) = <
+            target: Target,
+            planned: Plan,
+            actions: graphAdj(eps),
+            state: emptyState,
+            ongoing: eps,
+            phase: bplanning,
+            trace: nil
+        > .
+
+    op newConfig : T S Pl -> Conf .
+    eq newConfig(Target, State, Plan) = <
+            target: Target,
+            planned: Plan,
+            actions: graphAdj(eps),
+            state: State,
+            ongoing: eps,
+            phase: bplanning,
+            trace: nil
+        > .
+
+    op newExec : T S GraphAdj -> Conf .
+    eq newExec(Target, State, ActGraph) = <
+            target: Target,
+            planned: eps,
+            actions: ActGraph,
+            state: State,
+            ongoing: eps,
+            phase: executing,
+            trace: nil
+        > .
+
+endfm

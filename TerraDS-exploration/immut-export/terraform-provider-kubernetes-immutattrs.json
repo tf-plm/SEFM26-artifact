@@ -1,0 +1,304 @@
+{
+  "kubernetes_annotations": [
+    "api_version",
+    "kind",
+    "metadata"
+  ],
+  "kubernetes_api_service": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_api_service_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_certificate_signing_request": [
+    "metadata",
+    "spec",
+    "auto_approve"
+  ],
+  "kubernetes_certificate_signing_request_v1": [
+    "auto_approve",
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_cluster_role": [
+    "metadata"
+  ],
+  "kubernetes_cluster_role_binding": [
+    "metadata",
+    "role_ref"
+  ],
+  "kubernetes_cluster_role_binding_v1": [
+    "metadata",
+    "role_ref"
+  ],
+  "kubernetes_cluster_role_v1": [
+    "metadata"
+  ],
+  "kubernetes_config_map": [
+    "metadata"
+  ],
+  "kubernetes_config_map_v1": [
+    "metadata"
+  ],
+  "kubernetes_config_map_v1_data": [
+    "metadata"
+  ],
+  "kubernetes_cron_job": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_cron_job_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_csi_driver": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_csi_driver_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_daemon_set_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_daemonset": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_default_service_account": [
+    "metadata"
+  ],
+  "kubernetes_default_service_account_v1": [
+    "metadata"
+  ],
+  "kubernetes_deployment": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_deployment_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_endpoint_slice_v1": [
+    "metadata",
+    "address_type"
+  ],
+  "kubernetes_endpoints": [
+    "metadata"
+  ],
+  "kubernetes_endpoints_v1": [
+    "metadata"
+  ],
+  "kubernetes_env": [
+    "metadata"
+  ],
+  "kubernetes_horizontal_pod_autoscaler": [
+    "metadata"
+  ],
+  "kubernetes_horizontal_pod_autoscaler_v1": [
+    "metadata"
+  ],
+  "kubernetes_horizontal_pod_autoscaler_v2": [
+    "metadata"
+  ],
+  "kubernetes_horizontal_pod_autoscaler_v2beta2": [
+    "metadata"
+  ],
+  "kubernetes_ingress": [
+    "metadata"
+  ],
+  "kubernetes_ingress_class": [
+    "metadata"
+  ],
+  "kubernetes_ingress_class_v1": [
+    "metadata"
+  ],
+  "kubernetes_ingress_v1": [
+    "metadata"
+  ],
+  "kubernetes_job": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_job_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_labels": [
+    "metadata",
+    "api_version",
+    "kind"
+  ],
+  "kubernetes_limit_range": [
+    "metadata"
+  ],
+  "kubernetes_limit_range_v1": [
+    "metadata"
+  ],
+  "kubernetes_mutating_webhook_configuration": [
+    "metadata"
+  ],
+  "kubernetes_mutating_webhook_configuration_v1": [
+    "metadata"
+  ],
+  "kubernetes_namespace": [
+    "metadata"
+  ],
+  "kubernetes_namespace_v1": [
+    "metadata"
+  ],
+  "kubernetes_network_policy": [
+    "metadata"
+  ],
+  "kubernetes_network_policy_v1": [
+    "metadata"
+  ],
+  "kubernetes_node_taint": [
+    "metadata"
+  ],
+  "kubernetes_persistent_volume": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_persistent_volume_claim": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_persistent_volume_claim_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_persistent_volume_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_pod": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_pod_disruption_budget": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_pod_disruption_budget_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_pod_security_policy": [
+    "metadata"
+  ],
+  "kubernetes_pod_security_policy_v1beta1": [
+    "metadata"
+  ],
+  "kubernetes_pod_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_priority_class": [
+    "value",
+    "preemption_policy",
+    "metadata"
+  ],
+  "kubernetes_priority_class_v1": [
+    "value",
+    "preemption_policy",
+    "metadata"
+  ],
+  "kubernetes_replication_controller": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_replication_controller_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_resource_quota": [
+    "spec",
+    "metadata"
+  ],
+  "kubernetes_resource_quota_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_role": [
+    "metadata"
+  ],
+  "kubernetes_role_binding": [
+    "metadata",
+    "role_ref"
+  ],
+  "kubernetes_role_binding_v1": [
+    "role_ref",
+    "metadata"
+  ],
+  "kubernetes_role_v1": [
+    "metadata"
+  ],
+  "kubernetes_runtime_class_v1": [
+    "metadata",
+    "handler"
+  ],
+  "kubernetes_secret": [
+    "metadata",
+    "type"
+  ],
+  "kubernetes_secret_v1": [
+    "type",
+    "metadata"
+  ],
+  "kubernetes_secret_v1_data": [
+    "metadata"
+  ],
+  "kubernetes_service": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_service_account": [
+    "metadata"
+  ],
+  "kubernetes_service_account_v1": [
+    "metadata"
+  ],
+  "kubernetes_service_v1": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_stateful_set": [
+    "metadata",
+    "spec"
+  ],
+  "kubernetes_stateful_set_v1": [
+    "spec",
+    "metadata"
+  ],
+  "kubernetes_storage_class": [
+    "mount_options",
+    "allowed_topologies",
+    "metadata",
+    "parameters",
+    "storage_provisioner",
+    "volume_binding_mode"
+  ],
+  "kubernetes_storage_class_v1": [
+    "mount_options",
+    "allowed_topologies",
+    "metadata",
+    "parameters",
+    "storage_provisioner",
+    "volume_binding_mode"
+  ],
+  "kubernetes_token_request_v1": [
+    "spec",
+    "metadata"
+  ],
+  "kubernetes_validating_webhook_configuration": [
+    "metadata"
+  ],
+  "kubernetes_validating_webhook_configuration_v1": [
+    "metadata"
+  ]
+}

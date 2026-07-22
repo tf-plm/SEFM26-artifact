@@ -1,0 +1,28 @@
+---
+title: Actions
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart TB
+classDef NO-OP  fill:#F5F5F5;
+classDef CREATE fill:#D5E8D4;
+classDef UPDATE fill:#FFF2CC;
+classDef DELETE fill:#FF9999;
+%% Nodes
+CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect):::CREATE;
+UPDATE-'aws_api_gateway_integration_response.login_ko_integration('aws_api_gateway_integration_response.login_ko_integration):::UPDATE;
+UPDATE-'aws_api_gateway_integration_response.login_ok_integration('aws_api_gateway_integration_response.login_ok_integration):::UPDATE;
+UPDATE-'aws_api_gateway_method.login('aws_api_gateway_method.login):::UPDATE;
+UPDATE-'aws_api_gateway_method_response.login_ko('aws_api_gateway_method_response.login_ko):::UPDATE;
+UPDATE-'aws_api_gateway_method_response.login_ok('aws_api_gateway_method_response.login_ok):::UPDATE;
+UPDATE-'aws_api_gateway_resource.auth('aws_api_gateway_resource.auth):::UPDATE;
+DELETE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect):::DELETE;
+%% Arcs
+DELETE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) --> CREATE-'aws_api_gateway_rest_api.connect;
+UPDATE-'aws_api_gateway_resource.auth('aws_api_gateway_resource.auth) & CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) & UPDATE-'aws_api_gateway_method_response.login_ko('aws_api_gateway_method_response.login_ko) & UPDATE-'aws_api_gateway_method.login('aws_api_gateway_method.login) --> UPDATE-'aws_api_gateway_integration_response.login_ko_integration;
+UPDATE-'aws_api_gateway_method_response.login_ok('aws_api_gateway_method_response.login_ok) & CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) & UPDATE-'aws_api_gateway_method.login('aws_api_gateway_method.login) & UPDATE-'aws_api_gateway_resource.auth('aws_api_gateway_resource.auth) --> UPDATE-'aws_api_gateway_integration_response.login_ok_integration;
+UPDATE-'aws_api_gateway_resource.auth('aws_api_gateway_resource.auth) & CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) --> UPDATE-'aws_api_gateway_method.login;
+UPDATE-'aws_api_gateway_resource.auth('aws_api_gateway_resource.auth) & CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) & UPDATE-'aws_api_gateway_method.login('aws_api_gateway_method.login) --> UPDATE-'aws_api_gateway_method_response.login_ko;
+UPDATE-'aws_api_gateway_resource.auth('aws_api_gateway_resource.auth) & CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) & UPDATE-'aws_api_gateway_method.login('aws_api_gateway_method.login) --> UPDATE-'aws_api_gateway_method_response.login_ok;
+CREATE-'aws_api_gateway_rest_api.connect('aws_api_gateway_rest_api.connect) --> UPDATE-'aws_api_gateway_resource.auth;

@@ -1,0 +1,82 @@
+---
+title: Current state
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+aws_api_gateway_integration_response.login_ko_integration
+aws_api_gateway_integration_response.login_ok_integration
+aws_api_gateway_method.login
+aws_api_gateway_method_response.login_ko
+aws_api_gateway_method_response.login_ok
+aws_api_gateway_resource.auth
+aws_api_gateway_rest_api.connect
+aws_db_instance.default
+aws_db_subnet_group.default
+aws_elastic_beanstalk_application.application
+aws_elastic_beanstalk_environment.environment
+aws_iam_role.smarla_login_iam
+aws_internet_gateway.internet
+aws_nat_gateway.default
+aws_route.private_internet
+aws_route.public_internet
+aws_route53_record.pesama_main
+aws_route53_record.pesama_www
+aws_route53_record.smarla_connect-ns
+aws_route53_record.smarla_main-eb
+aws_route53_record.smarla_www-eb
+aws_route53_zone.pesama_main
+aws_route53_zone.smarla_connect
+aws_route53_zone.smarla_main
+aws_route_table.private
+aws_route_table.public
+aws_route_table_association.private
+aws_route_table_association.public
+aws_subnet.private
+aws_subnet.public
+aws_vpc.smarla
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_method_response.login_ko
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_rest_api.connect
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_method.login
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_resource.auth
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_rest_api.connect
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_method.login
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_resource.auth
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_method_response.login_ok
+aws_api_gateway_method.login --> aws_api_gateway_rest_api.connect
+aws_api_gateway_method.login --> aws_api_gateway_resource.auth
+aws_api_gateway_method_response.login_ko --> aws_api_gateway_rest_api.connect
+aws_api_gateway_method_response.login_ko --> aws_api_gateway_method.login
+aws_api_gateway_method_response.login_ko --> aws_api_gateway_resource.auth
+aws_api_gateway_method_response.login_ok --> aws_api_gateway_rest_api.connect
+aws_api_gateway_method_response.login_ok --> aws_api_gateway_method.login
+aws_api_gateway_method_response.login_ok --> aws_api_gateway_resource.auth
+aws_api_gateway_resource.auth --> aws_api_gateway_rest_api.connect
+aws_db_instance.default --> aws_db_subnet_group.default
+aws_db_subnet_group.default --> aws_subnet.private
+aws_elastic_beanstalk_environment.environment --> aws_elastic_beanstalk_application.application
+aws_internet_gateway.internet --> aws_vpc.smarla
+aws_nat_gateway.default --> aws_vpc.smarla
+aws_route.private_internet --> aws_nat_gateway.default
+aws_route.private_internet --> aws_route_table.private
+aws_route.public_internet --> aws_route_table.public
+aws_route.public_internet --> aws_internet_gateway.internet
+aws_route53_record.pesama_main --> aws_route53_zone.smarla_main
+aws_route53_record.pesama_main --> aws_elastic_beanstalk_environment.environment
+aws_route53_record.pesama_www --> aws_route53_record.pesama_main
+aws_route53_record.pesama_www --> aws_route53_zone.pesama_main
+aws_route53_record.smarla_connect-ns --> aws_route53_zone.smarla_connect
+aws_route53_record.smarla_connect-ns --> aws_route53_zone.smarla_main
+aws_route53_record.smarla_main-eb --> aws_route53_zone.smarla_main
+aws_route53_record.smarla_main-eb --> aws_elastic_beanstalk_environment.environment
+aws_route53_record.smarla_www-eb --> aws_route53_zone.smarla_main
+aws_route53_record.smarla_www-eb --> aws_route53_record.smarla_main-eb
+aws_route_table.private --> aws_vpc.smarla
+aws_route_table.public --> aws_vpc.smarla
+aws_route_table_association.private --> aws_subnet.private
+aws_route_table_association.private --> aws_route_table.private
+aws_route_table_association.public --> aws_route_table.public
+aws_route_table_association.public --> aws_subnet.public
+aws_subnet.private --> aws_vpc.smarla
+aws_subnet.public --> aws_vpc.smarla

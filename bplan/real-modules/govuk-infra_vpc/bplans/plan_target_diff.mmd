@@ -1,0 +1,39 @@
+---
+title: Plan diff
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+classDef no-op  fill:#F5F5F5
+classDef create fill:#D5E8D4,stroke-width:2px,stroke-dasharray:5 5
+classDef delete fill:#FF9999,stroke-width:2px,stroke-dasharray:5 5
+classDef update fill:#FFF2CC
+classDef replace fill:#FF9999
+%% Nodes
+aws_accessanalyzer_analyzer.analyzer:::no-op
+aws_eip.private_subnet_nat:::no-op
+aws_internet_gateway.public:::no-op
+aws_nat_gateway.private_subnet:::update
+aws_route.public_subnet_igw:::no-op
+aws_route_table.private_subnet:::no-op
+aws_route_table.public_subnet:::update
+aws_route_table_association.private_subnet:::no-op
+aws_route_table_association.public_subnet:::update
+aws_subnet.private_subnet:::update
+aws_subnet.public_subnet:::update
+aws_vpc.vpc:::replace@{ shape: trap-t }
+%% Arcs
+aws_subnet.public_subnet --> aws_vpc.vpc
+aws_route_table.private_subnet --> aws_vpc.vpc
+aws_nat_gateway.private_subnet --> aws_eip.private_subnet_nat
+aws_route_table_association.public_subnet --> aws_subnet.public_subnet
+aws_route_table_association.private_subnet --> aws_route_table.private_subnet
+aws_subnet.private_subnet --> aws_vpc.vpc
+aws_route.public_subnet_igw --> aws_route_table.public_subnet
+aws_internet_gateway.public --> aws_vpc.vpc
+aws_route_table_association.public_subnet --> aws_route_table.public_subnet
+aws_route_table.public_subnet --> aws_vpc.vpc
+aws_route_table_association.private_subnet --> aws_subnet.private_subnet
+aws_nat_gateway.private_subnet --> aws_subnet.public_subnet
+aws_route.public_subnet_igw --> aws_internet_gateway.public

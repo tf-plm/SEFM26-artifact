@@ -1,0 +1,22 @@
+---
+title: Actions
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart TB
+classDef NO-OP  fill:#F5F5F5;
+classDef CREATE fill:#D5E8D4;
+classDef UPDATE fill:#FFF2CC;
+classDef DELETE fill:#FF9999;
+%% Nodes
+CREATE-'openstack_networking_network_v2.hyperion-network('openstack_networking_network_v2.hyperion-network):::CREATE;
+UPDATE-'openstack_compute_instance_v2.hyperion-master('openstack_compute_instance_v2.hyperion-master):::UPDATE;
+UPDATE-'openstack_compute_instance_v2.hyperion-nodes('openstack_compute_instance_v2.hyperion-nodes):::UPDATE;
+UPDATE-'openstack_networking_subnet_v2.hyperion-network('openstack_networking_subnet_v2.hyperion-network):::UPDATE;
+DELETE-'openstack_networking_network_v2.hyperion-network('openstack_networking_network_v2.hyperion-network):::DELETE;
+%% Arcs
+CREATE-'openstack_networking_network_v2.hyperion-network('openstack_networking_network_v2.hyperion-network) --> UPDATE-'openstack_compute_instance_v2.hyperion-master;
+CREATE-'openstack_networking_network_v2.hyperion-network('openstack_networking_network_v2.hyperion-network) --> UPDATE-'openstack_compute_instance_v2.hyperion-nodes;
+CREATE-'openstack_networking_network_v2.hyperion-network('openstack_networking_network_v2.hyperion-network) --> UPDATE-'openstack_networking_subnet_v2.hyperion-network;
+CREATE-'openstack_networking_network_v2.hyperion-network('openstack_networking_network_v2.hyperion-network) --> DELETE-'openstack_networking_network_v2.hyperion-network;

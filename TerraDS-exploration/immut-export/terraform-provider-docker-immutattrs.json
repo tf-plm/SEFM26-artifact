@@ -1,0 +1,104 @@
+{
+  "docker_config": [
+    "name",
+    "data"
+  ],
+  "docker_container": [
+    "working_dir",
+    "dns_opts",
+    "stop_timeout",
+    "privileged",
+    "devices",
+    "labels",
+    "log_driver",
+    "user",
+    "name",
+    "runtime",
+    "volumes",
+    "host",
+    "userns_mode",
+    "dns_search",
+    "capabilities",
+    "security_opts",
+    "dns",
+    "log_opts",
+    "pid_mode",
+    "sysctls",
+    "hostname",
+    "network_mode",
+    "stdin_open",
+    "read_only",
+    "entrypoint",
+    "publish_all_ports",
+    "cgroupns_mode",
+    "stop_signal",
+    "mounts",
+    "shm_size",
+    "tty",
+    "gpus",
+    "ports",
+    "env",
+    "cpus",
+    "image",
+    "domainname",
+    "command",
+    "ulimit",
+    "ipc_mode",
+    "group_add",
+    "storage_opts",
+    "networks_advanced",
+    "upload"
+  ],
+  "docker_image": [
+    "name",
+    "triggers",
+    "platform",
+    "pull_triggers",
+    "build"
+  ],
+  "docker_network": [
+    "labels",
+    "check_duplicate",
+    "driver",
+    "options",
+    "internal",
+    "attachable",
+    "ipam_config",
+    "name",
+    "ingress",
+    "ipv6",
+    "ipam_driver",
+    "ipam_options"
+  ],
+  "docker_plugin": [
+    "name",
+    "alias"
+  ],
+  "docker_registry_image": [
+    "name",
+    "triggers"
+  ],
+  "docker_secret": [
+    "name",
+    "data",
+    "labels"
+  ],
+  "docker_service": [
+    "auth",
+    "name",
+    "labels",
+    "task_spec",
+    "mode"
+  ],
+  "docker_tag": [
+    "source_image",
+    "target_image",
+    "tag_triggers"
+  ],
+  "docker_volume": [
+    "name",
+    "labels",
+    "driver",
+    "driver_opts"
+  ]
+}

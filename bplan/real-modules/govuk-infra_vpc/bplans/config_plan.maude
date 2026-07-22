@@ -1,0 +1,79 @@
+newConfig(
+        target(
+            resources: (
+                'aws_accessanalyzer_analyzer.analyzer
+                'aws_eip.private_subnet_nat
+                'aws_internet_gateway.public
+                'aws_nat_gateway.private_subnet
+                'aws_route.public_subnet_igw
+                'aws_route_table.private_subnet
+                'aws_route_table.public_subnet
+                'aws_route_table_association.private_subnet
+                'aws_route_table_association.public_subnet
+                'aws_subnet.private_subnet
+                'aws_subnet.public_subnet
+                'aws_vpc.vpc
+            ),
+            dependencies: (
+                'aws_internet_gateway.public -> 'aws_vpc.vpc
+                'aws_nat_gateway.private_subnet -> 'aws_subnet.public_subnet
+                'aws_nat_gateway.private_subnet -> 'aws_eip.private_subnet_nat
+                'aws_route.public_subnet_igw -> 'aws_internet_gateway.public
+                'aws_route.public_subnet_igw -> 'aws_route_table.public_subnet
+                'aws_route_table.private_subnet -> 'aws_vpc.vpc
+                'aws_route_table.public_subnet -> 'aws_vpc.vpc
+                'aws_route_table_association.private_subnet -> 'aws_subnet.private_subnet
+                'aws_route_table_association.private_subnet -> 'aws_route_table.private_subnet
+                'aws_route_table_association.public_subnet -> 'aws_subnet.public_subnet
+                'aws_route_table_association.public_subnet -> 'aws_route_table.public_subnet
+                'aws_subnet.private_subnet -> 'aws_vpc.vpc
+                'aws_subnet.public_subnet -> 'aws_vpc.vpc
+            )
+        ),
+        state(
+            resources: (
+                ri('aws_accessanalyzer_analyzer.analyzer,old)
+                ri('aws_eip.private_subnet_nat,old)
+                ri('aws_internet_gateway.public,old)
+                ri('aws_nat_gateway.private_subnet,old)
+                ri('aws_route.public_subnet_igw,old)
+                ri('aws_route_table.private_subnet,old)
+                ri('aws_route_table.public_subnet,old)
+                ri('aws_route_table_association.private_subnet,old)
+                ri('aws_route_table_association.public_subnet,old)
+                ri('aws_subnet.private_subnet,old)
+                ri('aws_subnet.public_subnet,old)
+                ri('aws_vpc.vpc,old)
+                ri('aws_regions.enabled,old)
+            ),
+            dependencies: (
+                ri('aws_internet_gateway.public,old) -> ri('aws_vpc.vpc,old)
+                ri('aws_nat_gateway.private_subnet,old) -> ri('aws_subnet.public_subnet,old)
+                ri('aws_nat_gateway.private_subnet,old) -> ri('aws_eip.private_subnet_nat,old)
+                ri('aws_route.public_subnet_igw,old) -> ri('aws_internet_gateway.public,old)
+                ri('aws_route.public_subnet_igw,old) -> ri('aws_route_table.public_subnet,old)
+                ri('aws_route_table.private_subnet,old) -> ri('aws_vpc.vpc,old)
+                ri('aws_route_table.public_subnet,old) -> ri('aws_vpc.vpc,old)
+                ri('aws_route_table_association.private_subnet,old) -> ri('aws_subnet.private_subnet,old)
+                ri('aws_route_table_association.private_subnet,old) -> ri('aws_route_table.private_subnet,old)
+                ri('aws_route_table_association.public_subnet,old) -> ri('aws_subnet.public_subnet,old)
+                ri('aws_route_table_association.public_subnet,old) -> ri('aws_route_table.public_subnet,old)
+                ri('aws_subnet.private_subnet,old) -> ri('aws_vpc.vpc,old)
+                ri('aws_subnet.public_subnet,old) -> ri('aws_vpc.vpc,old)
+            )
+        ),
+        (
+            'aws_accessanalyzer_analyzer.analyzer -> po(NO-OP)
+            'aws_eip.private_subnet_nat -> po(NO-OP)
+            'aws_internet_gateway.public -> po(NO-OP)
+            'aws_nat_gateway.private_subnet -> po(UPDATE)
+            'aws_route.public_subnet_igw -> po(NO-OP)
+            'aws_route_table.private_subnet -> po(NO-OP)
+            'aws_route_table.public_subnet -> po(UPDATE)
+            'aws_route_table_association.private_subnet -> po(NO-OP)
+            'aws_route_table_association.public_subnet -> po(UPDATE)
+            'aws_subnet.private_subnet -> po(UPDATE)
+            'aws_subnet.public_subnet -> po(UPDATE)
+            'aws_vpc.vpc -> po(CREATE ; DELETE)
+        )
+    )

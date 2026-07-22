@@ -1,0 +1,29 @@
+---
+title: Target state
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+aws_cloudwatch_log_group.json_logs
+aws_route53_record.antivirus_api
+aws_route53_record.antivirus_api_acm_validation
+aws_route53_record.api
+aws_route53_record.api_acm_validation
+aws_route53_record.assets
+aws_route53_record.assets_acm_validation
+aws_route53_record.search_api
+aws_route53_record.search_api_acm_validation
+aws_route53_record.www
+aws_route53_record.www_acm_validation
+aws_route53_zone.root
+aws_route53_record.antivirus_api --> aws_route53_zone.root
+aws_route53_record.antivirus_api_acm_validation --> aws_route53_zone.root
+aws_route53_record.api --> aws_route53_zone.root
+aws_route53_record.api_acm_validation --> aws_route53_zone.root
+aws_route53_record.assets --> aws_route53_zone.root
+aws_route53_record.assets_acm_validation --> aws_route53_zone.root
+aws_route53_record.search_api --> aws_route53_zone.root
+aws_route53_record.search_api_acm_validation --> aws_route53_zone.root
+aws_route53_record.www --> aws_route53_zone.root
+aws_route53_record.www_acm_validation --> aws_route53_zone.root

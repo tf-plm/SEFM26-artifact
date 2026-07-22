@@ -1,0 +1,33 @@
+---
+title: Current state
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+aws_accessanalyzer_analyzer.analyzer
+aws_eip.private_subnet_nat
+aws_internet_gateway.public
+aws_nat_gateway.private_subnet
+aws_route.public_subnet_igw
+aws_route_table.private_subnet
+aws_route_table.public_subnet
+aws_route_table_association.private_subnet
+aws_route_table_association.public_subnet
+aws_subnet.private_subnet
+aws_subnet.public_subnet
+aws_vpc.vpc
+aws_regions.enabled
+aws_internet_gateway.public --> aws_vpc.vpc
+aws_nat_gateway.private_subnet --> aws_subnet.public_subnet
+aws_nat_gateway.private_subnet --> aws_eip.private_subnet_nat
+aws_route.public_subnet_igw --> aws_internet_gateway.public
+aws_route.public_subnet_igw --> aws_route_table.public_subnet
+aws_route_table.private_subnet --> aws_vpc.vpc
+aws_route_table.public_subnet --> aws_vpc.vpc
+aws_route_table_association.private_subnet --> aws_subnet.private_subnet
+aws_route_table_association.private_subnet --> aws_route_table.private_subnet
+aws_route_table_association.public_subnet --> aws_subnet.public_subnet
+aws_route_table_association.public_subnet --> aws_route_table.public_subnet
+aws_subnet.private_subnet --> aws_vpc.vpc
+aws_subnet.public_subnet --> aws_vpc.vpc

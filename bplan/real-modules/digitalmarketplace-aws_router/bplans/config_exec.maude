@@ -1,0 +1,70 @@
+newExec(
+        target(
+            resources: (
+                'aws_cloudwatch_log_group.json_logs
+                'aws_route53_record.antivirus_api
+                'aws_route53_record.antivirus_api_acm_validation
+                'aws_route53_record.api
+                'aws_route53_record.api_acm_validation
+                'aws_route53_record.assets
+                'aws_route53_record.assets_acm_validation
+                'aws_route53_record.search_api
+                'aws_route53_record.search_api_acm_validation
+                'aws_route53_record.www
+                'aws_route53_record.www_acm_validation
+                'aws_route53_zone.root
+            ),
+            dependencies: (
+                'aws_route53_record.antivirus_api -> 'aws_route53_zone.root
+                'aws_route53_record.antivirus_api_acm_validation -> 'aws_route53_zone.root
+                'aws_route53_record.api -> 'aws_route53_zone.root
+                'aws_route53_record.api_acm_validation -> 'aws_route53_zone.root
+                'aws_route53_record.assets -> 'aws_route53_zone.root
+                'aws_route53_record.assets_acm_validation -> 'aws_route53_zone.root
+                'aws_route53_record.search_api -> 'aws_route53_zone.root
+                'aws_route53_record.search_api_acm_validation -> 'aws_route53_zone.root
+                'aws_route53_record.www -> 'aws_route53_zone.root
+                'aws_route53_record.www_acm_validation -> 'aws_route53_zone.root
+            )
+        ),
+        state(
+            resources: (
+                ri('aws_cloudwatch_log_group.json_logs,old)
+                ri('aws_route53_record.antivirus_api,old)
+                ri('aws_route53_record.antivirus_api_acm_validation,old)
+                ri('aws_route53_record.api,old)
+                ri('aws_route53_record.api_acm_validation,old)
+                ri('aws_route53_record.assets,old)
+                ri('aws_route53_record.assets_acm_validation,old)
+                ri('aws_route53_record.search_api,old)
+                ri('aws_route53_record.search_api_acm_validation,old)
+                ri('aws_route53_record.www,old)
+                ri('aws_route53_record.www_acm_validation,old)
+                ri('aws_route53_zone.root,old)
+            ),
+            dependencies: (
+                ri('aws_route53_record.antivirus_api,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.antivirus_api_acm_validation,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.api,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.api_acm_validation,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.assets,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.assets_acm_validation,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.search_api,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.search_api_acm_validation,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.www,old) -> ri('aws_route53_zone.root,old)
+                ri('aws_route53_record.www_acm_validation,old) -> ri('aws_route53_zone.root,old)
+            )
+        ),
+        (
+            graphAdj(
+                a(CREATE, 'aws_route53_zone.root) -> neighbors(eps)
+                a(UPDATE, 'aws_cloudwatch_log_group.json_logs) -> neighbors(eps)
+                a(UPDATE, 'aws_route53_record.antivirus_api_acm_validation) -> neighbors(a(CREATE, 'aws_route53_zone.root))
+                a(UPDATE, 'aws_route53_record.api_acm_validation) -> neighbors(a(CREATE, 'aws_route53_zone.root))
+                a(UPDATE, 'aws_route53_record.assets_acm_validation) -> neighbors(a(CREATE, 'aws_route53_zone.root))
+                a(UPDATE, 'aws_route53_record.search_api_acm_validation) -> neighbors(a(CREATE, 'aws_route53_zone.root))
+                a(UPDATE, 'aws_route53_record.www_acm_validation) -> neighbors(a(CREATE, 'aws_route53_zone.root))
+                a(DELETE, 'aws_route53_zone.root) -> neighbors(a(CREATE, 'aws_route53_zone.root))
+            )
+        )
+    )

@@ -1,0 +1,22 @@
+---
+title: Target state
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+openstack_compute_floatingip_v2.fip-master
+openstack_compute_floatingip_v2.fip-nodes
+openstack_compute_instance_v2.hyperion-master
+openstack_compute_instance_v2.hyperion-nodes
+openstack_compute_keypair_v2.hyperion-key
+openstack_compute_secgroup_v2.hyperion-sg
+openstack_networking_network_v2.hyperion-network
+openstack_networking_subnet_v2.hyperion-network
+openstack_compute_instance_v2.hyperion-master --> openstack_compute_secgroup_v2.hyperion-sg
+openstack_compute_instance_v2.hyperion-master --> openstack_compute_floatingip_v2.fip-master
+openstack_compute_instance_v2.hyperion-master --> openstack_networking_network_v2.hyperion-network
+openstack_compute_instance_v2.hyperion-nodes --> openstack_compute_secgroup_v2.hyperion-sg
+openstack_compute_instance_v2.hyperion-nodes --> openstack_compute_floatingip_v2.fip-nodes
+openstack_compute_instance_v2.hyperion-nodes --> openstack_networking_network_v2.hyperion-network
+openstack_networking_subnet_v2.hyperion-network --> openstack_networking_network_v2.hyperion-network

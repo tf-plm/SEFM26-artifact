@@ -1,0 +1,223 @@
+load model-checker
+
+mod MUTABLE-TF-PLM-PREDS is
+    pr CONFIGURATION .
+    including SATISFACTION .
+    subsort Conf < State .
+
+    var C : Conf .
+    var P : Prop .
+    var Res Res' : Qid .
+    var I I' : Inst .
+    var Key Key' : Qid .
+    var Val Val' : String .
+
+    var Target : T .
+    var Plan : Pl .
+    var Actions : GraphAdj .
+    var Ongoing : On .
+    var RS RS' : SR .
+    var DS : SD .
+    var State : S .
+    var Status : Status .
+    var Trace : Trace .
+
+    op hasRes : Qid -> Prop .
+    eq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: state (
+                resources: ri(Res, I) RS,
+                dependencies: DS
+            ),
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasRes(Res) = true .
+
+    op hasDep : Qid Qid -> Prop .
+    eq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: state (
+                resources: RS,
+                dependencies: (ri(Res, I) -> ri(Res', I'))
+                              DS
+            ),
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasDep(Res, Res') = true .
+
+    op hasDuplicateRes : Qid -> Prop .
+    eq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: state (
+                resources: ri(Res, old) ri(Res, new) RS,
+                dependencies: DS
+            ),
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasDuplicateRes(Res) = true
+        .
+
+    op hasDuplicateRes : -> Prop .
+    eq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: state (
+                resources: ri(Res, old) ri(Res, new) RS,
+                dependencies: DS
+            ),
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasDuplicateRes = true
+        .
+
+    op hasDanglingDep : Qid Qid -> Prop .
+    ceq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: state (
+                resources: RS,
+                dependencies: (ri(Res, I) -> ri(Res', I'))
+                              DS
+            ),
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasDanglingDep(Res, Res') = true
+        if not ri(Res', I') in RS .
+
+    op hasDanglingDep : -> Prop .
+    ceq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: state (
+                resources: RS,
+                dependencies: (ri(Res, I) -> ri(Res', I'))
+                              DS
+            ),
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasDanglingDep = true
+        if not ri(Res', I') in RS .
+
+    op hasState : S -> Prop .
+    eq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: State,
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasState(State) = true .
+
+    op hasTrace : Trace -> Prop .
+    eq <
+            target: Target,
+            planned: Plan,
+            actions: Actions,
+            state: State,
+            ongoing: Ongoing,
+            phase: Status,
+            trace: Trace
+        > |= hasTrace(Trace) = true .
+
+    eq C |= P = false [owise] .
+
+endm
+
+mod MUTABLE-TF-PLM-PROPS is
+
+    inc CONFIGURATION .
+    inc MUTABLE-TF-PLM-PREDS .
+    including MODEL-CHECKER .
+    pr RULES .
+
+    var Res Res' : Qid .
+    var F : Prop .
+
+    --- General notions of stability w.r.t a proposition
+    op stable   : Prop -> Formula . eq stable(F)   = [] ~ F .
+    op estable  : Prop -> Formula . eq estable(F)  = <> F /\ <> stable(F) .
+    op unstable : Prop -> Formula . eq unstable(F) = [] <> F .
+
+    --- Stability of a resource within an execution
+    op stable-res   : Qid -> Formula . eq stable-res(Res)   = stable(hasDuplicateRes(Res)) .
+    op estable-res  : Qid -> Formula . eq estable-res(Res)  = estable(hasDuplicateRes(Res)) .
+    op unstable-res : Qid -> Formula . eq unstable-res(Res) = unstable(hasDuplicateRes(Res)) .
+
+    --- Stability of a dependency within an execution
+    op stable-dep   : Qid Qid -> Formula . eq stable-dep(Res, Res')   = stable(hasDanglingDep(Res, Res')) .
+    op estable-dep  : Qid Qid -> Formula . eq estable-dep(Res, Res')  = estable(hasDanglingDep(Res, Res')) .
+    op unstable-dep : Qid Qid -> Formula . eq unstable-dep(Res, Res') = unstable(hasDanglingDep(Res, Res')) .
+
+    --- Resource stability of an execution
+    op stable-res   : -> Formula . eq stable-res   = stable(hasDuplicateRes) .
+    op estable-res  : -> Formula . eq estable-res  = estable(hasDuplicateRes) .
+    op unstable-res : -> Formula . eq unstable-res = unstable(hasDuplicateRes) .
+
+    --- Dependency stability of an execution
+    op stable-dep   : -> Formula . eq stable-dep   = stable(hasDanglingDep) .
+    op estable-dep  : -> Formula . eq estable-dep  = estable(hasDanglingDep) .
+    op unstable-dep : -> Formula . eq unstable-dep = unstable(hasDanglingDep) .
+
+endm
+
+mod ABSTRACTION-EXEC is
+
+    pr MUTABLE-TF-PLM-PROPS .
+    pr CONFIGURATION .
+    pr RULES .
+
+    var Target : T .
+    var Plan : Pl .
+    var Actions : GraphAdj .
+    var Act Act' : Act .
+    var R R' : Qid .
+    var Op Op' : OP .
+    var Ongoing Ongoing' : On .
+    var RS RS' : SR .
+    var DS : SD .
+    var State : S .
+    var Status : Status .
+    var Trace Trace' : Trace .
+
+    eq [UnorderedAction] :
+        <   target: Target,
+            planned: Plan,
+            actions: graphAdj((Act -> neighbors(eps)) (Act' -> neighbors(eps)) Actions),
+            state: State,
+            ongoing: Ongoing Act,
+            phase: executing,
+            trace: Trace start(Act)
+        >
+        =
+        <   target: Target,
+            planned: Plan,
+            actions: graphAdj((Act -> neighbors(eps)) (Act' -> neighbors(eps)) Actions),
+            state: State,
+            ongoing: Ongoing Act',
+            phase: executing,
+            trace: Trace start(Act')
+        >
+        --- if not Act' in Ongoing and not Act in Ongoing
+        --- /\ not occurs(start(Act'), Trace) and not occurs(start(Act), Trace)
+        .
+    --- crl [UnorderedAction]
+
+
+endm
+

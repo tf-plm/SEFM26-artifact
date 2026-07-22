@@ -1,0 +1,1049 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.13.4",
+  "variables": {
+    "hyperion_nb_nodes": {
+      "value": "2"
+    },
+    "openstack_access_key": {
+      "value": "e22perde"
+    },
+    "openstack_floating_ip_pool_name": {
+      "value": "public"
+    },
+    "openstack_image_id": {
+      "value": 4
+    },
+    "openstack_instance_type_master": {
+      "value": "m1.large"
+    },
+    "openstack_instance_type_node": {
+      "value": "m1.large"
+    },
+    "openstack_key_name": {
+      "value": "mykey"
+    },
+    "openstack_public_key": {
+      "value": "~/.ssh/id_rsa.pub"
+    },
+    "openstack_region": {
+      "value": ""
+    },
+    "openstack_ssh_user": {
+      "value": "ubuntu"
+    },
+    "openstack_subnet_cidr_block": {
+      "value": "10.0.1.0/24"
+    },
+    "openstack_tenant_name": {
+      "value": "fila3-terraform-e22perde"
+    }
+  },
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "openstack_compute_floatingip_v2.fip-master",
+          "mode": "managed",
+          "type": "openstack_compute_floatingip_v2",
+          "name": "fip-master",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "pool": "public"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "openstack_compute_floatingip_v2.fip-nodes",
+          "mode": "managed",
+          "type": "openstack_compute_floatingip_v2",
+          "name": "fip-nodes",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "pool": "public"
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "openstack_compute_instance_v2.hyperion-master",
+          "mode": "managed",
+          "type": "openstack_compute_instance_v2",
+          "name": "hyperion-master",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "admin_pass": null,
+            "availability_zone_hints": null,
+            "block_device": [],
+            "config_drive": null,
+            "flavor_name": "m1.large",
+            "force_delete": false,
+            "image_id": "4",
+            "key_pair": "mykey",
+            "metadata": null,
+            "name": "hyperion-master",
+            "network": [
+              {
+                "access_network": false
+              }
+            ],
+            "network_mode": null,
+            "personality": [],
+            "power_state": "active",
+            "scheduler_hints": [],
+            "security_groups": [
+              "hyperion-sg"
+            ],
+            "stop_before_destroy": false,
+            "tags": null,
+            "timeouts": null,
+            "user_data": null,
+            "vendor_options": [],
+            "volume": []
+          },
+          "sensitive_values": {
+            "admin_pass": true,
+            "all_metadata": {},
+            "all_tags": [],
+            "block_device": [],
+            "network": [
+              {}
+            ],
+            "personality": [],
+            "scheduler_hints": [],
+            "security_groups": [
+              false
+            ],
+            "vendor_options": [],
+            "volume": []
+          }
+        },
+        {
+          "address": "openstack_compute_instance_v2.hyperion-nodes",
+          "mode": "managed",
+          "type": "openstack_compute_instance_v2",
+          "name": "hyperion-nodes",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "admin_pass": null,
+            "availability_zone_hints": null,
+            "block_device": [],
+            "config_drive": null,
+            "flavor_name": "m1.large",
+            "force_delete": false,
+            "image_id": "4",
+            "key_pair": "mykey",
+            "metadata": null,
+            "name": "hyperion-node-0",
+            "network": [
+              {
+                "access_network": false
+              }
+            ],
+            "network_mode": null,
+            "personality": [],
+            "power_state": "active",
+            "scheduler_hints": [],
+            "security_groups": [
+              "hyperion-sg"
+            ],
+            "stop_before_destroy": false,
+            "tags": null,
+            "timeouts": null,
+            "user_data": null,
+            "vendor_options": [],
+            "volume": []
+          },
+          "sensitive_values": {
+            "admin_pass": true,
+            "all_metadata": {},
+            "all_tags": [],
+            "block_device": [],
+            "network": [
+              {}
+            ],
+            "personality": [],
+            "scheduler_hints": [],
+            "security_groups": [
+              false
+            ],
+            "vendor_options": [],
+            "volume": []
+          }
+        },
+        {
+          "address": "openstack_compute_keypair_v2.hyperion-key",
+          "mode": "managed",
+          "type": "openstack_compute_keypair_v2",
+          "name": "hyperion-key",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "name": "mykey",
+            "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCummf86CakwkQwKhomF0eJiitKsJphGTmAdFI/eATqIx8fcaBGY0IUGse8IQn4H37Uf29ba5he7GVmDBxbKLJueXxnvbX/L8+hBrh7cvYkvW6dj+PjrLu6Z/I7kD053qHco+xcM+8yslE3McMurUXbzeFFw9D1db54758v9/q44yJtz+Vznfpks5UFcaatwshnB3T2o+gN5aQhlz9tZJwuMPZRqs5zPW4J1XDYL1MY26HrQ25rZF8bDnMk85FEqEZtAW8XMbpVjedrZ4zrxwUMVEYbq6kuya0FAawzyST5kPXY5/HOzYNdcA9zuR1z/gqk2N8oiFHIe1AFF6TykFzL eloi@eloi-pro\n",
+            "value_specs": null
+          },
+          "sensitive_values": {
+            "private_key": true
+          }
+        },
+        {
+          "address": "openstack_compute_secgroup_v2.hyperion-sg",
+          "mode": "managed",
+          "type": "openstack_compute_secgroup_v2",
+          "name": "hyperion-sg",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "description": "Security Group for Hyperion",
+            "name": "hyperion-sg",
+            "rule": [
+              {
+                "cidr": "",
+                "from_group_id": "",
+                "from_port": 1,
+                "ip_protocol": "icmp",
+                "self": true,
+                "to_port": 1
+              },
+              {
+                "cidr": "",
+                "from_group_id": "",
+                "from_port": 1,
+                "ip_protocol": "tcp",
+                "self": true,
+                "to_port": 65535
+              },
+              {
+                "cidr": "",
+                "from_group_id": "",
+                "from_port": 1,
+                "ip_protocol": "udp",
+                "self": true,
+                "to_port": 65535
+              },
+              {
+                "cidr": "0.0.0.0/0",
+                "from_group_id": "",
+                "from_port": 1,
+                "ip_protocol": "tcp",
+                "self": false,
+                "to_port": 65535
+              },
+              {
+                "cidr": "0.0.0.0/0",
+                "from_group_id": "",
+                "from_port": 1,
+                "ip_protocol": "udp",
+                "self": false,
+                "to_port": 65535
+              },
+              {
+                "cidr": "0.0.0.0/0",
+                "from_group_id": "",
+                "from_port": 22,
+                "ip_protocol": "tcp",
+                "self": false,
+                "to_port": 22
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "rule": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ]
+          }
+        },
+        {
+          "address": "openstack_networking_network_v2.hyperion-network",
+          "mode": "managed",
+          "type": "openstack_networking_network_v2",
+          "name": "hyperion-network",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "admin_state_up": true,
+            "description": null,
+            "name": "hyperion-network",
+            "tags": null,
+            "timeouts": null,
+            "value_specs": null
+          },
+          "sensitive_values": {
+            "all_tags": [],
+            "availability_zone_hints": [],
+            "segments": []
+          }
+        },
+        {
+          "address": "openstack_networking_subnet_v2.hyperion-network",
+          "mode": "managed",
+          "type": "openstack_networking_subnet_v2",
+          "name": "hyperion-network",
+          "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+          "schema_version": 0,
+          "values": {
+            "cidr": "10.0.1.0/24",
+            "description": null,
+            "dns_nameservers": null,
+            "enable_dhcp": true,
+            "host_routes": [],
+            "ip_version": 4,
+            "name": null,
+            "no_gateway": false,
+            "prefix_length": null,
+            "subnetpool_id": null,
+            "tags": null,
+            "timeouts": null,
+            "value_specs": null
+          },
+          "sensitive_values": {
+            "all_tags": [],
+            "allocation_pool": [],
+            "allocation_pools": [],
+            "host_routes": [],
+            "service_types": []
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "openstack_compute_floatingip_v2.fip-master",
+      "mode": "managed",
+      "type": "openstack_compute_floatingip_v2",
+      "name": "fip-master",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": null,
+        "after": {
+          "pool": "public"
+        },
+        "after_unknown": {
+          "address": true,
+          "fixed_ip": true,
+          "id": true,
+          "instance_id": true,
+          "region": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "openstack_compute_floatingip_v2.fip-nodes",
+      "mode": "managed",
+      "type": "openstack_compute_floatingip_v2",
+      "name": "fip-nodes",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+            "no-op"
+        ],
+        "before": null,
+        "after": {
+          "pool": "public"
+        },
+        "after_unknown": {
+          "address": true,
+          "fixed_ip": true,
+          "id": true,
+          "instance_id": true,
+          "region": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "openstack_compute_instance_v2.hyperion-master",
+      "mode": "managed",
+      "type": "openstack_compute_instance_v2",
+      "name": "hyperion-master",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "admin_pass": null,
+          "availability_zone_hints": null,
+          "block_device": [],
+          "config_drive": null,
+          "flavor_name": "m1.large",
+          "force_delete": false,
+          "image_id": "4",
+          "key_pair": "mykey",
+          "metadata": null,
+          "name": "hyperion-master",
+          "network": [
+            {
+              "access_network": false
+            }
+          ],
+          "network_mode": null,
+          "personality": [],
+          "power_state": "active",
+          "scheduler_hints": [],
+          "security_groups": [
+            "hyperion-sg"
+          ],
+          "stop_before_destroy": false,
+          "tags": null,
+          "timeouts": null,
+          "user_data": null,
+          "vendor_options": [],
+          "volume": []
+        },
+        "after_unknown": {
+          "access_ip_v4": true,
+          "access_ip_v6": true,
+          "all_metadata": true,
+          "all_tags": true,
+          "availability_zone": true,
+          "block_device": [],
+          "created": true,
+          "flavor_id": true,
+          "floating_ip": true,
+          "id": true,
+          "image_name": true,
+          "network": [
+            {
+              "fixed_ip_v4": true,
+              "fixed_ip_v6": true,
+              "floating_ip": true,
+              "mac": true,
+              "name": true,
+              "port": true,
+              "uuid": true
+            }
+          ],
+          "personality": [],
+          "region": true,
+          "scheduler_hints": [],
+          "security_groups": [
+            false
+          ],
+          "updated": true,
+          "vendor_options": [],
+          "volume": []
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "admin_pass": true,
+          "all_metadata": {},
+          "all_tags": [],
+          "block_device": [],
+          "network": [
+            {}
+          ],
+          "personality": [],
+          "scheduler_hints": [],
+          "security_groups": [
+            false
+          ],
+          "vendor_options": [],
+          "volume": []
+        }
+      }
+    },
+    {
+      "address": "openstack_compute_instance_v2.hyperion-nodes",
+      "mode": "managed",
+      "type": "openstack_compute_instance_v2",
+      "name": "hyperion-nodes",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "admin_pass": null,
+          "availability_zone_hints": null,
+          "block_device": [],
+          "config_drive": null,
+          "flavor_name": "m1.large",
+          "force_delete": false,
+          "image_id": "4",
+          "key_pair": "mykey",
+          "metadata": null,
+          "name": "hyperion-node-0",
+          "network": [
+            {
+              "access_network": false
+            }
+          ],
+          "network_mode": null,
+          "personality": [],
+          "power_state": "active",
+          "scheduler_hints": [],
+          "security_groups": [
+            "hyperion-sg"
+          ],
+          "stop_before_destroy": false,
+          "tags": null,
+          "timeouts": null,
+          "user_data": null,
+          "vendor_options": [],
+          "volume": []
+        },
+        "after_unknown": {
+          "access_ip_v4": true,
+          "access_ip_v6": true,
+          "all_metadata": true,
+          "all_tags": true,
+          "availability_zone": true,
+          "block_device": [],
+          "created": true,
+          "flavor_id": true,
+          "floating_ip": true,
+          "id": true,
+          "image_name": true,
+          "network": [
+            {
+              "fixed_ip_v4": true,
+              "fixed_ip_v6": true,
+              "floating_ip": true,
+              "mac": true,
+              "name": true,
+              "port": true,
+              "uuid": true
+            }
+          ],
+          "personality": [],
+          "region": true,
+          "scheduler_hints": [],
+          "security_groups": [
+            false
+          ],
+          "updated": true,
+          "vendor_options": [],
+          "volume": []
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "admin_pass": true,
+          "all_metadata": {},
+          "all_tags": [],
+          "block_device": [],
+          "network": [
+            {}
+          ],
+          "personality": [],
+          "scheduler_hints": [],
+          "security_groups": [
+            false
+          ],
+          "vendor_options": [],
+          "volume": []
+        }
+      }
+    },
+    {
+      "address": "openstack_compute_keypair_v2.hyperion-key",
+      "mode": "managed",
+      "type": "openstack_compute_keypair_v2",
+      "name": "hyperion-key",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+            "no-op"
+        ],
+        "before": null,
+        "after": {
+          "name": "mykey",
+          "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCummf86CakwkQwKhomF0eJiitKsJphGTmAdFI/eATqIx8fcaBGY0IUGse8IQn4H37Uf29ba5he7GVmDBxbKLJueXxnvbX/L8+hBrh7cvYkvW6dj+PjrLu6Z/I7kD053qHco+xcM+8yslE3McMurUXbzeFFw9D1db54758v9/q44yJtz+Vznfpks5UFcaatwshnB3T2o+gN5aQhlz9tZJwuMPZRqs5zPW4J1XDYL1MY26HrQ25rZF8bDnMk85FEqEZtAW8XMbpVjedrZ4zrxwUMVEYbq6kuya0FAawzyST5kPXY5/HOzYNdcA9zuR1z/gqk2N8oiFHIe1AFF6TykFzL eloi@eloi-pro\n",
+          "value_specs": null
+        },
+        "after_unknown": {
+          "fingerprint": true,
+          "id": true,
+          "private_key": true,
+          "region": true,
+          "user_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "private_key": true
+        }
+      }
+    },
+    {
+      "address": "openstack_compute_secgroup_v2.hyperion-sg",
+      "mode": "managed",
+      "type": "openstack_compute_secgroup_v2",
+      "name": "hyperion-sg",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+            "no-op"
+        ],
+        "before": null,
+        "after": {
+          "description": "Security Group for Hyperion",
+          "name": "hyperion-sg",
+          "rule": [
+            {
+              "cidr": "",
+              "from_group_id": "",
+              "from_port": 1,
+              "ip_protocol": "icmp",
+              "self": true,
+              "to_port": 1
+            },
+            {
+              "cidr": "",
+              "from_group_id": "",
+              "from_port": 1,
+              "ip_protocol": "tcp",
+              "self": true,
+              "to_port": 65535
+            },
+            {
+              "cidr": "",
+              "from_group_id": "",
+              "from_port": 1,
+              "ip_protocol": "udp",
+              "self": true,
+              "to_port": 65535
+            },
+            {
+              "cidr": "0.0.0.0/0",
+              "from_group_id": "",
+              "from_port": 1,
+              "ip_protocol": "tcp",
+              "self": false,
+              "to_port": 65535
+            },
+            {
+              "cidr": "0.0.0.0/0",
+              "from_group_id": "",
+              "from_port": 1,
+              "ip_protocol": "udp",
+              "self": false,
+              "to_port": 65535
+            },
+            {
+              "cidr": "0.0.0.0/0",
+              "from_group_id": "",
+              "from_port": 22,
+              "ip_protocol": "tcp",
+              "self": false,
+              "to_port": 22
+            }
+          ],
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "region": true,
+          "rule": [
+            {
+              "id": true
+            },
+            {
+              "id": true
+            },
+            {
+              "id": true
+            },
+            {
+              "id": true
+            },
+            {
+              "id": true
+            },
+            {
+              "id": true
+            }
+          ]
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "rule": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+          ]
+        }
+      }
+    },
+    {
+      "address": "openstack_networking_network_v2.hyperion-network",
+      "mode": "managed",
+      "type": "openstack_networking_network_v2",
+      "name": "hyperion-network",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+          "delete", "create"
+        ],
+        "before": null,
+        "after": {
+          "admin_state_up": true,
+          "description": null,
+          "name": "hyperion-network",
+          "tags": null,
+          "timeouts": null,
+          "value_specs": null
+        },
+        "after_unknown": {
+          "all_tags": true,
+          "availability_zone_hints": true,
+          "dns_domain": true,
+          "external": true,
+          "id": true,
+          "mtu": true,
+          "port_security_enabled": true,
+          "qos_policy_id": true,
+          "region": true,
+          "segments": true,
+          "shared": true,
+          "tenant_id": true,
+          "transparent_vlan": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "all_tags": [],
+          "availability_zone_hints": [],
+          "segments": []
+        }
+      }
+    },
+    {
+      "address": "openstack_networking_subnet_v2.hyperion-network",
+      "mode": "managed",
+      "type": "openstack_networking_subnet_v2",
+      "name": "hyperion-network",
+      "provider_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": null,
+        "after": {
+          "cidr": "10.0.1.0/24",
+          "description": null,
+          "dns_nameservers": null,
+          "enable_dhcp": true,
+          "host_routes": [],
+          "ip_version": 4,
+          "name": null,
+          "no_gateway": false,
+          "prefix_length": null,
+          "subnetpool_id": null,
+          "tags": null,
+          "timeouts": null,
+          "value_specs": null
+        },
+        "after_unknown": {
+          "all_tags": true,
+          "allocation_pool": true,
+          "allocation_pools": true,
+          "gateway_ip": true,
+          "host_routes": [],
+          "id": true,
+          "ipv6_address_mode": true,
+          "ipv6_ra_mode": true,
+          "network_id": true,
+          "region": true,
+          "service_types": true,
+          "tenant_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "all_tags": [],
+          "allocation_pool": [],
+          "allocation_pools": [],
+          "host_routes": [],
+          "service_types": []
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "openstack": {
+        "name": "openstack",
+        "full_name": "registry.terraform.io/terraform-provider-openstack/openstack",
+        "version_constraint": "~> 1.53.0",
+        "expressions": {
+          "cloud": {
+            "constant_value": "openstack"
+          },
+          "tenant_name": {
+            "references": [
+              "var.openstack_tenant_name"
+            ]
+          },
+          "user_name": {
+            "references": [
+              "var.openstack_access_key"
+            ]
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "openstack_compute_floatingip_v2.fip-master",
+          "mode": "managed",
+          "type": "openstack_compute_floatingip_v2",
+          "name": "fip-master",
+          "provider_config_key": "openstack",
+          "depends_on": []
+        },
+        {
+          "address": "openstack_compute_floatingip_v2.fip-nodes",
+          "mode": "managed",
+          "type": "openstack_compute_floatingip_v2",
+          "name": "fip-nodes",
+          "provider_config_key": "openstack",
+          "depends_on": []
+        },
+        {
+          "address": "openstack_compute_instance_v2.hyperion-master",
+          "mode": "managed",
+          "type": "openstack_compute_instance_v2",
+          "name": "hyperion-master",
+          "provider_config_key": "openstack",
+          "depends_on": [
+            "openstack_networking_network_v2.hyperion-network",
+            "openstack_compute_floatingip_v2.fip-master",
+            "openstack_compute_secgroup_v2.hyperion-sg"
+          ]
+        },
+        {
+          "address": "openstack_compute_instance_v2.hyperion-nodes",
+          "mode": "managed",
+          "type": "openstack_compute_instance_v2",
+          "name": "hyperion-nodes",
+          "provider_config_key": "openstack",
+          "depends_on": [
+            "openstack_networking_network_v2.hyperion-network",
+            "openstack_compute_floatingip_v2.fip-nodes",
+            "openstack_compute_secgroup_v2.hyperion-sg"
+          ]
+        },
+        {
+          "address": "openstack_compute_keypair_v2.hyperion-key",
+          "mode": "managed",
+          "type": "openstack_compute_keypair_v2",
+          "name": "hyperion-key",
+          "provider_config_key": "openstack",
+          "depends_on": []
+        },
+        {
+          "address": "openstack_compute_secgroup_v2.hyperion-sg",
+          "mode": "managed",
+          "type": "openstack_compute_secgroup_v2",
+          "name": "hyperion-sg",
+          "provider_config_key": "openstack",
+          "depends_on": []
+        },
+        {
+          "address": "openstack_networking_network_v2.hyperion-network",
+          "mode": "managed",
+          "type": "openstack_networking_network_v2",
+          "name": "hyperion-network",
+          "provider_config_key": "openstack",
+          "depends_on": []
+        },
+        {
+          "address": "openstack_networking_subnet_v2.hyperion-network",
+          "mode": "managed",
+          "type": "openstack_networking_subnet_v2",
+          "name": "hyperion-network",
+          "provider_config_key": "openstack",
+          "depends_on": [
+            "openstack_networking_network_v2.hyperion-network"
+          ]
+        }
+      ],
+      "variables": {
+        "hyperion_nb_nodes": {
+          "default": "2",
+          "description": "The number of nodes."
+        },
+        "openstack_access_key": {
+          "default": "e22perde",
+          "description": "Openstack username"
+        },
+        "openstack_floating_ip_pool_name": {
+          "default": "public",
+          "description": "The name of the IP pool that floating IP's will be requested from."
+        },
+        "openstack_image_id": {
+          "default": 4,
+          "description": "The ID the image to base the launched instances."
+        },
+        "openstack_instance_type_master": {
+          "default": "m1.large",
+          "description": "The machine type to use for the Hyperion master instance."
+        },
+        "openstack_instance_type_node": {
+          "default": "m1.large",
+          "description": "The machine type to use for the Hyperion nodes instance."
+        },
+        "openstack_key_name": {
+          "default": "mykey",
+          "description": "The SSH key name to use for the instances."
+        },
+        "openstack_public_key": {
+          "default": "~/.ssh/id_rsa.pub",
+          "description": "The SSH public key to upload as openstack_key_name."
+        },
+        "openstack_region": {
+          "default": "",
+          "description": "Openstack region"
+        },
+        "openstack_ssh_user": {
+          "default": "ubuntu",
+          "description": "SSH user."
+        },
+        "openstack_subnet_cidr_block": {
+          "default": "10.0.1.0/24",
+          "description": "The IPv4 address range that machines in the network are assigned to, represented as a CIDR block."
+        },
+        "openstack_tenant_name": {
+          "default": "fila3-terraform-e22perde",
+          "description": "Openstack project / tenant name"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "openstack_compute_floatingip_v2.fip-master",
+      "attribute": [
+        "address"
+      ]
+    },
+    {
+      "resource": "openstack_networking_network_v2.hyperion-network",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "openstack_compute_floatingip_v2.fip-nodes",
+      "attribute": [
+        "address"
+      ]
+    },
+    {
+      "resource": "openstack_compute_secgroup_v2.hyperion-sg",
+      "attribute": [
+        "name"
+      ]
+    }
+  ],
+  "timestamp": "2025-11-23T10:41:35Z",
+  "applyable": true,
+  "complete": true,
+  "errored": false,
+  "prior_state": {
+    "format_version": "1.0",
+    "terraform_version": "1.13.1",
+    "values": {
+      "outputs": {},
+      "root_module": {
+        "resources": [
+          {
+            "address": "openstack_compute_floatingip_v2.fip-master",
+            "mode": "managed",
+            "type": "openstack_compute_floatingip_v2",
+            "name": "fip-master",
+            "provider_config_key": "openstack",
+            "depends_on": []
+          },
+          {
+            "address": "openstack_compute_floatingip_v2.fip-nodes",
+            "mode": "managed",
+            "type": "openstack_compute_floatingip_v2",
+            "name": "fip-nodes",
+            "provider_config_key": "openstack",
+            "depends_on": []
+          },
+          {
+            "address": "openstack_compute_instance_v2.hyperion-master",
+            "mode": "managed",
+            "type": "openstack_compute_instance_v2",
+            "name": "hyperion-master",
+            "provider_config_key": "openstack",
+            "depends_on": [
+              "openstack_networking_network_v2.hyperion-network",
+              "openstack_compute_floatingip_v2.fip-master",
+              "openstack_compute_secgroup_v2.hyperion-sg"
+            ]
+          },
+          {
+            "address": "openstack_compute_instance_v2.hyperion-nodes",
+            "mode": "managed",
+            "type": "openstack_compute_instance_v2",
+            "name": "hyperion-nodes",
+            "provider_config_key": "openstack",
+            "depends_on": [
+              "openstack_networking_network_v2.hyperion-network",
+              "openstack_compute_floatingip_v2.fip-nodes",
+              "openstack_compute_secgroup_v2.hyperion-sg"
+            ]
+          },
+          {
+            "address": "openstack_compute_keypair_v2.hyperion-key",
+            "mode": "managed",
+            "type": "openstack_compute_keypair_v2",
+            "name": "hyperion-key",
+            "provider_config_key": "openstack",
+            "depends_on": []
+          },
+          {
+            "address": "openstack_compute_secgroup_v2.hyperion-sg",
+            "mode": "managed",
+            "type": "openstack_compute_secgroup_v2",
+            "name": "hyperion-sg",
+            "provider_config_key": "openstack",
+            "depends_on": []
+          },
+          {
+            "address": "openstack_networking_network_v2.hyperion-network",
+            "mode": "managed",
+            "type": "openstack_networking_network_v2",
+            "name": "hyperion-network",
+            "provider_config_key": "openstack",
+            "depends_on": []
+          },
+          {
+            "address": "openstack_networking_subnet_v2.hyperion-network",
+            "mode": "managed",
+            "type": "openstack_networking_subnet_v2",
+            "name": "hyperion-network",
+            "provider_config_key": "openstack",
+            "depends_on": [
+              "openstack_networking_network_v2.hyperion-network"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

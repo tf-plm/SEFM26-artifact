@@ -1,0 +1,5 @@
+load sorts
+load tuples
+load syntactic
+load semantics
+load check

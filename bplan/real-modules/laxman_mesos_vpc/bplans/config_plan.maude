@@ -1,0 +1,322 @@
+newConfig(
+        target(
+            resources: (
+                'aws_eip.nat_eip
+                'aws_internet_gateway.demo_igw
+                'aws_main_route_table_association.demo_rta
+                'aws_nat_gateway.nat_gw
+                'aws_route.bastion_rt_igw
+                'aws_route.demo_rt_igw
+                'aws_route.mesos_master_rt_igw
+                'aws_route.mesos_slave_rt_igw
+                'aws_route.monitor_rt_igw
+                'aws_route.nat_igw_route
+                'aws_route.traefik_rt_igw
+                'aws_route.zookeeper_rt_igw
+                'aws_route53_zone_association.private-zone-association
+                'aws_route_table.bastion_rt
+                'aws_route_table.demo_rt
+                'aws_route_table.mesos_master_rt
+                'aws_route_table.mesos_slave_rt
+                'aws_route_table.monitor_rt
+                'aws_route_table.nat_gw_rt
+                'aws_route_table.traefik_rt
+                'aws_route_table.vpn_rt
+                'aws_route_table.zookeeper_rt
+                'aws_route_table_association.bastion_rta
+                'aws_route_table_association.mesos_master_rta
+                'aws_route_table_association.mesos_slave_rta
+                'aws_route_table_association.monitor_rta
+                'aws_route_table_association.traefik_rta
+                'aws_route_table_association.vpn_rta
+                'aws_route_table_association.zookeeper_rta
+                'aws_security_group.bastion_sg
+                'aws_security_group.elb_sg
+                'aws_security_group.mesos_master_sg
+                'aws_security_group.mesos_slave_sg
+                'aws_security_group.monitor_sg
+                'aws_security_group.traefik_sg
+                'aws_security_group.vpn_sg
+                'aws_security_group.zookeeper_sg
+                'aws_security_group_rule.allow_from_master
+                'aws_security_group_rule.allow_from_zookeeper
+                'aws_subnet.bastion_subnet
+                'aws_subnet.elb_subnet
+                'aws_subnet.mesos_master_subnet
+                'aws_subnet.mesos_slave_subnet
+                'aws_subnet.monitor_subnet
+                'aws_subnet.nat_gw_subnet
+                'aws_subnet.traefik_subnet
+                'aws_subnet.vpn_subnet
+                'aws_subnet.zookeeper_subnet
+                'aws_vpc.demo
+            ),
+            dependencies: (
+                'aws_internet_gateway.demo_igw -> 'aws_vpc.demo
+                'aws_main_route_table_association.demo_rta -> 'aws_route_table.demo_rt
+                'aws_main_route_table_association.demo_rta -> 'aws_vpc.demo
+                'aws_nat_gateway.nat_gw -> 'aws_subnet.nat_gw_subnet
+                'aws_nat_gateway.nat_gw -> 'aws_internet_gateway.demo_igw
+                'aws_nat_gateway.nat_gw -> 'aws_eip.nat_eip
+                'aws_route.bastion_rt_igw -> 'aws_route_table.bastion_rt
+                'aws_route.bastion_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.demo_rt_igw -> 'aws_route_table.demo_rt
+                'aws_route.demo_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.mesos_master_rt_igw -> 'aws_route_table.mesos_master_rt
+                'aws_route.mesos_master_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.mesos_slave_rt_igw -> 'aws_route_table.mesos_slave_rt
+                'aws_route.mesos_slave_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.monitor_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.monitor_rt_igw -> 'aws_route_table.monitor_rt
+                'aws_route.nat_igw_route -> 'aws_route_table.nat_gw_rt
+                'aws_route.nat_igw_route -> 'aws_internet_gateway.demo_igw
+                'aws_route.traefik_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.traefik_rt_igw -> 'aws_route_table.traefik_rt
+                'aws_route.zookeeper_rt_igw -> 'aws_internet_gateway.demo_igw
+                'aws_route.zookeeper_rt_igw -> 'aws_route_table.zookeeper_rt
+                'aws_route53_zone_association.private-zone-association -> 'aws_vpc.demo
+                'aws_route_table.bastion_rt -> 'aws_vpc.demo
+                'aws_route_table.demo_rt -> 'aws_vpc.demo
+                'aws_route_table.mesos_master_rt -> 'aws_vpc.demo
+                'aws_route_table.mesos_slave_rt -> 'aws_vpc.demo
+                'aws_route_table.monitor_rt -> 'aws_vpc.demo
+                'aws_route_table.nat_gw_rt -> 'aws_vpc.demo
+                'aws_route_table.traefik_rt -> 'aws_vpc.demo
+                'aws_route_table.vpn_rt -> 'aws_internet_gateway.demo_igw
+                'aws_route_table.vpn_rt -> 'aws_vpc.demo
+                'aws_route_table.zookeeper_rt -> 'aws_vpc.demo
+                'aws_route_table_association.bastion_rta -> 'aws_route_table.bastion_rt
+                'aws_route_table_association.bastion_rta -> 'aws_subnet.bastion_subnet
+                'aws_route_table_association.mesos_master_rta -> 'aws_route_table.mesos_master_rt
+                'aws_route_table_association.mesos_master_rta -> 'aws_subnet.mesos_master_subnet
+                'aws_route_table_association.mesos_slave_rta -> 'aws_route_table.mesos_slave_rt
+                'aws_route_table_association.mesos_slave_rta -> 'aws_subnet.mesos_slave_subnet
+                'aws_route_table_association.monitor_rta -> 'aws_subnet.monitor_subnet
+                'aws_route_table_association.monitor_rta -> 'aws_route_table.monitor_rt
+                'aws_route_table_association.traefik_rta -> 'aws_subnet.traefik_subnet
+                'aws_route_table_association.traefik_rta -> 'aws_route_table.traefik_rt
+                'aws_route_table_association.vpn_rta -> 'aws_subnet.vpn_subnet
+                'aws_route_table_association.vpn_rta -> 'aws_route_table.vpn_rt
+                'aws_route_table_association.zookeeper_rta -> 'aws_subnet.zookeeper_subnet
+                'aws_route_table_association.zookeeper_rta -> 'aws_route_table.zookeeper_rt
+                'aws_security_group.bastion_sg -> 'aws_security_group.vpn_sg
+                'aws_security_group.bastion_sg -> 'aws_vpc.demo
+                'aws_security_group.elb_sg -> 'aws_vpc.demo
+                'aws_security_group.mesos_master_sg -> 'aws_security_group.vpn_sg
+                'aws_security_group.mesos_master_sg -> 'aws_security_group.traefik_sg
+                'aws_security_group.mesos_master_sg -> 'aws_vpc.demo
+                'aws_security_group.mesos_master_sg -> 'aws_security_group.mesos_slave_sg
+                'aws_security_group.mesos_slave_sg -> 'aws_security_group.vpn_sg
+                'aws_security_group.mesos_slave_sg -> 'aws_vpc.demo
+                'aws_security_group.monitor_sg -> 'aws_security_group.vpn_sg
+                'aws_security_group.monitor_sg -> 'aws_security_group.bastion_sg
+                'aws_security_group.monitor_sg -> 'aws_vpc.demo
+                'aws_security_group.traefik_sg -> 'aws_security_group.vpn_sg
+                'aws_security_group.traefik_sg -> 'aws_vpc.demo
+                'aws_security_group.traefik_sg -> 'aws_security_group.elb_sg
+                'aws_security_group.vpn_sg -> 'aws_vpc.demo
+                'aws_security_group.zookeeper_sg -> 'aws_security_group.mesos_master_sg
+                'aws_security_group.zookeeper_sg -> 'aws_security_group.vpn_sg
+                'aws_security_group.zookeeper_sg -> 'aws_vpc.demo
+                'aws_security_group.zookeeper_sg -> 'aws_security_group.mesos_slave_sg
+                'aws_security_group_rule.allow_from_master -> 'aws_security_group.mesos_master_sg
+                'aws_security_group_rule.allow_from_master -> 'aws_security_group.mesos_slave_sg
+                'aws_security_group_rule.allow_from_zookeeper -> 'aws_security_group.mesos_master_sg
+                'aws_security_group_rule.allow_from_zookeeper -> 'aws_security_group.zookeeper_sg
+                'aws_subnet.bastion_subnet -> 'aws_vpc.demo
+                'aws_subnet.elb_subnet -> 'aws_vpc.demo
+                'aws_subnet.mesos_master_subnet -> 'aws_vpc.demo
+                'aws_subnet.mesos_slave_subnet -> 'aws_vpc.demo
+                'aws_subnet.monitor_subnet -> 'aws_vpc.demo
+                'aws_subnet.nat_gw_subnet -> 'aws_vpc.demo
+                'aws_subnet.traefik_subnet -> 'aws_vpc.demo
+                'aws_subnet.vpn_subnet -> 'aws_vpc.demo
+                'aws_subnet.zookeeper_subnet -> 'aws_vpc.demo
+            )
+        ),
+        state(
+            resources: (
+                ri('aws_eip.nat_eip,old)
+                ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_main_route_table_association.demo_rta,old)
+                ri('aws_nat_gateway.nat_gw,old)
+                ri('aws_route.bastion_rt_igw,old)
+                ri('aws_route.demo_rt_igw,old)
+                ri('aws_route.mesos_master_rt_igw,old)
+                ri('aws_route.mesos_slave_rt_igw,old)
+                ri('aws_route.monitor_rt_igw,old)
+                ri('aws_route.nat_igw_route,old)
+                ri('aws_route.traefik_rt_igw,old)
+                ri('aws_route.zookeeper_rt_igw,old)
+                ri('aws_route53_zone_association.private-zone-association,old)
+                ri('aws_route_table.bastion_rt,old)
+                ri('aws_route_table.demo_rt,old)
+                ri('aws_route_table.mesos_master_rt,old)
+                ri('aws_route_table.mesos_slave_rt,old)
+                ri('aws_route_table.monitor_rt,old)
+                ri('aws_route_table.nat_gw_rt,old)
+                ri('aws_route_table.traefik_rt,old)
+                ri('aws_route_table.vpn_rt,old)
+                ri('aws_route_table.zookeeper_rt,old)
+                ri('aws_route_table_association.bastion_rta,old)
+                ri('aws_route_table_association.mesos_master_rta,old)
+                ri('aws_route_table_association.mesos_slave_rta,old)
+                ri('aws_route_table_association.monitor_rta,old)
+                ri('aws_route_table_association.traefik_rta,old)
+                ri('aws_route_table_association.vpn_rta,old)
+                ri('aws_route_table_association.zookeeper_rta,old)
+                ri('aws_security_group.bastion_sg,old)
+                ri('aws_security_group.elb_sg,old)
+                ri('aws_security_group.mesos_master_sg,old)
+                ri('aws_security_group.mesos_slave_sg,old)
+                ri('aws_security_group.monitor_sg,old)
+                ri('aws_security_group.traefik_sg,old)
+                ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.zookeeper_sg,old)
+                ri('aws_security_group_rule.allow_from_master,old)
+                ri('aws_security_group_rule.allow_from_zookeeper,old)
+                ri('aws_subnet.bastion_subnet,old)
+                ri('aws_subnet.elb_subnet,old)
+                ri('aws_subnet.mesos_master_subnet,old)
+                ri('aws_subnet.mesos_slave_subnet,old)
+                ri('aws_subnet.monitor_subnet,old)
+                ri('aws_subnet.nat_gw_subnet,old)
+                ri('aws_subnet.traefik_subnet,old)
+                ri('aws_subnet.vpn_subnet,old)
+                ri('aws_subnet.zookeeper_subnet,old)
+                ri('aws_vpc.demo,old)
+            ),
+            dependencies: (
+                ri('aws_internet_gateway.demo_igw,old) -> ri('aws_vpc.demo,old)
+                ri('aws_main_route_table_association.demo_rta,old) -> ri('aws_route_table.demo_rt,old)
+                ri('aws_main_route_table_association.demo_rta,old) -> ri('aws_vpc.demo,old)
+                ri('aws_nat_gateway.nat_gw,old) -> ri('aws_subnet.nat_gw_subnet,old)
+                ri('aws_nat_gateway.nat_gw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_nat_gateway.nat_gw,old) -> ri('aws_eip.nat_eip,old)
+                ri('aws_route.bastion_rt_igw,old) -> ri('aws_route_table.bastion_rt,old)
+                ri('aws_route.bastion_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.demo_rt_igw,old) -> ri('aws_route_table.demo_rt,old)
+                ri('aws_route.demo_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.mesos_master_rt_igw,old) -> ri('aws_route_table.mesos_master_rt,old)
+                ri('aws_route.mesos_master_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.mesos_slave_rt_igw,old) -> ri('aws_route_table.mesos_slave_rt,old)
+                ri('aws_route.mesos_slave_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.monitor_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.monitor_rt_igw,old) -> ri('aws_route_table.monitor_rt,old)
+                ri('aws_route.nat_igw_route,old) -> ri('aws_route_table.nat_gw_rt,old)
+                ri('aws_route.nat_igw_route,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.traefik_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.traefik_rt_igw,old) -> ri('aws_route_table.traefik_rt,old)
+                ri('aws_route.zookeeper_rt_igw,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route.zookeeper_rt_igw,old) -> ri('aws_route_table.zookeeper_rt,old)
+                ri('aws_route53_zone_association.private-zone-association,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.bastion_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.demo_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.mesos_master_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.mesos_slave_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.monitor_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.nat_gw_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.traefik_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.vpn_rt,old) -> ri('aws_internet_gateway.demo_igw,old)
+                ri('aws_route_table.vpn_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table.zookeeper_rt,old) -> ri('aws_vpc.demo,old)
+                ri('aws_route_table_association.bastion_rta,old) -> ri('aws_route_table.bastion_rt,old)
+                ri('aws_route_table_association.bastion_rta,old) -> ri('aws_subnet.bastion_subnet,old)
+                ri('aws_route_table_association.mesos_master_rta,old) -> ri('aws_route_table.mesos_master_rt,old)
+                ri('aws_route_table_association.mesos_master_rta,old) -> ri('aws_subnet.mesos_master_subnet,old)
+                ri('aws_route_table_association.mesos_slave_rta,old) -> ri('aws_route_table.mesos_slave_rt,old)
+                ri('aws_route_table_association.mesos_slave_rta,old) -> ri('aws_subnet.mesos_slave_subnet,old)
+                ri('aws_route_table_association.monitor_rta,old) -> ri('aws_subnet.monitor_subnet,old)
+                ri('aws_route_table_association.monitor_rta,old) -> ri('aws_route_table.monitor_rt,old)
+                ri('aws_route_table_association.traefik_rta,old) -> ri('aws_subnet.traefik_subnet,old)
+                ri('aws_route_table_association.traefik_rta,old) -> ri('aws_route_table.traefik_rt,old)
+                ri('aws_route_table_association.vpn_rta,old) -> ri('aws_subnet.vpn_subnet,old)
+                ri('aws_route_table_association.vpn_rta,old) -> ri('aws_route_table.vpn_rt,old)
+                ri('aws_route_table_association.zookeeper_rta,old) -> ri('aws_subnet.zookeeper_subnet,old)
+                ri('aws_route_table_association.zookeeper_rta,old) -> ri('aws_route_table.zookeeper_rt,old)
+                ri('aws_security_group.bastion_sg,old) -> ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.bastion_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.elb_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.mesos_master_sg,old) -> ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.mesos_master_sg,old) -> ri('aws_security_group.traefik_sg,old)
+                ri('aws_security_group.mesos_master_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.mesos_master_sg,old) -> ri('aws_security_group.mesos_slave_sg,old)
+                ri('aws_security_group.mesos_slave_sg,old) -> ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.mesos_slave_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.monitor_sg,old) -> ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.monitor_sg,old) -> ri('aws_security_group.bastion_sg,old)
+                ri('aws_security_group.monitor_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.traefik_sg,old) -> ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.traefik_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.traefik_sg,old) -> ri('aws_security_group.elb_sg,old)
+                ri('aws_security_group.vpn_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.zookeeper_sg,old) -> ri('aws_security_group.mesos_master_sg,old)
+                ri('aws_security_group.zookeeper_sg,old) -> ri('aws_security_group.vpn_sg,old)
+                ri('aws_security_group.zookeeper_sg,old) -> ri('aws_vpc.demo,old)
+                ri('aws_security_group.zookeeper_sg,old) -> ri('aws_security_group.mesos_slave_sg,old)
+                ri('aws_security_group_rule.allow_from_master,old) -> ri('aws_security_group.mesos_master_sg,old)
+                ri('aws_security_group_rule.allow_from_master,old) -> ri('aws_security_group.mesos_slave_sg,old)
+                ri('aws_security_group_rule.allow_from_zookeeper,old) -> ri('aws_security_group.mesos_master_sg,old)
+                ri('aws_security_group_rule.allow_from_zookeeper,old) -> ri('aws_security_group.zookeeper_sg,old)
+                ri('aws_subnet.bastion_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.elb_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.mesos_master_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.mesos_slave_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.monitor_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.nat_gw_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.traefik_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.vpn_subnet,old) -> ri('aws_vpc.demo,old)
+                ri('aws_subnet.zookeeper_subnet,old) -> ri('aws_vpc.demo,old)
+            )
+        ),
+        (
+            'aws_eip.nat_eip -> po(NO-OP)
+            'aws_internet_gateway.demo_igw -> po(NO-OP)
+            'aws_main_route_table_association.demo_rta -> po(NO-OP)
+            'aws_nat_gateway.nat_gw -> po(NO-OP)
+            'aws_route.bastion_rt_igw -> po(NO-OP)
+            'aws_route.demo_rt_igw -> po(NO-OP)
+            'aws_route.mesos_master_rt_igw -> po(NO-OP)
+            'aws_route.mesos_slave_rt_igw -> po(NO-OP)
+            'aws_route.monitor_rt_igw -> po(NO-OP)
+            'aws_route.nat_igw_route -> po(NO-OP)
+            'aws_route.traefik_rt_igw -> po(NO-OP)
+            'aws_route.zookeeper_rt_igw -> po(NO-OP)
+            'aws_route53_zone_association.private-zone-association -> po(NO-OP)
+            'aws_route_table.bastion_rt -> po(NO-OP)
+            'aws_route_table.demo_rt -> po(NO-OP)
+            'aws_route_table.mesos_master_rt -> po(NO-OP)
+            'aws_route_table.mesos_slave_rt -> po(NO-OP)
+            'aws_route_table.monitor_rt -> po(UPDATE)
+            'aws_route_table.nat_gw_rt -> po(NO-OP)
+            'aws_route_table.traefik_rt -> po(UPDATE)
+            'aws_route_table.vpn_rt -> po(NO-OP)
+            'aws_route_table.zookeeper_rt -> po(NO-OP)
+            'aws_route_table_association.bastion_rta -> po(NO-OP)
+            'aws_route_table_association.mesos_master_rta -> po(NO-OP)
+            'aws_route_table_association.mesos_slave_rta -> po(NO-OP)
+            'aws_route_table_association.monitor_rta -> po(NO-OP)
+            'aws_route_table_association.traefik_rta -> po(NO-OP)
+            'aws_route_table_association.vpn_rta -> po(NO-OP)
+            'aws_route_table_association.zookeeper_rta -> po(NO-OP)
+            'aws_security_group.bastion_sg -> po(NO-OP)
+            'aws_security_group.elb_sg -> po(NO-OP)
+            'aws_security_group.mesos_master_sg -> po(NO-OP)
+            'aws_security_group.mesos_slave_sg -> po(NO-OP)
+            'aws_security_group.monitor_sg -> po(NO-OP)
+            'aws_security_group.traefik_sg -> po(NO-OP)
+            'aws_security_group.vpn_sg -> po(NO-OP)
+            'aws_security_group.zookeeper_sg -> po(NO-OP)
+            'aws_security_group_rule.allow_from_master -> po(NO-OP)
+            'aws_security_group_rule.allow_from_zookeeper -> po(NO-OP)
+            'aws_subnet.bastion_subnet -> po(UPDATE)
+            'aws_subnet.mesos_master_subnet -> po(NO-OP)
+            'aws_subnet.mesos_slave_subnet -> po(NO-OP)
+            'aws_subnet.monitor_subnet -> po(NO-OP)
+            'aws_subnet.nat_gw_subnet -> po(NO-OP)
+            'aws_subnet.traefik_subnet -> po(NO-OP)
+            'aws_subnet.vpn_subnet -> po(NO-OP)
+            'aws_subnet.zookeeper_subnet -> po(NO-OP)
+            'aws_vpc.demo -> po(DELETE ; CREATE)
+        )
+    )

@@ -1,0 +1,6584 @@
+{
+  "azurerm_aadb2c_directory": [
+    "data_residency_location",
+    "display_name",
+    "domain_name",
+    "resource_group_name",
+    "country_code"
+  ],
+  "azurerm_active_directory_domain_service": [
+    "initial_replica_set",
+    "domain_configuration_type",
+    "name",
+    "location",
+    "domain_name",
+    "resource_group_name"
+  ],
+  "azurerm_active_directory_domain_service_replica_set": [
+    "location",
+    "subnet_id",
+    "domain_service_id"
+  ],
+  "azurerm_active_directory_domain_service_trust": [
+    "name",
+    "domain_service_id"
+  ],
+  "azurerm_advanced_threat_protection": [
+    "target_resource_id"
+  ],
+  "azurerm_advisor_suppression": [
+    "ttl",
+    "name",
+    "recommendation_id",
+    "resource_id"
+  ],
+  "azurerm_ai_foundry": [
+    "resource_group_name",
+    "location",
+    "encryption",
+    "high_business_impact_enabled",
+    "storage_account_id",
+    "key_vault_id",
+    "name"
+  ],
+  "azurerm_ai_foundry_project": [
+    "location",
+    "ai_services_hub_id",
+    "name",
+    "high_business_impact_enabled"
+  ],
+  "azurerm_ai_services": [
+    "resource_group_name",
+    "name",
+    "custom_subdomain_name",
+    "location"
+  ],
+  "azurerm_analysis_services_server": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_api_connection": [
+    "resource_group_name",
+    "managed_api_id",
+    "name"
+  ],
+  "azurerm_api_management": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_api": [
+    "api_management_name",
+    "name",
+    "revision",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_api_diagnostic": [
+    "api_management_name",
+    "identifier",
+    "api_name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_api_operation": [
+    "api_management_name",
+    "resource_group_name",
+    "operation_id",
+    "api_name"
+  ],
+  "azurerm_api_management_api_operation_policy": [
+    "api_management_name",
+    "api_name",
+    "operation_id",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_api_operation_tag": [
+    "api_operation_id",
+    "name"
+  ],
+  "azurerm_api_management_api_policy": [
+    "resource_group_name",
+    "api_management_name",
+    "api_name"
+  ],
+  "azurerm_api_management_api_release": [
+    "name",
+    "api_id"
+  ],
+  "azurerm_api_management_api_schema": [
+    "schema_id",
+    "api_name",
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_api_tag": [
+    "api_id",
+    "name"
+  ],
+  "azurerm_api_management_api_tag_description": [
+    "api_tag_id"
+  ],
+  "azurerm_api_management_api_version_set": [
+    "name",
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_authorization_server": [
+    "resource_group_name",
+    "name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_backend": [
+    "name",
+    "api_management_name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_certificate": [
+    "resource_group_name",
+    "name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_custom_domain": [
+    "api_management_id"
+  ],
+  "azurerm_api_management_diagnostic": [
+    "resource_group_name",
+    "api_management_name",
+    "identifier"
+  ],
+  "azurerm_api_management_email_template": [
+    "resource_group_name",
+    "api_management_name",
+    "template_name"
+  ],
+  "azurerm_api_management_gateway": [
+    "api_management_id",
+    "name"
+  ],
+  "azurerm_api_management_gateway_api": [
+    "api_id",
+    "gateway_id"
+  ],
+  "azurerm_api_management_gateway_certificate_authority": [
+    "api_management_id",
+    "certificate_name",
+    "gateway_name"
+  ],
+  "azurerm_api_management_gateway_host_name_configuration": [
+    "name",
+    "api_management_id",
+    "gateway_name"
+  ],
+  "azurerm_api_management_global_schema": [
+    "schema_id",
+    "api_management_name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_group": [
+    "api_management_name",
+    "external_id",
+    "type",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_group_user": [
+    "group_name",
+    "resource_group_name",
+    "api_management_name",
+    "user_id"
+  ],
+  "azurerm_api_management_identity_provider_aad": [
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_identity_provider_aadb2c": [
+    "api_management_name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_identity_provider_facebook": [
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_identity_provider_google": [
+    "api_management_name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_identity_provider_microsoft": [
+    "api_management_name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_identity_provider_twitter": [
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_logger": [
+    "name",
+    "resource_group_name",
+    "api_management_name",
+    "resource_id",
+    "eventhub",
+    "application_insights"
+  ],
+  "azurerm_api_management_named_value": [
+    "name",
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_notification_recipient_email": [
+    "email",
+    "api_management_id",
+    "notification_type"
+  ],
+  "azurerm_api_management_notification_recipient_user": [
+    "notification_type",
+    "user_id",
+    "api_management_id"
+  ],
+  "azurerm_api_management_openid_connect_provider": [
+    "name",
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_policy": [
+    "api_management_id"
+  ],
+  "azurerm_api_management_policy_fragment": [
+    "name",
+    "api_management_id"
+  ],
+  "azurerm_api_management_product": [
+    "api_management_name",
+    "resource_group_name",
+    "product_id"
+  ],
+  "azurerm_api_management_product_api": [
+    "api_name",
+    "product_id",
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_product_group": [
+    "product_id",
+    "group_name",
+    "resource_group_name",
+    "api_management_name"
+  ],
+  "azurerm_api_management_product_policy": [
+    "resource_group_name",
+    "api_management_name",
+    "product_id"
+  ],
+  "azurerm_api_management_product_tag": [
+    "api_management_product_id",
+    "api_management_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_api_management_redis_cache": [
+    "name",
+    "api_management_id"
+  ],
+  "azurerm_api_management_standalone_gateway": [
+    "location",
+    "backend_subnet_id",
+    "tags",
+    "virtual_network_type",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_subscription": [
+    "api_management_name",
+    "product_id",
+    "api_id",
+    "user_id",
+    "subscription_id",
+    "resource_group_name"
+  ],
+  "azurerm_api_management_tag": [
+    "api_management_id",
+    "name"
+  ],
+  "azurerm_api_management_user": [
+    "resource_group_name",
+    "confirmation",
+    "user_id",
+    "api_management_name"
+  ],
+  "azurerm_api_management_workspace": [
+    "name",
+    "api_management_id"
+  ],
+  "azurerm_api_management_workspace_api_version_set": [
+    "name",
+    "api_management_workspace_id"
+  ],
+  "azurerm_api_management_workspace_certificate": [
+    "api_management_workspace_id",
+    "name"
+  ],
+  "azurerm_api_management_workspace_named_value": [
+    "name",
+    "api_management_workspace_id"
+  ],
+  "azurerm_api_management_workspace_policy": [
+    "api_management_workspace_id"
+  ],
+  "azurerm_api_management_workspace_policy_fragment": [
+    "name",
+    "api_management_workspace_id"
+  ],
+  "azurerm_app_configuration": [
+    "resource_group_name",
+    "location",
+    "soft_delete_retention_days",
+    "name"
+  ],
+  "azurerm_app_configuration_feature": [
+    "name",
+    "label",
+    "configuration_store_id",
+    "key"
+  ],
+  "azurerm_app_configuration_key": [
+    "label",
+    "key",
+    "configuration_store_id"
+  ],
+  "azurerm_app_service": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_app_service_active_slot": [
+    "resource_group_name",
+    "app_service_name"
+  ],
+  "azurerm_app_service_certificate": [
+    "resource_group_name",
+    "pfx_blob",
+    "key_vault_secret_id",
+    "app_service_plan_id",
+    "name",
+    "password",
+    "key_vault_id",
+    "location"
+  ],
+  "azurerm_app_service_certificate_binding": [
+    "hostname_binding_id",
+    "certificate_id",
+    "ssl_state"
+  ],
+  "azurerm_app_service_certificate_order": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_app_service_connection": [
+    "authentication",
+    "name",
+    "app_service_id",
+    "target_resource_id"
+  ],
+  "azurerm_app_service_custom_hostname_binding": [
+    "thumbprint",
+    "hostname",
+    "resource_group_name",
+    "app_service_name",
+    "ssl_state"
+  ],
+  "azurerm_app_service_environment_v3": [
+    "dedicated_host_count",
+    "internal_load_balancing_mode",
+    "subnet_id",
+    "name",
+    "zone_redundant",
+    "resource_group_name"
+  ],
+  "azurerm_app_service_hybrid_connection": [
+    "app_service_name",
+    "resource_group_name",
+    "relay_id"
+  ],
+  "azurerm_app_service_managed_certificate": [
+    "custom_hostname_binding_id"
+  ],
+  "azurerm_app_service_plan": [
+    "kind",
+    "app_service_environment_id",
+    "zone_redundant",
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_app_service_public_certificate": [
+    "blob",
+    "resource_group_name",
+    "app_service_name",
+    "certificate_name",
+    "certificate_location"
+  ],
+  "azurerm_app_service_slot": [
+    "name",
+    "location",
+    "resource_group_name",
+    "app_service_plan_id",
+    "app_service_name"
+  ],
+  "azurerm_app_service_slot_custom_hostname_binding": [
+    "ssl_state",
+    "thumbprint",
+    "app_service_slot_id",
+    "hostname"
+  ],
+  "azurerm_app_service_slot_virtual_network_swift_connection": [
+    "app_service_id",
+    "slot_name"
+  ],
+  "azurerm_app_service_source_control": [
+    "use_manual_integration",
+    "rollback_enabled",
+    "app_id",
+    "repo_url",
+    "github_action_configuration",
+    "use_mercurial",
+    "branch",
+    "use_local_git"
+  ],
+  "azurerm_app_service_source_control_slot": [
+    "use_local_git",
+    "github_action_configuration",
+    "use_mercurial",
+    "use_manual_integration",
+    "rollback_enabled",
+    "slot_id",
+    "repo_url",
+    "branch"
+  ],
+  "azurerm_app_service_source_control_token": [],
+  "azurerm_app_service_virtual_network_swift_connection": [
+    "app_service_id"
+  ],
+  "azurerm_application_gateway": [
+    "zones",
+    "resource_group_name",
+    "location",
+    "name"
+  ],
+  "azurerm_application_insights": [
+    "location",
+    "application_type",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_application_insights_analytics_item": [
+    "name",
+    "application_insights_id",
+    "type",
+    "scope"
+  ],
+  "azurerm_application_insights_api_key": [
+    "name",
+    "application_insights_id",
+    "read_permissions",
+    "write_permissions"
+  ],
+  "azurerm_application_insights_smart_detection_rule": [
+    "name",
+    "application_insights_id"
+  ],
+  "azurerm_application_insights_standard_web_test": [
+    "location",
+    "application_insights_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_application_insights_web_test": [
+    "application_insights_id",
+    "location",
+    "kind",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_application_insights_workbook": [
+    "name",
+    "location",
+    "storage_container_id",
+    "resource_group_name",
+    "identity"
+  ],
+  "azurerm_application_insights_workbook_template": [
+    "resource_group_name",
+    "location",
+    "name"
+  ],
+  "azurerm_application_load_balancer": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_application_load_balancer_frontend": [
+    "name",
+    "application_load_balancer_id"
+  ],
+  "azurerm_application_load_balancer_security_policy": [
+    "web_application_firewall_policy_id",
+    "name",
+    "application_load_balancer_id",
+    "location"
+  ],
+  "azurerm_application_load_balancer_subnet_association": [
+    "name",
+    "application_load_balancer_id"
+  ],
+  "azurerm_application_security_group": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_arc_kubernetes_cluster": [
+    "name",
+    "resource_group_name",
+    "agent_public_key_certificate",
+    "identity",
+    "location"
+  ],
+  "azurerm_arc_kubernetes_cluster_extension": [
+    "release_train",
+    "release_namespace",
+    "name",
+    "version",
+    "cluster_id",
+    "target_namespace",
+    "extension_type",
+    "identity"
+  ],
+  "azurerm_arc_kubernetes_flux_configuration": [
+    "name",
+    "scope",
+    "cluster_id",
+    "namespace"
+  ],
+  "azurerm_arc_kubernetes_provisioned_cluster": [
+    "location",
+    "identity",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_arc_machine": [
+    "location",
+    "kind",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_arc_machine_automanage_configuration_assignment": [
+    "arc_machine_id",
+    "configuration_id"
+  ],
+  "azurerm_arc_machine_extension": [
+    "name",
+    "arc_machine_id",
+    "publisher",
+    "location",
+    "type"
+  ],
+  "azurerm_arc_private_link_scope": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_arc_resource_bridge_appliance": [
+    "resource_group_name",
+    "location",
+    "identity",
+    "infrastructure_provider",
+    "public_key_base64",
+    "name"
+  ],
+  "azurerm_attestation_provider": [
+    "location",
+    "policy_signing_certificate_data",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_automanage_configuration": [
+    "resource_group_name",
+    "location",
+    "name"
+  ],
+  "azurerm_automation_account": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_automation_certificate": [
+    "name",
+    "resource_group_name",
+    "automation_account_name",
+    "base64"
+  ],
+  "azurerm_automation_connection": [
+    "name",
+    "resource_group_name",
+    "automation_account_name",
+    "type"
+  ],
+  "azurerm_automation_connection_certificate": [
+    "resource_group_name",
+    "automation_account_name",
+    "name"
+  ],
+  "azurerm_automation_connection_classic_certificate": [
+    "resource_group_name",
+    "automation_account_name",
+    "name"
+  ],
+  "azurerm_automation_connection_service_principal": [
+    "resource_group_name",
+    "automation_account_name",
+    "name"
+  ],
+  "azurerm_automation_connection_type": [
+    "is_global",
+    "field",
+    "resource_group_name",
+    "automation_account_name",
+    "name"
+  ],
+  "azurerm_automation_credential": [
+    "name",
+    "resource_group_name",
+    "automation_account_name"
+  ],
+  "azurerm_automation_dsc_configuration": [
+    "automation_account_name",
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_automation_dsc_nodeconfiguration": [
+    "name",
+    "automation_account_name",
+    "resource_group_name"
+  ],
+  "azurerm_automation_hybrid_runbook_worker": [
+    "automation_account_name",
+    "worker_group_name",
+    "worker_id",
+    "vm_resource_id",
+    "resource_group_name"
+  ],
+  "azurerm_automation_hybrid_runbook_worker_group": [
+    "resource_group_name",
+    "automation_account_name",
+    "name"
+  ],
+  "azurerm_automation_job_schedule": [
+    "run_on",
+    "job_schedule_id",
+    "resource_group_name",
+    "automation_account_name",
+    "runbook_name",
+    "schedule_name",
+    "parameters"
+  ],
+  "azurerm_automation_module": [
+    "resource_group_name",
+    "name",
+    "automation_account_name"
+  ],
+  "azurerm_automation_powershell72_module": [
+    "name",
+    "automation_account_id"
+  ],
+  "azurerm_automation_python3_package": [
+    "resource_group_name",
+    "automation_account_name",
+    "content_uri",
+    "content_version",
+    "hash_algorithm",
+    "hash_value",
+    "name"
+  ],
+  "azurerm_automation_runbook": [
+    "automation_account_name",
+    "location",
+    "resource_group_name",
+    "name",
+    "runbook_type"
+  ],
+  "azurerm_automation_runtime_environment": [
+    "name",
+    "location",
+    "automation_account_id",
+    "runtime_language",
+    "runtime_version",
+    "description",
+    "tags"
+  ],
+  "azurerm_automation_schedule": [
+    "resource_group_name",
+    "automation_account_name",
+    "name"
+  ],
+  "azurerm_automation_software_update_configuration": [
+    "name",
+    "automation_account_id"
+  ],
+  "azurerm_automation_source_control": [
+    "name",
+    "automation_account_id"
+  ],
+  "azurerm_automation_variable_bool": [
+    "automation_account_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_automation_variable_datetime": [
+    "resource_group_name",
+    "name",
+    "automation_account_name"
+  ],
+  "azurerm_automation_variable_int": [
+    "resource_group_name",
+    "name",
+    "automation_account_name"
+  ],
+  "azurerm_automation_variable_object": [
+    "resource_group_name",
+    "name",
+    "automation_account_name"
+  ],
+  "azurerm_automation_variable_string": [
+    "name",
+    "automation_account_name",
+    "resource_group_name"
+  ],
+  "azurerm_automation_watcher": [
+    "script_parameters",
+    "name",
+    "location",
+    "script_name",
+    "automation_account_id"
+  ],
+  "azurerm_automation_webhook": [
+    "resource_group_name",
+    "name",
+    "automation_account_name",
+    "expiry_time",
+    "uri"
+  ],
+  "azurerm_availability_set": [
+    "resource_group_name",
+    "location",
+    "platform_update_domain_count",
+    "platform_fault_domain_count",
+    "managed",
+    "proximity_placement_group_id",
+    "name"
+  ],
+  "azurerm_backup_container_storage_account": [
+    "resource_group_name",
+    "recovery_vault_name",
+    "storage_account_id"
+  ],
+  "azurerm_backup_policy_file_share": [
+    "name",
+    "resource_group_name",
+    "recovery_vault_name"
+  ],
+  "azurerm_backup_policy_vm": [
+    "name",
+    "recovery_vault_name",
+    "resource_group_name",
+    "policy_type"
+  ],
+  "azurerm_backup_policy_vm_workload": [
+    "recovery_vault_name",
+    "workload_type",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_backup_protected_file_share": [
+    "resource_group_name",
+    "recovery_vault_name",
+    "source_storage_account_id",
+    "source_file_share_name"
+  ],
+  "azurerm_backup_protected_vm": [
+    "resource_group_name",
+    "recovery_vault_name",
+    "source_vm_id"
+  ],
+  "azurerm_bastion_host": [
+    "resource_group_name",
+    "zones",
+    "name",
+    "location",
+    "ip_configuration",
+    "virtual_network_id"
+  ],
+  "azurerm_batch_account": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_batch_application": [
+    "name",
+    "resource_group_name",
+    "account_name"
+  ],
+  "azurerm_batch_certificate": [
+    "resource_group_name",
+    "thumbprint",
+    "account_name",
+    "thumbprint_algorithm"
+  ],
+  "azurerm_batch_job": [
+    "batch_pool_id",
+    "display_name",
+    "common_environment_properties",
+    "name"
+  ],
+  "azurerm_batch_pool": [
+    "network_configuration",
+    "name",
+    "vm_size",
+    "display_name",
+    "max_tasks_per_node",
+    "container_configuration",
+    "security_profile",
+    "account_name",
+    "storage_image_reference",
+    "resource_group_name",
+    "node_agent_sku_id",
+    "start_task"
+  ],
+  "azurerm_billing_account_cost_management_export": [
+    "export_data_storage_location",
+    "billing_account_id",
+    "name"
+  ],
+  "azurerm_blueprint_assignment": [
+    "name",
+    "target_subscription_id",
+    "location"
+  ],
+  "azurerm_bot_channel_alexa": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channel_direct_line_speech": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channel_directline": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channel_email": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channel_facebook": [
+    "bot_name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_bot_channel_line": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channel_ms_teams": [
+    "location",
+    "bot_name",
+    "resource_group_name"
+  ],
+  "azurerm_bot_channel_slack": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channel_sms": [
+    "location",
+    "bot_name",
+    "resource_group_name"
+  ],
+  "azurerm_bot_channel_web_chat": [
+    "resource_group_name",
+    "location",
+    "bot_name"
+  ],
+  "azurerm_bot_channels_registration": [
+    "name",
+    "resource_group_name",
+    "sku",
+    "microsoft_app_id",
+    "location"
+  ],
+  "azurerm_bot_connection": [
+    "name",
+    "bot_name",
+    "service_provider_name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_bot_service_azure_bot": [
+    "microsoft_app_tenant_id",
+    "microsoft_app_id",
+    "sku",
+    "location",
+    "name",
+    "microsoft_app_msi_id",
+    "microsoft_app_type",
+    "resource_group_name"
+  ],
+  "azurerm_bot_web_app": [
+    "name",
+    "resource_group_name",
+    "location",
+    "sku",
+    "microsoft_app_id"
+  ],
+  "azurerm_capacity_reservation": [
+    "name",
+    "capacity_reservation_group_id",
+    "zone",
+    "sku"
+  ],
+  "azurerm_capacity_reservation_group": [
+    "name",
+    "resource_group_name",
+    "location",
+    "zones"
+  ],
+  "azurerm_cdn_endpoint": [
+    "location",
+    "origin",
+    "resource_group_name",
+    "profile_name",
+    "name"
+  ],
+  "azurerm_cdn_endpoint_custom_domain": [
+    "cdn_endpoint_id",
+    "host_name",
+    "name"
+  ],
+  "azurerm_cdn_frontdoor_custom_domain": [
+    "host_name",
+    "name",
+    "cdn_frontdoor_profile_id"
+  ],
+  "azurerm_cdn_frontdoor_custom_domain_association": [
+    "cdn_frontdoor_custom_domain_id"
+  ],
+  "azurerm_cdn_frontdoor_endpoint": [
+    "name",
+    "cdn_frontdoor_profile_id"
+  ],
+  "azurerm_cdn_frontdoor_firewall_policy": [
+    "resource_group_name",
+    "sku_name",
+    "name"
+  ],
+  "azurerm_cdn_frontdoor_origin": [
+    "name",
+    "cdn_frontdoor_origin_group_id",
+    "private_link"
+  ],
+  "azurerm_cdn_frontdoor_origin_group": [
+    "name",
+    "cdn_frontdoor_profile_id"
+  ],
+  "azurerm_cdn_frontdoor_profile": [
+    "sku_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_cdn_frontdoor_route": [
+    "name",
+    "cdn_frontdoor_endpoint_id"
+  ],
+  "azurerm_cdn_frontdoor_rule": [
+    "cdn_frontdoor_rule_set_id",
+    "name"
+  ],
+  "azurerm_cdn_frontdoor_rule_set": [
+    "name",
+    "cdn_frontdoor_profile_id"
+  ],
+  "azurerm_cdn_frontdoor_secret": [
+    "secret",
+    "name",
+    "cdn_frontdoor_profile_id"
+  ],
+  "azurerm_cdn_frontdoor_security_policy": [
+    "name",
+    "cdn_frontdoor_profile_id",
+    "security_policies"
+  ],
+  "azurerm_cdn_profile": [
+    "location",
+    "resource_group_name",
+    "sku",
+    "name"
+  ],
+  "azurerm_chaos_studio_capability": [
+    "capability_type",
+    "chaos_studio_target_id"
+  ],
+  "azurerm_chaos_studio_experiment": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_chaos_studio_target": [
+    "target_type",
+    "location",
+    "target_resource_id"
+  ],
+  "azurerm_cognitive_account": [
+    "location",
+    "metrics_advisor_aad_tenant_id",
+    "metrics_advisor_super_user_name",
+    "resource_group_name",
+    "metrics_advisor_aad_client_id",
+    "metrics_advisor_website_name",
+    "name"
+  ],
+  "azurerm_cognitive_account_customer_managed_key": [
+    "cognitive_account_id"
+  ],
+  "azurerm_cognitive_account_project": [
+    "cognitive_account_id",
+    "location",
+    "name"
+  ],
+  "azurerm_cognitive_account_rai_blocklist": [
+    "name",
+    "cognitive_account_id"
+  ],
+  "azurerm_cognitive_account_rai_policy": [
+    "name",
+    "cognitive_account_id",
+    "base_policy_name"
+  ],
+  "azurerm_cognitive_deployment": [
+    "sku",
+    "name",
+    "cognitive_account_id",
+    "model"
+  ],
+  "azurerm_communication_service": [
+    "name",
+    "resource_group_name",
+    "data_location"
+  ],
+  "azurerm_communication_service_email_domain_association": [
+    "communication_service_id",
+    "email_service_domain_id"
+  ],
+  "azurerm_confidential_ledger": [
+    "resource_group_name",
+    "ledger_type",
+    "name",
+    "location"
+  ],
+  "azurerm_consumption_budget_management_group": [
+    "time_grain",
+    "time_period",
+    "name",
+    "management_group_id"
+  ],
+  "azurerm_consumption_budget_resource_group": [
+    "time_grain",
+    "time_period",
+    "name",
+    "resource_group_id"
+  ],
+  "azurerm_consumption_budget_subscription": [
+    "time_period",
+    "name",
+    "subscription_id",
+    "time_grain"
+  ],
+  "azurerm_container_app": [
+    "name",
+    "container_app_environment_id",
+    "resource_group_name"
+  ],
+  "azurerm_container_app_custom_domain": [
+    "certificate_binding_type",
+    "name",
+    "container_app_id",
+    "container_app_environment_certificate_id"
+  ],
+  "azurerm_container_app_environment": [
+    "resource_group_name",
+    "infrastructure_subnet_id",
+    "name",
+    "internal_load_balancer_enabled",
+    "infrastructure_resource_group_name",
+    "location",
+    "zone_redundancy_enabled",
+    "dapr_application_insights_connection_string"
+  ],
+  "azurerm_container_app_environment_certificate": [
+    "certificate_password",
+    "name",
+    "certificate_blob_base64",
+    "certificate_key_vault",
+    "container_app_environment_id"
+  ],
+  "azurerm_container_app_environment_custom_domain": [
+    "container_app_environment_id"
+  ],
+  "azurerm_container_app_environment_dapr_component": [
+    "name",
+    "component_type",
+    "container_app_environment_id"
+  ],
+  "azurerm_container_app_environment_storage": [
+    "account_name",
+    "share_name",
+    "access_mode",
+    "nfs_server_url",
+    "name",
+    "container_app_environment_id"
+  ],
+  "azurerm_container_app_job": [
+    "schedule_trigger_config",
+    "resource_group_name",
+    "manual_trigger_config",
+    "location",
+    "event_trigger_config",
+    "name",
+    "container_app_environment_id"
+  ],
+  "azurerm_container_connected_registry": [
+    "name",
+    "parent_registry_id",
+    "sync_token_id",
+    "mode",
+    "container_registry_id"
+  ],
+  "azurerm_container_group": [
+    "exposed_port",
+    "ip_address_type",
+    "dns_name_label_reuse_policy",
+    "init_container",
+    "diagnostics",
+    "dns_config",
+    "location",
+    "resource_group_name",
+    "subnet_ids",
+    "zones",
+    "sku",
+    "container",
+    "key_vault_key_id",
+    "name",
+    "image_registry_credential",
+    "priority",
+    "os_type",
+    "restart_policy",
+    "dns_name_label"
+  ],
+  "azurerm_container_registry": [
+    "name",
+    "location",
+    "resource_group_name",
+    "zone_redundancy_enabled"
+  ],
+  "azurerm_container_registry_agent_pool": [
+    "location",
+    "container_registry_name",
+    "tier",
+    "virtual_network_subnet_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_container_registry_cache_rule": [
+    "container_registry_id",
+    "source_repo",
+    "target_repo",
+    "name"
+  ],
+  "azurerm_container_registry_credential_set": [
+    "container_registry_id",
+    "login_server",
+    "name"
+  ],
+  "azurerm_container_registry_scope_map": [
+    "name",
+    "resource_group_name",
+    "container_registry_name"
+  ],
+  "azurerm_container_registry_task": [
+    "name",
+    "is_system_task",
+    "container_registry_id"
+  ],
+  "azurerm_container_registry_task_schedule_run_now": [
+    "container_registry_task_id"
+  ],
+  "azurerm_container_registry_token": [
+    "name",
+    "resource_group_name",
+    "container_registry_name"
+  ],
+  "azurerm_container_registry_token_password": [
+    "container_registry_token_id",
+    "password1",
+    "password2"
+  ],
+  "azurerm_container_registry_webhook": [
+    "resource_group_name",
+    "name",
+    "registry_name",
+    "location"
+  ],
+  "azurerm_cosmosdb_account": [
+    "name",
+    "restore",
+    "location",
+    "create_mode",
+    "kind",
+    "managed_hsm_key_id",
+    "key_vault_key_id",
+    "resource_group_name",
+    "free_tier_enabled"
+  ],
+  "azurerm_cosmosdb_cassandra_cluster": [
+    "resource_group_name",
+    "default_admin_password",
+    "version",
+    "name",
+    "location",
+    "delegated_management_subnet_id"
+  ],
+  "azurerm_cosmosdb_cassandra_datacenter": [
+    "name",
+    "delegated_management_subnet_id",
+    "cassandra_cluster_id",
+    "location"
+  ],
+  "azurerm_cosmosdb_cassandra_keyspace": [
+    "name",
+    "resource_group_name",
+    "account_name"
+  ],
+  "azurerm_cosmosdb_cassandra_table": [
+    "name",
+    "cassandra_keyspace_id",
+    "analytical_storage_ttl"
+  ],
+  "azurerm_cosmosdb_gremlin_database": [
+    "name",
+    "resource_group_name",
+    "account_name"
+  ],
+  "azurerm_cosmosdb_gremlin_graph": [
+    "partition_key_path",
+    "unique_key",
+    "name",
+    "resource_group_name",
+    "database_name",
+    "partition_key_version",
+    "conflict_resolution_policy",
+    "account_name"
+  ],
+  "azurerm_cosmosdb_mongo_collection": [
+    "account_name",
+    "name",
+    "resource_group_name",
+    "database_name",
+    "shard_key"
+  ],
+  "azurerm_cosmosdb_mongo_database": [
+    "name",
+    "resource_group_name",
+    "account_name"
+  ],
+  "azurerm_cosmosdb_mongo_role_definition": [
+    "cosmos_mongo_database_id",
+    "role_name"
+  ],
+  "azurerm_cosmosdb_mongo_user_definition": [
+    "cosmos_mongo_database_id",
+    "username"
+  ],
+  "azurerm_cosmosdb_postgresql_cluster": [
+    "source_location",
+    "source_resource_id",
+    "resource_group_name",
+    "point_in_time_in_utc",
+    "location",
+    "name"
+  ],
+  "azurerm_cosmosdb_postgresql_coordinator_configuration": [
+    "name",
+    "cluster_id"
+  ],
+  "azurerm_cosmosdb_postgresql_firewall_rule": [
+    "name",
+    "cluster_id"
+  ],
+  "azurerm_cosmosdb_postgresql_node_configuration": [
+    "name",
+    "cluster_id"
+  ],
+  "azurerm_cosmosdb_postgresql_role": [
+    "name",
+    "cluster_id",
+    "password"
+  ],
+  "azurerm_cosmosdb_sql_container": [
+    "resource_group_name",
+    "partition_key_paths",
+    "conflict_resolution_policy",
+    "unique_key",
+    "account_name",
+    "database_name",
+    "partition_key_kind",
+    "name"
+  ],
+  "azurerm_cosmosdb_sql_database": [
+    "name",
+    "resource_group_name",
+    "account_name"
+  ],
+  "azurerm_cosmosdb_sql_dedicated_gateway": [
+    "cosmosdb_account_id",
+    "instance_size"
+  ],
+  "azurerm_cosmosdb_sql_function": [
+    "name",
+    "container_id"
+  ],
+  "azurerm_cosmosdb_sql_role_assignment": [
+    "name",
+    "resource_group_name",
+    "account_name",
+    "principal_id",
+    "scope"
+  ],
+  "azurerm_cosmosdb_sql_role_definition": [
+    "role_definition_id",
+    "resource_group_name",
+    "account_name",
+    "type"
+  ],
+  "azurerm_cosmosdb_sql_stored_procedure": [
+    "resource_group_name",
+    "account_name",
+    "container_name",
+    "database_name",
+    "name"
+  ],
+  "azurerm_cosmosdb_sql_trigger": [
+    "name",
+    "container_id"
+  ],
+  "azurerm_cosmosdb_table": [
+    "name",
+    "resource_group_name",
+    "account_name"
+  ],
+  "azurerm_cost_anomaly_alert": [
+    "name",
+    "subscription_id"
+  ],
+  "azurerm_cost_management_scheduled_action": [
+    "name",
+    "view_id"
+  ],
+  "azurerm_custom_ip_prefix": [
+    "location",
+    "parent_custom_ip_prefix_id",
+    "cidr",
+    "resource_group_name",
+    "name",
+    "roa_validity_end_date",
+    "wan_validation_signed_message",
+    "zones"
+  ],
+  "azurerm_custom_provider": [
+    "name",
+    "location",
+    "resource_group_name",
+    "tags"
+  ],
+  "azurerm_dashboard_grafana": [
+    "zone_redundancy_enabled",
+    "name",
+    "resource_group_name",
+    "identity",
+    "sku",
+    "location"
+  ],
+  "azurerm_dashboard_grafana_managed_private_endpoint": [
+    "name",
+    "location",
+    "group_ids",
+    "private_link_resource_region",
+    "grafana_id",
+    "private_link_resource_id"
+  ],
+  "azurerm_data_factory": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_data_factory_credential_service_principal": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_credential_user_managed_identity": [
+    "name",
+    "data_factory_id",
+    "identity_id"
+  ],
+  "azurerm_data_factory_custom_dataset": [
+    "type",
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_customer_managed_key": [
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_data_flow": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_azure_blob": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_azure_sql_table": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_binary": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_dataset_cosmosdb_sqlapi": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_delimited_text": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_http": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_json": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_mysql": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_dataset_parquet": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_postgresql": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_dataset_snowflake": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_dataset_sql_server_table": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_flowlet_data_flow": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_integration_runtime_azure": [
+    "location",
+    "data_factory_id",
+    "virtual_network_enabled",
+    "name"
+  ],
+  "azurerm_data_factory_integration_runtime_azure_ssis": [
+    "location",
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_integration_runtime_self_hosted": [
+    "name",
+    "data_factory_id",
+    "rbac_authorization"
+  ],
+  "azurerm_data_factory_linked_custom_service": [
+    "name",
+    "data_factory_id",
+    "type"
+  ],
+  "azurerm_data_factory_linked_service_azure_blob_storage": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_azure_databricks": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_azure_file_storage": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_azure_function": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_azure_search": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_azure_sql_database": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_linked_service_azure_table_storage": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_cosmosdb": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_cosmosdb_mongoapi": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_data_lake_storage_gen2": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_key_vault": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_kusto": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_linked_service_mysql": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_odata": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_odbc": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_postgresql": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_sftp": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_linked_service_snowflake": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_linked_service_sql_managed_instance": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_linked_service_sql_server": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_synapse": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_linked_service_web": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_managed_private_endpoint": [
+    "target_resource_id",
+    "subresource_name",
+    "fqdns",
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_pipeline": [
+    "name",
+    "data_factory_id"
+  ],
+  "azurerm_data_factory_trigger_blob_event": [
+    "name",
+    "data_factory_id",
+    "storage_account_id"
+  ],
+  "azurerm_data_factory_trigger_custom_event": [
+    "data_factory_id",
+    "eventgrid_topic_id",
+    "name"
+  ],
+  "azurerm_data_factory_trigger_schedule": [
+    "data_factory_id",
+    "name"
+  ],
+  "azurerm_data_factory_trigger_tumbling_window": [
+    "data_factory_id",
+    "interval",
+    "name",
+    "frequency",
+    "start_time"
+  ],
+  "azurerm_data_protection_backup_instance_blob_storage": [
+    "location",
+    "vault_id",
+    "storage_account_id",
+    "name"
+  ],
+  "azurerm_data_protection_backup_instance_disk": [
+    "location",
+    "vault_id",
+    "disk_id",
+    "snapshot_resource_group_name",
+    "snapshot_subscription_id",
+    "name"
+  ],
+  "azurerm_data_protection_backup_instance_kubernetes_cluster": [
+    "backup_policy_id",
+    "kubernetes_cluster_id",
+    "snapshot_resource_group_name",
+    "backup_datasource_parameters",
+    "name",
+    "location",
+    "vault_id"
+  ],
+  "azurerm_data_protection_backup_instance_mysql_flexible_server": [
+    "vault_id",
+    "server_id",
+    "name",
+    "location"
+  ],
+  "azurerm_data_protection_backup_instance_postgresql": [
+    "name",
+    "location",
+    "vault_id",
+    "database_id"
+  ],
+  "azurerm_data_protection_backup_instance_postgresql_flexible_server": [
+    "server_id",
+    "name",
+    "location",
+    "vault_id"
+  ],
+  "azurerm_data_protection_backup_policy_blob_storage": [
+    "operational_default_retention_duration",
+    "time_zone",
+    "vault_default_retention_duration",
+    "retention_rule",
+    "name",
+    "vault_id",
+    "backup_repeating_time_intervals"
+  ],
+  "azurerm_data_protection_backup_policy_disk": [
+    "name",
+    "vault_id",
+    "backup_repeating_time_intervals",
+    "default_retention_duration",
+    "retention_rule",
+    "time_zone"
+  ],
+  "azurerm_data_protection_backup_policy_kubernetes_cluster": [
+    "name",
+    "resource_group_name",
+    "vault_name",
+    "backup_repeating_time_intervals",
+    "default_retention_rule",
+    "retention_rule",
+    "time_zone"
+  ],
+  "azurerm_data_protection_backup_policy_mysql_flexible_server": [
+    "vault_id",
+    "backup_repeating_time_intervals",
+    "default_retention_rule",
+    "retention_rule",
+    "time_zone",
+    "name"
+  ],
+  "azurerm_data_protection_backup_policy_postgresql": [
+    "backup_repeating_time_intervals",
+    "default_retention_duration",
+    "retention_rule",
+    "time_zone",
+    "name",
+    "resource_group_name",
+    "vault_name"
+  ],
+  "azurerm_data_protection_backup_policy_postgresql_flexible_server": [
+    "time_zone",
+    "name",
+    "vault_id",
+    "backup_repeating_time_intervals",
+    "default_retention_rule",
+    "retention_rule"
+  ],
+  "azurerm_data_protection_backup_vault": [
+    "name",
+    "location",
+    "resource_group_name",
+    "datastore_type",
+    "redundancy"
+  ],
+  "azurerm_data_protection_backup_vault_customer_managed_key": [
+    "data_protection_backup_vault_id"
+  ],
+  "azurerm_data_protection_resource_guard": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_data_share": [
+    "name",
+    "account_id",
+    "kind"
+  ],
+  "azurerm_data_share_account": [
+    "identity",
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_data_share_dataset_blob_storage": [
+    "folder_path",
+    "name",
+    "data_share_id",
+    "container_name",
+    "storage_account",
+    "file_path"
+  ],
+  "azurerm_data_share_dataset_data_lake_gen2": [
+    "share_id",
+    "storage_account_id",
+    "file_system_name",
+    "file_path",
+    "folder_path",
+    "name"
+  ],
+  "azurerm_data_share_dataset_kusto_cluster": [
+    "kusto_cluster_id",
+    "name",
+    "share_id"
+  ],
+  "azurerm_data_share_dataset_kusto_database": [
+    "name",
+    "share_id",
+    "kusto_database_id"
+  ],
+  "azurerm_database_migration_project": [
+    "target_platform",
+    "name",
+    "service_name",
+    "resource_group_name",
+    "location",
+    "source_platform"
+  ],
+  "azurerm_database_migration_service": [
+    "subnet_id",
+    "sku_name",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_databox_edge_device": [
+    "name",
+    "resource_group_name",
+    "location",
+    "sku_name"
+  ],
+  "azurerm_databricks_access_connector": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_databricks_virtual_network_peering": [
+    "name",
+    "remote_address_space_prefixes",
+    "resource_group_name",
+    "workspace_id",
+    "remote_virtual_network_id"
+  ],
+  "azurerm_databricks_workspace": [
+    "load_balancer_backend_address_pool_id",
+    "managed_resource_group_name",
+    "infrastructure_encryption_enabled",
+    "custom_parameters",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_databricks_workspace_customer_managed_key": [],
+  "azurerm_databricks_workspace_root_dbfs_customer_managed_key": [],
+  "azurerm_datadog_monitor": [
+    "name",
+    "resource_group_name",
+    "location",
+    "user",
+    "datadog_organization"
+  ],
+  "azurerm_datadog_monitor_sso_configuration": [
+    "datadog_monitor_id"
+  ],
+  "azurerm_datadog_monitor_tag_rule": [
+    "datadog_monitor_id"
+  ],
+  "azurerm_dedicated_hardware_security_module": [
+    "network_profile",
+    "management_network_profile",
+    "stamp_id",
+    "zones",
+    "name",
+    "location",
+    "resource_group_name",
+    "sku_name"
+  ],
+  "azurerm_dedicated_host": [
+    "name",
+    "dedicated_host_group_id",
+    "location",
+    "sku_name",
+    "platform_fault_domain"
+  ],
+  "azurerm_dedicated_host_group": [
+    "location",
+    "platform_fault_domain_count",
+    "automatic_placement_enabled",
+    "zone",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_dev_center": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_dev_center_attached_network": [
+    "network_connection_id",
+    "name",
+    "dev_center_id"
+  ],
+  "azurerm_dev_center_catalog": [
+    "name",
+    "resource_group_name",
+    "dev_center_id"
+  ],
+  "azurerm_dev_center_dev_box_definition": [
+    "dev_center_id",
+    "name",
+    "location"
+  ],
+  "azurerm_dev_center_environment_type": [
+    "name",
+    "dev_center_id"
+  ],
+  "azurerm_dev_center_gallery": [
+    "name",
+    "dev_center_id",
+    "shared_gallery_id"
+  ],
+  "azurerm_dev_center_network_connection": [
+    "resource_group_name",
+    "location",
+    "domain_join_type",
+    "name"
+  ],
+  "azurerm_dev_center_project": [
+    "location",
+    "resource_group_name",
+    "description",
+    "dev_center_id",
+    "name"
+  ],
+  "azurerm_dev_center_project_environment_type": [
+    "name",
+    "location",
+    "dev_center_project_id"
+  ],
+  "azurerm_dev_center_project_pool": [
+    "location",
+    "dev_center_project_id",
+    "name"
+  ],
+  "azurerm_dev_test_global_vm_shutdown_schedule": [
+    "location",
+    "virtual_machine_id"
+  ],
+  "azurerm_dev_test_lab": [
+    "resource_group_name",
+    "name",
+    "location"
+  ],
+  "azurerm_dev_test_linux_virtual_machine": [
+    "username",
+    "gallery_image_reference",
+    "name",
+    "disallow_public_ip_address",
+    "resource_group_name",
+    "lab_subnet_name",
+    "ssh_key",
+    "lab_name",
+    "size",
+    "storage_type",
+    "lab_virtual_network_id",
+    "password",
+    "inbound_nat_rule",
+    "location"
+  ],
+  "azurerm_dev_test_policy": [
+    "evaluator_type",
+    "lab_name",
+    "name",
+    "policy_set_name",
+    "resource_group_name"
+  ],
+  "azurerm_dev_test_schedule": [
+    "name",
+    "resource_group_name",
+    "location",
+    "lab_name"
+  ],
+  "azurerm_dev_test_virtual_network": [
+    "name",
+    "lab_name",
+    "resource_group_name"
+  ],
+  "azurerm_dev_test_windows_virtual_machine": [
+    "name",
+    "lab_name",
+    "resource_group_name",
+    "size",
+    "password",
+    "lab_subnet_name",
+    "inbound_nat_rule",
+    "storage_type",
+    "gallery_image_reference",
+    "location",
+    "username",
+    "disallow_public_ip_address",
+    "lab_virtual_network_id"
+  ],
+  "azurerm_digital_twins_endpoint_eventgrid": [
+    "name",
+    "digital_twins_id"
+  ],
+  "azurerm_digital_twins_endpoint_eventhub": [
+    "name",
+    "digital_twins_id"
+  ],
+  "azurerm_digital_twins_endpoint_servicebus": [
+    "name",
+    "digital_twins_id"
+  ],
+  "azurerm_digital_twins_instance": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_digital_twins_time_series_database_connection": [
+    "kusto_cluster_id",
+    "kusto_cluster_uri",
+    "kusto_database_name",
+    "kusto_table_name",
+    "name",
+    "eventhub_name",
+    "eventhub_namespace_id",
+    "eventhub_namespace_endpoint_uri",
+    "eventhub_consumer_group_name",
+    "digital_twins_id"
+  ],
+  "azurerm_disk_access": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_disk_encryption_set": [
+    "encryption_type",
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_dns_a_record": [
+    "resource_group_name",
+    "zone_name",
+    "name"
+  ],
+  "azurerm_dns_aaaa_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_dns_caa_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_dns_cname_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_dns_mx_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_dns_ns_record": [
+    "resource_group_name",
+    "zone_name",
+    "name"
+  ],
+  "azurerm_dns_ptr_record": [
+    "zone_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_dns_srv_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_dns_txt_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_dns_zone": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_dynatrace_monitor": [
+    "user",
+    "resource_group_name",
+    "name",
+    "location",
+    "monitoring_enabled",
+    "marketplace_subscription",
+    "plan"
+  ],
+  "azurerm_dynatrace_tag_rules": [
+    "monitor_id",
+    "name"
+  ],
+  "azurerm_elastic_cloud_elasticsearch": [
+    "resource_group_name",
+    "monitoring_enabled",
+    "location",
+    "sku_name",
+    "elastic_cloud_email_address",
+    "name"
+  ],
+  "azurerm_elastic_san": [
+    "name",
+    "resource_group_name",
+    "zones",
+    "sku",
+    "location"
+  ],
+  "azurerm_elastic_san_volume": [
+    "create_source",
+    "name",
+    "volume_group_id"
+  ],
+  "azurerm_elastic_san_volume_group": [
+    "name",
+    "elastic_san_id"
+  ],
+  "azurerm_email_communication_service": [
+    "name",
+    "resource_group_name",
+    "data_location"
+  ],
+  "azurerm_email_communication_service_domain": [
+    "name",
+    "email_service_id",
+    "domain_management"
+  ],
+  "azurerm_email_communication_service_domain_sender_username": [
+    "name",
+    "email_service_domain_id"
+  ],
+  "azurerm_eventgrid_domain": [
+    "input_schema",
+    "input_mapping_fields",
+    "name",
+    "location",
+    "resource_group_name",
+    "input_mapping_default_values"
+  ],
+  "azurerm_eventgrid_domain_topic": [
+    "domain_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_eventgrid_event_subscription": [
+    "scope",
+    "event_delivery_schema",
+    "name"
+  ],
+  "azurerm_eventgrid_namespace": [
+    "location",
+    "name",
+    "resource_group_name",
+    "topic_spaces_configuration"
+  ],
+  "azurerm_eventgrid_partner_configuration": [
+    "resource_group_name"
+  ],
+  "azurerm_eventgrid_partner_namespace": [
+    "location",
+    "partner_topic_routing_mode",
+    "resource_group_name",
+    "partner_registration_id",
+    "name"
+  ],
+  "azurerm_eventgrid_partner_registration": [
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_eventgrid_system_topic": [
+    "resource_group_name",
+    "source_resource_id",
+    "topic_type",
+    "source_arm_resource_id",
+    "name",
+    "location"
+  ],
+  "azurerm_eventgrid_system_topic_event_subscription": [
+    "event_delivery_schema",
+    "name",
+    "system_topic",
+    "resource_group_name"
+  ],
+  "azurerm_eventgrid_topic": [
+    "name",
+    "location",
+    "resource_group_name",
+    "input_schema",
+    "input_mapping_fields",
+    "input_mapping_default_values"
+  ],
+  "azurerm_eventhub": [
+    "retention_description",
+    "name"
+  ],
+  "azurerm_eventhub_authorization_rule": [
+    "namespace_name",
+    "eventhub_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_eventhub_cluster": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_eventhub_consumer_group": [
+    "name",
+    "namespace_name",
+    "eventhub_name",
+    "resource_group_name"
+  ],
+  "azurerm_eventhub_namespace": [
+    "location",
+    "resource_group_name",
+    "name",
+    "dedicated_cluster_id"
+  ],
+  "azurerm_eventhub_namespace_authorization_rule": [
+    "name",
+    "namespace_name",
+    "resource_group_name"
+  ],
+  "azurerm_eventhub_namespace_customer_managed_key": [
+    "eventhub_namespace_id",
+    "infrastructure_encryption_enabled"
+  ],
+  "azurerm_eventhub_namespace_disaster_recovery_config": [
+    "namespace_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_eventhub_namespace_schema_group": [
+    "name",
+    "namespace_id",
+    "schema_compatibility",
+    "schema_type"
+  ],
+  "azurerm_express_route_circuit": [
+    "resource_group_name",
+    "peering_location",
+    "name",
+    "location",
+    "express_route_port_id",
+    "service_provider_name"
+  ],
+  "azurerm_express_route_circuit_authorization": [
+    "name",
+    "resource_group_name",
+    "express_route_circuit_name"
+  ],
+  "azurerm_express_route_circuit_connection": [
+    "peer_peering_id",
+    "address_prefix_ipv4",
+    "name",
+    "peering_id"
+  ],
+  "azurerm_express_route_circuit_peering": [
+    "resource_group_name",
+    "express_route_circuit_name"
+  ],
+  "azurerm_express_route_connection": [
+    "name",
+    "express_route_circuit_peering_id",
+    "express_route_gateway_id"
+  ],
+  "azurerm_express_route_gateway": [
+    "virtual_hub_id",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_express_route_port": [
+    "name",
+    "location",
+    "resource_group_name",
+    "peering_location",
+    "bandwidth_in_gbps",
+    "encapsulation"
+  ],
+  "azurerm_express_route_port_authorization": [
+    "name",
+    "resource_group_name",
+    "express_route_port_name"
+  ],
+  "azurerm_extended_custom_location": [
+    "namespace",
+    "host_resource_id",
+    "host_type",
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_extended_location_custom_location": [
+    "resource_group_name",
+    "host_resource_id",
+    "namespace",
+    "location",
+    "host_type",
+    "name"
+  ],
+  "azurerm_fabric_capacity": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_federated_identity_credential": [
+    "parent_id",
+    "name"
+  ],
+  "azurerm_firewall": [
+    "name",
+    "ip_configuration",
+    "zones",
+    "location",
+    "resource_group_name",
+    "sku_name",
+    "management_ip_configuration"
+  ],
+  "azurerm_firewall_application_rule_collection": [
+    "name",
+    "azure_firewall_name",
+    "resource_group_name"
+  ],
+  "azurerm_firewall_nat_rule_collection": [
+    "azure_firewall_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_firewall_network_rule_collection": [
+    "name",
+    "azure_firewall_name",
+    "resource_group_name"
+  ],
+  "azurerm_firewall_policy": [
+    "resource_group_name",
+    "name",
+    "sku",
+    "location"
+  ],
+  "azurerm_firewall_policy_rule_collection_group": [
+    "name",
+    "firewall_policy_id"
+  ],
+  "azurerm_fluid_relay_server": [
+    "location",
+    "customer_managed_key",
+    "name",
+    "resource_group_name",
+    "storage_sku"
+  ],
+  "azurerm_frontdoor": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_frontdoor_custom_https_configuration": [
+    "frontend_endpoint_id"
+  ],
+  "azurerm_frontdoor_firewall_policy": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_frontdoor_rules_engine": [
+    "name",
+    "frontdoor_name",
+    "resource_group_name"
+  ],
+  "azurerm_function_app": [
+    "os_type",
+    "storage_account_name",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_function_app_active_slot": [
+    "overwrite_network_config"
+  ],
+  "azurerm_function_app_connection": [
+    "authentication",
+    "name",
+    "function_app_id",
+    "target_resource_id"
+  ],
+  "azurerm_function_app_flex_consumption": [
+    "location",
+    "resource_group_name",
+    "name",
+    "service_plan_id"
+  ],
+  "azurerm_function_app_function": [
+    "name",
+    "file",
+    "function_app_id"
+  ],
+  "azurerm_function_app_hybrid_connection": [
+    "function_app_id",
+    "relay_id"
+  ],
+  "azurerm_function_app_slot": [
+    "storage_account_name",
+    "os_type",
+    "name",
+    "resource_group_name",
+    "location",
+    "app_service_plan_id",
+    "function_app_name"
+  ],
+  "azurerm_gallery_application": [
+    "name",
+    "gallery_id",
+    "location",
+    "supported_os_type"
+  ],
+  "azurerm_gallery_application_version": [
+    "manage_action",
+    "name",
+    "location",
+    "package_file",
+    "source",
+    "gallery_application_id",
+    "config_file"
+  ],
+  "azurerm_graph_services_account": [
+    "application_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_hdinsight_hadoop_cluster": [
+    "tls_min_version",
+    "security_profile",
+    "component_version",
+    "metastores",
+    "storage_account_gen2",
+    "resource_group_name",
+    "roles",
+    "name",
+    "location",
+    "gateway",
+    "network",
+    "storage_account",
+    "cluster_version",
+    "tier"
+  ],
+  "azurerm_hdinsight_hbase_cluster": [
+    "component_version",
+    "storage_account",
+    "resource_group_name",
+    "tls_min_version",
+    "network",
+    "security_profile",
+    "roles",
+    "location",
+    "tier",
+    "gateway",
+    "name",
+    "cluster_version",
+    "metastores",
+    "storage_account_gen2"
+  ],
+  "azurerm_hdinsight_interactive_query_cluster": [
+    "location",
+    "cluster_version",
+    "roles",
+    "tier",
+    "component_version",
+    "storage_account_gen2",
+    "name",
+    "resource_group_name",
+    "storage_account",
+    "network",
+    "tls_min_version",
+    "encryption_in_transit_enabled",
+    "gateway",
+    "metastores",
+    "security_profile"
+  ],
+  "azurerm_hdinsight_kafka_cluster": [
+    "roles",
+    "location",
+    "storage_account",
+    "storage_account_gen2",
+    "rest_proxy",
+    "name",
+    "tier",
+    "encryption_in_transit_enabled",
+    "resource_group_name",
+    "cluster_version",
+    "metastores",
+    "network",
+    "security_profile",
+    "tls_min_version",
+    "component_version",
+    "gateway"
+  ],
+  "azurerm_hdinsight_spark_cluster": [
+    "name",
+    "tier",
+    "encryption_in_transit_enabled",
+    "gateway",
+    "resource_group_name",
+    "tls_min_version",
+    "metastores",
+    "storage_account",
+    "storage_account_gen2",
+    "location",
+    "cluster_version",
+    "component_version",
+    "roles",
+    "zones",
+    "network",
+    "security_profile"
+  ],
+  "azurerm_healthbot": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_healthcare_dicom_service": [
+    "data_partitions_enabled",
+    "location",
+    "storage",
+    "name",
+    "workspace_id"
+  ],
+  "azurerm_healthcare_fhir_service": [
+    "name",
+    "resource_group_name",
+    "workspace_id",
+    "location",
+    "kind"
+  ],
+  "azurerm_healthcare_medtech_service": [
+    "workspace_id",
+    "name",
+    "location"
+  ],
+  "azurerm_healthcare_medtech_service_fhir_destination": [
+    "name",
+    "medtech_service_id",
+    "location"
+  ],
+  "azurerm_healthcare_service": [
+    "resource_group_name",
+    "cosmosdb_key_vault_key_versionless_id",
+    "name",
+    "location"
+  ],
+  "azurerm_healthcare_workspace": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_hpc_cache": [
+    "identity",
+    "cache_size_in_gb",
+    "name",
+    "location",
+    "resource_group_name",
+    "subnet_id",
+    "sku_name"
+  ],
+  "azurerm_hpc_cache_access_policy": [
+    "name",
+    "hpc_cache_id"
+  ],
+  "azurerm_hpc_cache_blob_nfs_target": [
+    "cache_name",
+    "storage_container_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_hpc_cache_blob_target": [
+    "name",
+    "cache_name",
+    "resource_group_name",
+    "storage_container_id"
+  ],
+  "azurerm_hpc_cache_nfs_target": [
+    "name",
+    "resource_group_name",
+    "cache_name",
+    "target_host_name"
+  ],
+  "azurerm_image": [
+    "name",
+    "location",
+    "resource_group_name",
+    "zone_resilient",
+    "hyper_v_generation",
+    "data_disk",
+    "os_disk"
+  ],
+  "azurerm_iot_security_device_group": [
+    "name",
+    "iothub_id"
+  ],
+  "azurerm_iot_security_solution": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_iotcentral_application": [
+    "template",
+    "resource_group_name",
+    "name",
+    "location"
+  ],
+  "azurerm_iotcentral_application_network_rule_set": [
+    "iotcentral_application_id"
+  ],
+  "azurerm_iotcentral_organization": [
+    "iotcentral_application_id",
+    "organization_id",
+    "parent_organization_id"
+  ],
+  "azurerm_iothub": [
+    "resource_group_name",
+    "endpoint",
+    "location",
+    "min_tls_version",
+    "name"
+  ],
+  "azurerm_iothub_certificate": [
+    "name",
+    "resource_group_name",
+    "iothub_name"
+  ],
+  "azurerm_iothub_consumer_group": [
+    "name",
+    "iothub_name",
+    "eventhub_endpoint_name",
+    "resource_group_name"
+  ],
+  "azurerm_iothub_device_update_account": [
+    "location",
+    "sku",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_iothub_device_update_instance": [
+    "iothub_id",
+    "name",
+    "device_update_account_id"
+  ],
+  "azurerm_iothub_dps": [
+    "data_residency_enabled",
+    "resource_group_name",
+    "name",
+    "location"
+  ],
+  "azurerm_iothub_dps_certificate": [
+    "resource_group_name",
+    "iot_dps_name",
+    "is_verified",
+    "name"
+  ],
+  "azurerm_iothub_dps_shared_access_policy": [
+    "resource_group_name",
+    "name",
+    "iothub_dps_name"
+  ],
+  "azurerm_iothub_endpoint_cosmosdb_account": [
+    "container_name",
+    "resource_group_name",
+    "database_name",
+    "endpoint_uri",
+    "name",
+    "iothub_id"
+  ],
+  "azurerm_iothub_endpoint_eventhub": [
+    "name",
+    "iothub_id",
+    "resource_group_name"
+  ],
+  "azurerm_iothub_endpoint_servicebus_queue": [
+    "name",
+    "iothub_id",
+    "resource_group_name"
+  ],
+  "azurerm_iothub_endpoint_servicebus_topic": [
+    "name",
+    "iothub_id",
+    "resource_group_name"
+  ],
+  "azurerm_iothub_endpoint_storage_container": [
+    "name",
+    "resource_group_name",
+    "iothub_id",
+    "encoding"
+  ],
+  "azurerm_iothub_enrichment": [
+    "resource_group_name",
+    "iothub_name",
+    "key"
+  ],
+  "azurerm_iothub_fallback_route": [
+    "resource_group_name",
+    "iothub_name"
+  ],
+  "azurerm_iothub_file_upload": [
+    "iothub_id"
+  ],
+  "azurerm_iothub_route": [
+    "name",
+    "resource_group_name",
+    "iothub_name"
+  ],
+  "azurerm_iothub_shared_access_policy": [
+    "name",
+    "resource_group_name",
+    "iothub_name"
+  ],
+  "azurerm_ip_group": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_ip_group_cidr": [
+    "ip_group_id",
+    "cidr"
+  ],
+  "azurerm_key_vault": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_key_vault_access_policy": [
+    "application_id",
+    "key_vault_id",
+    "tenant_id",
+    "object_id"
+  ],
+  "azurerm_key_vault_certificate": [
+    "key_vault_id",
+    "name"
+  ],
+  "azurerm_key_vault_certificate_contacts": [
+    "key_vault_id"
+  ],
+  "azurerm_key_vault_certificate_issuer": [
+    "key_vault_id",
+    "name"
+  ],
+  "azurerm_key_vault_key": [
+    "name",
+    "key_size",
+    "curve",
+    "key_vault_id",
+    "key_type"
+  ],
+  "azurerm_key_vault_managed_hardware_security_module": [
+    "admin_object_ids",
+    "purge_protection_enabled",
+    "soft_delete_retention_days",
+    "resource_group_name",
+    "sku_name",
+    "tenant_id",
+    "name",
+    "location"
+  ],
+  "azurerm_key_vault_managed_hardware_security_module_key": [
+    "name",
+    "key_type",
+    "managed_hsm_id",
+    "key_size",
+    "curve"
+  ],
+  "azurerm_key_vault_managed_hardware_security_module_key_rotation_policy": [
+    "managed_hsm_key_id"
+  ],
+  "azurerm_key_vault_managed_hardware_security_module_role_assignment": [
+    "scope",
+    "role_definition_id",
+    "principal_id",
+    "managed_hsm_id",
+    "name"
+  ],
+  "azurerm_key_vault_managed_hardware_security_module_role_definition": [
+    "managed_hsm_id",
+    "name"
+  ],
+  "azurerm_key_vault_managed_storage_account": [
+    "key_vault_id",
+    "tags",
+    "name"
+  ],
+  "azurerm_key_vault_managed_storage_account_sas_token_definition": [
+    "tags"
+  ],
+  "azurerm_key_vault_secret": [
+    "name",
+    "key_vault_id"
+  ],
+  "azurerm_kubernetes_cluster": [
+    "dns_prefix_private_cluster",
+    "node_resource_group",
+    "default_node_pool",
+    "dns_prefix",
+    "role_based_access_control_enabled",
+    "resource_group_name",
+    "private_dns_zone_id",
+    "name",
+    "network_profile",
+    "edge_zone",
+    "linux_profile",
+    "private_cluster_enabled",
+    "disk_encryption_set_id",
+    "location",
+    "windows_profile",
+    "kubelet_identity"
+  ],
+  "azurerm_kubernetes_cluster_extension": [
+    "name",
+    "release_train",
+    "cluster_id",
+    "extension_type",
+    "release_namespace",
+    "version",
+    "plan",
+    "target_namespace"
+  ],
+  "azurerm_kubernetes_cluster_node_pool": [
+    "node_public_ip_prefix_id",
+    "priority",
+    "kubernetes_cluster_id",
+    "gpu_driver",
+    "name",
+    "capacity_reservation_group_id",
+    "os_type",
+    "proximity_placement_group_id",
+    "spot_max_price",
+    "gpu_instance",
+    "eviction_policy",
+    "windows_profile",
+    "host_group_id",
+    "node_network_profile"
+  ],
+  "azurerm_kubernetes_cluster_trusted_access_role_binding": [
+    "source_resource_id",
+    "kubernetes_cluster_id",
+    "name"
+  ],
+  "azurerm_kubernetes_fleet_manager": [
+    "resource_group_name",
+    "hub_profile",
+    "location",
+    "name"
+  ],
+  "azurerm_kubernetes_fleet_member": [
+    "kubernetes_cluster_id",
+    "kubernetes_fleet_id",
+    "name"
+  ],
+  "azurerm_kubernetes_fleet_update_run": [
+    "kubernetes_fleet_manager_id",
+    "name"
+  ],
+  "azurerm_kubernetes_fleet_update_strategy": [
+    "name",
+    "kubernetes_fleet_manager_id"
+  ],
+  "azurerm_kubernetes_flux_configuration": [
+    "name",
+    "namespace",
+    "scope",
+    "cluster_id"
+  ],
+  "azurerm_kusto_attached_database_configuration": [
+    "location",
+    "database_name",
+    "name",
+    "resource_group_name",
+    "cluster_name"
+  ],
+  "azurerm_kusto_cluster": [
+    "location",
+    "double_encryption_enabled",
+    "name",
+    "virtual_network_configuration",
+    "resource_group_name",
+    "zones"
+  ],
+  "azurerm_kusto_cluster_customer_managed_key": [
+    "cluster_id"
+  ],
+  "azurerm_kusto_cluster_managed_private_endpoint": [
+    "group_id",
+    "private_link_resource_region",
+    "resource_group_name",
+    "cluster_name",
+    "name",
+    "private_link_resource_id"
+  ],
+  "azurerm_kusto_cluster_principal_assignment": [
+    "principal_id",
+    "resource_group_name",
+    "principal_type",
+    "role",
+    "cluster_name",
+    "name",
+    "tenant_id"
+  ],
+  "azurerm_kusto_cosmosdb_data_connection": [
+    "kusto_database_id",
+    "managed_identity_id",
+    "table_name",
+    "mapping_rule_name",
+    "retrieval_start_date",
+    "name",
+    "location",
+    "cosmosdb_container_id"
+  ],
+  "azurerm_kusto_database": [
+    "name",
+    "resource_group_name",
+    "location",
+    "cluster_name"
+  ],
+  "azurerm_kusto_database_principal_assignment": [
+    "principal_type",
+    "role",
+    "tenant_id",
+    "principal_id",
+    "resource_group_name",
+    "cluster_name",
+    "database_name",
+    "name"
+  ],
+  "azurerm_kusto_eventgrid_data_connection": [
+    "cluster_name",
+    "database_name",
+    "storage_account_id",
+    "resource_group_name",
+    "database_routing_type",
+    "name",
+    "eventhub_consumer_group_name",
+    "location",
+    "eventhub_id"
+  ],
+  "azurerm_kusto_eventhub_data_connection": [
+    "name",
+    "cluster_name",
+    "compression",
+    "database_name",
+    "consumer_group",
+    "database_routing_type",
+    "resource_group_name",
+    "location",
+    "eventhub_id"
+  ],
+  "azurerm_kusto_iothub_data_connection": [
+    "data_format",
+    "database_routing_type",
+    "name",
+    "location",
+    "database_name",
+    "consumer_group",
+    "table_name",
+    "event_system_properties",
+    "resource_group_name",
+    "cluster_name",
+    "iothub_id",
+    "shared_access_policy_name",
+    "mapping_rule_name"
+  ],
+  "azurerm_kusto_script": [
+    "name",
+    "database_id",
+    "sas_token",
+    "script_content",
+    "script_level"
+  ],
+  "azurerm_lb": [
+    "name",
+    "resource_group_name",
+    "sku",
+    "location",
+    "edge_zone",
+    "sku_tier"
+  ],
+  "azurerm_lb_backend_address_pool": [
+    "loadbalancer_id",
+    "synchronous_mode",
+    "name"
+  ],
+  "azurerm_lb_backend_address_pool_address": [
+    "name",
+    "backend_address_pool_id"
+  ],
+  "azurerm_lb_nat_pool": [
+    "name",
+    "resource_group_name",
+    "loadbalancer_id"
+  ],
+  "azurerm_lb_nat_rule": [
+    "name",
+    "resource_group_name",
+    "loadbalancer_id"
+  ],
+  "azurerm_lb_outbound_rule": [
+    "name",
+    "loadbalancer_id"
+  ],
+  "azurerm_lb_probe": [
+    "name",
+    "loadbalancer_id"
+  ],
+  "azurerm_lb_rule": [
+    "name",
+    "loadbalancer_id"
+  ],
+  "azurerm_lighthouse_assignment": [
+    "name",
+    "lighthouse_definition_id",
+    "scope"
+  ],
+  "azurerm_lighthouse_definition": [
+    "lighthouse_definition_id",
+    "name",
+    "managing_tenant_id",
+    "scope"
+  ],
+  "azurerm_linux_function_app": [
+    "resource_group_name",
+    "name",
+    "location"
+  ],
+  "azurerm_linux_function_app_slot": [
+    "function_app_id",
+    "name"
+  ],
+  "azurerm_linux_virtual_machine": [
+    "name",
+    "disable_password_authentication",
+    "provision_vm_agent",
+    "source_image_id",
+    "source_image_reference",
+    "admin_ssh_key",
+    "computer_name",
+    "platform_fault_domain",
+    "os_managed_disk_id",
+    "edge_zone",
+    "eviction_policy",
+    "zone",
+    "admin_username",
+    "os_disk",
+    "secure_boot_enabled",
+    "resource_group_name",
+    "plan",
+    "availability_set_id",
+    "custom_data",
+    "priority",
+    "vtpm_enabled",
+    "location",
+    "admin_password"
+  ],
+  "azurerm_linux_virtual_machine_scale_set": [
+    "capacity_reservation_group_id",
+    "data_disk",
+    "resource_group_name",
+    "network_interface",
+    "host_group_id",
+    "provision_vm_agent",
+    "secure_boot_enabled",
+    "source_image_reference",
+    "upgrade_mode",
+    "location",
+    "platform_fault_domain_count",
+    "priority",
+    "rolling_upgrade_policy",
+    "spot_restore",
+    "computer_name_prefix",
+    "additional_capabilities",
+    "admin_password",
+    "eviction_policy",
+    "plan",
+    "zone_balance",
+    "name",
+    "admin_username",
+    "edge_zone",
+    "vtpm_enabled",
+    "os_disk",
+    "extension_operations_enabled",
+    "gallery_application",
+    "proximity_placement_group_id"
+  ],
+  "azurerm_linux_web_app": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_linux_web_app_slot": [
+    "name"
+  ],
+  "azurerm_load_test": [
+    "encryption",
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_local_network_gateway": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_log_analytics_cluster": [
+    "identity",
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_log_analytics_cluster_customer_managed_key": [
+    "log_analytics_cluster_id"
+  ],
+  "azurerm_log_analytics_data_export_rule": [
+    "name",
+    "resource_group_name",
+    "workspace_resource_id"
+  ],
+  "azurerm_log_analytics_datasource_windows_event": [
+    "name",
+    "resource_group_name",
+    "workspace_name"
+  ],
+  "azurerm_log_analytics_datasource_windows_performance_counter": [
+    "workspace_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_log_analytics_linked_service": [
+    "resource_group_name"
+  ],
+  "azurerm_log_analytics_linked_storage_account": [
+    "data_source_type",
+    "resource_group_name",
+    "workspace_id",
+    "workspace_resource_id"
+  ],
+  "azurerm_log_analytics_query_pack": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_log_analytics_query_pack_query": [
+    "query_pack_id",
+    "name"
+  ],
+  "azurerm_log_analytics_saved_search": [
+    "category",
+    "display_name",
+    "query",
+    "function_alias",
+    "function_parameters",
+    "tags",
+    "log_analytics_workspace_id",
+    "name"
+  ],
+  "azurerm_log_analytics_solution": [
+    "resource_group_name",
+    "plan",
+    "solution_name",
+    "workspace_name",
+    "workspace_resource_id",
+    "location"
+  ],
+  "azurerm_log_analytics_storage_insights": [
+    "name",
+    "resource_group_name",
+    "workspace_id"
+  ],
+  "azurerm_log_analytics_workspace": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_log_analytics_workspace_table": [],
+  "azurerm_log_analytics_workspace_table_custom_log": [
+    "workspace_id",
+    "name"
+  ],
+  "azurerm_logic_app_action_custom": [
+    "name",
+    "logic_app_id"
+  ],
+  "azurerm_logic_app_action_http": [
+    "name",
+    "logic_app_id"
+  ],
+  "azurerm_logic_app_integration_account": [
+    "name",
+    "resource_group_name",
+    "location",
+    "integration_service_environment_id"
+  ],
+  "azurerm_logic_app_integration_account_agreement": [
+    "resource_group_name",
+    "integration_account_name",
+    "name"
+  ],
+  "azurerm_logic_app_integration_account_assembly": [
+    "integration_account_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_logic_app_integration_account_batch_configuration": [
+    "name",
+    "resource_group_name",
+    "integration_account_name",
+    "batch_group_name"
+  ],
+  "azurerm_logic_app_integration_account_certificate": [
+    "resource_group_name",
+    "integration_account_name",
+    "name"
+  ],
+  "azurerm_logic_app_integration_account_map": [
+    "name",
+    "resource_group_name",
+    "integration_account_name"
+  ],
+  "azurerm_logic_app_integration_account_partner": [
+    "integration_account_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_logic_app_integration_account_schema": [
+    "name",
+    "resource_group_name",
+    "integration_account_name"
+  ],
+  "azurerm_logic_app_integration_account_session": [
+    "name",
+    "resource_group_name",
+    "integration_account_name"
+  ],
+  "azurerm_logic_app_standard": [
+    "location",
+    "resource_group_name",
+    "name",
+    "storage_account_name"
+  ],
+  "azurerm_logic_app_trigger_custom": [
+    "name",
+    "logic_app_id"
+  ],
+  "azurerm_logic_app_trigger_http_request": [
+    "name",
+    "logic_app_id"
+  ],
+  "azurerm_logic_app_trigger_recurrence": [
+    "name",
+    "logic_app_id"
+  ],
+  "azurerm_logic_app_workflow": [
+    "resource_group_name",
+    "workflow_version",
+    "name",
+    "location",
+    "workflow_schema",
+    "integration_service_environment_id"
+  ],
+  "azurerm_machine_learning_compute_cluster": [
+    "vm_priority",
+    "local_auth_enabled",
+    "node_public_ip_enabled",
+    "ssh",
+    "machine_learning_workspace_id",
+    "location",
+    "description",
+    "ssh_public_access_enabled",
+    "subnet_resource_id",
+    "name",
+    "vm_size"
+  ],
+  "azurerm_machine_learning_compute_instance": [
+    "machine_learning_workspace_id",
+    "virtual_machine_size",
+    "authorization_type",
+    "assign_to_user",
+    "description",
+    "ssh",
+    "node_public_ip_enabled",
+    "name",
+    "identity",
+    "local_auth_enabled",
+    "subnet_resource_id",
+    "tags"
+  ],
+  "azurerm_machine_learning_datastore_blobstorage": [
+    "tags",
+    "name",
+    "workspace_id",
+    "description",
+    "storage_container_id"
+  ],
+  "azurerm_machine_learning_datastore_datalake_gen2": [
+    "description",
+    "workspace_id",
+    "storage_container_id",
+    "tags",
+    "name"
+  ],
+  "azurerm_machine_learning_datastore_fileshare": [
+    "name",
+    "storage_fileshare_id",
+    "description",
+    "tags",
+    "workspace_id"
+  ],
+  "azurerm_machine_learning_inference_cluster": [
+    "location",
+    "description",
+    "identity",
+    "tags",
+    "name",
+    "kubernetes_cluster_id",
+    "machine_learning_workspace_id",
+    "cluster_purpose",
+    "ssl"
+  ],
+  "azurerm_machine_learning_synapse_spark": [
+    "location",
+    "synapse_spark_pool_id",
+    "description",
+    "identity",
+    "local_auth_enabled",
+    "tags",
+    "name",
+    "machine_learning_workspace_id"
+  ],
+  "azurerm_machine_learning_workspace": [
+    "name",
+    "location",
+    "storage_account_id",
+    "container_registry_id",
+    "encryption",
+    "service_side_encryption_enabled",
+    "key_vault_id",
+    "managed_network",
+    "high_business_impact",
+    "resource_group_name",
+    "application_insights_id"
+  ],
+  "azurerm_machine_learning_workspace_network_outbound_rule_fqdn": [
+    "name",
+    "workspace_id"
+  ],
+  "azurerm_machine_learning_workspace_network_outbound_rule_private_endpoint": [
+    "name",
+    "workspace_id",
+    "service_resource_id",
+    "sub_resource_target",
+    "spark_enabled"
+  ],
+  "azurerm_machine_learning_workspace_network_outbound_rule_service_tag": [
+    "workspace_id",
+    "name"
+  ],
+  "azurerm_maintenance_assignment_dedicated_host": [
+    "location",
+    "maintenance_configuration_id",
+    "dedicated_host_id"
+  ],
+  "azurerm_maintenance_assignment_dynamic_scope": [
+    "name",
+    "maintenance_configuration_id"
+  ],
+  "azurerm_maintenance_assignment_virtual_machine": [
+    "virtual_machine_id",
+    "location",
+    "maintenance_configuration_id"
+  ],
+  "azurerm_maintenance_assignment_virtual_machine_scale_set": [
+    "location",
+    "maintenance_configuration_id",
+    "virtual_machine_scale_set_id"
+  ],
+  "azurerm_maintenance_configuration": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_managed_application": [
+    "plan",
+    "resource_group_name",
+    "managed_resource_group_name",
+    "name",
+    "location",
+    "kind"
+  ],
+  "azurerm_managed_application_definition": [
+    "resource_group_name",
+    "lock_level",
+    "name",
+    "location"
+  ],
+  "azurerm_managed_disk": [
+    "security_type",
+    "source_uri",
+    "source_resource_id",
+    "gallery_image_reference_id",
+    "hyper_v_generation",
+    "image_reference_id",
+    "trusted_launch_enabled",
+    "name",
+    "create_option",
+    "resource_group_name",
+    "logical_sector_size",
+    "secure_vm_disk_encryption_set_id",
+    "location",
+    "upload_size_bytes",
+    "zone",
+    "edge_zone",
+    "performance_plus_enabled",
+    "storage_account_id"
+  ],
+  "azurerm_managed_disk_sas_token": [
+    "managed_disk_id",
+    "duration_in_seconds",
+    "access_level"
+  ],
+  "azurerm_managed_lustre_file_system": [
+    "name",
+    "storage_capacity_in_tb",
+    "zones",
+    "hsm_setting",
+    "location",
+    "sku_name",
+    "subnet_id",
+    "resource_group_name",
+    "identity"
+  ],
+  "azurerm_managed_redis": [
+    "resource_group_name",
+    "location",
+    "high_availability_enabled",
+    "name"
+  ],
+  "azurerm_managed_redis_access_policy_assignment": [
+    "managed_redis_id",
+    "object_id"
+  ],
+  "azurerm_managed_redis_geo_replication": [
+    "managed_redis_id"
+  ],
+  "azurerm_management_group": [
+    "name"
+  ],
+  "azurerm_management_group_policy_assignment": [
+    "management_group_id",
+    "name",
+    "location",
+    "policy_definition_id"
+  ],
+  "azurerm_management_group_policy_exemption": [
+    "name",
+    "management_group_id"
+  ],
+  "azurerm_management_group_policy_remediation": [
+    "name",
+    "management_group_id"
+  ],
+  "azurerm_management_group_policy_set_definition": [
+    "policy_type",
+    "name",
+    "management_group_id"
+  ],
+  "azurerm_management_group_subscription_association": [
+    "management_group_id",
+    "subscription_id"
+  ],
+  "azurerm_management_group_template_deployment": [
+    "name",
+    "management_group_id",
+    "location"
+  ],
+  "azurerm_management_lock": [
+    "name",
+    "scope",
+    "lock_level",
+    "notes"
+  ],
+  "azurerm_maps_account": [
+    "sku_name",
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_maps_creator": [
+    "location",
+    "name",
+    "maps_account_id"
+  ],
+  "azurerm_marketplace_agreement": [
+    "offer",
+    "plan",
+    "publisher"
+  ],
+  "azurerm_marketplace_role_assignment": [
+    "skip_service_principal_aad_check",
+    "delegated_managed_identity_resource_id",
+    "condition_version",
+    "name",
+    "description",
+    "role_definition_name",
+    "condition",
+    "principal_id",
+    "role_definition_id"
+  ],
+  "azurerm_mongo_cluster": [
+    "resource_group_name",
+    "shard_count",
+    "restore",
+    "source_location",
+    "administrator_username",
+    "preview_features",
+    "customer_managed_key",
+    "location",
+    "name",
+    "source_server_id",
+    "storage_type"
+  ],
+  "azurerm_mongo_cluster_firewall_rule": [
+    "name",
+    "mongo_cluster_id"
+  ],
+  "azurerm_mongo_cluster_user": [
+    "mongo_cluster_id",
+    "identity_provider_type",
+    "principal_type",
+    "role",
+    "object_id"
+  ],
+  "azurerm_monitor_aad_diagnostic_setting": [
+    "storage_account_id",
+    "name",
+    "eventhub_name",
+    "eventhub_authorization_rule_id"
+  ],
+  "azurerm_monitor_action_group": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_monitor_activity_log_alert": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_monitor_alert_processing_rule_action_group": [
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_monitor_alert_processing_rule_suppression": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_monitor_alert_prometheus_rule_group": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_monitor_autoscale_setting": [
+    "name",
+    "resource_group_name",
+    "location",
+    "target_resource_id"
+  ],
+  "azurerm_monitor_data_collection_endpoint": [
+    "resource_group_name",
+    "name",
+    "location"
+  ],
+  "azurerm_monitor_data_collection_rule": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_monitor_data_collection_rule_association": [
+    "target_resource_id",
+    "name"
+  ],
+  "azurerm_monitor_diagnostic_setting": [
+    "target_resource_id",
+    "name"
+  ],
+  "azurerm_monitor_metric_alert": [
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_monitor_private_link_scope": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_monitor_private_link_scoped_service": [
+    "name",
+    "resource_group_name",
+    "scope_name",
+    "linked_resource_id"
+  ],
+  "azurerm_monitor_scheduled_query_rules_alert": [
+    "name",
+    "data_source_id",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_monitor_scheduled_query_rules_alert_v2": [
+    "resource_group_name",
+    "scopes",
+    "location",
+    "name"
+  ],
+  "azurerm_monitor_scheduled_query_rules_log": [
+    "resource_group_name",
+    "name",
+    "location",
+    "data_source_id"
+  ],
+  "azurerm_monitor_smart_detector_alert_rule": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_monitor_workspace": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_mssql_database": [
+    "create_mode",
+    "collation",
+    "creation_source_database_id",
+    "ledger_enabled",
+    "secondary_type",
+    "server_id",
+    "name"
+  ],
+  "azurerm_mssql_database_extended_auditing_policy": [
+    "database_id"
+  ],
+  "azurerm_mssql_database_vulnerability_assessment_rule_baseline": [
+    "database_name",
+    "rule_id",
+    "baseline_name",
+    "server_vulnerability_assessment_id"
+  ],
+  "azurerm_mssql_elasticpool": [
+    "location",
+    "server_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_mssql_failover_group": [
+    "name",
+    "server_id"
+  ],
+  "azurerm_mssql_firewall_rule": [
+    "name",
+    "server_id"
+  ],
+  "azurerm_mssql_job": [
+    "name",
+    "job_agent_id"
+  ],
+  "azurerm_mssql_job_agent": [
+    "database_id",
+    "location",
+    "name"
+  ],
+  "azurerm_mssql_job_credential": [
+    "name",
+    "job_agent_id"
+  ],
+  "azurerm_mssql_job_schedule": [
+    "job_id"
+  ],
+  "azurerm_mssql_job_step": [
+    "name",
+    "job_id"
+  ],
+  "azurerm_mssql_job_target_group": [
+    "name",
+    "job_agent_id"
+  ],
+  "azurerm_mssql_managed_database": [
+    "name",
+    "managed_instance_id",
+    "point_in_time_restore"
+  ],
+  "azurerm_mssql_managed_instance": [
+    "resource_group_name",
+    "collation",
+    "timezone_id",
+    "administrator_login",
+    "location",
+    "name"
+  ],
+  "azurerm_mssql_managed_instance_active_directory_administrator": [
+    "managed_instance_id"
+  ],
+  "azurerm_mssql_managed_instance_failover_group": [
+    "name",
+    "location",
+    "managed_instance_id",
+    "partner_managed_instance_id"
+  ],
+  "azurerm_mssql_managed_instance_security_alert_policy": [
+    "managed_instance_name",
+    "resource_group_name"
+  ],
+  "azurerm_mssql_managed_instance_start_stop_schedule": [
+    "managed_instance_id"
+  ],
+  "azurerm_mssql_managed_instance_transparent_data_encryption": [
+    "managed_instance_id"
+  ],
+  "azurerm_mssql_managed_instance_vulnerability_assessment": [
+    "managed_instance_id"
+  ],
+  "azurerm_mssql_outbound_firewall_rule": [
+    "name",
+    "server_id"
+  ],
+  "azurerm_mssql_server": [
+    "name",
+    "version",
+    "administrator_login",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_mssql_server_dns_alias": [
+    "mssql_server_id",
+    "name"
+  ],
+  "azurerm_mssql_server_extended_auditing_policy": [
+    "server_id"
+  ],
+  "azurerm_mssql_server_microsoft_support_auditing_policy": [
+    "server_id"
+  ],
+  "azurerm_mssql_server_security_alert_policy": [
+    "resource_group_name",
+    "server_name"
+  ],
+  "azurerm_mssql_server_transparent_data_encryption": [
+    "server_id"
+  ],
+  "azurerm_mssql_server_vulnerability_assessment": [
+    "server_security_alert_policy_id"
+  ],
+  "azurerm_mssql_virtual_machine": [
+    "sql_instance",
+    "sql_license_type",
+    "key_vault_credential",
+    "virtual_machine_id"
+  ],
+  "azurerm_mssql_virtual_machine_availability_group_listener": [
+    "availability_group_name",
+    "port",
+    "load_balancer_configuration",
+    "multi_subnet_ip_configuration",
+    "replica",
+    "name",
+    "sql_virtual_machine_group_id"
+  ],
+  "azurerm_mssql_virtual_machine_group": [
+    "wsfc_domain_profile",
+    "name",
+    "resource_group_name",
+    "location",
+    "sql_image_offer"
+  ],
+  "azurerm_mssql_virtual_network_rule": [
+    "name",
+    "server_id"
+  ],
+  "azurerm_mysql_flexible_database": [
+    "name",
+    "resource_group_name",
+    "server_name",
+    "charset",
+    "collation"
+  ],
+  "azurerm_mysql_flexible_server": [
+    "geo_redundant_backup_enabled",
+    "name",
+    "source_server_id",
+    "delegated_subnet_id",
+    "private_dns_zone_id",
+    "create_mode",
+    "point_in_time_restore_time_in_utc",
+    "resource_group_name",
+    "location",
+    "administrator_login"
+  ],
+  "azurerm_mysql_flexible_server_active_directory_administrator": [
+    "server_id"
+  ],
+  "azurerm_mysql_flexible_server_configuration": [
+    "name",
+    "resource_group_name",
+    "server_name"
+  ],
+  "azurerm_mysql_flexible_server_firewall_rule": [
+    "name",
+    "resource_group_name",
+    "server_name"
+  ],
+  "azurerm_nat_gateway": [
+    "zones",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_nat_gateway_public_ip_association": [
+    "nat_gateway_id",
+    "public_ip_address_id"
+  ],
+  "azurerm_nat_gateway_public_ip_prefix_association": [
+    "public_ip_prefix_id",
+    "nat_gateway_id"
+  ],
+  "azurerm_netapp_account": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_netapp_account_encryption": [],
+  "azurerm_netapp_backup_policy": [
+    "resource_group_name",
+    "account_name",
+    "name",
+    "location"
+  ],
+  "azurerm_netapp_backup_vault": [
+    "location",
+    "account_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_netapp_pool": [
+    "resource_group_name",
+    "location",
+    "account_name",
+    "encryption_type",
+    "name",
+    "service_level"
+  ],
+  "azurerm_netapp_snapshot": [
+    "resource_group_name",
+    "location",
+    "account_name",
+    "pool_name",
+    "volume_name",
+    "name"
+  ],
+  "azurerm_netapp_snapshot_policy": [
+    "name",
+    "resource_group_name",
+    "location",
+    "account_name"
+  ],
+  "azurerm_netapp_volume": [
+    "subnet_id",
+    "kerberos_enabled",
+    "name",
+    "smb3_protocol_encryption_enabled",
+    "key_vault_private_endpoint_id",
+    "create_from_snapshot_resource_id",
+    "encryption_key_source",
+    "zone",
+    "account_name",
+    "data_protection_replication",
+    "azure_vmware_data_store_enabled",
+    "security_style",
+    "location",
+    "volume_path",
+    "accept_grow_capacity_pool_for_short_term_clone_split",
+    "smb_continuous_availability_enabled",
+    "resource_group_name"
+  ],
+  "azurerm_netapp_volume_group_oracle": [
+    "application_identifier",
+    "volume",
+    "name",
+    "resource_group_name",
+    "location",
+    "account_name",
+    "group_description"
+  ],
+  "azurerm_netapp_volume_group_sap_hana": [
+    "resource_group_name",
+    "location",
+    "account_name",
+    "group_description",
+    "application_identifier",
+    "volume",
+    "name"
+  ],
+  "azurerm_netapp_volume_quota_rule": [
+    "location",
+    "volume_id",
+    "quota_type",
+    "quota_target",
+    "name"
+  ],
+  "azurerm_network_connection_monitor": [
+    "name",
+    "network_watcher_id",
+    "location"
+  ],
+  "azurerm_network_ddos_protection_plan": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_network_function_azure_traffic_collector": [
+    "resource_group_name",
+    "location",
+    "name"
+  ],
+  "azurerm_network_function_collector_policy": [
+    "name",
+    "location",
+    "traffic_collector_id",
+    "ipfx_emission",
+    "ipfx_ingestion"
+  ],
+  "azurerm_network_interface": [
+    "edge_zone",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_network_interface_application_gateway_backend_address_pool_association": [
+    "network_interface_id",
+    "ip_configuration_name",
+    "backend_address_pool_id"
+  ],
+  "azurerm_network_interface_application_security_group_association": [
+    "network_interface_id",
+    "application_security_group_id"
+  ],
+  "azurerm_network_interface_backend_address_pool_association": [
+    "network_interface_id",
+    "ip_configuration_name",
+    "backend_address_pool_id"
+  ],
+  "azurerm_network_interface_nat_rule_association": [
+    "ip_configuration_name",
+    "nat_rule_id",
+    "network_interface_id"
+  ],
+  "azurerm_network_interface_security_group_association": [
+    "network_interface_id",
+    "network_security_group_id"
+  ],
+  "azurerm_network_manager": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_network_manager_admin_rule": [
+    "admin_rule_collection_id",
+    "name"
+  ],
+  "azurerm_network_manager_admin_rule_collection": [
+    "name",
+    "security_admin_configuration_id"
+  ],
+  "azurerm_network_manager_connectivity_configuration": [
+    "name",
+    "network_manager_id"
+  ],
+  "azurerm_network_manager_deployment": [
+    "network_manager_id",
+    "location",
+    "scope_access"
+  ],
+  "azurerm_network_manager_ipam_pool": [
+    "address_prefixes",
+    "parent_pool_name",
+    "name",
+    "network_manager_id",
+    "location"
+  ],
+  "azurerm_network_manager_ipam_pool_static_cidr": [
+    "name",
+    "ipam_pool_id"
+  ],
+  "azurerm_network_manager_management_group_connection": [
+    "management_group_id",
+    "network_manager_id",
+    "name"
+  ],
+  "azurerm_network_manager_network_group": [
+    "name",
+    "network_manager_id"
+  ],
+  "azurerm_network_manager_routing_configuration": [
+    "name",
+    "network_manager_id"
+  ],
+  "azurerm_network_manager_routing_rule": [
+    "rule_collection_id",
+    "name"
+  ],
+  "azurerm_network_manager_routing_rule_collection": [
+    "name",
+    "routing_configuration_id"
+  ],
+  "azurerm_network_manager_scope_connection": [
+    "name",
+    "network_manager_id"
+  ],
+  "azurerm_network_manager_security_admin_configuration": [
+    "name",
+    "network_manager_id"
+  ],
+  "azurerm_network_manager_static_member": [
+    "target_virtual_network_id",
+    "name",
+    "network_group_id"
+  ],
+  "azurerm_network_manager_subscription_connection": [
+    "name",
+    "subscription_id"
+  ],
+  "azurerm_network_manager_verifier_workspace": [
+    "location",
+    "name",
+    "network_manager_id"
+  ],
+  "azurerm_network_manager_verifier_workspace_reachability_analysis_intent": [
+    "name",
+    "verifier_workspace_id",
+    "source_resource_id",
+    "destination_resource_id",
+    "ip_traffic",
+    "description"
+  ],
+  "azurerm_network_packet_capture": [
+    "name",
+    "resource_group_name",
+    "network_watcher_name",
+    "target_resource_id",
+    "maximum_bytes_per_session",
+    "filter",
+    "maximum_bytes_per_packet",
+    "maximum_capture_duration",
+    "storage_location"
+  ],
+  "azurerm_network_profile": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_network_security_group": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_network_security_perimeter": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_network_security_perimeter_access_rule": [
+    "name",
+    "network_security_perimeter_profile_id",
+    "direction"
+  ],
+  "azurerm_network_security_perimeter_association": [
+    "name",
+    "resource_id",
+    "network_security_perimeter_profile_id"
+  ],
+  "azurerm_network_security_perimeter_profile": [
+    "name",
+    "network_security_perimeter_id"
+  ],
+  "azurerm_network_security_rule": [
+    "resource_group_name",
+    "name",
+    "network_security_group_name"
+  ],
+  "azurerm_network_watcher": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_network_watcher_flow_log": [
+    "location",
+    "network_watcher_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_new_relic_monitor": [
+    "resource_group_name",
+    "plan",
+    "account_creation_source",
+    "identity",
+    "location",
+    "user",
+    "ingestion_key",
+    "account_id",
+    "organization_id",
+    "org_creation_source",
+    "user_id",
+    "name"
+  ],
+  "azurerm_new_relic_tag_rule": [
+    "monitor_id"
+  ],
+  "azurerm_nginx_api_key": [
+    "name",
+    "nginx_deployment_id"
+  ],
+  "azurerm_nginx_certificate": [
+    "name",
+    "nginx_deployment_id"
+  ],
+  "azurerm_nginx_configuration": [
+    "nginx_deployment_id"
+  ],
+  "azurerm_nginx_deployment": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_notification_hub": [
+    "resource_group_name",
+    "location",
+    "browser_credential",
+    "name",
+    "namespace_name"
+  ],
+  "azurerm_notification_hub_authorization_rule": [
+    "notification_hub_name",
+    "namespace_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_notification_hub_namespace": [
+    "name",
+    "resource_group_name",
+    "location",
+    "enabled",
+    "namespace_type",
+    "zone_redundancy_enabled",
+    "replication_region"
+  ],
+  "azurerm_oracle_autonomous_database": [
+    "subnet_id",
+    "compute_model",
+    "db_workload",
+    "mtls_connection_required",
+    "db_version",
+    "name",
+    "virtual_network_id",
+    "display_name",
+    "national_character_set",
+    "location",
+    "character_set",
+    "license_model",
+    "resource_group_name",
+    "customer_contacts"
+  ],
+  "azurerm_oracle_autonomous_database_backup": [
+    "name",
+    "type",
+    "autonomous_database_id"
+  ],
+  "azurerm_oracle_autonomous_database_clone_from_backup": [
+    "source_autonomous_database_id",
+    "character_set",
+    "compute_count",
+    "auto_scaling_enabled",
+    "name",
+    "admin_password",
+    "mtls_connection_required",
+    "tags",
+    "database_version",
+    "virtual_network_id",
+    "clone_type",
+    "compute_model",
+    "data_storage_size_in_tb",
+    "display_name",
+    "license_model",
+    "customer_contacts",
+    "database_workload",
+    "subnet_id",
+    "national_character_set",
+    "backup_timestamp",
+    "location",
+    "resource_group_name",
+    "auto_scaling_for_storage_enabled",
+    "backup_retention_period_in_days",
+    "allowed_ip_addresses"
+  ],
+  "azurerm_oracle_autonomous_database_clone_from_database": [
+    "compute_model",
+    "name",
+    "virtual_network_id",
+    "database_version",
+    "display_name",
+    "national_character_set",
+    "allowed_ip_addresses",
+    "refreshable_model",
+    "resource_group_name",
+    "location",
+    "auto_scaling_enabled",
+    "customer_contacts",
+    "auto_scaling_for_storage_enabled",
+    "admin_password",
+    "database_workload",
+    "mtls_connection_required",
+    "license_model",
+    "backup_retention_period_in_days",
+    "character_set",
+    "compute_count",
+    "data_storage_size_in_tb",
+    "subnet_id",
+    "tags",
+    "source_autonomous_database_id",
+    "clone_type"
+  ],
+  "azurerm_oracle_cloud_vm_cluster": [
+    "cluster_name",
+    "data_collection_options",
+    "sparse_diskgroup_enabled",
+    "subnet_id",
+    "cloud_exadata_infrastructure_id",
+    "memory_size_in_gbs",
+    "gi_version",
+    "system_version",
+    "resource_group_name",
+    "hostname",
+    "zone_id",
+    "data_storage_size_in_tbs",
+    "time_zone",
+    "location",
+    "local_backup_enabled",
+    "license_model",
+    "db_servers",
+    "scan_listener_port_tcp_ssl",
+    "backup_subnet_cidr",
+    "domain",
+    "cpu_core_count",
+    "virtual_network_id",
+    "display_name",
+    "db_node_storage_size_in_gbs",
+    "data_storage_percentage",
+    "ssh_public_keys",
+    "scan_listener_port_tcp",
+    "name"
+  ],
+  "azurerm_oracle_exadata_infrastructure": [
+    "name",
+    "resource_group_name",
+    "shape",
+    "customer_contacts",
+    "maintenance_window",
+    "location",
+    "database_server_type",
+    "display_name",
+    "zones",
+    "compute_count",
+    "storage_count",
+    "storage_server_type"
+  ],
+  "azurerm_oracle_exascale_database_storage_vault": [
+    "additional_flash_cache_percentage",
+    "display_name",
+    "time_zone",
+    "zones",
+    "name",
+    "location",
+    "resource_group_name",
+    "description",
+    "high_capacity_database_storage"
+  ],
+  "azurerm_oracle_resource_anchor": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_orbital_contact": [
+    "name",
+    "spacecraft_id",
+    "reservation_start_time",
+    "reservation_end_time",
+    "ground_station_name",
+    "contact_profile_id"
+  ],
+  "azurerm_orbital_contact_profile": [
+    "name",
+    "links",
+    "network_configuration_subnet_id",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_orbital_spacecraft": [
+    "name",
+    "resource_group_name",
+    "location",
+    "links",
+    "two_line_elements"
+  ],
+  "azurerm_orchestrated_virtual_machine_scale_set": [
+    "priority",
+    "name",
+    "network_interface",
+    "os_disk",
+    "extension_operations_enabled",
+    "sku_profile",
+    "source_image_reference",
+    "additional_capabilities",
+    "upgrade_mode",
+    "capacity_reservation_group_id",
+    "proximity_placement_group_id",
+    "rolling_upgrade_policy",
+    "data_disk",
+    "eviction_policy",
+    "location",
+    "zone_balance",
+    "resource_group_name",
+    "os_profile",
+    "plan",
+    "platform_fault_domain_count"
+  ],
+  "azurerm_palo_alto_local_rulestack": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_palo_alto_local_rulestack_certificate": [
+    "key_vault_certificate_id",
+    "self_signed",
+    "rulestack_id"
+  ],
+  "azurerm_palo_alto_local_rulestack_fqdn_list": [
+    "rulestack_id"
+  ],
+  "azurerm_palo_alto_local_rulestack_outbound_trust_certificate_association": [
+    "certificate_id"
+  ],
+  "azurerm_palo_alto_local_rulestack_outbound_untrust_certificate_association": [
+    "certificate_id"
+  ],
+  "azurerm_palo_alto_local_rulestack_prefix_list": [
+    "rulestack_id"
+  ],
+  "azurerm_palo_alto_local_rulestack_rule": [
+    "priority",
+    "rulestack_id"
+  ],
+  "azurerm_palo_alto_next_generation_firewall_virtual_hub_local_rulestack": [
+    "name",
+    "marketplace_offer_id",
+    "network_profile",
+    "resource_group_name"
+  ],
+  "azurerm_palo_alto_next_generation_firewall_virtual_hub_panorama": [
+    "resource_group_name",
+    "marketplace_offer_id",
+    "name",
+    "location",
+    "network_profile"
+  ],
+  "azurerm_palo_alto_next_generation_firewall_virtual_hub_strata_cloud_manager": [
+    "location",
+    "marketplace_offer_id",
+    "name",
+    "resource_group_name",
+    "network_profile"
+  ],
+  "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack": [
+    "resource_group_name",
+    "marketplace_offer_id",
+    "name"
+  ],
+  "azurerm_palo_alto_next_generation_firewall_virtual_network_panorama": [
+    "name",
+    "location",
+    "resource_group_name",
+    "marketplace_offer_id"
+  ],
+  "azurerm_palo_alto_next_generation_firewall_virtual_network_strata_cloud_manager": [
+    "location",
+    "marketplace_offer_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_palo_alto_virtual_network_appliance": [
+    "name",
+    "virtual_hub_id"
+  ],
+  "azurerm_pim_active_role_assignment": [
+    "scope",
+    "role_definition_id",
+    "principal_id",
+    "justification",
+    "schedule",
+    "ticket"
+  ],
+  "azurerm_pim_eligible_role_assignment": [
+    "condition",
+    "schedule",
+    "scope",
+    "role_definition_id",
+    "condition_version",
+    "ticket",
+    "principal_id",
+    "justification"
+  ],
+  "azurerm_point_to_site_vpn_gateway": [
+    "resource_group_name",
+    "location",
+    "name",
+    "virtual_hub_id",
+    "vpn_server_configuration_id",
+    "routing_preference_internet_enabled"
+  ],
+  "azurerm_policy_definition": [
+    "name",
+    "policy_type",
+    "management_group_id"
+  ],
+  "azurerm_policy_set_definition": [
+    "policy_type",
+    "management_group_id",
+    "name"
+  ],
+  "azurerm_policy_virtual_machine_configuration_assignment": [
+    "location",
+    "virtual_machine_id",
+    "name"
+  ],
+  "azurerm_portal_dashboard": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_portal_tenant_configuration": [],
+  "azurerm_postgresql_active_directory_administrator": [
+    "server_name",
+    "resource_group_name"
+  ],
+  "azurerm_postgresql_configuration": [
+    "name",
+    "resource_group_name",
+    "server_name",
+    "value"
+  ],
+  "azurerm_postgresql_database": [
+    "name",
+    "resource_group_name",
+    "server_name",
+    "charset",
+    "collation"
+  ],
+  "azurerm_postgresql_firewall_rule": [
+    "name",
+    "resource_group_name",
+    "server_name",
+    "start_ip_address",
+    "end_ip_address"
+  ],
+  "azurerm_postgresql_flexible_server": [
+    "resource_group_name",
+    "location",
+    "delegated_subnet_id",
+    "point_in_time_restore_time_in_utc",
+    "customer_managed_key",
+    "source_server_id",
+    "geo_redundant_backup_enabled",
+    "name",
+    "cluster"
+  ],
+  "azurerm_postgresql_flexible_server_active_directory_administrator": [
+    "resource_group_name",
+    "object_id",
+    "principal_name",
+    "principal_type",
+    "tenant_id",
+    "server_name"
+  ],
+  "azurerm_postgresql_flexible_server_backup": [
+    "name",
+    "server_id"
+  ],
+  "azurerm_postgresql_flexible_server_configuration": [
+    "name",
+    "server_id"
+  ],
+  "azurerm_postgresql_flexible_server_database": [
+    "name",
+    "server_id",
+    "charset",
+    "collation"
+  ],
+  "azurerm_postgresql_flexible_server_firewall_rule": [
+    "server_id",
+    "name"
+  ],
+  "azurerm_postgresql_flexible_server_virtual_endpoint": [
+    "name",
+    "source_server_id",
+    "type"
+  ],
+  "azurerm_postgresql_server": [
+    "infrastructure_encryption_enabled",
+    "location",
+    "resource_group_name",
+    "version",
+    "geo_redundant_backup_enabled",
+    "name",
+    "administrator_login"
+  ],
+  "azurerm_postgresql_server_key": [
+    "server_id"
+  ],
+  "azurerm_postgresql_virtual_network_rule": [
+    "name",
+    "resource_group_name",
+    "server_name"
+  ],
+  "azurerm_powerbi_embedded": [
+    "mode",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_private_dns_a_record": [
+    "zone_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_private_dns_aaaa_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_private_dns_cname_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_private_dns_mx_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_private_dns_ptr_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_private_dns_resolver": [
+    "location",
+    "virtual_network_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_private_dns_resolver_dns_forwarding_ruleset": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_private_dns_resolver_forwarding_rule": [
+    "dns_forwarding_ruleset_id",
+    "domain_name",
+    "name"
+  ],
+  "azurerm_private_dns_resolver_inbound_endpoint": [
+    "private_dns_resolver_id",
+    "ip_configurations",
+    "location",
+    "name"
+  ],
+  "azurerm_private_dns_resolver_outbound_endpoint": [
+    "name",
+    "private_dns_resolver_id",
+    "subnet_id",
+    "location"
+  ],
+  "azurerm_private_dns_resolver_virtual_network_link": [
+    "virtual_network_id",
+    "name",
+    "dns_forwarding_ruleset_id"
+  ],
+  "azurerm_private_dns_srv_record": [
+    "name",
+    "resource_group_name",
+    "zone_name"
+  ],
+  "azurerm_private_dns_txt_record": [
+    "resource_group_name",
+    "zone_name",
+    "name"
+  ],
+  "azurerm_private_dns_zone": [
+    "name",
+    "resource_group_name",
+    "soa_record"
+  ],
+  "azurerm_private_dns_zone_virtual_network_link": [
+    "name",
+    "private_dns_zone_name",
+    "resource_group_name",
+    "virtual_network_id"
+  ],
+  "azurerm_private_endpoint": [
+    "subnet_id",
+    "custom_network_interface_name",
+    "private_service_connection",
+    "ip_configuration",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_private_endpoint_application_security_group_association": [
+    "private_endpoint_id",
+    "application_security_group_id"
+  ],
+  "azurerm_private_link_service": [
+    "name",
+    "location",
+    "resource_group_name",
+    "load_balancer_frontend_ip_configuration_ids"
+  ],
+  "azurerm_proximity_placement_group": [
+    "name",
+    "resource_group_name",
+    "location",
+    "zone"
+  ],
+  "azurerm_public_ip": [
+    "ip_version",
+    "name",
+    "resource_group_name",
+    "zones",
+    "location",
+    "edge_zone",
+    "sku",
+    "sku_tier",
+    "ip_tags",
+    "public_ip_prefix_id"
+  ],
+  "azurerm_public_ip_prefix": [
+    "location",
+    "resource_group_name",
+    "custom_ip_prefix_id",
+    "sku_tier",
+    "ip_version",
+    "name",
+    "sku",
+    "prefix_length",
+    "zones"
+  ],
+  "azurerm_purview_account": [
+    "location",
+    "managed_resource_group_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_qumulo_file_system": [
+    "name",
+    "resource_group_name",
+    "storage_sku",
+    "subnet_id",
+    "zone",
+    "offer_id",
+    "admin_password",
+    "location",
+    "email",
+    "plan_id",
+    "publisher_id"
+  ],
+  "azurerm_recovery_services_vault": [
+    "name",
+    "resource_group_name",
+    "classic_vmware_replication_enabled",
+    "location"
+  ],
+  "azurerm_recovery_services_vault_resource_guard_association": [
+    "vault_id",
+    "resource_guard_id"
+  ],
+  "azurerm_redhat_openshift_cluster": [
+    "main_profile",
+    "name",
+    "cluster_profile",
+    "network_profile",
+    "worker_profile",
+    "location",
+    "ingress_profile",
+    "resource_group_name",
+    "api_server_profile"
+  ],
+  "azurerm_redis_cache": [
+    "name",
+    "location",
+    "private_static_ip_address",
+    "resource_group_name",
+    "zones",
+    "subnet_id"
+  ],
+  "azurerm_redis_cache_access_policy": [
+    "redis_cache_id",
+    "name"
+  ],
+  "azurerm_redis_cache_access_policy_assignment": [
+    "access_policy_name",
+    "object_id",
+    "object_id_alias",
+    "name",
+    "redis_cache_id"
+  ],
+  "azurerm_redis_enterprise_cluster": [
+    "location",
+    "sku_name",
+    "minimum_tls_version",
+    "name",
+    "resource_group_name",
+    "zones"
+  ],
+  "azurerm_redis_enterprise_database": [
+    "clustering_policy",
+    "module",
+    "port",
+    "client_protocol",
+    "eviction_policy",
+    "linked_database_group_nickname",
+    "name",
+    "cluster_id"
+  ],
+  "azurerm_redis_firewall_rule": [
+    "name",
+    "redis_cache_name",
+    "resource_group_name"
+  ],
+  "azurerm_redis_linked_server": [
+    "server_role",
+    "target_redis_cache_name",
+    "linked_redis_cache_id",
+    "linked_redis_cache_location",
+    "resource_group_name"
+  ],
+  "azurerm_relay_hybrid_connection": [
+    "resource_group_name",
+    "relay_namespace_name",
+    "requires_client_authorization",
+    "name"
+  ],
+  "azurerm_relay_hybrid_connection_authorization_rule": [
+    "name",
+    "namespace_name",
+    "resource_group_name",
+    "hybrid_connection_name"
+  ],
+  "azurerm_relay_namespace": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_relay_namespace_authorization_rule": [
+    "namespace_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_resource_deployment_script_azure_cli": [
+    "resource_group_name",
+    "cleanup_preference",
+    "primary_script_uri",
+    "supporting_script_uris",
+    "command_line",
+    "container",
+    "retention_interval",
+    "name",
+    "force_update_tag",
+    "location",
+    "environment_variable",
+    "version",
+    "script_content",
+    "storage_account",
+    "identity",
+    "timeout"
+  ],
+  "azurerm_resource_deployment_script_azure_power_shell": [
+    "retention_interval",
+    "resource_group_name",
+    "script_content",
+    "identity",
+    "force_update_tag",
+    "location",
+    "environment_variable",
+    "storage_account",
+    "supporting_script_uris",
+    "cleanup_preference",
+    "name",
+    "container",
+    "command_line",
+    "version",
+    "timeout",
+    "primary_script_uri"
+  ],
+  "azurerm_resource_group": [
+    "name",
+    "location"
+  ],
+  "azurerm_resource_group_cost_management_export": [
+    "resource_group_id",
+    "export_data_storage_location",
+    "name"
+  ],
+  "azurerm_resource_group_cost_management_view": [
+    "name",
+    "accumulated",
+    "dataset",
+    "resource_group_id"
+  ],
+  "azurerm_resource_group_policy_assignment": [
+    "name",
+    "resource_group_id",
+    "location",
+    "policy_definition_id"
+  ],
+  "azurerm_resource_group_policy_exemption": [
+    "name",
+    "resource_group_id",
+    "policy_assignment_id"
+  ],
+  "azurerm_resource_group_policy_remediation": [
+    "resource_group_id",
+    "name"
+  ],
+  "azurerm_resource_group_template_deployment": [
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_resource_management_private_link": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_resource_management_private_link_association": [
+    "name",
+    "management_group_id",
+    "resource_management_private_link_id",
+    "public_network_access_enabled"
+  ],
+  "azurerm_resource_policy_assignment": [
+    "resource_id",
+    "location",
+    "policy_definition_id",
+    "name"
+  ],
+  "azurerm_resource_policy_exemption": [
+    "name",
+    "resource_id",
+    "policy_assignment_id"
+  ],
+  "azurerm_resource_policy_remediation": [
+    "name",
+    "resource_id"
+  ],
+  "azurerm_resource_provider_registration": [
+    "name"
+  ],
+  "azurerm_restore_point_collection": [
+    "location",
+    "source_virtual_machine_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_role_assignment": [
+    "principal_id",
+    "principal_type",
+    "description",
+    "condition",
+    "condition_version",
+    "scope",
+    "role_definition_name",
+    "delegated_managed_identity_resource_id",
+    "name",
+    "role_definition_id"
+  ],
+  "azurerm_role_definition": [
+    "role_definition_id",
+    "scope"
+  ],
+  "azurerm_role_management_policy": [
+    "role_definition_id",
+    "scope"
+  ],
+  "azurerm_route": [
+    "name",
+    "resource_group_name",
+    "route_table_name"
+  ],
+  "azurerm_route_filter": [
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_route_map": [
+    "name",
+    "virtual_hub_id"
+  ],
+  "azurerm_route_server": [
+    "location",
+    "subnet_id",
+    "name",
+    "resource_group_name",
+    "sku",
+    "public_ip_address_id"
+  ],
+  "azurerm_route_server_bgp_connection": [
+    "peer_ip",
+    "name",
+    "route_server_id",
+    "peer_asn"
+  ],
+  "azurerm_route_table": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_search_service": [
+    "name",
+    "resource_group_name",
+    "hosting_mode",
+    "location"
+  ],
+  "azurerm_search_shared_private_link_service": [
+    "target_resource_id",
+    "name",
+    "search_service_id",
+    "subresource_name"
+  ],
+  "azurerm_security_center_assessment": [
+    "assessment_policy_id",
+    "target_resource_id"
+  ],
+  "azurerm_security_center_assessment_policy": [],
+  "azurerm_security_center_auto_provisioning": [],
+  "azurerm_security_center_automation": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_security_center_contact": [
+    "name"
+  ],
+  "azurerm_security_center_server_vulnerability_assessment_virtual_machine": [
+    "virtual_machine_id"
+  ],
+  "azurerm_security_center_server_vulnerability_assessments_setting": [],
+  "azurerm_security_center_setting": [
+    "setting_name"
+  ],
+  "azurerm_security_center_storage_defender": [
+    "storage_account_id"
+  ],
+  "azurerm_security_center_subscription_pricing": [
+    "subplan"
+  ],
+  "azurerm_security_center_workspace": [],
+  "azurerm_sentinel_alert_rule_anomaly_built_in": [
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_alert_rule_anomaly_duplicate": [
+    "log_analytics_workspace_id",
+    "built_in_rule_id"
+  ],
+  "azurerm_sentinel_alert_rule_fusion": [
+    "name",
+    "log_analytics_workspace_id",
+    "alert_rule_template_guid"
+  ],
+  "azurerm_sentinel_alert_rule_machine_learning_behavior_analytics": [
+    "name",
+    "log_analytics_workspace_id",
+    "alert_rule_template_guid"
+  ],
+  "azurerm_sentinel_alert_rule_ms_security_incident": [
+    "name",
+    "log_analytics_workspace_id",
+    "alert_rule_template_guid"
+  ],
+  "azurerm_sentinel_alert_rule_nrt": [
+    "log_analytics_workspace_id",
+    "name",
+    "alert_rule_template_version",
+    "alert_rule_template_guid"
+  ],
+  "azurerm_sentinel_alert_rule_scheduled": [
+    "alert_rule_template_guid",
+    "log_analytics_workspace_id",
+    "name"
+  ],
+  "azurerm_sentinel_alert_rule_threat_intelligence": [
+    "log_analytics_workspace_id",
+    "alert_rule_template_guid",
+    "name"
+  ],
+  "azurerm_sentinel_automation_rule": [
+    "name",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_data_connector_aws_cloud_trail": [
+    "name",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_data_connector_aws_s3": [
+    "name",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_data_connector_azure_active_directory": [
+    "log_analytics_workspace_id",
+    "tenant_id",
+    "name"
+  ],
+  "azurerm_sentinel_data_connector_azure_advanced_threat_protection": [
+    "name",
+    "log_analytics_workspace_id",
+    "tenant_id"
+  ],
+  "azurerm_sentinel_data_connector_azure_security_center": [
+    "name",
+    "log_analytics_workspace_id",
+    "subscription_id"
+  ],
+  "azurerm_sentinel_data_connector_dynamics_365": [
+    "name",
+    "log_analytics_workspace_id",
+    "tenant_id"
+  ],
+  "azurerm_sentinel_data_connector_iot": [
+    "name",
+    "log_analytics_workspace_id",
+    "subscription_id"
+  ],
+  "azurerm_sentinel_data_connector_microsoft_cloud_app_security": [
+    "name",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection": [
+    "tenant_id",
+    "name",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_data_connector_microsoft_threat_intelligence": [
+    "microsoft_emerging_threat_feed_lookback_date",
+    "name",
+    "log_analytics_workspace_id",
+    "tenant_id"
+  ],
+  "azurerm_sentinel_data_connector_microsoft_threat_protection": [
+    "log_analytics_workspace_id",
+    "tenant_id",
+    "name"
+  ],
+  "azurerm_sentinel_data_connector_office_365": [
+    "log_analytics_workspace_id",
+    "tenant_id",
+    "name"
+  ],
+  "azurerm_sentinel_data_connector_office_365_project": [
+    "name",
+    "log_analytics_workspace_id",
+    "tenant_id"
+  ],
+  "azurerm_sentinel_data_connector_office_atp": [
+    "name",
+    "log_analytics_workspace_id",
+    "tenant_id"
+  ],
+  "azurerm_sentinel_data_connector_office_irm": [
+    "tenant_id",
+    "name",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_data_connector_office_power_bi": [
+    "name",
+    "log_analytics_workspace_id",
+    "tenant_id"
+  ],
+  "azurerm_sentinel_data_connector_threat_intelligence": [
+    "log_analytics_workspace_id",
+    "tenant_id",
+    "lookback_date",
+    "name"
+  ],
+  "azurerm_sentinel_data_connector_threat_intelligence_taxii": [
+    "name",
+    "tenant_id",
+    "log_analytics_workspace_id"
+  ],
+  "azurerm_sentinel_log_analytics_workspace_onboarding": [
+    "workspace_id",
+    "customer_managed_key_enabled"
+  ],
+  "azurerm_sentinel_metadata": [
+    "workspace_id",
+    "name"
+  ],
+  "azurerm_sentinel_threat_intelligence_indicator": [
+    "source",
+    "workspace_id"
+  ],
+  "azurerm_sentinel_watchlist": [
+    "description",
+    "labels",
+    "default_duration",
+    "name",
+    "log_analytics_workspace_id",
+    "display_name",
+    "item_search_key"
+  ],
+  "azurerm_sentinel_watchlist_item": [
+    "name",
+    "watchlist_id"
+  ],
+  "azurerm_service_fabric_cluster": [
+    "name",
+    "management_endpoint",
+    "location",
+    "resource_group_name",
+    "vm_image"
+  ],
+  "azurerm_service_fabric_managed_cluster": [
+    "subnet_id",
+    "sku",
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_service_plan": [
+    "location",
+    "os_type",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_servicebus_namespace": [
+    "name",
+    "premium_messaging_partitions",
+    "customer_managed_key",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_servicebus_namespace_authorization_rule": [
+    "name",
+    "namespace_id"
+  ],
+  "azurerm_servicebus_namespace_customer_managed_key": [
+    "namespace_id",
+    "infrastructure_encryption_enabled"
+  ],
+  "azurerm_servicebus_namespace_disaster_recovery_config": [
+    "primary_namespace_id",
+    "name"
+  ],
+  "azurerm_servicebus_queue": [
+    "requires_session",
+    "name",
+    "partitioning_enabled",
+    "requires_duplicate_detection",
+    "namespace_id"
+  ],
+  "azurerm_servicebus_queue_authorization_rule": [
+    "queue_id",
+    "name"
+  ],
+  "azurerm_servicebus_subscription": [
+    "topic_id",
+    "requires_session",
+    "name",
+    "client_scoped_subscription"
+  ],
+  "azurerm_servicebus_subscription_rule": [
+    "name",
+    "subscription_id"
+  ],
+  "azurerm_servicebus_topic": [
+    "requires_duplicate_detection",
+    "name",
+    "namespace_id",
+    "partitioning_enabled"
+  ],
+  "azurerm_servicebus_topic_authorization_rule": [
+    "name",
+    "topic_id"
+  ],
+  "azurerm_shared_image": [
+    "specialized",
+    "trusted_launch_supported",
+    "confidential_vm_enabled",
+    "name",
+    "architecture",
+    "os_type",
+    "identifier",
+    "confidential_vm_supported",
+    "accelerated_network_support_enabled",
+    "location",
+    "resource_group_name",
+    "hyper_v_generation",
+    "eula",
+    "trusted_launch_enabled",
+    "hibernation_enabled",
+    "disk_controller_type_nvme_enabled",
+    "gallery_name",
+    "purchase_plan",
+    "privacy_statement_uri"
+  ],
+  "azurerm_shared_image_gallery": [
+    "name",
+    "resource_group_name",
+    "location",
+    "sharing"
+  ],
+  "azurerm_shared_image_version": [
+    "name",
+    "image_name",
+    "resource_group_name",
+    "os_disk_snapshot_id",
+    "replication_mode",
+    "gallery_name",
+    "storage_account_id",
+    "managed_image_id",
+    "location",
+    "blob_uri",
+    "deletion_of_replicated_locations_enabled",
+    "target_region"
+  ],
+  "azurerm_signalr_service": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_signalr_service_custom_certificate": [
+    "custom_certificate_id",
+    "name",
+    "signalr_service_id"
+  ],
+  "azurerm_signalr_service_custom_domain": [
+    "name",
+    "signalr_service_id",
+    "domain_name",
+    "signalr_custom_certificate_id"
+  ],
+  "azurerm_signalr_service_network_acl": [
+    "signalr_service_id"
+  ],
+  "azurerm_signalr_shared_private_link_resource": [
+    "name",
+    "signalr_service_id",
+    "sub_resource_name",
+    "target_resource_id"
+  ],
+  "azurerm_site_recovery_fabric": [
+    "resource_group_name",
+    "recovery_vault_name",
+    "location",
+    "name"
+  ],
+  "azurerm_site_recovery_hyperv_network_mapping": [
+    "name",
+    "recovery_vault_id",
+    "source_system_center_virtual_machine_manager_name",
+    "source_network_name",
+    "target_network_id"
+  ],
+  "azurerm_site_recovery_hyperv_replication_policy": [
+    "recovery_vault_id",
+    "name"
+  ],
+  "azurerm_site_recovery_hyperv_replication_policy_association": [
+    "hyperv_site_id",
+    "policy_id",
+    "name"
+  ],
+  "azurerm_site_recovery_network_mapping": [
+    "target_recovery_fabric_name",
+    "source_network_id",
+    "target_network_id",
+    "name",
+    "resource_group_name",
+    "recovery_vault_name",
+    "source_recovery_fabric_name"
+  ],
+  "azurerm_site_recovery_protection_container": [
+    "name",
+    "resource_group_name",
+    "recovery_vault_name",
+    "recovery_fabric_name"
+  ],
+  "azurerm_site_recovery_protection_container_mapping": [
+    "recovery_target_protection_container_id",
+    "name",
+    "resource_group_name",
+    "recovery_vault_name",
+    "recovery_fabric_name",
+    "recovery_replication_policy_id",
+    "recovery_source_protection_container_name"
+  ],
+  "azurerm_site_recovery_replicated_vm": [
+    "name",
+    "resource_group_name",
+    "recovery_vault_name",
+    "recovery_replication_policy_id",
+    "target_zone",
+    "source_recovery_protection_container_name",
+    "target_recovery_protection_container_id",
+    "target_resource_group_id",
+    "target_edge_zone",
+    "unmanaged_disk",
+    "source_vm_id",
+    "target_recovery_fabric_id",
+    "managed_disk",
+    "source_recovery_fabric_name"
+  ],
+  "azurerm_site_recovery_replication_policy": [
+    "name",
+    "resource_group_name",
+    "recovery_vault_name"
+  ],
+  "azurerm_site_recovery_replication_recovery_plan": [
+    "azure_to_azure_settings",
+    "name",
+    "recovery_vault_id",
+    "source_recovery_fabric_id",
+    "target_recovery_fabric_id"
+  ],
+  "azurerm_site_recovery_services_vault_hyperv_site": [
+    "recovery_vault_id",
+    "name"
+  ],
+  "azurerm_site_recovery_vmware_replicated_vm": [
+    "physical_server_credential_name",
+    "name",
+    "target_vm_name",
+    "source_vm_name",
+    "appliance_name"
+  ],
+  "azurerm_site_recovery_vmware_replication_policy": [
+    "recovery_vault_id",
+    "name"
+  ],
+  "azurerm_site_recovery_vmware_replication_policy_association": [
+    "name",
+    "recovery_vault_id",
+    "policy_id"
+  ],
+  "azurerm_snapshot": [
+    "location",
+    "incremental_enabled",
+    "source_uri",
+    "name",
+    "resource_group_name",
+    "storage_account_id",
+    "source_resource_id"
+  ],
+  "azurerm_source_control_token": [],
+  "azurerm_spring_cloud_accelerator": [
+    "spring_cloud_service_id",
+    "name"
+  ],
+  "azurerm_spring_cloud_active_deployment": [
+    "spring_cloud_app_id"
+  ],
+  "azurerm_spring_cloud_api_portal": [
+    "spring_cloud_service_id",
+    "name"
+  ],
+  "azurerm_spring_cloud_api_portal_custom_domain": [
+    "name",
+    "spring_cloud_api_portal_id"
+  ],
+  "azurerm_spring_cloud_app": [
+    "service_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_spring_cloud_app_cosmosdb_association": [
+    "name",
+    "api_type",
+    "spring_cloud_app_id",
+    "cosmosdb_account_id"
+  ],
+  "azurerm_spring_cloud_app_dynamics_application_performance_monitoring": [
+    "spring_cloud_service_id",
+    "name"
+  ],
+  "azurerm_spring_cloud_app_mysql_association": [
+    "name",
+    "spring_cloud_app_id",
+    "mysql_server_id"
+  ],
+  "azurerm_spring_cloud_app_redis_association": [
+    "name",
+    "spring_cloud_app_id",
+    "redis_cache_id"
+  ],
+  "azurerm_spring_cloud_application_insights_application_performance_monitoring": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_application_live_view": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_build_deployment": [
+    "name",
+    "spring_cloud_app_id"
+  ],
+  "azurerm_spring_cloud_build_pack_binding": [
+    "name",
+    "spring_cloud_builder_id"
+  ],
+  "azurerm_spring_cloud_builder": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_certificate": [
+    "service_name",
+    "certificate_content",
+    "exclude_private_key",
+    "key_vault_certificate_id",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_spring_cloud_configuration_service": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_connection": [
+    "authentication",
+    "name",
+    "spring_cloud_id",
+    "target_resource_id"
+  ],
+  "azurerm_spring_cloud_container_deployment": [
+    "spring_cloud_app_id",
+    "name"
+  ],
+  "azurerm_spring_cloud_custom_domain": [
+    "thumbprint",
+    "name",
+    "spring_cloud_app_id"
+  ],
+  "azurerm_spring_cloud_customized_accelerator": [
+    "spring_cloud_accelerator_id",
+    "git_repository",
+    "name"
+  ],
+  "azurerm_spring_cloud_dev_tool_portal": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_dynatrace_application_performance_monitoring": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_elastic_application_performance_monitoring": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_gateway": [
+    "spring_cloud_service_id",
+    "name"
+  ],
+  "azurerm_spring_cloud_gateway_custom_domain": [
+    "name",
+    "spring_cloud_gateway_id"
+  ],
+  "azurerm_spring_cloud_gateway_route_config": [
+    "name",
+    "spring_cloud_gateway_id"
+  ],
+  "azurerm_spring_cloud_java_deployment": [
+    "name",
+    "spring_cloud_app_id"
+  ],
+  "azurerm_spring_cloud_new_relic_application_performance_monitoring": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_spring_cloud_service": [
+    "resource_group_name",
+    "sku_tier",
+    "network",
+    "name",
+    "location",
+    "sku_name"
+  ],
+  "azurerm_spring_cloud_storage": [
+    "name",
+    "spring_cloud_service_id"
+  ],
+  "azurerm_ssh_public_key": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_stack_hci_cluster": [
+    "location",
+    "client_id",
+    "tenant_id",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_stack_hci_deployment_setting": [
+    "arc_resource_ids",
+    "version",
+    "scale_unit",
+    "stack_hci_cluster_id"
+  ],
+  "azurerm_stack_hci_extension": [
+    "name",
+    "type",
+    "auto_upgrade_minor_version_enabled",
+    "arc_setting_id",
+    "publisher"
+  ],
+  "azurerm_stack_hci_logical_network": [
+    "name",
+    "resource_group_name",
+    "location",
+    "custom_location_id",
+    "virtual_switch_name",
+    "dns_servers",
+    "subnet"
+  ],
+  "azurerm_stack_hci_marketplace_gallery_image": [
+    "location",
+    "custom_location_id",
+    "hyperv_generation",
+    "os_type",
+    "version",
+    "storage_path_id",
+    "resource_group_name",
+    "name",
+    "identifier"
+  ],
+  "azurerm_stack_hci_network_interface": [
+    "name",
+    "resource_group_name",
+    "location",
+    "custom_location_id",
+    "ip_configuration",
+    "dns_servers",
+    "mac_address"
+  ],
+  "azurerm_stack_hci_storage_path": [
+    "name",
+    "resource_group_name",
+    "location",
+    "custom_location_id",
+    "path"
+  ],
+  "azurerm_stack_hci_virtual_hard_disk": [
+    "block_size_in_bytes",
+    "physical_sector_in_bytes",
+    "storage_path_id",
+    "resource_group_name",
+    "logical_sector_in_bytes",
+    "custom_location_id",
+    "disk_size_in_gb",
+    "disk_file_format",
+    "dynamic_enabled",
+    "hyperv_generation",
+    "name",
+    "location"
+  ],
+  "azurerm_static_site": [
+    "resource_group_name",
+    "location",
+    "name"
+  ],
+  "azurerm_static_site_custom_domain": [
+    "domain_name",
+    "validation_type",
+    "static_site_id"
+  ],
+  "azurerm_static_web_app": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_static_web_app_custom_domain": [
+    "static_web_app_id",
+    "domain_name",
+    "validation_type"
+  ],
+  "azurerm_static_web_app_function_app_registration": [
+    "static_web_app_id",
+    "function_app_id"
+  ],
+  "azurerm_storage_account": [
+    "name",
+    "account_tier",
+    "dns_endpoint_type",
+    "queue_encryption_key_type",
+    "provisioned_billing_model_version",
+    "immutability_policy",
+    "resource_group_name",
+    "location",
+    "infrastructure_encryption_enabled",
+    "nfsv3_enabled",
+    "is_hns_enabled",
+    "table_encryption_key_type",
+    "edge_zone"
+  ],
+  "azurerm_storage_account_customer_managed_key": [
+    "storage_account_id"
+  ],
+  "azurerm_storage_account_local_user": [
+    "name",
+    "storage_account_id"
+  ],
+  "azurerm_storage_account_network_rules": [
+    "storage_account_id"
+  ],
+  "azurerm_storage_account_queue_properties": [
+    "storage_account_id"
+  ],
+  "azurerm_storage_account_static_website": [
+    "storage_account_id"
+  ],
+  "azurerm_storage_blob": [
+    "parallelism",
+    "type",
+    "encryption_scope",
+    "source",
+    "name",
+    "storage_account_name",
+    "storage_container_name",
+    "source_uri",
+    "content_md5",
+    "size",
+    "source_content"
+  ],
+  "azurerm_storage_blob_inventory_policy": [
+    "storage_account_id"
+  ],
+  "azurerm_storage_container": [
+    "name",
+    "encryption_scope_override_enabled",
+    "default_encryption_scope"
+  ],
+  "azurerm_storage_container_immutability_policy": [
+    "storage_container_resource_manager_id"
+  ],
+  "azurerm_storage_data_lake_gen2_filesystem": [
+    "default_encryption_scope",
+    "name",
+    "storage_account_id"
+  ],
+  "azurerm_storage_data_lake_gen2_path": [
+    "storage_account_id",
+    "filesystem_name",
+    "path",
+    "resource"
+  ],
+  "azurerm_storage_encryption_scope": [
+    "infrastructure_encryption_required",
+    "name",
+    "storage_account_id"
+  ],
+  "azurerm_storage_management_policy": [
+    "storage_account_id"
+  ],
+  "azurerm_storage_mover": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_storage_mover_agent": [
+    "name",
+    "arc_virtual_machine_id",
+    "arc_virtual_machine_uuid",
+    "storage_mover_id"
+  ],
+  "azurerm_storage_mover_job_definition": [
+    "target_name",
+    "source_name",
+    "target_sub_path",
+    "storage_mover_project_id",
+    "source_sub_path",
+    "name"
+  ],
+  "azurerm_storage_mover_project": [
+    "name",
+    "storage_mover_id"
+  ],
+  "azurerm_storage_mover_source_endpoint": [
+    "nfs_version",
+    "name",
+    "storage_mover_id",
+    "host",
+    "export"
+  ],
+  "azurerm_storage_mover_target_endpoint": [
+    "name",
+    "storage_mover_id",
+    "storage_account_id",
+    "storage_container_name"
+  ],
+  "azurerm_storage_object_replication": [
+    "source_storage_account_id",
+    "destination_storage_account_id"
+  ],
+  "azurerm_storage_queue": [
+    "name"
+  ],
+  "azurerm_storage_share": [
+    "name",
+    "enabled_protocol"
+  ],
+  "azurerm_storage_share_directory": [
+    "name",
+    "storage_share_url",
+    "storage_share_id"
+  ],
+  "azurerm_storage_share_file": [
+    "storage_share_url",
+    "content_md5",
+    "path",
+    "source",
+    "storage_share_id",
+    "name"
+  ],
+  "azurerm_storage_sync": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_storage_sync_cloud_endpoint": [
+    "name",
+    "storage_sync_group_id",
+    "file_share_name",
+    "storage_account_id",
+    "storage_account_tenant_id"
+  ],
+  "azurerm_storage_sync_group": [
+    "name",
+    "storage_sync_id"
+  ],
+  "azurerm_storage_sync_server_endpoint": [
+    "storage_sync_group_id",
+    "initial_download_policy",
+    "name",
+    "registered_server_id",
+    "server_local_path"
+  ],
+  "azurerm_storage_table": [
+    "name",
+    "storage_account_name"
+  ],
+  "azurerm_storage_table_entity": [
+    "partition_key",
+    "row_key"
+  ],
+  "azurerm_stream_analytics_cluster": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_stream_analytics_function_javascript_uda": [
+    "name",
+    "stream_analytics_job_id"
+  ],
+  "azurerm_stream_analytics_function_javascript_udf": [
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name"
+  ],
+  "azurerm_stream_analytics_job": [
+    "name",
+    "resource_group_name",
+    "location",
+    "type"
+  ],
+  "azurerm_stream_analytics_job_schedule": [
+    "stream_analytics_job_id"
+  ],
+  "azurerm_stream_analytics_job_storage_account": [
+    "stream_analytics_job_id"
+  ],
+  "azurerm_stream_analytics_managed_private_endpoint": [
+    "target_resource_id",
+    "subresource_name",
+    "name",
+    "resource_group_name",
+    "stream_analytics_cluster_name"
+  ],
+  "azurerm_stream_analytics_output_blob": [
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name"
+  ],
+  "azurerm_stream_analytics_output_cosmosdb": [
+    "name",
+    "stream_analytics_job_id"
+  ],
+  "azurerm_stream_analytics_output_eventhub": [
+    "stream_analytics_job_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_stream_analytics_output_function": [
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name"
+  ],
+  "azurerm_stream_analytics_output_mssql": [
+    "name",
+    "resource_group_name",
+    "user",
+    "stream_analytics_job_name",
+    "server",
+    "database",
+    "table"
+  ],
+  "azurerm_stream_analytics_output_powerbi": [
+    "name",
+    "stream_analytics_job_id"
+  ],
+  "azurerm_stream_analytics_output_servicebus_queue": [
+    "stream_analytics_job_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_stream_analytics_output_servicebus_topic": [
+    "name",
+    "resource_group_name",
+    "stream_analytics_job_name"
+  ],
+  "azurerm_stream_analytics_output_synapse": [
+    "database",
+    "table",
+    "user",
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name",
+    "server"
+  ],
+  "azurerm_stream_analytics_output_table": [
+    "stream_analytics_job_name",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_stream_analytics_reference_input_blob": [
+    "resource_group_name",
+    "name",
+    "stream_analytics_job_name"
+  ],
+  "azurerm_stream_analytics_reference_input_mssql": [
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name"
+  ],
+  "azurerm_stream_analytics_stream_input_blob": [
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name"
+  ],
+  "azurerm_stream_analytics_stream_input_eventhub": [
+    "resource_group_name",
+    "name",
+    "stream_analytics_job_name"
+  ],
+  "azurerm_stream_analytics_stream_input_eventhub_v2": [
+    "stream_analytics_job_id",
+    "name"
+  ],
+  "azurerm_stream_analytics_stream_input_iothub": [
+    "name",
+    "stream_analytics_job_name",
+    "resource_group_name",
+    "shared_access_policy_key"
+  ],
+  "azurerm_subnet": [
+    "virtual_network_name",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_subnet_nat_gateway_association": [
+    "subnet_id",
+    "nat_gateway_id"
+  ],
+  "azurerm_subnet_network_security_group_association": [
+    "subnet_id",
+    "network_security_group_id"
+  ],
+  "azurerm_subnet_route_table_association": [
+    "subnet_id",
+    "route_table_id"
+  ],
+  "azurerm_subnet_service_endpoint_storage_policy": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_subscription": [
+    "subscription_id",
+    "alias",
+    "workload"
+  ],
+  "azurerm_subscription_cost_management_export": [
+    "name",
+    "subscription_id",
+    "export_data_storage_location"
+  ],
+  "azurerm_subscription_cost_management_view": [
+    "name",
+    "subscription_id",
+    "accumulated",
+    "dataset"
+  ],
+  "azurerm_subscription_policy_assignment": [
+    "location",
+    "subscription_id",
+    "policy_definition_id",
+    "name"
+  ],
+  "azurerm_subscription_policy_exemption": [
+    "subscription_id",
+    "name",
+    "policy_assignment_id"
+  ],
+  "azurerm_subscription_policy_remediation": [
+    "name",
+    "subscription_id"
+  ],
+  "azurerm_subscription_template_deployment": [
+    "name",
+    "location"
+  ],
+  "azurerm_synapse_firewall_rule": [
+    "name",
+    "synapse_workspace_id"
+  ],
+  "azurerm_synapse_integration_runtime_azure": [
+    "name",
+    "synapse_workspace_id",
+    "location"
+  ],
+  "azurerm_synapse_integration_runtime_self_hosted": [
+    "name",
+    "synapse_workspace_id"
+  ],
+  "azurerm_synapse_linked_service": [
+    "name",
+    "synapse_workspace_id",
+    "type"
+  ],
+  "azurerm_synapse_managed_private_endpoint": [
+    "synapse_workspace_id",
+    "target_resource_id",
+    "subresource_name",
+    "name"
+  ],
+  "azurerm_synapse_private_link_hub": [
+    "location",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_synapse_role_assignment": [
+    "role_name",
+    "synapse_workspace_id",
+    "synapse_spark_pool_id",
+    "principal_id",
+    "principal_type"
+  ],
+  "azurerm_synapse_spark_pool": [
+    "name",
+    "synapse_workspace_id"
+  ],
+  "azurerm_synapse_sql_pool": [
+    "name",
+    "synapse_workspace_id",
+    "create_mode",
+    "recovery_database_id",
+    "storage_account_type",
+    "collation",
+    "restore"
+  ],
+  "azurerm_synapse_sql_pool_extended_auditing_policy": [
+    "sql_pool_id"
+  ],
+  "azurerm_synapse_sql_pool_security_alert_policy": [
+    "sql_pool_id"
+  ],
+  "azurerm_synapse_sql_pool_vulnerability_assessment": [
+    "sql_pool_security_alert_policy_id"
+  ],
+  "azurerm_synapse_sql_pool_vulnerability_assessment_baseline": [
+    "sql_pool_vulnerability_assessment_id"
+  ],
+  "azurerm_synapse_sql_pool_workload_classifier": [
+    "workload_group_id",
+    "name"
+  ],
+  "azurerm_synapse_sql_pool_workload_group": [
+    "sql_pool_id",
+    "name"
+  ],
+  "azurerm_synapse_workspace": [
+    "sql_administrator_login",
+    "data_exfiltration_protection_enabled",
+    "managed_resource_group_name",
+    "resource_group_name",
+    "storage_data_lake_gen2_filesystem_id",
+    "managed_virtual_network_enabled",
+    "name",
+    "compute_subnet_id",
+    "location"
+  ],
+  "azurerm_synapse_workspace_aad_admin": [],
+  "azurerm_synapse_workspace_extended_auditing_policy": [
+    "synapse_workspace_id"
+  ],
+  "azurerm_synapse_workspace_key": [],
+  "azurerm_synapse_workspace_security_alert_policy": [
+    "synapse_workspace_id"
+  ],
+  "azurerm_synapse_workspace_sql_aad_admin": [],
+  "azurerm_synapse_workspace_vulnerability_assessment": [
+    "workspace_security_alert_policy_id"
+  ],
+  "azurerm_system_center_virtual_machine_manager_availability_set": [
+    "name",
+    "resource_group_name",
+    "location",
+    "custom_location_id",
+    "system_center_virtual_machine_manager_server_id"
+  ],
+  "azurerm_system_center_virtual_machine_manager_cloud": [
+    "resource_group_name",
+    "custom_location_id",
+    "system_center_virtual_machine_manager_server_inventory_item_id",
+    "name",
+    "location"
+  ],
+  "azurerm_system_center_virtual_machine_manager_server": [
+    "resource_group_name",
+    "location",
+    "custom_location_id",
+    "password",
+    "name",
+    "fqdn",
+    "username",
+    "port"
+  ],
+  "azurerm_system_center_virtual_machine_manager_virtual_machine_instance": [
+    "infrastructure",
+    "hardware",
+    "operating_system",
+    "storage_disk",
+    "scoped_resource_id",
+    "custom_location_id"
+  ],
+  "azurerm_system_center_virtual_machine_manager_virtual_machine_instance_guest_agent": [
+    "scoped_resource_id",
+    "username",
+    "password",
+    "provisioning_action"
+  ],
+  "azurerm_system_center_virtual_machine_manager_virtual_machine_template": [
+    "system_center_virtual_machine_manager_server_inventory_item_id",
+    "name",
+    "location",
+    "resource_group_name",
+    "custom_location_id"
+  ],
+  "azurerm_system_center_virtual_machine_manager_virtual_network": [
+    "system_center_virtual_machine_manager_server_inventory_item_id",
+    "name",
+    "location",
+    "resource_group_name",
+    "custom_location_id"
+  ],
+  "azurerm_tenant_template_deployment": [
+    "name",
+    "location"
+  ],
+  "azurerm_traffic_manager_azure_endpoint": [
+    "profile_id",
+    "subnet",
+    "name"
+  ],
+  "azurerm_traffic_manager_external_endpoint": [
+    "subnet",
+    "name",
+    "profile_id"
+  ],
+  "azurerm_traffic_manager_nested_endpoint": [
+    "profile_id",
+    "name",
+    "subnet"
+  ],
+  "azurerm_traffic_manager_profile": [
+    "name",
+    "resource_group_name",
+    "dns_config"
+  ],
+  "azurerm_trusted_signing_account": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_user_assigned_identity": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_video_indexer_account": [
+    "resource_group_name",
+    "location",
+    "storage",
+    "name"
+  ],
+  "azurerm_virtual_desktop_application": [
+    "name",
+    "application_group_id"
+  ],
+  "azurerm_virtual_desktop_application_group": [
+    "name",
+    "location",
+    "resource_group_name",
+    "type",
+    "host_pool_id"
+  ],
+  "azurerm_virtual_desktop_host_pool": [
+    "location",
+    "name",
+    "personal_desktop_assignment_type",
+    "type",
+    "resource_group_name"
+  ],
+  "azurerm_virtual_desktop_host_pool_registration_info": [
+    "hostpool_id"
+  ],
+  "azurerm_virtual_desktop_scaling_plan": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_virtual_desktop_scaling_plan_host_pool_association": [
+    "scaling_plan_id",
+    "host_pool_id"
+  ],
+  "azurerm_virtual_desktop_workspace": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_virtual_desktop_workspace_application_group_association": [
+    "application_group_id",
+    "workspace_id"
+  ],
+  "azurerm_virtual_hub": [
+    "sku",
+    "name",
+    "resource_group_name",
+    "location",
+    "virtual_wan_id",
+    "address_prefix"
+  ],
+  "azurerm_virtual_hub_bgp_connection": [
+    "peer_ip",
+    "name",
+    "virtual_hub_id",
+    "peer_asn"
+  ],
+  "azurerm_virtual_hub_connection": [
+    "routing",
+    "name",
+    "virtual_hub_id",
+    "remote_virtual_network_id"
+  ],
+  "azurerm_virtual_hub_ip": [
+    "name",
+    "virtual_hub_id",
+    "public_ip_address_id",
+    "subnet_id"
+  ],
+  "azurerm_virtual_hub_route_table": [
+    "name",
+    "virtual_hub_id"
+  ],
+  "azurerm_virtual_hub_route_table_route": [
+    "route_table_id",
+    "name"
+  ],
+  "azurerm_virtual_hub_routing_intent": [
+    "name",
+    "virtual_hub_id"
+  ],
+  "azurerm_virtual_hub_security_partner_provider": [
+    "security_provider_name",
+    "virtual_hub_id",
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_virtual_machine": [
+    "name",
+    "proximity_placement_group_id",
+    "storage_os_disk",
+    "resource_group_name",
+    "zones",
+    "availability_set_id",
+    "storage_image_reference",
+    "os_profile",
+    "location",
+    "additional_capabilities",
+    "os_profile_windows_config"
+  ],
+  "azurerm_virtual_machine_automanage_configuration_assignment": [
+    "virtual_machine_id",
+    "configuration_id"
+  ],
+  "azurerm_virtual_machine_data_disk_attachment": [
+    "managed_disk_id",
+    "virtual_machine_id",
+    "lun",
+    "create_option"
+  ],
+  "azurerm_virtual_machine_extension": [
+    "name",
+    "virtual_machine_id",
+    "publisher"
+  ],
+  "azurerm_virtual_machine_gallery_application_assignment": [
+    "tag",
+    "gallery_application_version_id",
+    "virtual_machine_id",
+    "configuration_blob_uri"
+  ],
+  "azurerm_virtual_machine_implicit_data_disk_from_source": [
+    "virtual_machine_id",
+    "lun",
+    "create_option",
+    "source_resource_id",
+    "name"
+  ],
+  "azurerm_virtual_machine_packet_capture": [
+    "storage_location",
+    "filter",
+    "name",
+    "network_watcher_id",
+    "virtual_machine_id",
+    "maximum_bytes_per_packet",
+    "maximum_bytes_per_session",
+    "maximum_capture_duration_in_seconds"
+  ],
+  "azurerm_virtual_machine_restore_point": [
+    "excluded_disks",
+    "name",
+    "virtual_machine_restore_point_collection_id",
+    "crash_consistency_mode_enabled"
+  ],
+  "azurerm_virtual_machine_restore_point_collection": [
+    "name",
+    "resource_group_name",
+    "location",
+    "source_virtual_machine_id"
+  ],
+  "azurerm_virtual_machine_run_command": [
+    "virtual_machine_id",
+    "name",
+    "location"
+  ],
+  "azurerm_virtual_machine_scale_set": [
+    "location",
+    "priority",
+    "os_profile",
+    "os_profile_linux_config",
+    "resource_group_name",
+    "zones",
+    "eviction_policy",
+    "proximity_placement_group_id",
+    "name",
+    "single_placement_group"
+  ],
+  "azurerm_virtual_machine_scale_set_extension": [
+    "publisher",
+    "type",
+    "name",
+    "virtual_machine_scale_set_id"
+  ],
+  "azurerm_virtual_machine_scale_set_packet_capture": [
+    "storage_location",
+    "filter",
+    "machine_scope",
+    "network_watcher_id",
+    "maximum_capture_duration_in_seconds",
+    "name",
+    "virtual_machine_scale_set_id",
+    "maximum_bytes_per_packet",
+    "maximum_bytes_per_session"
+  ],
+  "azurerm_virtual_machine_scale_set_standby_pool": [
+    "resource_group_name",
+    "location",
+    "name"
+  ],
+  "azurerm_virtual_network": [
+    "location",
+    "edge_zone",
+    "name",
+    "resource_group_name"
+  ],
+  "azurerm_virtual_network_dns_servers": [
+    "virtual_network_id"
+  ],
+  "azurerm_virtual_network_gateway": [
+    "location",
+    "edge_zone",
+    "private_ip_address_enabled",
+    "generation",
+    "resource_group_name",
+    "vpn_type",
+    "name",
+    "type",
+    "ip_configuration"
+  ],
+  "azurerm_virtual_network_gateway_connection": [
+    "connection_mode",
+    "name",
+    "virtual_network_gateway_id",
+    "dpd_timeout_seconds",
+    "express_route_circuit_id",
+    "type",
+    "local_azure_ip_address_enabled",
+    "connection_protocol",
+    "resource_group_name",
+    "location",
+    "peer_virtual_network_gateway_id"
+  ],
+  "azurerm_virtual_network_gateway_nat_rule": [
+    "name",
+    "resource_group_name",
+    "virtual_network_gateway_id",
+    "mode",
+    "type"
+  ],
+  "azurerm_virtual_network_peering": [
+    "virtual_network_name",
+    "only_ipv6_peering_enabled",
+    "peer_complete_virtual_networks_enabled",
+    "name",
+    "remote_virtual_network_id",
+    "resource_group_name"
+  ],
+  "azurerm_virtual_wan": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_vmware_cluster": [
+    "name",
+    "vmware_cloud_id",
+    "sku_name"
+  ],
+  "azurerm_vmware_express_route_authorization": [
+    "name",
+    "private_cloud_id"
+  ],
+  "azurerm_vmware_netapp_volume_attachment": [
+    "name",
+    "netapp_volume_id",
+    "vmware_cluster_id"
+  ],
+  "azurerm_vmware_private_cloud": [
+    "location",
+    "nsxt_password",
+    "vcenter_password",
+    "name",
+    "network_subnet_cidr",
+    "resource_group_name",
+    "sku_name"
+  ],
+  "azurerm_voice_services_communications_gateway": [
+    "name",
+    "location",
+    "resource_group_name",
+    "connectivity",
+    "auto_generated_domain_name_label_scope"
+  ],
+  "azurerm_voice_services_communications_gateway_test_line": [
+    "name",
+    "location",
+    "voice_services_communications_gateway_id"
+  ],
+  "azurerm_vpn_gateway": [
+    "virtual_hub_id",
+    "routing_preference",
+    "bgp_settings",
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_vpn_gateway_connection": [
+    "name",
+    "vpn_gateway_id",
+    "remote_vpn_site_id",
+    "vpn_link"
+  ],
+  "azurerm_vpn_gateway_nat_rule": [
+    "mode",
+    "type",
+    "name",
+    "vpn_gateway_id"
+  ],
+  "azurerm_vpn_server_configuration": [
+    "name",
+    "resource_group_name",
+    "location"
+  ],
+  "azurerm_vpn_server_configuration_policy_group": [
+    "name",
+    "vpn_server_configuration_id",
+    "is_default"
+  ],
+  "azurerm_vpn_site": [
+    "resource_group_name",
+    "name",
+    "location",
+    "virtual_wan_id"
+  ],
+  "azurerm_web_app_active_slot": [
+    "overwrite_network_config"
+  ],
+  "azurerm_web_app_hybrid_connection": [
+    "relay_id",
+    "web_app_id"
+  ],
+  "azurerm_web_application_firewall_policy": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_web_pubsub": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_web_pubsub_custom_certificate": [
+    "custom_certificate_id",
+    "name",
+    "web_pubsub_id"
+  ],
+  "azurerm_web_pubsub_custom_domain": [
+    "domain_name",
+    "web_pubsub_custom_certificate_id",
+    "name",
+    "web_pubsub_id"
+  ],
+  "azurerm_web_pubsub_hub": [
+    "name",
+    "web_pubsub_id"
+  ],
+  "azurerm_web_pubsub_network_acl": [
+    "web_pubsub_id"
+  ],
+  "azurerm_web_pubsub_shared_private_link_resource": [
+    "name",
+    "web_pubsub_id",
+    "subresource_name",
+    "target_resource_id"
+  ],
+  "azurerm_web_pubsub_socketio": [
+    "resource_group_name",
+    "name",
+    "location"
+  ],
+  "azurerm_windows_function_app": [
+    "name",
+    "location",
+    "resource_group_name"
+  ],
+  "azurerm_windows_function_app_slot": [
+    "name",
+    "function_app_id"
+  ],
+  "azurerm_windows_virtual_machine": [
+    "edge_zone",
+    "source_image_id",
+    "source_image_reference",
+    "timezone",
+    "additional_unattend_content",
+    "plan",
+    "os_managed_disk_id",
+    "admin_username",
+    "custom_data",
+    "automatic_updates_enabled",
+    "priority",
+    "eviction_policy",
+    "platform_fault_domain",
+    "winrm_listener",
+    "name",
+    "admin_password",
+    "os_disk",
+    "enable_automatic_updates",
+    "resource_group_name",
+    "availability_set_id",
+    "vtpm_enabled",
+    "computer_name",
+    "provision_vm_agent",
+    "zone",
+    "location",
+    "secure_boot_enabled"
+  ],
+  "azurerm_windows_virtual_machine_scale_set": [
+    "secure_boot_enabled",
+    "source_image_reference",
+    "vtpm_enabled",
+    "extension_operations_enabled",
+    "zone_balance",
+    "location",
+    "plan",
+    "additional_capabilities",
+    "edge_zone",
+    "platform_fault_domain_count",
+    "resource_group_name",
+    "admin_password",
+    "provision_vm_agent",
+    "os_disk",
+    "host_group_id",
+    "data_disk",
+    "name",
+    "computer_name_prefix",
+    "winrm_listener",
+    "rolling_upgrade_policy",
+    "capacity_reservation_group_id",
+    "priority",
+    "proximity_placement_group_id",
+    "upgrade_mode",
+    "network_interface",
+    "additional_unattend_content",
+    "gallery_application",
+    "eviction_policy",
+    "admin_username",
+    "spot_restore"
+  ],
+  "azurerm_windows_web_app": [
+    "location",
+    "resource_group_name",
+    "name"
+  ],
+  "azurerm_windows_web_app_slot": [
+    "name",
+    "app_service_id"
+  ],
+  "azurerm_workloads_sap_discovery_virtual_instance": [
+    "central_server_virtual_machine_id",
+    "name",
+    "location",
+    "sap_product",
+    "resource_group_name",
+    "managed_resource_group_name",
+    "managed_storage_account_name",
+    "environment"
+  ],
+  "azurerm_workloads_sap_single_node_virtual_instance": [
+    "resource_group_name",
+    "location",
+    "single_server_configuration",
+    "managed_resource_group_name",
+    "name",
+    "app_location",
+    "sap_fqdn",
+    "environment",
+    "sap_product"
+  ],
+  "azurerm_workloads_sap_three_tier_virtual_instance": [
+    "three_tier_configuration",
+    "sap_fqdn",
+    "managed_resource_group_name",
+    "name",
+    "resource_group_name",
+    "app_location",
+    "environment",
+    "sap_product",
+    "location"
+  ]
+}

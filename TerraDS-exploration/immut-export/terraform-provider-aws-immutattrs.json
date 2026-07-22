@@ -1,0 +1,5720 @@
+{
+  "aws_accessanalyzer_analyzer": [
+    "analyzer_name",
+    "configuration",
+    "type"
+  ],
+  "aws_accessanalyzer_archive_rule": [
+    "analyzer_name",
+    "rule_name"
+  ],
+  "aws_account_alternate_contact": [
+    "account_id",
+    "alternate_contact_type"
+  ],
+  "aws_account_primary_contact": [
+    "account_id"
+  ],
+  "aws_account_region": [
+    "account_id",
+    "region_name"
+  ],
+  "aws_acm_certificate": [
+    "key_algorithm",
+    "certificate_authority_arn",
+    "validation_option",
+    "subject_alternative_names",
+    "validation_method",
+    "domain_name"
+  ],
+  "aws_acm_certificate_validation": [
+    "certificate_arn",
+    "validation_record_fqdns"
+  ],
+  "aws_acmpca_certificate": [
+    "validity",
+    "certificate_signing_request",
+    "template_arn",
+    "signing_algorithm",
+    "api_passthrough",
+    "certificate_authority_arn"
+  ],
+  "aws_acmpca_certificate_authority": [
+    "certificate_authority_configuration",
+    "key_storage_security_standard",
+    "type"
+  ],
+  "aws_acmpca_certificate_authority_certificate": [
+    "certificate",
+    "certificate_authority_arn",
+    "certificate_chain"
+  ],
+  "aws_acmpca_permission": [
+    "certificate_authority_arn",
+    "principal",
+    "source_account",
+    "actions"
+  ],
+  "aws_acmpca_policy": [
+    "resource_arn"
+  ],
+  "aws_alb": [
+    "customer_owned_ipv4_pool",
+    "internal",
+    "name",
+    "load_balancer_type",
+    "name_prefix"
+  ],
+  "aws_alb_listener": [
+    "load_balancer_arn"
+  ],
+  "aws_alb_listener_certificate": [
+    "certificate_arn",
+    "listener_arn"
+  ],
+  "aws_alb_listener_rule": [
+    "listener_arn"
+  ],
+  "aws_alb_target_group": [
+    "name",
+    "name_prefix",
+    "target_type",
+    "vpc_id",
+    "protocol",
+    "protocol_version",
+    "ip_address_type",
+    "port"
+  ],
+  "aws_alb_target_group_attachment": [
+    "target_id",
+    "port",
+    "availability_zone",
+    "target_group_arn"
+  ],
+  "aws_ami": [
+    "ebs_block_device",
+    "tpm_support",
+    "image_location",
+    "ena_support",
+    "kernel_id",
+    "imds_support",
+    "name",
+    "ramdisk_id",
+    "uefi_data",
+    "architecture",
+    "sriov_net_support",
+    "ephemeral_block_device",
+    "root_device_name",
+    "boot_mode",
+    "virtualization_type"
+  ],
+  "aws_ami_copy": [
+    "encrypted",
+    "ephemeral_block_device",
+    "source_ami_id",
+    "name",
+    "source_ami_region",
+    "kms_key_id"
+  ],
+  "aws_ami_from_instance": [
+    "snapshot_without_reboot",
+    "name",
+    "ephemeral_block_device",
+    "source_instance_id"
+  ],
+  "aws_ami_launch_permission": [
+    "group",
+    "image_id",
+    "organization_arn",
+    "organizational_unit_arn",
+    "account_id"
+  ],
+  "aws_amplify_app": [
+    "auto_branch_creation_config"
+  ],
+  "aws_amplify_backend_environment": [
+    "stack_name",
+    "app_id",
+    "deployment_artifacts",
+    "environment_name"
+  ],
+  "aws_amplify_branch": [
+    "app_id",
+    "branch_name"
+  ],
+  "aws_amplify_domain_association": [
+    "domain_name",
+    "app_id"
+  ],
+  "aws_amplify_webhook": [
+    "app_id"
+  ],
+  "aws_api_gateway_api_key": [
+    "value"
+  ],
+  "aws_api_gateway_authorizer": [
+    "rest_api_id"
+  ],
+  "aws_api_gateway_base_path_mapping": [
+    "domain_name"
+  ],
+  "aws_api_gateway_client_certificate": [],
+  "aws_api_gateway_deployment": [
+    "stage_description",
+    "stage_name",
+    "canary_settings",
+    "rest_api_id",
+    "triggers",
+    "variables"
+  ],
+  "aws_api_gateway_documentation_part": [
+    "location",
+    "rest_api_id"
+  ],
+  "aws_api_gateway_documentation_version": [
+    "rest_api_id",
+    "version"
+  ],
+  "aws_api_gateway_domain_name": [
+    "certificate_body",
+    "certificate_private_key",
+    "certificate_chain",
+    "domain_name"
+  ],
+  "aws_api_gateway_gateway_response": [
+    "rest_api_id",
+    "response_type"
+  ],
+  "aws_api_gateway_integration": [
+    "passthrough_behavior",
+    "integration_http_method",
+    "credentials",
+    "http_method",
+    "type",
+    "resource_id",
+    "rest_api_id"
+  ],
+  "aws_api_gateway_integration_response": [
+    "resource_id",
+    "rest_api_id",
+    "http_method"
+  ],
+  "aws_api_gateway_method": [
+    "http_method",
+    "resource_id",
+    "rest_api_id"
+  ],
+  "aws_api_gateway_method_response": [
+    "http_method",
+    "resource_id",
+    "rest_api_id"
+  ],
+  "aws_api_gateway_method_settings": [
+    "method_path",
+    "rest_api_id",
+    "stage_name"
+  ],
+  "aws_api_gateway_model": [
+    "name",
+    "rest_api_id",
+    "content_type"
+  ],
+  "aws_api_gateway_request_validator": [
+    "rest_api_id"
+  ],
+  "aws_api_gateway_resource": [
+    "rest_api_id"
+  ],
+  "aws_api_gateway_rest_api": [],
+  "aws_api_gateway_rest_api_policy": [
+    "rest_api_id"
+  ],
+  "aws_api_gateway_stage": [
+    "stage_name",
+    "rest_api_id"
+  ],
+  "aws_api_gateway_usage_plan": [],
+  "aws_api_gateway_usage_plan_key": [
+    "usage_plan_id",
+    "key_id",
+    "key_type"
+  ],
+  "aws_api_gateway_vpc_link": [
+    "target_arns"
+  ],
+  "aws_apigatewayv2_api": [
+    "protocol_type",
+    "target",
+    "credentials_arn",
+    "route_key"
+  ],
+  "aws_apigatewayv2_api_mapping": [
+    "domain_name",
+    "api_id"
+  ],
+  "aws_apigatewayv2_authorizer": [
+    "api_id"
+  ],
+  "aws_apigatewayv2_deployment": [
+    "api_id",
+    "triggers"
+  ],
+  "aws_apigatewayv2_domain_name": [
+    "domain_name"
+  ],
+  "aws_apigatewayv2_integration": [
+    "api_id",
+    "integration_subtype",
+    "integration_type"
+  ],
+  "aws_apigatewayv2_integration_response": [
+    "api_id",
+    "integration_id"
+  ],
+  "aws_apigatewayv2_model": [
+    "api_id"
+  ],
+  "aws_apigatewayv2_route": [
+    "api_id"
+  ],
+  "aws_apigatewayv2_route_response": [
+    "api_id",
+    "route_id"
+  ],
+  "aws_apigatewayv2_stage": [
+    "name",
+    "api_id"
+  ],
+  "aws_apigatewayv2_vpc_link": [
+    "security_group_ids",
+    "subnet_ids"
+  ],
+  "aws_app_cookie_stickiness_policy": [
+    "lb_port",
+    "load_balancer",
+    "name",
+    "cookie_name"
+  ],
+  "aws_appautoscaling_policy": [
+    "resource_id",
+    "scalable_dimension",
+    "name",
+    "service_namespace"
+  ],
+  "aws_appautoscaling_scheduled_action": [
+    "resource_id",
+    "scalable_dimension",
+    "service_namespace",
+    "name"
+  ],
+  "aws_appautoscaling_target": [
+    "resource_id",
+    "scalable_dimension",
+    "service_namespace"
+  ],
+  "aws_appconfig_application": [],
+  "aws_appconfig_configuration_profile": [
+    "application_id",
+    "location_uri",
+    "type"
+  ],
+  "aws_appconfig_deployment": [
+    "application_id",
+    "description",
+    "environment_id",
+    "kms_key_identifier",
+    "configuration_profile_id",
+    "configuration_version",
+    "deployment_strategy_id"
+  ],
+  "aws_appconfig_deployment_strategy": [
+    "name",
+    "replicate_to"
+  ],
+  "aws_appconfig_extension": [
+    "name"
+  ],
+  "aws_appconfig_extension_association": [
+    "extension_arn",
+    "resource_arn"
+  ],
+  "aws_appconfig_hosted_configuration_version": [
+    "configuration_profile_id",
+    "content",
+    "content_type",
+    "description",
+    "application_id"
+  ],
+  "aws_appflow_connector_profile": [
+    "kms_arn",
+    "name",
+    "connector_label",
+    "connector_type"
+  ],
+  "aws_appflow_flow": [
+    "kms_arn",
+    "name",
+    "source_flow_config"
+  ],
+  "aws_appintegrations_data_integration": [
+    "name",
+    "schedule_config",
+    "source_uri"
+  ],
+  "aws_appintegrations_event_integration": [
+    "eventbridge_bus",
+    "event_filter",
+    "name"
+  ],
+  "aws_applicationinsights_application": [
+    "resource_group_name",
+    "grouping_type",
+    "auto_create"
+  ],
+  "aws_appmesh_gateway_route": [
+    "virtual_gateway_name",
+    "mesh_name",
+    "mesh_owner",
+    "name"
+  ],
+  "aws_appmesh_mesh": [
+    "name"
+  ],
+  "aws_appmesh_route": [
+    "mesh_name",
+    "mesh_owner",
+    "name",
+    "virtual_router_name"
+  ],
+  "aws_appmesh_virtual_gateway": [
+    "mesh_name",
+    "name",
+    "mesh_owner"
+  ],
+  "aws_appmesh_virtual_node": [
+    "mesh_name",
+    "mesh_owner",
+    "name"
+  ],
+  "aws_appmesh_virtual_router": [
+    "mesh_name",
+    "mesh_owner",
+    "name"
+  ],
+  "aws_appmesh_virtual_service": [
+    "name",
+    "mesh_name",
+    "mesh_owner"
+  ],
+  "aws_apprunner_auto_scaling_configuration_version": [
+    "max_concurrency",
+    "min_size",
+    "auto_scaling_configuration_name",
+    "max_size"
+  ],
+  "aws_apprunner_connection": [
+    "connection_name",
+    "provider_type"
+  ],
+  "aws_apprunner_custom_domain_association": [
+    "domain_name",
+    "enable_www_subdomain",
+    "service_arn"
+  ],
+  "aws_apprunner_observability_configuration": [
+    "observability_configuration_name"
+  ],
+  "aws_apprunner_service": [
+    "service_name",
+    "encryption_configuration"
+  ],
+  "aws_apprunner_vpc_connector": [
+    "vpc_connector_name",
+    "security_groups",
+    "subnets"
+  ],
+  "aws_apprunner_vpc_ingress_connection": [
+    "ingress_vpc_configuration",
+    "name",
+    "service_arn"
+  ],
+  "aws_appstream_directory_config": [
+    "directory_name"
+  ],
+  "aws_appstream_fleet": [
+    "fleet_type",
+    "name"
+  ],
+  "aws_appstream_fleet_stack_association": [
+    "fleet_name",
+    "stack_name"
+  ],
+  "aws_appstream_image_builder": [
+    "appstream_agent_version",
+    "image_arn",
+    "vpc_config",
+    "description",
+    "display_name",
+    "domain_join_info",
+    "iam_role_arn",
+    "name",
+    "access_endpoint",
+    "enable_default_internet_access",
+    "image_name",
+    "instance_type"
+  ],
+  "aws_appstream_stack": [
+    "name"
+  ],
+  "aws_appstream_user": [
+    "last_name",
+    "user_name",
+    "authentication_type",
+    "first_name"
+  ],
+  "aws_appstream_user_stack_association": [
+    "authentication_type",
+    "stack_name",
+    "user_name"
+  ],
+  "aws_appsync_api_cache": [
+    "at_rest_encryption_enabled",
+    "transit_encryption_enabled"
+  ],
+  "aws_appsync_api_key": [],
+  "aws_appsync_datasource": [],
+  "aws_appsync_domain_name": [
+    "domain_name",
+    "certificate_arn"
+  ],
+  "aws_appsync_domain_name_api_association": [
+    "domain_name"
+  ],
+  "aws_appsync_function": [
+    "api_id"
+  ],
+  "aws_appsync_graphql_api": [
+    "visibility",
+    "api_type"
+  ],
+  "aws_appsync_resolver": [
+    "type",
+    "api_id",
+    "field"
+  ],
+  "aws_appsync_type": [
+    "api_id"
+  ],
+  "aws_athena_data_catalog": [
+    "name"
+  ],
+  "aws_athena_database": [
+    "comment",
+    "encryption_configuration",
+    "expected_bucket_owner",
+    "name",
+    "properties",
+    "acl_configuration"
+  ],
+  "aws_athena_named_query": [
+    "database",
+    "description",
+    "name",
+    "query",
+    "workgroup"
+  ],
+  "aws_athena_prepared_statement": [
+    "workgroup",
+    "name"
+  ],
+  "aws_athena_workgroup": [
+    "name"
+  ],
+  "aws_autoscaling_attachment": [
+    "autoscaling_group_name",
+    "elb",
+    "lb_target_group_arn"
+  ],
+  "aws_autoscaling_group": [
+    "name",
+    "initial_lifecycle_hook",
+    "name_prefix"
+  ],
+  "aws_autoscaling_group_tag": [
+    "autoscaling_group_name",
+    "tag"
+  ],
+  "aws_autoscaling_lifecycle_hook": [
+    "name"
+  ],
+  "aws_autoscaling_notification": [
+    "topic_arn"
+  ],
+  "aws_autoscaling_policy": [
+    "autoscaling_group_name",
+    "name"
+  ],
+  "aws_autoscaling_schedule": [
+    "autoscaling_group_name",
+    "scheduled_action_name"
+  ],
+  "aws_autoscaling_traffic_source_attachment": [
+    "autoscaling_group_name",
+    "traffic_source"
+  ],
+  "aws_autoscalingplans_scaling_plan": [
+    "name"
+  ],
+  "aws_backup_framework": [
+    "name"
+  ],
+  "aws_backup_global_settings": [],
+  "aws_backup_plan": [
+    "name"
+  ],
+  "aws_backup_region_settings": [],
+  "aws_backup_report_plan": [
+    "name",
+    "report_setting"
+  ],
+  "aws_backup_selection": [
+    "name",
+    "condition",
+    "iam_role_arn",
+    "not_resources",
+    "plan_id",
+    "selection_tag",
+    "resources"
+  ],
+  "aws_backup_vault": [
+    "kms_key_arn",
+    "name"
+  ],
+  "aws_backup_vault_lock_configuration": [
+    "max_retention_days",
+    "min_retention_days",
+    "backup_vault_name",
+    "changeable_for_days"
+  ],
+  "aws_backup_vault_notifications": [
+    "backup_vault_events",
+    "backup_vault_name",
+    "sns_topic_arn"
+  ],
+  "aws_backup_vault_policy": [
+    "backup_vault_name"
+  ],
+  "aws_batch_compute_environment": [
+    "type",
+    "eks_configuration",
+    "compute_environment_name_prefix",
+    "compute_resources",
+    "compute_environment_name"
+  ],
+  "aws_batch_job_definition": [
+    "name",
+    "retry_strategy"
+  ],
+  "aws_batch_scheduling_policy": [
+    "name"
+  ],
+  "aws_budgets_budget": [
+    "name",
+    "name_prefix",
+    "account_id"
+  ],
+  "aws_budgets_budget_action": [
+    "account_id",
+    "budget_name",
+    "action_type"
+  ],
+  "aws_ce_anomaly_monitor": [
+    "monitor_dimension",
+    "monitor_specification",
+    "monitor_type"
+  ],
+  "aws_ce_anomaly_subscription": [
+    "name",
+    "account_id"
+  ],
+  "aws_ce_cost_allocation_tag": [],
+  "aws_ce_cost_category": [
+    "name",
+    "rule_version"
+  ],
+  "aws_chime_voice_connector": [
+    "aws_region"
+  ],
+  "aws_chime_voice_connector_group": [],
+  "aws_chime_voice_connector_logging": [
+    "voice_connector_id"
+  ],
+  "aws_chime_voice_connector_origination": [
+    "voice_connector_id"
+  ],
+  "aws_chime_voice_connector_streaming": [
+    "voice_connector_id"
+  ],
+  "aws_chime_voice_connector_termination": [
+    "voice_connector_id"
+  ],
+  "aws_chime_voice_connector_termination_credentials": [
+    "voice_connector_id"
+  ],
+  "aws_chimesdkmediapipelines_media_insights_pipeline_configuration": [],
+  "aws_chimesdkvoice_global_settings": [],
+  "aws_chimesdkvoice_sip_media_application": [
+    "aws_region"
+  ],
+  "aws_chimesdkvoice_sip_rule": [
+    "target_applications"
+  ],
+  "aws_chimesdkvoice_voice_profile_domain": [],
+  "aws_cleanrooms_collaboration": [
+    "query_log_status",
+    "creator_member_abilities",
+    "data_encryption_metadata",
+    "member",
+    "creator_display_name"
+  ],
+  "aws_cleanrooms_configured_table": [
+    "table_reference",
+    "allowed_columns"
+  ],
+  "aws_cloud9_environment_ec2": [
+    "image_id",
+    "subnet_id",
+    "instance_type",
+    "owner_arn",
+    "automatic_stop_time_minutes",
+    "connection_type"
+  ],
+  "aws_cloud9_environment_membership": [
+    "user_arn",
+    "environment_id"
+  ],
+  "aws_cloudcontrolapi_resource": [
+    "type_name"
+  ],
+  "aws_cloudformation_stack": [
+    "disable_rollback",
+    "timeout_in_minutes",
+    "name",
+    "on_failure"
+  ],
+  "aws_cloudformation_stack_instances": [
+    "stack_set_name",
+    "deployment_targets"
+  ],
+  "aws_cloudformation_stack_set": [
+    "name",
+    "auto_deployment"
+  ],
+  "aws_cloudformation_stack_set_instance": [
+    "account_id",
+    "region",
+    "deployment_targets",
+    "stack_set_name"
+  ],
+  "aws_cloudformation_type": [
+    "execution_role_arn",
+    "type",
+    "schema_handler_package",
+    "logging_config",
+    "type_name"
+  ],
+  "aws_cloudfront_cache_policy": [],
+  "aws_cloudfront_distribution": [
+    "staging"
+  ],
+  "aws_cloudfront_field_level_encryption_config": [],
+  "aws_cloudfront_field_level_encryption_profile": [],
+  "aws_cloudfront_function": [
+    "name"
+  ],
+  "aws_cloudfront_key_group": [],
+  "aws_cloudfront_monitoring_subscription": [
+    "distribution_id"
+  ],
+  "aws_cloudfront_origin_access_control": [],
+  "aws_cloudfront_origin_access_identity": [],
+  "aws_cloudfront_origin_request_policy": [],
+  "aws_cloudfront_public_key": [
+    "encoded_key",
+    "name",
+    "name_prefix"
+  ],
+  "aws_cloudfront_realtime_log_config": [
+    "name"
+  ],
+  "aws_cloudfront_response_headers_policy": [],
+  "aws_cloudhsm_v2_cluster": [
+    "source_backup_identifier",
+    "subnet_ids",
+    "hsm_type",
+    "mode"
+  ],
+  "aws_cloudhsm_v2_hsm": [
+    "ip_address",
+    "subnet_id",
+    "availability_zone",
+    "cluster_id"
+  ],
+  "aws_cloudsearch_domain": [
+    "name"
+  ],
+  "aws_cloudsearch_domain_service_access_policy": [],
+  "aws_cloudtrail": [
+    "name"
+  ],
+  "aws_cloudtrail_event_data_store": [
+    "kms_key_id",
+    "name"
+  ],
+  "aws_cloudwatch_composite_alarm": [
+    "actions_enabled",
+    "alarm_name"
+  ],
+  "aws_cloudwatch_dashboard": [
+    "dashboard_name"
+  ],
+  "aws_cloudwatch_event_api_destination": [
+    "name"
+  ],
+  "aws_cloudwatch_event_archive": [
+    "event_source_arn",
+    "name"
+  ],
+  "aws_cloudwatch_event_bus": [
+    "event_source_name",
+    "name"
+  ],
+  "aws_cloudwatch_event_bus_policy": [
+    "event_bus_name"
+  ],
+  "aws_cloudwatch_event_connection": [
+    "name"
+  ],
+  "aws_cloudwatch_event_endpoint": [
+    "name"
+  ],
+  "aws_cloudwatch_event_permission": [
+    "event_bus_name",
+    "statement_id"
+  ],
+  "aws_cloudwatch_event_rule": [
+    "name_prefix",
+    "event_bus_name",
+    "name"
+  ],
+  "aws_cloudwatch_event_target": [
+    "event_bus_name",
+    "rule",
+    "target_id"
+  ],
+  "aws_cloudwatch_log_account_policy": [
+    "policy_name",
+    "policy_type",
+    "selection_criteria"
+  ],
+  "aws_cloudwatch_log_data_protection_policy": [
+    "log_group_name"
+  ],
+  "aws_cloudwatch_log_destination": [
+    "name"
+  ],
+  "aws_cloudwatch_log_destination_policy": [
+    "destination_name"
+  ],
+  "aws_cloudwatch_log_group": [
+    "name_prefix",
+    "log_group_class",
+    "name"
+  ],
+  "aws_cloudwatch_log_metric_filter": [
+    "log_group_name",
+    "name"
+  ],
+  "aws_cloudwatch_log_resource_policy": [
+    "policy_name"
+  ],
+  "aws_cloudwatch_log_stream": [
+    "log_group_name",
+    "name"
+  ],
+  "aws_cloudwatch_log_subscription_filter": [
+    "name",
+    "destination_arn",
+    "log_group_name"
+  ],
+  "aws_cloudwatch_metric_alarm": [
+    "alarm_name"
+  ],
+  "aws_cloudwatch_metric_stream": [
+    "name_prefix",
+    "name"
+  ],
+  "aws_cloudwatch_query_definition": [],
+  "aws_codeartifact_domain": [
+    "encryption_key",
+    "domain"
+  ],
+  "aws_codeartifact_domain_permissions_policy": [
+    "domain_owner",
+    "domain"
+  ],
+  "aws_codeartifact_repository": [
+    "domain",
+    "domain_owner",
+    "repository"
+  ],
+  "aws_codeartifact_repository_permissions_policy": [
+    "domain",
+    "domain_owner",
+    "repository"
+  ],
+  "aws_codebuild_fleet": [
+    "name"
+  ],
+  "aws_codebuild_project": [
+    "name"
+  ],
+  "aws_codebuild_report_group": [
+    "type",
+    "name"
+  ],
+  "aws_codebuild_resource_policy": [
+    "resource_arn"
+  ],
+  "aws_codebuild_source_credential": [
+    "auth_type",
+    "server_type",
+    "token",
+    "user_name"
+  ],
+  "aws_codebuild_webhook": [
+    "manual_creation",
+    "project_name"
+  ],
+  "aws_codecatalyst_dev_environment": [],
+  "aws_codecatalyst_project": [],
+  "aws_codecatalyst_source_repository": [],
+  "aws_codecommit_approval_rule_template": [],
+  "aws_codecommit_approval_rule_template_association": [
+    "approval_rule_template_name",
+    "repository_name"
+  ],
+  "aws_codecommit_repository": [],
+  "aws_codecommit_trigger": [
+    "repository_name",
+    "trigger"
+  ],
+  "aws_codedeploy_app": [
+    "compute_platform"
+  ],
+  "aws_codedeploy_deployment_config": [
+    "deployment_config_name",
+    "minimum_healthy_hosts",
+    "traffic_routing_config",
+    "zonal_config",
+    "compute_platform"
+  ],
+  "aws_codedeploy_deployment_group": [],
+  "aws_codegurureviewer_repository_association": [
+    "repository",
+    "kms_key_details"
+  ],
+  "aws_codepipeline": [
+    "name"
+  ],
+  "aws_codepipeline_custom_action_type": [
+    "configuration_property",
+    "input_artifact_details",
+    "settings",
+    "version",
+    "category",
+    "output_artifact_details",
+    "provider_name"
+  ],
+  "aws_codepipeline_webhook": [
+    "target_pipeline",
+    "name",
+    "target_action",
+    "authentication",
+    "authentication_configuration"
+  ],
+  "aws_codestarconnections_connection": [
+    "provider_type",
+    "host_arn",
+    "name"
+  ],
+  "aws_codestarconnections_host": [
+    "name",
+    "provider_type"
+  ],
+  "aws_codestarnotifications_notification_rule": [
+    "resource"
+  ],
+  "aws_cognito_identity_pool": [
+    "identity_pool_name",
+    "developer_provider_name"
+  ],
+  "aws_cognito_identity_pool_provider_principal_tag": [
+    "identity_provider_name",
+    "identity_pool_id"
+  ],
+  "aws_cognito_identity_pool_roles_attachment": [
+    "identity_pool_id",
+    "roles"
+  ],
+  "aws_cognito_identity_provider": [
+    "provider_name",
+    "provider_type",
+    "user_pool_id"
+  ],
+  "aws_cognito_resource_server": [
+    "identifier",
+    "name",
+    "user_pool_id"
+  ],
+  "aws_cognito_risk_configuration": [
+    "client_id",
+    "user_pool_id"
+  ],
+  "aws_cognito_user": [
+    "user_pool_id",
+    "username"
+  ],
+  "aws_cognito_user_group": [
+    "user_pool_id",
+    "name"
+  ],
+  "aws_cognito_user_in_group": [
+    "user_pool_id",
+    "username",
+    "group_name"
+  ],
+  "aws_cognito_user_pool": [
+    "username_configuration",
+    "name",
+    "alias_attributes",
+    "username_attributes"
+  ],
+  "aws_cognito_user_pool_domain": [
+    "domain",
+    "user_pool_id"
+  ],
+  "aws_cognito_user_pool_ui_customization": [],
+  "aws_comprehend_document_classifier": [],
+  "aws_comprehend_entity_recognizer": [],
+  "aws_config_aggregate_authorization": [
+    "account_id",
+    "region"
+  ],
+  "aws_config_config_rule": [
+    "name"
+  ],
+  "aws_config_configuration_aggregator": [
+    "name"
+  ],
+  "aws_config_configuration_recorder": [
+    "name"
+  ],
+  "aws_config_configuration_recorder_status": [],
+  "aws_config_conformance_pack": [
+    "name"
+  ],
+  "aws_config_delivery_channel": [
+    "name"
+  ],
+  "aws_config_organization_conformance_pack": [
+    "name"
+  ],
+  "aws_config_organization_custom_policy_rule": [
+    "name"
+  ],
+  "aws_config_organization_custom_rule": [
+    "name"
+  ],
+  "aws_config_organization_managed_rule": [
+    "name"
+  ],
+  "aws_config_remediation_configuration": [
+    "config_rule_name"
+  ],
+  "aws_connect_bot_association": [
+    "instance_id",
+    "lex_bot"
+  ],
+  "aws_connect_contact_flow": [
+    "type"
+  ],
+  "aws_connect_contact_flow_module": [],
+  "aws_connect_hours_of_operation": [],
+  "aws_connect_instance": [
+    "instance_alias",
+    "identity_management_type",
+    "directory_id"
+  ],
+  "aws_connect_instance_storage_config": [
+    "resource_type",
+    "instance_id"
+  ],
+  "aws_connect_lambda_function_association": [
+    "function_arn",
+    "instance_id"
+  ],
+  "aws_connect_phone_number": [
+    "type",
+    "country_code",
+    "description",
+    "prefix"
+  ],
+  "aws_connect_queue": [],
+  "aws_connect_quick_connect": [],
+  "aws_connect_routing_profile": [],
+  "aws_connect_security_profile": [
+    "name"
+  ],
+  "aws_connect_user": [
+    "name",
+    "instance_id"
+  ],
+  "aws_connect_user_hierarchy_group": [
+    "parent_group_id"
+  ],
+  "aws_connect_user_hierarchy_structure": [],
+  "aws_connect_vocabulary": [
+    "content",
+    "instance_id",
+    "language_code",
+    "name"
+  ],
+  "aws_controltower_control": [
+    "control_identifier",
+    "target_identifier"
+  ],
+  "aws_controltower_landing_zone": [],
+  "aws_cur_report_definition": [
+    "report_versioning",
+    "report_name",
+    "time_unit",
+    "additional_schema_elements"
+  ],
+  "aws_customer_gateway": [
+    "device_name",
+    "type",
+    "bgp_asn_extended",
+    "ip_address",
+    "bgp_asn",
+    "certificate_arn"
+  ],
+  "aws_customerprofiles_domain": [
+    "domain_name"
+  ],
+  "aws_customerprofiles_profile": [],
+  "aws_dataexchange_data_set": [
+    "asset_type"
+  ],
+  "aws_dataexchange_revision": [
+    "data_set_id"
+  ],
+  "aws_datapipeline_pipeline": [
+    "name",
+    "description"
+  ],
+  "aws_datapipeline_pipeline_definition": [
+    "pipeline_id"
+  ],
+  "aws_datasync_agent": [
+    "activation_key",
+    "ip_address",
+    "subnet_arns",
+    "private_link_endpoint",
+    "security_group_arns",
+    "vpc_endpoint_id"
+  ],
+  "aws_datasync_location_azure_blob": [
+    "container_url"
+  ],
+  "aws_datasync_location_efs": [
+    "efs_file_system_arn",
+    "file_system_access_role_arn",
+    "access_point_arn",
+    "subdirectory",
+    "ec2_config",
+    "in_transit_encryption"
+  ],
+  "aws_datasync_location_fsx_lustre_file_system": [
+    "fsx_filesystem_arn",
+    "security_group_arns",
+    "subdirectory"
+  ],
+  "aws_datasync_location_fsx_ontap_file_system": [
+    "protocol",
+    "security_group_arns",
+    "subdirectory",
+    "storage_virtual_machine_arn"
+  ],
+  "aws_datasync_location_fsx_openzfs_file_system": [
+    "fsx_filesystem_arn",
+    "protocol",
+    "security_group_arns",
+    "subdirectory"
+  ],
+  "aws_datasync_location_fsx_windows_file_system": [
+    "fsx_filesystem_arn",
+    "domain",
+    "password",
+    "security_group_arns",
+    "subdirectory",
+    "user"
+  ],
+  "aws_datasync_location_hdfs": [],
+  "aws_datasync_location_nfs": [
+    "mount_options",
+    "on_prem_config",
+    "server_hostname"
+  ],
+  "aws_datasync_location_object_storage": [
+    "bucket_name",
+    "server_hostname"
+  ],
+  "aws_datasync_location_s3": [
+    "s3_bucket_arn",
+    "s3_storage_class",
+    "agent_arns",
+    "s3_config",
+    "subdirectory"
+  ],
+  "aws_datasync_location_smb": [
+    "server_hostname"
+  ],
+  "aws_datasync_task": [
+    "task_mode",
+    "destination_location_arn",
+    "source_location_arn"
+  ],
+  "aws_dax_cluster": [
+    "subnet_group_name",
+    "cluster_endpoint_encryption_type",
+    "cluster_name",
+    "iam_role_arn",
+    "availability_zones",
+    "server_side_encryption",
+    "node_type"
+  ],
+  "aws_dax_parameter_group": [
+    "name",
+    "description"
+  ],
+  "aws_dax_subnet_group": [
+    "name"
+  ],
+  "aws_db_cluster_snapshot": [
+    "db_cluster_snapshot_identifier",
+    "db_cluster_identifier"
+  ],
+  "aws_db_event_subscription": [
+    "name_prefix",
+    "name"
+  ],
+  "aws_db_instance": [
+    "db_name",
+    "availability_zone",
+    "kms_key_id",
+    "storage_encrypted",
+    "username",
+    "nchar_character_set_name",
+    "restore_to_point_in_time",
+    "custom_iam_instance_profile",
+    "backup_target",
+    "snapshot_identifier",
+    "engine",
+    "timezone",
+    "character_set_name",
+    "s3_import"
+  ],
+  "aws_db_instance_automated_backups_replication": [
+    "source_db_instance_arn",
+    "kms_key_id",
+    "pre_signed_url",
+    "retention_period"
+  ],
+  "aws_db_instance_role_association": [
+    "db_instance_identifier",
+    "feature_name",
+    "role_arn"
+  ],
+  "aws_db_option_group": [
+    "major_engine_version",
+    "engine_name",
+    "name",
+    "name_prefix",
+    "option_group_description"
+  ],
+  "aws_db_parameter_group": [
+    "family",
+    "name",
+    "description",
+    "name_prefix"
+  ],
+  "aws_db_proxy": [
+    "engine_family",
+    "vpc_subnet_ids"
+  ],
+  "aws_db_proxy_default_target_group": [
+    "db_proxy_name"
+  ],
+  "aws_db_proxy_endpoint": [
+    "target_role",
+    "db_proxy_endpoint_name",
+    "db_proxy_name",
+    "vpc_subnet_ids"
+  ],
+  "aws_db_proxy_target": [
+    "db_cluster_identifier",
+    "db_instance_identifier",
+    "db_proxy_name",
+    "target_group_name"
+  ],
+  "aws_db_snapshot": [
+    "db_instance_identifier",
+    "db_snapshot_identifier"
+  ],
+  "aws_db_snapshot_copy": [
+    "presigned_url",
+    "kms_key_id",
+    "target_db_snapshot_identifier",
+    "copy_tags",
+    "destination_region",
+    "option_group_name",
+    "source_db_snapshot_identifier",
+    "target_custom_availability_zone"
+  ],
+  "aws_db_subnet_group": [
+    "name_prefix",
+    "name"
+  ],
+  "aws_default_network_acl": [
+    "default_network_acl_id"
+  ],
+  "aws_default_route_table": [
+    "default_route_table_id"
+  ],
+  "aws_default_security_group": [
+    "vpc_id"
+  ],
+  "aws_default_subnet": [
+    "ipv6_native",
+    "availability_zone"
+  ],
+  "aws_default_vpc": [],
+  "aws_default_vpc_dhcp_options": [],
+  "aws_detective_graph": [],
+  "aws_detective_invitation_accepter": [
+    "graph_arn"
+  ],
+  "aws_detective_member": [
+    "account_id",
+    "disable_email_notification",
+    "email_address",
+    "graph_arn",
+    "message"
+  ],
+  "aws_detective_organization_admin_account": [
+    "account_id"
+  ],
+  "aws_detective_organization_configuration": [
+    "graph_arn"
+  ],
+  "aws_devicefarm_device_pool": [],
+  "aws_devicefarm_instance_profile": [],
+  "aws_devicefarm_network_profile": [],
+  "aws_devicefarm_project": [],
+  "aws_devicefarm_test_grid_project": [],
+  "aws_devicefarm_upload": [
+    "project_arn",
+    "type"
+  ],
+  "aws_directory_service_conditional_forwarder": [
+    "directory_id",
+    "remote_domain_name"
+  ],
+  "aws_directory_service_directory": [
+    "password",
+    "vpc_settings",
+    "type",
+    "alias",
+    "connect_settings",
+    "description",
+    "name",
+    "size",
+    "edition",
+    "short_name"
+  ],
+  "aws_directory_service_log_subscription": [
+    "directory_id",
+    "log_group_name"
+  ],
+  "aws_directory_service_radius_settings": [
+    "directory_id"
+  ],
+  "aws_directory_service_region": [
+    "vpc_settings",
+    "directory_id",
+    "region_name"
+  ],
+  "aws_directory_service_shared_directory": [
+    "method",
+    "notes",
+    "target",
+    "directory_id"
+  ],
+  "aws_directory_service_shared_directory_accepter": [
+    "shared_directory_id"
+  ],
+  "aws_dlm_lifecycle_policy": [
+    "policy_details"
+  ],
+  "aws_dms_certificate": [
+    "certificate_id",
+    "certificate_pem",
+    "certificate_wallet"
+  ],
+  "aws_dms_endpoint": [
+    "endpoint_id",
+    "kms_key_arn",
+    "kinesis_settings",
+    "elasticsearch_settings"
+  ],
+  "aws_dms_event_subscription": [
+    "name",
+    "source_ids",
+    "source_type"
+  ],
+  "aws_dms_replication_config": [
+    "resource_identifier",
+    "compute_config",
+    "replication_config_identifier"
+  ],
+  "aws_dms_replication_instance": [
+    "kms_key_arn",
+    "publicly_accessible",
+    "replication_subnet_group_id",
+    "availability_zone",
+    "replication_instance_id"
+  ],
+  "aws_dms_replication_subnet_group": [
+    "replication_subnet_group_id"
+  ],
+  "aws_dms_replication_task": [
+    "resource_identifier",
+    "source_endpoint_arn",
+    "target_endpoint_arn",
+    "replication_task_id"
+  ],
+  "aws_dms_s3_endpoint": [
+    "ignore_header_rows",
+    "endpoint_id",
+    "kms_key_arn"
+  ],
+  "aws_docdb_cluster": [
+    "kms_key_id",
+    "availability_zones",
+    "master_username",
+    "restore_to_point_in_time",
+    "snapshot_identifier",
+    "port",
+    "cluster_identifier",
+    "cluster_identifier_prefix",
+    "storage_encrypted",
+    "db_subnet_group_name",
+    "engine"
+  ],
+  "aws_docdb_cluster_instance": [
+    "cluster_identifier",
+    "identifier_prefix",
+    "availability_zone",
+    "engine",
+    "identifier"
+  ],
+  "aws_docdb_cluster_parameter_group": [
+    "name_prefix",
+    "description",
+    "family",
+    "name"
+  ],
+  "aws_docdb_cluster_snapshot": [
+    "db_cluster_identifier",
+    "db_cluster_snapshot_identifier"
+  ],
+  "aws_docdb_event_subscription": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_docdb_global_cluster": [
+    "source_db_cluster_identifier",
+    "storage_encrypted",
+    "database_name",
+    "engine",
+    "global_cluster_identifier"
+  ],
+  "aws_docdb_subnet_group": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_dx_bgp_peer": [
+    "customer_address",
+    "virtual_interface_id",
+    "bgp_asn",
+    "amazon_address",
+    "bgp_auth_key",
+    "address_family"
+  ],
+  "aws_dx_connection": [
+    "bandwidth",
+    "location",
+    "request_macsec",
+    "provider_name",
+    "name"
+  ],
+  "aws_dx_connection_association": [
+    "connection_id",
+    "lag_id"
+  ],
+  "aws_dx_connection_confirmation": [
+    "connection_id"
+  ],
+  "aws_dx_gateway": [
+    "amazon_side_asn"
+  ],
+  "aws_dx_gateway_association": [
+    "associated_gateway_id",
+    "associated_gateway_owner_account_id",
+    "vpn_gateway_id",
+    "dx_gateway_id"
+  ],
+  "aws_dx_gateway_association_proposal": [
+    "associated_gateway_id",
+    "dx_gateway_id",
+    "dx_gateway_owner_account_id"
+  ],
+  "aws_dx_hosted_connection": [
+    "connection_id",
+    "bandwidth",
+    "name",
+    "owner_account_id",
+    "vlan"
+  ],
+  "aws_dx_hosted_private_virtual_interface": [
+    "name",
+    "owner_account_id",
+    "bgp_asn",
+    "mtu",
+    "bgp_auth_key",
+    "connection_id",
+    "vlan",
+    "address_family",
+    "amazon_address",
+    "customer_address"
+  ],
+  "aws_dx_hosted_private_virtual_interface_accepter": [
+    "dx_gateway_id",
+    "virtual_interface_id",
+    "vpn_gateway_id"
+  ],
+  "aws_dx_hosted_public_virtual_interface": [
+    "bgp_asn",
+    "connection_id",
+    "customer_address",
+    "name",
+    "owner_account_id",
+    "amazon_address",
+    "bgp_auth_key",
+    "route_filter_prefixes",
+    "vlan",
+    "address_family"
+  ],
+  "aws_dx_hosted_public_virtual_interface_accepter": [
+    "virtual_interface_id"
+  ],
+  "aws_dx_hosted_transit_virtual_interface": [
+    "name",
+    "amazon_address",
+    "owner_account_id",
+    "customer_address",
+    "bgp_auth_key",
+    "connection_id",
+    "mtu",
+    "bgp_asn",
+    "vlan",
+    "address_family"
+  ],
+  "aws_dx_hosted_transit_virtual_interface_accepter": [
+    "dx_gateway_id",
+    "virtual_interface_id"
+  ],
+  "aws_dx_lag": [
+    "location",
+    "connection_id",
+    "connections_bandwidth",
+    "provider_name"
+  ],
+  "aws_dx_macsec_key_association": [
+    "cak",
+    "ckn",
+    "connection_id",
+    "secret_arn"
+  ],
+  "aws_dx_private_virtual_interface": [
+    "vlan",
+    "vpn_gateway_id",
+    "address_family",
+    "bgp_asn",
+    "bgp_auth_key",
+    "amazon_address",
+    "connection_id",
+    "dx_gateway_id",
+    "customer_address",
+    "name"
+  ],
+  "aws_dx_public_virtual_interface": [
+    "address_family",
+    "amazon_address",
+    "bgp_auth_key",
+    "bgp_asn",
+    "name",
+    "vlan",
+    "connection_id",
+    "customer_address",
+    "route_filter_prefixes"
+  ],
+  "aws_dx_transit_virtual_interface": [
+    "connection_id",
+    "customer_address",
+    "dx_gateway_id",
+    "address_family",
+    "bgp_auth_key",
+    "bgp_asn",
+    "name",
+    "amazon_address",
+    "vlan"
+  ],
+  "aws_dynamodb_contributor_insights": [
+    "index_name",
+    "table_name"
+  ],
+  "aws_dynamodb_global_table": [
+    "name"
+  ],
+  "aws_dynamodb_kinesis_streaming_destination": [
+    "approximate_creation_date_time_precision",
+    "stream_arn",
+    "table_name"
+  ],
+  "aws_dynamodb_table": [
+    "range_key",
+    "restore_date_time",
+    "restore_to_latest_time",
+    "import_table",
+    "hash_key",
+    "local_secondary_index",
+    "name"
+  ],
+  "aws_dynamodb_table_export": [
+    "export_format",
+    "s3_bucket",
+    "s3_sse_algorithm",
+    "export_time",
+    "s3_sse_kms_key_id",
+    "export_type",
+    "incremental_export_specification",
+    "s3_bucket_owner",
+    "s3_prefix",
+    "table_arn"
+  ],
+  "aws_dynamodb_table_item": [
+    "range_key",
+    "table_name",
+    "hash_key"
+  ],
+  "aws_dynamodb_table_replica": [
+    "kms_key_arn",
+    "table_class_override",
+    "global_table_arn"
+  ],
+  "aws_dynamodb_tag": [
+    "key",
+    "resource_arn"
+  ],
+  "aws_ebs_default_kms_key": [
+    "key_arn"
+  ],
+  "aws_ebs_encryption_by_default": [],
+  "aws_ebs_snapshot": [
+    "volume_id",
+    "description",
+    "outpost_arn"
+  ],
+  "aws_ebs_snapshot_block_public_access": [],
+  "aws_ebs_snapshot_copy": [
+    "completion_duration_minutes",
+    "description",
+    "encrypted",
+    "source_snapshot_id",
+    "kms_key_id",
+    "source_region"
+  ],
+  "aws_ebs_snapshot_import": [
+    "client_data",
+    "disk_container",
+    "encrypted",
+    "kms_key_id",
+    "description",
+    "role_name"
+  ],
+  "aws_ebs_volume": [
+    "snapshot_id",
+    "encrypted",
+    "multi_attach_enabled",
+    "outpost_arn",
+    "availability_zone",
+    "kms_key_id"
+  ],
+  "aws_ec2_availability_zone_group": [
+    "group_name"
+  ],
+  "aws_ec2_capacity_reservation": [
+    "tenancy",
+    "instance_platform",
+    "instance_type",
+    "availability_zone",
+    "ebs_optimized",
+    "ephemeral_storage",
+    "instance_match_criteria"
+  ],
+  "aws_ec2_carrier_gateway": [
+    "vpc_id"
+  ],
+  "aws_ec2_client_vpn_authorization_rule": [
+    "authorize_all_groups",
+    "client_vpn_endpoint_id",
+    "description",
+    "target_network_cidr",
+    "access_group_id"
+  ],
+  "aws_ec2_client_vpn_endpoint": [
+    "authentication_options",
+    "client_cidr_block",
+    "transport_protocol"
+  ],
+  "aws_ec2_client_vpn_network_association": [
+    "client_vpn_endpoint_id",
+    "subnet_id"
+  ],
+  "aws_ec2_client_vpn_route": [
+    "client_vpn_endpoint_id",
+    "description",
+    "destination_cidr_block",
+    "target_vpc_subnet_id"
+  ],
+  "aws_ec2_fleet": [
+    "replace_unhealthy_instances",
+    "terminate_instances_with_expiration",
+    "spot_options",
+    "valid_from",
+    "valid_until",
+    "on_demand_options",
+    "target_capacity_specification",
+    "type"
+  ],
+  "aws_ec2_host": [
+    "outpost_arn",
+    "asset_id",
+    "availability_zone"
+  ],
+  "aws_ec2_image_block_public_access": [],
+  "aws_ec2_instance_state": [
+    "instance_id"
+  ],
+  "aws_ec2_local_gateway_route": [
+    "local_gateway_route_table_id",
+    "local_gateway_virtual_interface_group_id",
+    "destination_cidr_block"
+  ],
+  "aws_ec2_local_gateway_route_table_vpc_association": [
+    "local_gateway_route_table_id",
+    "vpc_id"
+  ],
+  "aws_ec2_managed_prefix_list": [
+    "address_family"
+  ],
+  "aws_ec2_managed_prefix_list_entry": [
+    "prefix_list_id",
+    "cidr",
+    "description"
+  ],
+  "aws_ec2_network_insights_analysis": [
+    "filter_in_arns",
+    "network_insights_path_id"
+  ],
+  "aws_ec2_network_insights_path": [
+    "source",
+    "destination_ip",
+    "destination_port",
+    "filter_at_destination",
+    "filter_at_source",
+    "protocol",
+    "source_ip",
+    "destination"
+  ],
+  "aws_ec2_serial_console_access": [],
+  "aws_ec2_subnet_cidr_reservation": [
+    "description",
+    "reservation_type",
+    "subnet_id",
+    "cidr_block"
+  ],
+  "aws_ec2_tag": [
+    "resource_id",
+    "key"
+  ],
+  "aws_ec2_traffic_mirror_filter": [
+    "description"
+  ],
+  "aws_ec2_traffic_mirror_filter_rule": [
+    "traffic_mirror_filter_id"
+  ],
+  "aws_ec2_traffic_mirror_session": [
+    "network_interface_id"
+  ],
+  "aws_ec2_traffic_mirror_target": [
+    "description",
+    "gateway_load_balancer_endpoint_id",
+    "network_interface_id",
+    "network_load_balancer_arn"
+  ],
+  "aws_ec2_transit_gateway": [
+    "multicast_support"
+  ],
+  "aws_ec2_transit_gateway_connect": [
+    "transport_attachment_id",
+    "protocol",
+    "transit_gateway_id"
+  ],
+  "aws_ec2_transit_gateway_connect_peer": [
+    "peer_address",
+    "transit_gateway_address",
+    "transit_gateway_attachment_id",
+    "bgp_asn",
+    "inside_cidr_blocks"
+  ],
+  "aws_ec2_transit_gateway_multicast_domain": [
+    "static_sources_support",
+    "transit_gateway_id",
+    "auto_accept_shared_associations",
+    "igmpv2_support"
+  ],
+  "aws_ec2_transit_gateway_multicast_domain_association": [
+    "subnet_id",
+    "transit_gateway_attachment_id",
+    "transit_gateway_multicast_domain_id"
+  ],
+  "aws_ec2_transit_gateway_multicast_group_member": [
+    "group_ip_address",
+    "network_interface_id",
+    "transit_gateway_multicast_domain_id"
+  ],
+  "aws_ec2_transit_gateway_multicast_group_source": [
+    "network_interface_id",
+    "transit_gateway_multicast_domain_id",
+    "group_ip_address"
+  ],
+  "aws_ec2_transit_gateway_peering_attachment": [
+    "transit_gateway_id",
+    "options",
+    "peer_account_id",
+    "peer_region",
+    "peer_transit_gateway_id"
+  ],
+  "aws_ec2_transit_gateway_peering_attachment_accepter": [
+    "transit_gateway_attachment_id"
+  ],
+  "aws_ec2_transit_gateway_policy_table": [
+    "transit_gateway_id"
+  ],
+  "aws_ec2_transit_gateway_policy_table_association": [
+    "transit_gateway_attachment_id",
+    "transit_gateway_policy_table_id"
+  ],
+  "aws_ec2_transit_gateway_prefix_list_reference": [
+    "prefix_list_id",
+    "transit_gateway_route_table_id"
+  ],
+  "aws_ec2_transit_gateway_route": [
+    "blackhole",
+    "destination_cidr_block",
+    "transit_gateway_attachment_id",
+    "transit_gateway_route_table_id"
+  ],
+  "aws_ec2_transit_gateway_route_table": [
+    "transit_gateway_id"
+  ],
+  "aws_ec2_transit_gateway_route_table_association": [
+    "transit_gateway_route_table_id"
+  ],
+  "aws_ec2_transit_gateway_route_table_propagation": [
+    "transit_gateway_route_table_id",
+    "transit_gateway_attachment_id"
+  ],
+  "aws_ec2_transit_gateway_vpc_attachment": [
+    "transit_gateway_id",
+    "vpc_id"
+  ],
+  "aws_ec2_transit_gateway_vpc_attachment_accepter": [
+    "transit_gateway_attachment_id"
+  ],
+  "aws_ecr_lifecycle_policy": [
+    "policy",
+    "repository"
+  ],
+  "aws_ecr_pull_through_cache_rule": [
+    "ecr_repository_prefix",
+    "upstream_registry_url",
+    "upstream_repository_prefix"
+  ],
+  "aws_ecr_registry_policy": [],
+  "aws_ecr_registry_scanning_configuration": [],
+  "aws_ecr_replication_configuration": [],
+  "aws_ecr_repository": [
+    "encryption_configuration",
+    "name"
+  ],
+  "aws_ecr_repository_creation_template": [
+    "prefix"
+  ],
+  "aws_ecr_repository_policy": [
+    "repository"
+  ],
+  "aws_ecrpublic_repository": [
+    "repository_name"
+  ],
+  "aws_ecrpublic_repository_policy": [
+    "repository_name"
+  ],
+  "aws_ecs_account_setting_default": [
+    "name"
+  ],
+  "aws_ecs_capacity_provider": [
+    "auto_scaling_group_provider",
+    "name"
+  ],
+  "aws_ecs_cluster": [
+    "name"
+  ],
+  "aws_ecs_cluster_capacity_providers": [
+    "cluster_name"
+  ],
+  "aws_ecs_service": [
+    "deployment_controller",
+    "iam_role",
+    "scheduling_strategy",
+    "name",
+    "cluster",
+    "launch_type"
+  ],
+  "aws_ecs_tag": [
+    "resource_arn",
+    "key"
+  ],
+  "aws_ecs_task_definition": [
+    "proxy_configuration",
+    "task_role_arn",
+    "requires_compatibilities",
+    "container_definitions",
+    "cpu",
+    "enable_fault_injection",
+    "network_mode",
+    "pid_mode",
+    "placement_constraints",
+    "volume",
+    "execution_role_arn",
+    "family",
+    "ipc_mode",
+    "ephemeral_storage",
+    "inference_accelerator",
+    "memory",
+    "runtime_platform"
+  ],
+  "aws_ecs_task_set": [
+    "capacity_provider_strategy",
+    "external_id",
+    "launch_type",
+    "service",
+    "service_registries",
+    "cluster",
+    "network_configuration",
+    "load_balancer",
+    "platform_version",
+    "task_definition"
+  ],
+  "aws_efs_access_point": [
+    "posix_user",
+    "root_directory",
+    "file_system_id"
+  ],
+  "aws_efs_backup_policy": [
+    "file_system_id"
+  ],
+  "aws_efs_file_system": [
+    "performance_mode",
+    "creation_token",
+    "encrypted",
+    "availability_zone_name",
+    "kms_key_id"
+  ],
+  "aws_efs_file_system_policy": [
+    "file_system_id"
+  ],
+  "aws_efs_mount_target": [
+    "subnet_id",
+    "file_system_id",
+    "ip_address"
+  ],
+  "aws_efs_replication_configuration": [
+    "destination",
+    "source_file_system_id"
+  ],
+  "aws_egress_only_internet_gateway": [
+    "vpc_id"
+  ],
+  "aws_eip": [
+    "ipam_pool_id",
+    "address",
+    "network_border_group",
+    "public_ipv4_pool",
+    "domain",
+    "vpc"
+  ],
+  "aws_eip_association": [
+    "private_ip_address",
+    "public_ip",
+    "allocation_id",
+    "allow_reassociation",
+    "instance_id",
+    "network_interface_id"
+  ],
+  "aws_eks_access_entry": [
+    "principal_arn",
+    "cluster_name",
+    "type"
+  ],
+  "aws_eks_access_policy_association": [
+    "access_scope",
+    "cluster_name",
+    "policy_arn",
+    "principal_arn"
+  ],
+  "aws_eks_addon": [
+    "addon_name",
+    "cluster_name"
+  ],
+  "aws_eks_cluster": [
+    "outpost_config",
+    "bootstrap_self_managed_addons",
+    "role_arn",
+    "access_config",
+    "remote_network_config",
+    "kubernetes_network_config",
+    "name"
+  ],
+  "aws_eks_fargate_profile": [
+    "fargate_profile_name",
+    "pod_execution_role_arn",
+    "subnet_ids",
+    "cluster_name",
+    "selector"
+  ],
+  "aws_eks_identity_provider_config": [
+    "cluster_name",
+    "oidc"
+  ],
+  "aws_eks_node_group": [
+    "remote_access",
+    "ami_type",
+    "capacity_type",
+    "instance_types",
+    "node_role_arn",
+    "launch_template",
+    "node_group_name_prefix",
+    "cluster_name",
+    "disk_size",
+    "node_group_name",
+    "subnet_ids"
+  ],
+  "aws_elastic_beanstalk_application": [
+    "name"
+  ],
+  "aws_elastic_beanstalk_application_version": [
+    "bucket",
+    "application",
+    "key",
+    "name"
+  ],
+  "aws_elastic_beanstalk_configuration_template": [
+    "name",
+    "solution_stack_name",
+    "application",
+    "environment_id"
+  ],
+  "aws_elastic_beanstalk_environment": [
+    "name",
+    "cname_prefix",
+    "tier"
+  ],
+  "aws_elasticache_cluster": [
+    "subnet_group_name",
+    "cluster_id",
+    "snapshot_name",
+    "transit_encryption_enabled",
+    "preferred_outpost_arn",
+    "snapshot_arns",
+    "engine",
+    "port",
+    "replication_group_id",
+    "availability_zone",
+    "network_type",
+    "outpost_mode"
+  ],
+  "aws_elasticache_global_replication_group": [
+    "global_replication_group_id_suffix",
+    "primary_replication_group_id"
+  ],
+  "aws_elasticache_parameter_group": [
+    "description",
+    "family",
+    "name"
+  ],
+  "aws_elasticache_replication_group": [
+    "snapshot_arns",
+    "replication_group_id",
+    "security_group_names",
+    "global_replication_group_id",
+    "data_tiering_enabled",
+    "snapshot_name",
+    "at_rest_encryption_enabled",
+    "kms_key_id",
+    "port",
+    "subnet_group_name",
+    "network_type"
+  ],
+  "aws_elasticache_subnet_group": [
+    "name"
+  ],
+  "aws_elasticache_user": [
+    "user_id",
+    "user_name"
+  ],
+  "aws_elasticache_user_group": [
+    "user_group_id"
+  ],
+  "aws_elasticache_user_group_association": [
+    "user_group_id",
+    "user_id"
+  ],
+  "aws_elasticsearch_domain": [
+    "domain_name",
+    "vpc_options",
+    "encrypt_at_rest",
+    "advanced_security_options"
+  ],
+  "aws_elasticsearch_domain_policy": [
+    "domain_name"
+  ],
+  "aws_elasticsearch_domain_saml_options": [
+    "domain_name"
+  ],
+  "aws_elasticsearch_vpc_endpoint": [
+    "domain_arn"
+  ],
+  "aws_elastictranscoder_pipeline": [
+    "name"
+  ],
+  "aws_elastictranscoder_preset": [
+    "video_watermarks",
+    "video_codec_options",
+    "description",
+    "thumbnails",
+    "audio_codec_options",
+    "container",
+    "name",
+    "video",
+    "audio"
+  ],
+  "aws_elb": [
+    "internal",
+    "name",
+    "name_prefix"
+  ],
+  "aws_elb_attachment": [
+    "elb",
+    "instance"
+  ],
+  "aws_emr_block_public_access_configuration": [
+    "block_public_security_group_rules",
+    "permitted_public_security_group_rule_range"
+  ],
+  "aws_emr_cluster": [
+    "scale_down_behavior",
+    "security_configuration",
+    "applications",
+    "configurations",
+    "custom_ami_id",
+    "log_encryption_kms_key_id",
+    "placement_group_config",
+    "step",
+    "additional_info",
+    "autoscaling_role",
+    "service_role",
+    "core_instance_fleet",
+    "ebs_root_volume_size",
+    "ec2_attributes",
+    "bootstrap_action",
+    "log_uri",
+    "name",
+    "release_label",
+    "configurations_json",
+    "core_instance_group",
+    "kerberos_attributes",
+    "keep_job_flow_alive_when_no_steps",
+    "master_instance_fleet",
+    "master_instance_group"
+  ],
+  "aws_emr_instance_fleet": [
+    "cluster_id",
+    "instance_type_configs",
+    "launch_specifications",
+    "name"
+  ],
+  "aws_emr_instance_group": [
+    "ebs_optimized",
+    "cluster_id",
+    "ebs_config",
+    "bid_price",
+    "instance_type",
+    "name"
+  ],
+  "aws_emr_managed_scaling_policy": [
+    "cluster_id",
+    "compute_limits"
+  ],
+  "aws_emr_security_configuration": [
+    "name",
+    "name_prefix",
+    "configuration"
+  ],
+  "aws_emr_studio": [
+    "user_role",
+    "idp_relay_state_parameter_name",
+    "idp_auth_url",
+    "engine_security_group_id",
+    "service_role",
+    "vpc_id",
+    "workspace_security_group_id",
+    "auth_mode"
+  ],
+  "aws_emr_studio_session_mapping": [
+    "studio_id",
+    "identity_id",
+    "identity_name",
+    "identity_type"
+  ],
+  "aws_emrcontainers_job_template": [
+    "kms_key_arn",
+    "name",
+    "tags",
+    "job_template_data"
+  ],
+  "aws_emrcontainers_virtual_cluster": [
+    "name",
+    "container_provider"
+  ],
+  "aws_emrserverless_application": [
+    "type",
+    "name",
+    "network_configuration"
+  ],
+  "aws_evidently_feature": [
+    "project",
+    "name"
+  ],
+  "aws_evidently_launch": [
+    "project",
+    "name"
+  ],
+  "aws_evidently_project": [
+    "name"
+  ],
+  "aws_evidently_segment": [
+    "name",
+    "pattern",
+    "description"
+  ],
+  "aws_finspace_kx_cluster": [
+    "savedown_storage_configuration",
+    "auto_scaling_configuration",
+    "availability_zone_id",
+    "database",
+    "environment_id",
+    "execution_role",
+    "name",
+    "type",
+    "vpc_configuration",
+    "scaling_group_configuration",
+    "cache_storage_configurations",
+    "capacity_configuration",
+    "description",
+    "tickerplant_log_configuration",
+    "az_mode",
+    "release_label"
+  ],
+  "aws_finspace_kx_database": [
+    "name",
+    "environment_id"
+  ],
+  "aws_finspace_kx_dataview": [
+    "read_write",
+    "database_name",
+    "environment_id",
+    "segment_configurations",
+    "auto_update",
+    "az_mode",
+    "availability_zone_id",
+    "name"
+  ],
+  "aws_finspace_kx_environment": [],
+  "aws_finspace_kx_scaling_group": [
+    "availability_zone_id",
+    "environment_id",
+    "host_type",
+    "name"
+  ],
+  "aws_finspace_kx_user": [
+    "environment_id",
+    "name"
+  ],
+  "aws_finspace_kx_volume": [
+    "name",
+    "nas1_configuration",
+    "description",
+    "attached_clusters",
+    "az_mode",
+    "type",
+    "availability_zones",
+    "environment_id"
+  ],
+  "aws_fis_experiment_template": [
+    "tags"
+  ],
+  "aws_flow_log": [
+    "log_format",
+    "traffic_type",
+    "transit_gateway_id",
+    "log_destination",
+    "eni_id",
+    "max_aggregation_interval",
+    "subnet_id",
+    "vpc_id",
+    "deliver_cross_account_role",
+    "iam_role_arn",
+    "transit_gateway_attachment_id",
+    "log_destination_type",
+    "log_group_name",
+    "destination_options"
+  ],
+  "aws_fms_admin_account": [
+    "account_id"
+  ],
+  "aws_fms_policy": [],
+  "aws_fsx_backup": [
+    "volume_id",
+    "file_system_id"
+  ],
+  "aws_fsx_data_repository_association": [
+    "data_repository_path",
+    "file_system_id",
+    "file_system_path"
+  ],
+  "aws_fsx_file_cache": [
+    "file_cache_type",
+    "data_repository_association",
+    "kms_key_id",
+    "file_cache_type_version",
+    "lustre_configuration",
+    "storage_capacity",
+    "subnet_ids",
+    "security_group_ids"
+  ],
+  "aws_fsx_lustre_file_system": [
+    "export_path",
+    "kms_key_id",
+    "file_system_type_version",
+    "copy_tags_to_backups",
+    "deployment_type",
+    "efa_enabled",
+    "import_path",
+    "backup_id",
+    "imported_file_chunk_size",
+    "storage_type",
+    "subnet_ids",
+    "drive_cache_type",
+    "security_group_ids"
+  ],
+  "aws_fsx_ontap_file_system": [
+    "storage_type",
+    "subnet_ids",
+    "deployment_type",
+    "kms_key_id",
+    "endpoint_ip_address_range",
+    "preferred_subnet_id",
+    "security_group_ids"
+  ],
+  "aws_fsx_ontap_storage_virtual_machine": [
+    "root_volume_security_style",
+    "name",
+    "file_system_id"
+  ],
+  "aws_fsx_ontap_volume": [
+    "volume_type",
+    "name",
+    "storage_virtual_machine_id",
+    "ontap_volume_type",
+    "snaplock_configuration",
+    "aggregate_configuration",
+    "volume_style"
+  ],
+  "aws_fsx_openzfs_file_system": [
+    "backup_id",
+    "endpoint_ip_address_range",
+    "security_group_ids",
+    "deployment_type",
+    "preferred_subnet_id",
+    "storage_type",
+    "kms_key_id",
+    "root_volume_configuration",
+    "subnet_ids"
+  ],
+  "aws_fsx_openzfs_snapshot": [
+    "volume_id"
+  ],
+  "aws_fsx_openzfs_volume": [
+    "copy_tags_to_snapshots",
+    "volume_type"
+  ],
+  "aws_fsx_windows_file_system": [
+    "preferred_subnet_id",
+    "security_group_ids",
+    "copy_tags_to_backups",
+    "storage_type",
+    "active_directory_id",
+    "deployment_type",
+    "backup_id",
+    "subnet_ids",
+    "kms_key_id"
+  ],
+  "aws_gamelift_alias": [],
+  "aws_gamelift_build": [
+    "operating_system",
+    "storage_location"
+  ],
+  "aws_gamelift_fleet": [
+    "instance_role_arn",
+    "certificate_configuration",
+    "fleet_type",
+    "build_id",
+    "ec2_instance_type",
+    "script_id"
+  ],
+  "aws_gamelift_game_server_group": [
+    "auto_scaling_policy",
+    "game_server_group_name",
+    "min_size",
+    "vpc_subnets",
+    "launch_template",
+    "max_size"
+  ],
+  "aws_gamelift_game_session_queue": [
+    "name"
+  ],
+  "aws_gamelift_script": [
+    "storage_location"
+  ],
+  "aws_glacier_vault": [
+    "name"
+  ],
+  "aws_glacier_vault_lock": [
+    "complete_lock",
+    "policy",
+    "vault_name"
+  ],
+  "aws_globalaccelerator_accelerator": [
+    "ip_addresses"
+  ],
+  "aws_globalaccelerator_custom_routing_accelerator": [
+    "ip_addresses"
+  ],
+  "aws_globalaccelerator_custom_routing_endpoint_group": [
+    "destination_configuration",
+    "endpoint_configuration",
+    "endpoint_group_region",
+    "listener_arn"
+  ],
+  "aws_globalaccelerator_custom_routing_listener": [
+    "accelerator_arn"
+  ],
+  "aws_globalaccelerator_endpoint_group": [
+    "listener_arn",
+    "endpoint_group_region"
+  ],
+  "aws_globalaccelerator_listener": [
+    "accelerator_arn"
+  ],
+  "aws_glue_catalog_database": [
+    "target_database",
+    "catalog_id",
+    "name"
+  ],
+  "aws_glue_catalog_table": [
+    "partition_index",
+    "name",
+    "target_table",
+    "catalog_id",
+    "database_name"
+  ],
+  "aws_glue_classifier": [
+    "name"
+  ],
+  "aws_glue_connection": [
+    "catalog_id",
+    "name"
+  ],
+  "aws_glue_crawler": [
+    "name",
+    "database_name"
+  ],
+  "aws_glue_data_catalog_encryption_settings": [
+    "catalog_id"
+  ],
+  "aws_glue_data_quality_ruleset": [
+    "target_table",
+    "name"
+  ],
+  "aws_glue_dev_endpoint": [
+    "security_group_ids",
+    "glue_version",
+    "number_of_nodes",
+    "number_of_workers",
+    "role_arn",
+    "security_configuration",
+    "worker_type",
+    "name",
+    "subnet_id"
+  ],
+  "aws_glue_job": [
+    "name"
+  ],
+  "aws_glue_ml_transform": [
+    "input_record_tables",
+    "name"
+  ],
+  "aws_glue_partition": [
+    "table_name",
+    "database_name",
+    "partition_values",
+    "catalog_id"
+  ],
+  "aws_glue_partition_index": [
+    "catalog_id",
+    "database_name",
+    "table_name",
+    "partition_index"
+  ],
+  "aws_glue_registry": [
+    "registry_name"
+  ],
+  "aws_glue_resource_policy": [],
+  "aws_glue_schema": [
+    "schema_name"
+  ],
+  "aws_glue_security_configuration": [
+    "encryption_configuration",
+    "name"
+  ],
+  "aws_glue_trigger": [
+    "name",
+    "workflow_name",
+    "type"
+  ],
+  "aws_glue_user_defined_function": [
+    "catalog_id",
+    "database_name",
+    "name"
+  ],
+  "aws_glue_workflow": [
+    "name"
+  ],
+  "aws_grafana_license_association": [
+    "grafana_token",
+    "license_type",
+    "workspace_id"
+  ],
+  "aws_grafana_role_association": [
+    "workspace_id"
+  ],
+  "aws_grafana_workspace": [
+    "authentication_providers"
+  ],
+  "aws_grafana_workspace_api_key": [
+    "key_name",
+    "key_role",
+    "workspace_id"
+  ],
+  "aws_grafana_workspace_saml_configuration": [
+    "workspace_id"
+  ],
+  "aws_guardduty_detector": [],
+  "aws_guardduty_detector_feature": [
+    "additional_configuration",
+    "detector_id",
+    "name"
+  ],
+  "aws_guardduty_filter": [
+    "name",
+    "detector_id"
+  ],
+  "aws_guardduty_invite_accepter": [
+    "detector_id",
+    "master_account_id"
+  ],
+  "aws_guardduty_ipset": [
+    "detector_id",
+    "format"
+  ],
+  "aws_guardduty_member": [
+    "detector_id",
+    "email",
+    "disable_email_notification",
+    "invitation_message",
+    "account_id"
+  ],
+  "aws_guardduty_organization_admin_account": [
+    "admin_account_id"
+  ],
+  "aws_guardduty_organization_configuration": [
+    "detector_id"
+  ],
+  "aws_guardduty_organization_configuration_feature": [
+    "name",
+    "additional_configuration",
+    "detector_id"
+  ],
+  "aws_guardduty_publishing_destination": [
+    "detector_id"
+  ],
+  "aws_guardduty_threatintelset": [
+    "detector_id",
+    "format"
+  ],
+  "aws_iam_access_key": [
+    "pgp_key",
+    "user"
+  ],
+  "aws_iam_account_alias": [
+    "account_alias"
+  ],
+  "aws_iam_account_password_policy": [],
+  "aws_iam_group": [],
+  "aws_iam_group_membership": [
+    "group",
+    "name"
+  ],
+  "aws_iam_group_policy": [
+    "name",
+    "name_prefix",
+    "group"
+  ],
+  "aws_iam_group_policy_attachment": [
+    "group",
+    "policy_arn"
+  ],
+  "aws_iam_instance_profile": [
+    "name",
+    "name_prefix",
+    "path"
+  ],
+  "aws_iam_openid_connect_provider": [
+    "url"
+  ],
+  "aws_iam_policy": [
+    "path",
+    "description",
+    "name_prefix",
+    "name"
+  ],
+  "aws_iam_policy_attachment": [
+    "name",
+    "policy_arn"
+  ],
+  "aws_iam_role": [
+    "name_prefix",
+    "name",
+    "path"
+  ],
+  "aws_iam_role_policy": [
+    "role",
+    "name",
+    "name_prefix"
+  ],
+  "aws_iam_role_policy_attachment": [
+    "policy_arn",
+    "role"
+  ],
+  "aws_iam_saml_provider": [
+    "name"
+  ],
+  "aws_iam_security_token_service_preferences": [],
+  "aws_iam_server_certificate": [
+    "certificate_body",
+    "certificate_chain",
+    "private_key"
+  ],
+  "aws_iam_service_linked_role": [
+    "aws_service_name",
+    "custom_suffix"
+  ],
+  "aws_iam_service_specific_credential": [
+    "user_name",
+    "service_name"
+  ],
+  "aws_iam_signing_certificate": [
+    "user_name",
+    "certificate_body"
+  ],
+  "aws_iam_user": [],
+  "aws_iam_user_group_membership": [
+    "user"
+  ],
+  "aws_iam_user_login_profile": [
+    "user",
+    "pgp_key",
+    "password_reset_required",
+    "password_length"
+  ],
+  "aws_iam_user_policy": [
+    "name",
+    "name_prefix",
+    "user"
+  ],
+  "aws_iam_user_policy_attachment": [
+    "user",
+    "policy_arn"
+  ],
+  "aws_iam_user_ssh_key": [
+    "public_key",
+    "username",
+    "encoding"
+  ],
+  "aws_iam_virtual_mfa_device": [
+    "path",
+    "virtual_mfa_device_name"
+  ],
+  "aws_identitystore_group": [
+    "identity_store_id"
+  ],
+  "aws_identitystore_group_membership": [
+    "group_id",
+    "identity_store_id",
+    "member_id"
+  ],
+  "aws_identitystore_user": [
+    "user_name",
+    "identity_store_id"
+  ],
+  "aws_imagebuilder_component": [
+    "data",
+    "name",
+    "change_description",
+    "platform",
+    "version",
+    "kms_key_id",
+    "supported_os_versions",
+    "description",
+    "uri"
+  ],
+  "aws_imagebuilder_container_recipe": [
+    "working_directory",
+    "kms_key_id",
+    "parent_image",
+    "target_repository",
+    "instance_configuration",
+    "name",
+    "description",
+    "dockerfile_template_data",
+    "platform_override",
+    "container_type",
+    "version",
+    "component",
+    "dockerfile_template_uri"
+  ],
+  "aws_imagebuilder_distribution_configuration": [
+    "name"
+  ],
+  "aws_imagebuilder_image": [
+    "container_recipe_arn",
+    "image_recipe_arn",
+    "image_tests_configuration",
+    "infrastructure_configuration_arn",
+    "workflow",
+    "distribution_configuration_arn",
+    "enhanced_image_metadata_enabled"
+  ],
+  "aws_imagebuilder_image_pipeline": [
+    "name"
+  ],
+  "aws_imagebuilder_image_recipe": [
+    "parent_image",
+    "component",
+    "description",
+    "version",
+    "working_directory",
+    "block_device_mapping",
+    "user_data_base64",
+    "name",
+    "systems_manager_agent"
+  ],
+  "aws_imagebuilder_infrastructure_configuration": [
+    "name"
+  ],
+  "aws_imagebuilder_workflow": [
+    "type",
+    "version",
+    "change_description",
+    "data",
+    "description",
+    "kms_key_id",
+    "name",
+    "uri"
+  ],
+  "aws_inspector2_delegated_admin_account": [
+    "account_id"
+  ],
+  "aws_inspector2_enabler": [],
+  "aws_inspector2_member_association": [
+    "account_id"
+  ],
+  "aws_inspector2_organization_configuration": [],
+  "aws_inspector_assessment_target": [
+    "name"
+  ],
+  "aws_inspector_assessment_template": [
+    "rules_package_arns",
+    "target_arn",
+    "duration",
+    "name"
+  ],
+  "aws_inspector_resource_group": [
+    "tags"
+  ],
+  "aws_instance": [
+    "availability_zone",
+    "cpu_threads_per_core",
+    "hibernation",
+    "network_interface",
+    "cpu_options",
+    "launch_template",
+    "security_groups",
+    "cpu_core_count",
+    "ebs_optimized",
+    "instance_market_options",
+    "ephemeral_block_device",
+    "associate_public_ip_address",
+    "enclave_options",
+    "placement_group",
+    "key_name",
+    "placement_partition_number",
+    "private_ip",
+    "root_block_device",
+    "ebs_block_device",
+    "ipv6_addresses",
+    "private_dns_name_options",
+    "tenancy",
+    "ami",
+    "subnet_id",
+    "host_id"
+  ],
+  "aws_internet_gateway": [],
+  "aws_internet_gateway_attachment": [
+    "internet_gateway_id",
+    "vpc_id"
+  ],
+  "aws_internetmonitor_monitor": [
+    "monitor_name"
+  ],
+  "aws_iot_authorizer": [],
+  "aws_iot_ca_certificate": [
+    "certificate_mode",
+    "ca_certificate_pem",
+    "verification_certificate_pem"
+  ],
+  "aws_iot_certificate": [
+    "ca_pem",
+    "certificate_pem",
+    "csr"
+  ],
+  "aws_iot_domain_configuration": [
+    "name",
+    "server_certificate_arns",
+    "validation_certificate_arn",
+    "domain_name",
+    "service_type"
+  ],
+  "aws_iot_event_configurations": [],
+  "aws_iot_indexing_configuration": [],
+  "aws_iot_logging_options": [],
+  "aws_iot_policy": [
+    "name"
+  ],
+  "aws_iot_policy_attachment": [
+    "policy",
+    "target"
+  ],
+  "aws_iot_provisioning_template": [
+    "type",
+    "name"
+  ],
+  "aws_iot_role_alias": [
+    "alias"
+  ],
+  "aws_iot_thing": [
+    "name"
+  ],
+  "aws_iot_thing_group": [
+    "name",
+    "parent_group_name"
+  ],
+  "aws_iot_thing_group_membership": [
+    "override_dynamic_group",
+    "thing_group_name",
+    "thing_name"
+  ],
+  "aws_iot_thing_principal_attachment": [
+    "principal",
+    "thing"
+  ],
+  "aws_iot_thing_type": [
+    "name",
+    "properties"
+  ],
+  "aws_iot_topic_rule": [
+    "name"
+  ],
+  "aws_iot_topic_rule_destination": [
+    "vpc_configuration"
+  ],
+  "aws_ivs_channel": [],
+  "aws_ivs_playback_key_pair": [
+    "name",
+    "public_key",
+    "tags"
+  ],
+  "aws_ivs_recording_configuration": [
+    "name",
+    "recording_reconnect_window_seconds",
+    "tags",
+    "thumbnail_configuration",
+    "destination_configuration"
+  ],
+  "aws_ivschat_logging_configuration": [],
+  "aws_ivschat_room": [],
+  "aws_kendra_data_source": [
+    "type",
+    "index_id"
+  ],
+  "aws_kendra_experience": [
+    "index_id"
+  ],
+  "aws_kendra_faq": [
+    "index_id",
+    "s3_path",
+    "language_code",
+    "name",
+    "role_arn",
+    "description",
+    "file_format"
+  ],
+  "aws_kendra_index": [
+    "edition",
+    "server_side_encryption_configuration"
+  ],
+  "aws_kendra_query_suggestions_block_list": [
+    "index_id"
+  ],
+  "aws_kendra_thesaurus": [
+    "index_id"
+  ],
+  "aws_key_pair": [
+    "key_name_prefix",
+    "public_key",
+    "key_name"
+  ],
+  "aws_keyspaces_keyspace": [
+    "name",
+    "replication_specification"
+  ],
+  "aws_keyspaces_table": [
+    "comment",
+    "keyspace_name",
+    "schema_definition",
+    "table_name"
+  ],
+  "aws_kinesis_analytics_application": [
+    "description",
+    "name"
+  ],
+  "aws_kinesis_firehose_delivery_stream": [
+    "iceberg_configuration",
+    "splunk_configuration",
+    "kinesis_source_configuration",
+    "opensearch_configuration",
+    "snowflake_configuration",
+    "destination",
+    "extended_s3_configuration",
+    "http_endpoint_configuration",
+    "opensearchserverless_configuration",
+    "redshift_configuration",
+    "elasticsearch_configuration",
+    "msk_source_configuration",
+    "name"
+  ],
+  "aws_kinesis_stream": [
+    "name"
+  ],
+  "aws_kinesis_stream_consumer": [
+    "name",
+    "stream_arn"
+  ],
+  "aws_kinesis_video_stream": [
+    "data_retention_in_hours",
+    "kms_key_id",
+    "name"
+  ],
+  "aws_kinesisanalyticsv2_application": [
+    "application_mode",
+    "name",
+    "description"
+  ],
+  "aws_kinesisanalyticsv2_application_snapshot": [
+    "application_name",
+    "snapshot_name"
+  ],
+  "aws_kms_alias": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_kms_ciphertext": [
+    "context",
+    "key_id",
+    "plaintext"
+  ],
+  "aws_kms_custom_key_store": [
+    "cloud_hsm_cluster_id",
+    "trust_anchor_certificate",
+    "custom_key_store_type"
+  ],
+  "aws_kms_external_key": [
+    "key_material_base64",
+    "multi_region"
+  ],
+  "aws_kms_grant": [
+    "name",
+    "operations",
+    "retire_on_delete",
+    "constraints",
+    "grant_creation_tokens",
+    "grantee_principal",
+    "key_id",
+    "retiring_principal"
+  ],
+  "aws_kms_key": [
+    "multi_region",
+    "xks_key_id",
+    "customer_master_key_spec",
+    "custom_key_store_id",
+    "key_usage"
+  ],
+  "aws_kms_key_policy": [],
+  "aws_kms_replica_external_key": [
+    "key_material_base64",
+    "primary_key_arn"
+  ],
+  "aws_kms_replica_key": [
+    "primary_key_arn"
+  ],
+  "aws_lakeformation_data_lake_settings": [
+    "catalog_id"
+  ],
+  "aws_lakeformation_lf_tag": [
+    "key",
+    "catalog_id"
+  ],
+  "aws_lakeformation_permissions": [
+    "data_cells_filter",
+    "data_location",
+    "database",
+    "lf_tag",
+    "permissions_with_grant_option",
+    "principal",
+    "table_with_columns",
+    "catalog_resource",
+    "lf_tag_policy",
+    "permissions",
+    "table",
+    "catalog_id"
+  ],
+  "aws_lakeformation_resource": [
+    "hybrid_access_enabled",
+    "role_arn",
+    "use_service_linked_role",
+    "with_federation",
+    "arn"
+  ],
+  "aws_lakeformation_resource_lf_tags": [
+    "lf_tag",
+    "table",
+    "table_with_columns",
+    "catalog_id",
+    "database"
+  ],
+  "aws_lambda_alias": [
+    "function_name",
+    "name"
+  ],
+  "aws_lambda_code_signing_config": [],
+  "aws_lambda_event_source_mapping": [
+    "self_managed_event_source",
+    "self_managed_kafka_event_source_config",
+    "queues",
+    "amazon_managed_kafka_event_source_config",
+    "event_source_arn",
+    "starting_position_timestamp",
+    "topics",
+    "starting_position"
+  ],
+  "aws_lambda_function": [
+    "package_type",
+    "function_name"
+  ],
+  "aws_lambda_function_event_invoke_config": [
+    "function_name",
+    "qualifier"
+  ],
+  "aws_lambda_function_url": [
+    "qualifier",
+    "function_name"
+  ],
+  "aws_lambda_invocation": [
+    "triggers",
+    "function_name",
+    "qualifier"
+  ],
+  "aws_lambda_layer_version": [
+    "skip_destroy",
+    "source_code_hash",
+    "compatible_architectures",
+    "filename",
+    "layer_name",
+    "s3_bucket",
+    "compatible_runtimes",
+    "description",
+    "license_info",
+    "s3_key",
+    "s3_object_version"
+  ],
+  "aws_lambda_layer_version_permission": [
+    "layer_name",
+    "skip_destroy",
+    "statement_id",
+    "version_number",
+    "action",
+    "organization_id",
+    "principal"
+  ],
+  "aws_lambda_permission": [
+    "source_arn",
+    "statement_id",
+    "action",
+    "function_url_auth_type",
+    "principal",
+    "qualifier",
+    "source_account",
+    "event_source_token",
+    "function_name",
+    "principal_org_id",
+    "statement_id_prefix"
+  ],
+  "aws_lambda_provisioned_concurrency_config": [
+    "function_name",
+    "qualifier"
+  ],
+  "aws_launch_configuration": [
+    "root_block_device",
+    "user_data_base64",
+    "image_id",
+    "metadata_options",
+    "name_prefix",
+    "user_data",
+    "associate_public_ip_address",
+    "ephemeral_block_device",
+    "placement_tenancy",
+    "key_name",
+    "enable_monitoring",
+    "instance_type",
+    "name",
+    "security_groups",
+    "spot_price",
+    "ebs_block_device",
+    "ebs_optimized",
+    "iam_instance_profile"
+  ],
+  "aws_launch_template": [
+    "name_prefix",
+    "name"
+  ],
+  "aws_lb": [
+    "name",
+    "internal",
+    "name_prefix",
+    "customer_owned_ipv4_pool",
+    "load_balancer_type"
+  ],
+  "aws_lb_cookie_stickiness_policy": [
+    "load_balancer",
+    "name",
+    "cookie_expiration_period",
+    "lb_port"
+  ],
+  "aws_lb_listener": [
+    "load_balancer_arn"
+  ],
+  "aws_lb_listener_certificate": [
+    "certificate_arn",
+    "listener_arn"
+  ],
+  "aws_lb_listener_rule": [
+    "listener_arn"
+  ],
+  "aws_lb_ssl_negotiation_policy": [
+    "attribute",
+    "lb_port",
+    "load_balancer",
+    "name",
+    "triggers"
+  ],
+  "aws_lb_target_group": [
+    "name",
+    "ip_address_type",
+    "name_prefix",
+    "port",
+    "protocol",
+    "protocol_version",
+    "target_type",
+    "vpc_id"
+  ],
+  "aws_lb_target_group_attachment": [
+    "availability_zone",
+    "target_group_arn",
+    "target_id",
+    "port"
+  ],
+  "aws_lb_trust_store": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_lb_trust_store_revocation": [
+    "revocations_s3_object_version",
+    "trust_store_arn",
+    "revocations_s3_bucket",
+    "revocations_s3_key"
+  ],
+  "aws_lex_bot": [
+    "locale",
+    "name"
+  ],
+  "aws_lex_bot_alias": [
+    "name",
+    "bot_name"
+  ],
+  "aws_lex_intent": [
+    "name"
+  ],
+  "aws_lex_slot_type": [
+    "name"
+  ],
+  "aws_licensemanager_association": [
+    "license_configuration_arn",
+    "resource_arn"
+  ],
+  "aws_licensemanager_grant": [
+    "principal",
+    "license_arn"
+  ],
+  "aws_licensemanager_grant_accepter": [
+    "grant_arn"
+  ],
+  "aws_licensemanager_license_configuration": [
+    "license_counting_type",
+    "license_rules"
+  ],
+  "aws_lightsail_bucket": [
+    "name"
+  ],
+  "aws_lightsail_bucket_access_key": [
+    "bucket_name"
+  ],
+  "aws_lightsail_bucket_resource_access": [
+    "bucket_name",
+    "resource_name"
+  ],
+  "aws_lightsail_certificate": [
+    "subject_alternative_names",
+    "domain_name",
+    "name"
+  ],
+  "aws_lightsail_container_service": [
+    "name"
+  ],
+  "aws_lightsail_container_service_deployment_version": [
+    "container",
+    "public_endpoint",
+    "service_name"
+  ],
+  "aws_lightsail_database": [
+    "relational_database_name",
+    "master_database_name",
+    "availability_zone",
+    "bundle_id",
+    "master_username",
+    "blueprint_id"
+  ],
+  "aws_lightsail_disk": [
+    "name",
+    "size_in_gb",
+    "availability_zone"
+  ],
+  "aws_lightsail_disk_attachment": [
+    "disk_path",
+    "disk_name",
+    "instance_name"
+  ],
+  "aws_lightsail_distribution": [],
+  "aws_lightsail_domain": [
+    "domain_name"
+  ],
+  "aws_lightsail_domain_entry": [
+    "name",
+    "target",
+    "type",
+    "domain_name",
+    "is_alias"
+  ],
+  "aws_lightsail_instance": [
+    "availability_zone",
+    "bundle_id",
+    "name",
+    "key_pair_name",
+    "user_data",
+    "blueprint_id"
+  ],
+  "aws_lightsail_instance_public_ports": [
+    "instance_name",
+    "port_info"
+  ],
+  "aws_lightsail_key_pair": [
+    "name",
+    "name_prefix",
+    "pgp_key",
+    "public_key"
+  ],
+  "aws_lightsail_lb": [
+    "instance_port",
+    "name"
+  ],
+  "aws_lightsail_lb_attachment": [
+    "instance_name",
+    "lb_name"
+  ],
+  "aws_lightsail_lb_certificate": [
+    "lb_name",
+    "name",
+    "subject_alternative_names",
+    "domain_name"
+  ],
+  "aws_lightsail_lb_certificate_attachment": [
+    "lb_name",
+    "certificate_name"
+  ],
+  "aws_lightsail_lb_https_redirection_policy": [
+    "lb_name"
+  ],
+  "aws_lightsail_lb_stickiness_policy": [
+    "lb_name"
+  ],
+  "aws_lightsail_static_ip": [
+    "name"
+  ],
+  "aws_lightsail_static_ip_attachment": [
+    "static_ip_name",
+    "instance_name"
+  ],
+  "aws_load_balancer_backend_server_policy": [],
+  "aws_load_balancer_listener_policy": [],
+  "aws_load_balancer_policy": [
+    "load_balancer_name",
+    "policy_name",
+    "policy_type_name"
+  ],
+  "aws_location_geofence_collection": [
+    "collection_name",
+    "kms_key_id"
+  ],
+  "aws_location_map": [
+    "configuration",
+    "map_name"
+  ],
+  "aws_location_place_index": [
+    "index_name",
+    "data_source"
+  ],
+  "aws_location_route_calculator": [
+    "calculator_name",
+    "data_source"
+  ],
+  "aws_location_tracker": [
+    "kms_key_id"
+  ],
+  "aws_location_tracker_association": [
+    "consumer_arn",
+    "tracker_name"
+  ],
+  "aws_macie2_account": [],
+  "aws_macie2_classification_export_configuration": [],
+  "aws_macie2_classification_job": [
+    "custom_data_identifier_ids",
+    "description",
+    "name_prefix",
+    "initial_run",
+    "sampling_percentage",
+    "job_type",
+    "s3_job_definition",
+    "schedule_frequency",
+    "name"
+  ],
+  "aws_macie2_custom_data_identifier": [
+    "description",
+    "ignore_words",
+    "name",
+    "name_prefix",
+    "regex",
+    "keywords",
+    "maximum_match_distance"
+  ],
+  "aws_macie2_findings_filter": [],
+  "aws_macie2_invitation_accepter": [
+    "administrator_account_id"
+  ],
+  "aws_macie2_member": [
+    "account_id",
+    "email"
+  ],
+  "aws_macie2_organization_admin_account": [
+    "admin_account_id"
+  ],
+  "aws_main_route_table_association": [],
+  "aws_media_convert_queue": [
+    "name",
+    "pricing_plan"
+  ],
+  "aws_media_package_channel": [
+    "channel_id"
+  ],
+  "aws_media_store_container": [
+    "name"
+  ],
+  "aws_media_store_container_policy": [
+    "container_name"
+  ],
+  "aws_medialive_channel": [
+    "channel_class",
+    "vpc"
+  ],
+  "aws_medialive_input": [
+    "type"
+  ],
+  "aws_medialive_input_security_group": [],
+  "aws_medialive_multiplex": [
+    "availability_zones"
+  ],
+  "aws_memorydb_acl": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_memorydb_cluster": [
+    "name",
+    "snapshot_arns",
+    "name_prefix",
+    "auto_minor_version_upgrade",
+    "multi_region_cluster_name",
+    "kms_key_arn",
+    "snapshot_name",
+    "subnet_group_name",
+    "tls_enabled",
+    "data_tiering",
+    "port"
+  ],
+  "aws_memorydb_parameter_group": [
+    "description",
+    "family",
+    "name",
+    "name_prefix"
+  ],
+  "aws_memorydb_snapshot": [
+    "cluster_name",
+    "kms_key_arn",
+    "name",
+    "name_prefix"
+  ],
+  "aws_memorydb_subnet_group": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_memorydb_user": [
+    "user_name"
+  ],
+  "aws_mq_broker": [
+    "subnet_ids",
+    "broker_name",
+    "engine_type",
+    "publicly_accessible",
+    "data_replication_primary_broker_arn",
+    "deployment_mode",
+    "encryption_options",
+    "ldap_server_metadata"
+  ],
+  "aws_mq_configuration": [
+    "name",
+    "engine_type",
+    "engine_version"
+  ],
+  "aws_msk_cluster": [
+    "cluster_name",
+    "broker_node_group_info",
+    "encryption_info"
+  ],
+  "aws_msk_cluster_policy": [],
+  "aws_msk_configuration": [
+    "kafka_versions",
+    "name"
+  ],
+  "aws_msk_replicator": [
+    "replication_info_list",
+    "kafka_cluster"
+  ],
+  "aws_msk_scram_secret_association": [
+    "cluster_arn"
+  ],
+  "aws_msk_serverless_cluster": [
+    "cluster_name",
+    "vpc_config",
+    "client_authentication"
+  ],
+  "aws_msk_vpc_connection": [
+    "target_cluster_arn",
+    "vpc_id",
+    "authentication",
+    "client_subnets",
+    "security_groups"
+  ],
+  "aws_mskconnect_connector": [
+    "service_execution_role_arn",
+    "kafka_cluster",
+    "kafka_cluster_client_authentication",
+    "log_delivery",
+    "plugin",
+    "description",
+    "kafkaconnect_version",
+    "worker_configuration",
+    "kafka_cluster_encryption_in_transit",
+    "name"
+  ],
+  "aws_mskconnect_custom_plugin": [
+    "name",
+    "content_type",
+    "description",
+    "location"
+  ],
+  "aws_mskconnect_worker_configuration": [
+    "description",
+    "name",
+    "properties_file_content"
+  ],
+  "aws_mwaa_environment": [
+    "endpoint_management",
+    "kms_key",
+    "network_configuration",
+    "name"
+  ],
+  "aws_nat_gateway": [
+    "allocation_id",
+    "connectivity_type",
+    "private_ip",
+    "subnet_id"
+  ],
+  "aws_neptune_cluster": [
+    "kms_key_arn",
+    "port",
+    "storage_encrypted",
+    "engine",
+    "snapshot_identifier",
+    "availability_zones",
+    "cluster_identifier_prefix",
+    "cluster_identifier",
+    "neptune_subnet_group_name"
+  ],
+  "aws_neptune_cluster_endpoint": [
+    "cluster_identifier",
+    "endpoint_type",
+    "cluster_endpoint_identifier"
+  ],
+  "aws_neptune_cluster_instance": [
+    "identifier_prefix",
+    "port",
+    "neptune_subnet_group_name",
+    "cluster_identifier",
+    "engine",
+    "availability_zone",
+    "publicly_accessible",
+    "identifier"
+  ],
+  "aws_neptune_cluster_parameter_group": [
+    "name_prefix",
+    "description",
+    "family",
+    "name"
+  ],
+  "aws_neptune_cluster_snapshot": [
+    "db_cluster_identifier",
+    "db_cluster_snapshot_identifier"
+  ],
+  "aws_neptune_event_subscription": [
+    "name_prefix",
+    "name"
+  ],
+  "aws_neptune_global_cluster": [
+    "source_db_cluster_identifier",
+    "storage_encrypted",
+    "engine",
+    "global_cluster_identifier"
+  ],
+  "aws_neptune_parameter_group": [
+    "name",
+    "name_prefix",
+    "description",
+    "family"
+  ],
+  "aws_neptune_subnet_group": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_network_acl": [
+    "vpc_id"
+  ],
+  "aws_network_acl_association": [
+    "network_acl_id",
+    "subnet_id"
+  ],
+  "aws_network_acl_rule": [
+    "icmp_type",
+    "protocol",
+    "rule_number",
+    "icmp_code",
+    "egress",
+    "from_port",
+    "ipv6_cidr_block",
+    "network_acl_id",
+    "rule_action",
+    "to_port",
+    "cidr_block"
+  ],
+  "aws_network_interface": [
+    "interface_type",
+    "subnet_id"
+  ],
+  "aws_network_interface_attachment": [
+    "device_index",
+    "instance_id",
+    "network_interface_id"
+  ],
+  "aws_network_interface_sg_attachment": [
+    "network_interface_id",
+    "security_group_id"
+  ],
+  "aws_networkfirewall_firewall": [
+    "name",
+    "vpc_id"
+  ],
+  "aws_networkfirewall_firewall_policy": [
+    "firewall_policy",
+    "name"
+  ],
+  "aws_networkfirewall_logging_configuration": [
+    "firewall_arn"
+  ],
+  "aws_networkfirewall_resource_policy": [
+    "resource_arn"
+  ],
+  "aws_networkfirewall_rule_group": [
+    "name",
+    "rule_group",
+    "capacity"
+  ],
+  "aws_networkmanager_attachment_accepter": [
+    "attachment_type",
+    "attachment_id"
+  ],
+  "aws_networkmanager_connect_attachment": [
+    "edge_location",
+    "core_network_id",
+    "transport_attachment_id"
+  ],
+  "aws_networkmanager_connect_peer": [
+    "core_network_address",
+    "inside_cidr_blocks",
+    "connect_attachment_id",
+    "bgp_options",
+    "peer_address"
+  ],
+  "aws_networkmanager_connection": [
+    "connected_device_id",
+    "device_id",
+    "global_network_id"
+  ],
+  "aws_networkmanager_core_network": [
+    "global_network_id"
+  ],
+  "aws_networkmanager_core_network_policy_attachment": [
+    "core_network_id"
+  ],
+  "aws_networkmanager_customer_gateway_association": [
+    "customer_gateway_arn",
+    "device_id",
+    "global_network_id",
+    "link_id"
+  ],
+  "aws_networkmanager_device": [
+    "global_network_id"
+  ],
+  "aws_networkmanager_global_network": [],
+  "aws_networkmanager_link": [
+    "global_network_id",
+    "site_id"
+  ],
+  "aws_networkmanager_link_association": [
+    "device_id",
+    "global_network_id",
+    "link_id"
+  ],
+  "aws_networkmanager_site": [
+    "global_network_id"
+  ],
+  "aws_networkmanager_site_to_site_vpn_attachment": [
+    "vpn_connection_arn",
+    "core_network_id"
+  ],
+  "aws_networkmanager_transit_gateway_connect_peer_association": [
+    "device_id",
+    "global_network_id",
+    "link_id",
+    "transit_gateway_connect_peer_arn"
+  ],
+  "aws_networkmanager_transit_gateway_peering": [
+    "core_network_id",
+    "transit_gateway_arn"
+  ],
+  "aws_networkmanager_transit_gateway_registration": [
+    "global_network_id",
+    "transit_gateway_arn"
+  ],
+  "aws_networkmanager_transit_gateway_route_table_attachment": [
+    "peering_id",
+    "transit_gateway_route_table_arn"
+  ],
+  "aws_networkmanager_vpc_attachment": [
+    "vpc_arn",
+    "core_network_id"
+  ],
+  "aws_oam_link": [
+    "label_template",
+    "sink_identifier"
+  ],
+  "aws_oam_sink": [
+    "name"
+  ],
+  "aws_oam_sink_policy": [
+    "sink_identifier"
+  ],
+  "aws_opensearch_domain": [
+    "domain_name",
+    "vpc_options",
+    "encrypt_at_rest"
+  ],
+  "aws_opensearch_domain_policy": [],
+  "aws_opensearch_domain_saml_options": [
+    "domain_name"
+  ],
+  "aws_opensearch_inbound_connection_accepter": [
+    "connection_id"
+  ],
+  "aws_opensearch_outbound_connection": [
+    "remote_domain_info",
+    "accept_connection",
+    "connection_alias",
+    "connection_mode",
+    "connection_properties",
+    "local_domain_info"
+  ],
+  "aws_opensearch_package": [
+    "package_name",
+    "package_source",
+    "package_type"
+  ],
+  "aws_opensearch_package_association": [
+    "domain_name",
+    "package_id"
+  ],
+  "aws_opensearch_vpc_endpoint": [
+    "domain_arn"
+  ],
+  "aws_opsworks_application": [
+    "short_name"
+  ],
+  "aws_opsworks_custom_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_ecs_cluster_layer": [
+    "stack_id",
+    "ecs_cluster_arn"
+  ],
+  "aws_opsworks_ganglia_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_haproxy_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_instance": [
+    "os",
+    "root_device_type",
+    "ami_id",
+    "ebs_optimized",
+    "tenancy",
+    "subnet_id",
+    "availability_zone",
+    "ebs_block_device",
+    "hostname",
+    "root_block_device",
+    "stack_id",
+    "virtualization_type",
+    "ephemeral_block_device"
+  ],
+  "aws_opsworks_java_app_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_memcached_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_mysql_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_nodejs_app_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_permission": [
+    "stack_id",
+    "user_arn"
+  ],
+  "aws_opsworks_php_app_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_rails_app_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_rds_db_instance": [
+    "rds_db_instance_arn",
+    "stack_id"
+  ],
+  "aws_opsworks_stack": [
+    "vpc_id",
+    "service_role_arn",
+    "region"
+  ],
+  "aws_opsworks_static_web_layer": [
+    "stack_id"
+  ],
+  "aws_opsworks_user_profile": [
+    "user_arn"
+  ],
+  "aws_organizations_account": [
+    "iam_user_access_to_billing",
+    "role_name",
+    "email"
+  ],
+  "aws_organizations_delegated_administrator": [
+    "account_id",
+    "service_principal"
+  ],
+  "aws_organizations_organization": [],
+  "aws_organizations_organizational_unit": [
+    "parent_id"
+  ],
+  "aws_organizations_policy": [
+    "type"
+  ],
+  "aws_organizations_policy_attachment": [
+    "target_id",
+    "policy_id"
+  ],
+  "aws_organizations_resource_policy": [],
+  "aws_pinpoint_adm_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_apns_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_apns_sandbox_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_apns_voip_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_apns_voip_sandbox_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_app": [
+    "name_prefix",
+    "name"
+  ],
+  "aws_pinpoint_baidu_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_email_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_event_stream": [
+    "application_id"
+  ],
+  "aws_pinpoint_gcm_channel": [
+    "application_id"
+  ],
+  "aws_pinpoint_sms_channel": [
+    "application_id"
+  ],
+  "aws_pipes_pipe": [
+    "source_parameters",
+    "name_prefix",
+    "name",
+    "source"
+  ],
+  "aws_placement_group": [
+    "strategy",
+    "name",
+    "partition_count",
+    "spread_level"
+  ],
+  "aws_prometheus_alert_manager_definition": [
+    "workspace_id"
+  ],
+  "aws_prometheus_rule_group_namespace": [
+    "workspace_id",
+    "name"
+  ],
+  "aws_prometheus_workspace": [
+    "kms_key_arn"
+  ],
+  "aws_proxy_protocol_policy": [],
+  "aws_qldb_ledger": [
+    "name"
+  ],
+  "aws_qldb_stream": [
+    "inclusive_start_time",
+    "role_arn",
+    "exclusive_end_time",
+    "kinesis_configuration",
+    "ledger_name",
+    "stream_name"
+  ],
+  "aws_quicksight_account_subscription": [
+    "author_group",
+    "directory_id",
+    "admin_group",
+    "aws_account_id",
+    "email_address",
+    "first_name",
+    "iam_identity_center_instance_arn",
+    "reader_group",
+    "authentication_method",
+    "contact_number",
+    "edition",
+    "last_name",
+    "realm",
+    "account_name",
+    "active_directory_name",
+    "notification_email"
+  ],
+  "aws_quicksight_analysis": [
+    "analysis_id",
+    "aws_account_id"
+  ],
+  "aws_quicksight_dashboard": [
+    "dashboard_id",
+    "aws_account_id"
+  ],
+  "aws_quicksight_data_set": [
+    "aws_account_id",
+    "data_set_id"
+  ],
+  "aws_quicksight_data_source": [
+    "data_source_id",
+    "type",
+    "aws_account_id"
+  ],
+  "aws_quicksight_folder": [
+    "parent_folder_arn",
+    "folder_id",
+    "aws_account_id"
+  ],
+  "aws_quicksight_group": [
+    "aws_account_id",
+    "group_name",
+    "namespace"
+  ],
+  "aws_quicksight_group_membership": [
+    "group_name",
+    "member_name",
+    "namespace",
+    "aws_account_id"
+  ],
+  "aws_quicksight_template": [
+    "aws_account_id",
+    "template_id"
+  ],
+  "aws_quicksight_theme": [
+    "theme_id",
+    "aws_account_id"
+  ],
+  "aws_quicksight_user": [
+    "aws_account_id",
+    "session_name",
+    "user_role",
+    "email",
+    "iam_arn",
+    "identity_type",
+    "namespace"
+  ],
+  "aws_ram_principal_association": [
+    "principal",
+    "resource_share_arn"
+  ],
+  "aws_ram_resource_association": [
+    "resource_arn",
+    "resource_share_arn"
+  ],
+  "aws_ram_resource_share": [
+    "permission_arns"
+  ],
+  "aws_ram_resource_share_accepter": [
+    "share_arn"
+  ],
+  "aws_ram_sharing_with_organization": [],
+  "aws_rbin_rule": [
+    "resource_type"
+  ],
+  "aws_rds_certificate": [],
+  "aws_rds_cluster": [
+    "cluster_identifier_prefix",
+    "storage_encrypted",
+    "cluster_scalability_type",
+    "availability_zones",
+    "cluster_identifier",
+    "engine_mode",
+    "db_system_id",
+    "master_username",
+    "engine",
+    "database_name",
+    "snapshot_identifier",
+    "s3_import",
+    "db_subnet_group_name",
+    "kms_key_id",
+    "restore_to_point_in_time",
+    "source_region"
+  ],
+  "aws_rds_cluster_activity_stream": [
+    "resource_arn",
+    "engine_native_audit_fields_included",
+    "kms_key_id",
+    "mode"
+  ],
+  "aws_rds_cluster_endpoint": [
+    "cluster_identifier",
+    "cluster_endpoint_identifier"
+  ],
+  "aws_rds_cluster_instance": [
+    "availability_zone",
+    "engine",
+    "cluster_identifier",
+    "custom_iam_instance_profile",
+    "db_subnet_group_name",
+    "identifier",
+    "identifier_prefix"
+  ],
+  "aws_rds_cluster_parameter_group": [
+    "name",
+    "name_prefix",
+    "description",
+    "family"
+  ],
+  "aws_rds_cluster_role_association": [
+    "db_cluster_identifier",
+    "feature_name",
+    "role_arn"
+  ],
+  "aws_rds_custom_db_engine_version": [
+    "engine",
+    "database_installation_files_s3_prefix",
+    "filename",
+    "kms_key_id",
+    "engine_version",
+    "manifest",
+    "source_image_id",
+    "database_installation_files_s3_bucket_name"
+  ],
+  "aws_rds_global_cluster": [
+    "source_db_cluster_identifier",
+    "database_name",
+    "global_cluster_identifier",
+    "engine",
+    "storage_encrypted"
+  ],
+  "aws_rds_reserved_instance": [
+    "reservation_id",
+    "instance_count",
+    "offering_id"
+  ],
+  "aws_redshift_authentication_profile": [
+    "authentication_profile_name"
+  ],
+  "aws_redshift_cluster": [
+    "cluster_identifier",
+    "cluster_subnet_group_name",
+    "master_username",
+    "snapshot_arn",
+    "snapshot_cluster_identifier",
+    "snapshot_identifier"
+  ],
+  "aws_redshift_cluster_iam_roles": [
+    "cluster_identifier"
+  ],
+  "aws_redshift_cluster_snapshot": [
+    "snapshot_identifier",
+    "cluster_identifier"
+  ],
+  "aws_redshift_endpoint_access": [
+    "cluster_identifier",
+    "endpoint_name",
+    "resource_owner",
+    "subnet_group_name"
+  ],
+  "aws_redshift_endpoint_authorization": [
+    "account",
+    "cluster_identifier"
+  ],
+  "aws_redshift_event_subscription": [
+    "name"
+  ],
+  "aws_redshift_hsm_client_certificate": [
+    "hsm_client_certificate_identifier"
+  ],
+  "aws_redshift_hsm_configuration": [
+    "description",
+    "hsm_configuration_identifier",
+    "hsm_server_public_certificate",
+    "hsm_ip_address",
+    "hsm_partition_name",
+    "hsm_partition_password"
+  ],
+  "aws_redshift_parameter_group": [
+    "description",
+    "family",
+    "name"
+  ],
+  "aws_redshift_partner": [
+    "account_id",
+    "cluster_identifier",
+    "database_name",
+    "partner_name"
+  ],
+  "aws_redshift_resource_policy": [
+    "resource_arn"
+  ],
+  "aws_redshift_scheduled_action": [
+    "name"
+  ],
+  "aws_redshift_snapshot_copy_grant": [
+    "kms_key_id",
+    "snapshot_copy_grant_name"
+  ],
+  "aws_redshift_snapshot_schedule": [
+    "identifier_prefix",
+    "description",
+    "identifier"
+  ],
+  "aws_redshift_snapshot_schedule_association": [
+    "cluster_identifier",
+    "schedule_identifier"
+  ],
+  "aws_redshift_subnet_group": [
+    "name"
+  ],
+  "aws_redshift_usage_limit": [
+    "limit_type",
+    "period",
+    "cluster_identifier",
+    "feature_type"
+  ],
+  "aws_redshiftdata_statement": [
+    "db_user",
+    "parameters",
+    "workgroup_name",
+    "sql",
+    "statement_name",
+    "with_event",
+    "cluster_identifier",
+    "database",
+    "secret_arn"
+  ],
+  "aws_redshiftserverless_endpoint_access": [
+    "owner_account",
+    "workgroup_name",
+    "endpoint_name",
+    "subnet_ids"
+  ],
+  "aws_redshiftserverless_namespace": [
+    "db_name",
+    "namespace_name"
+  ],
+  "aws_redshiftserverless_resource_policy": [
+    "resource_arn"
+  ],
+  "aws_redshiftserverless_snapshot": [
+    "snapshot_name",
+    "namespace_name"
+  ],
+  "aws_redshiftserverless_usage_limit": [
+    "period",
+    "resource_arn"
+  ],
+  "aws_redshiftserverless_workgroup": [
+    "namespace_name",
+    "workgroup_name"
+  ],
+  "aws_resourcegroups_group": [
+    "name"
+  ],
+  "aws_resourcegroups_resource": [
+    "group_arn",
+    "resource_arn"
+  ],
+  "aws_rolesanywhere_profile": [],
+  "aws_rolesanywhere_trust_anchor": [
+    "notification_settings"
+  ],
+  "aws_route": [
+    "destination_cidr_block",
+    "destination_prefix_list_id",
+    "route_table_id",
+    "destination_ipv6_cidr_block"
+  ],
+  "aws_route53_delegation_set": [
+    "reference_name"
+  ],
+  "aws_route53_health_check": [
+    "reference_name",
+    "request_interval",
+    "measure_latency",
+    "routing_control_arn",
+    "type"
+  ],
+  "aws_route53_hosted_zone_dnssec": [
+    "hosted_zone_id"
+  ],
+  "aws_route53_key_signing_key": [
+    "name",
+    "hosted_zone_id"
+  ],
+  "aws_route53_query_log": [
+    "zone_id",
+    "cloudwatch_log_group_arn"
+  ],
+  "aws_route53_record": [
+    "zone_id",
+    "name"
+  ],
+  "aws_route53_resolver_config": [
+    "resource_id"
+  ],
+  "aws_route53_resolver_dnssec_config": [
+    "resource_id"
+  ],
+  "aws_route53_resolver_endpoint": [
+    "security_group_ids",
+    "direction"
+  ],
+  "aws_route53_resolver_firewall_config": [
+    "resource_id"
+  ],
+  "aws_route53_resolver_firewall_domain_list": [
+    "name"
+  ],
+  "aws_route53_resolver_firewall_rule": [
+    "firewall_domain_list_id",
+    "firewall_rule_group_id"
+  ],
+  "aws_route53_resolver_firewall_rule_group": [
+    "name"
+  ],
+  "aws_route53_resolver_firewall_rule_group_association": [
+    "firewall_rule_group_id",
+    "vpc_id"
+  ],
+  "aws_route53_resolver_query_log_config": [
+    "destination_arn",
+    "name"
+  ],
+  "aws_route53_resolver_query_log_config_association": [
+    "resolver_query_log_config_id",
+    "resource_id"
+  ],
+  "aws_route53_resolver_rule": [
+    "domain_name",
+    "rule_type"
+  ],
+  "aws_route53_resolver_rule_association": [
+    "name",
+    "resolver_rule_id",
+    "vpc_id"
+  ],
+  "aws_route53_traffic_policy": [
+    "document",
+    "name"
+  ],
+  "aws_route53_traffic_policy_instance": [
+    "name",
+    "hosted_zone_id"
+  ],
+  "aws_route53_vpc_association_authorization": [
+    "vpc_id",
+    "vpc_region",
+    "zone_id"
+  ],
+  "aws_route53_zone": [
+    "delegation_set_id",
+    "name"
+  ],
+  "aws_route53_zone_association": [
+    "vpc_id",
+    "vpc_region",
+    "zone_id"
+  ],
+  "aws_route53domains_registered_domain": [],
+  "aws_route53recoverycontrolconfig_cluster": [
+    "name"
+  ],
+  "aws_route53recoverycontrolconfig_control_panel": [
+    "cluster_arn"
+  ],
+  "aws_route53recoverycontrolconfig_routing_control": [
+    "cluster_arn"
+  ],
+  "aws_route53recoverycontrolconfig_safety_rule": [
+    "asserted_controls",
+    "control_panel_arn",
+    "gating_controls",
+    "rule_config",
+    "target_controls"
+  ],
+  "aws_route53recoveryreadiness_cell": [
+    "cell_name"
+  ],
+  "aws_route53recoveryreadiness_readiness_check": [
+    "readiness_check_name"
+  ],
+  "aws_route53recoveryreadiness_recovery_group": [
+    "recovery_group_name"
+  ],
+  "aws_route53recoveryreadiness_resource_set": [
+    "resource_set_name",
+    "resource_set_type"
+  ],
+  "aws_route_table": [
+    "vpc_id"
+  ],
+  "aws_route_table_association": [
+    "subnet_id",
+    "gateway_id"
+  ],
+  "aws_rum_app_monitor": [
+    "name"
+  ],
+  "aws_rum_metrics_destination": [],
+  "aws_s3_access_point": [
+    "name",
+    "public_access_block_configuration",
+    "account_id",
+    "bucket_account_id",
+    "vpc_configuration",
+    "bucket"
+  ],
+  "aws_s3_account_public_access_block": [
+    "account_id"
+  ],
+  "aws_s3_bucket": [
+    "bucket",
+    "object_lock_configuration",
+    "object_lock_enabled",
+    "bucket_prefix"
+  ],
+  "aws_s3_bucket_accelerate_configuration": [
+    "expected_bucket_owner",
+    "bucket"
+  ],
+  "aws_s3_bucket_acl": [
+    "bucket",
+    "expected_bucket_owner"
+  ],
+  "aws_s3_bucket_analytics_configuration": [
+    "bucket",
+    "name"
+  ],
+  "aws_s3_bucket_cors_configuration": [
+    "bucket",
+    "expected_bucket_owner"
+  ],
+  "aws_s3_bucket_intelligent_tiering_configuration": [
+    "bucket",
+    "name"
+  ],
+  "aws_s3_bucket_inventory": [
+    "bucket",
+    "name"
+  ],
+  "aws_s3_bucket_logging": [
+    "bucket",
+    "expected_bucket_owner"
+  ],
+  "aws_s3_bucket_metric": [
+    "bucket",
+    "name"
+  ],
+  "aws_s3_bucket_notification": [
+    "bucket"
+  ],
+  "aws_s3_bucket_object": [
+    "bucket",
+    "key"
+  ],
+  "aws_s3_bucket_object_lock_configuration": [
+    "bucket",
+    "expected_bucket_owner",
+    "object_lock_enabled"
+  ],
+  "aws_s3_bucket_ownership_controls": [
+    "bucket"
+  ],
+  "aws_s3_bucket_policy": [
+    "bucket"
+  ],
+  "aws_s3_bucket_public_access_block": [
+    "bucket"
+  ],
+  "aws_s3_bucket_replication_configuration": [
+    "bucket"
+  ],
+  "aws_s3_bucket_request_payment_configuration": [
+    "expected_bucket_owner",
+    "bucket"
+  ],
+  "aws_s3_bucket_server_side_encryption_configuration": [
+    "bucket",
+    "expected_bucket_owner"
+  ],
+  "aws_s3_bucket_versioning": [
+    "bucket",
+    "expected_bucket_owner"
+  ],
+  "aws_s3_bucket_website_configuration": [
+    "bucket",
+    "expected_bucket_owner"
+  ],
+  "aws_s3_object": [
+    "key",
+    "bucket"
+  ],
+  "aws_s3_object_copy": [
+    "key",
+    "source",
+    "bucket"
+  ],
+  "aws_s3control_access_point_policy": [
+    "access_point_arn"
+  ],
+  "aws_s3control_bucket": [
+    "bucket",
+    "outpost_id"
+  ],
+  "aws_s3control_bucket_lifecycle_configuration": [
+    "bucket"
+  ],
+  "aws_s3control_bucket_policy": [
+    "bucket"
+  ],
+  "aws_s3control_multi_region_access_point": [
+    "account_id",
+    "details"
+  ],
+  "aws_s3control_multi_region_access_point_policy": [
+    "account_id",
+    "details"
+  ],
+  "aws_s3control_object_lambda_access_point": [
+    "name",
+    "account_id",
+    "configuration"
+  ],
+  "aws_s3control_object_lambda_access_point_policy": [
+    "name",
+    "account_id"
+  ],
+  "aws_s3control_storage_lens_configuration": [
+    "account_id",
+    "config_id"
+  ],
+  "aws_s3outposts_endpoint": [
+    "customer_owned_ipv4_pool",
+    "outpost_id",
+    "access_type",
+    "security_group_id",
+    "subnet_id"
+  ],
+  "aws_sagemaker_app": [
+    "user_profile_name",
+    "resource_spec",
+    "space_name",
+    "app_name",
+    "app_type",
+    "domain_id"
+  ],
+  "aws_sagemaker_app_image_config": [
+    "app_image_config_name"
+  ],
+  "aws_sagemaker_code_repository": [
+    "code_repository_name",
+    "git_config"
+  ],
+  "aws_sagemaker_data_quality_job_definition": [
+    "data_quality_job_input",
+    "data_quality_job_output_config",
+    "name",
+    "stopping_condition",
+    "data_quality_app_specification",
+    "data_quality_baseline_config",
+    "job_resources",
+    "network_config"
+  ],
+  "aws_sagemaker_device": [
+    "device",
+    "device_fleet_name"
+  ],
+  "aws_sagemaker_device_fleet": [
+    "device_fleet_name"
+  ],
+  "aws_sagemaker_domain": [
+    "subnet_ids",
+    "kms_key_id",
+    "retention_policy",
+    "vpc_id",
+    "domain_name",
+    "auth_mode",
+    "domain_settings"
+  ],
+  "aws_sagemaker_endpoint": [
+    "name",
+    "deployment_config"
+  ],
+  "aws_sagemaker_endpoint_configuration": [
+    "kms_key_arn",
+    "name_prefix",
+    "async_inference_config",
+    "data_capture_config",
+    "name",
+    "production_variants",
+    "shadow_production_variants"
+  ],
+  "aws_sagemaker_feature_group": [
+    "event_time_feature_name",
+    "online_store_config",
+    "description",
+    "feature_definition",
+    "feature_group_name",
+    "offline_store_config",
+    "record_identifier_feature_name",
+    "role_arn"
+  ],
+  "aws_sagemaker_flow_definition": [
+    "human_loop_activation_config",
+    "human_loop_config",
+    "human_loop_request_source",
+    "output_config",
+    "role_arn",
+    "flow_definition_name"
+  ],
+  "aws_sagemaker_hub": [
+    "hub_name",
+    "s3_storage_config"
+  ],
+  "aws_sagemaker_human_task_ui": [
+    "ui_template",
+    "human_task_ui_name"
+  ],
+  "aws_sagemaker_image": [
+    "image_name",
+    "role_arn"
+  ],
+  "aws_sagemaker_image_version": [
+    "base_image",
+    "image_name"
+  ],
+  "aws_sagemaker_mlflow_tracking_server": [
+    "mlflow_version",
+    "tracking_server_name",
+    "role_arn"
+  ],
+  "aws_sagemaker_model": [
+    "enable_network_isolation",
+    "primary_container",
+    "vpc_config",
+    "container",
+    "execution_role_arn",
+    "inference_execution_config",
+    "name"
+  ],
+  "aws_sagemaker_model_package_group": [
+    "model_package_group_name",
+    "model_package_group_description"
+  ],
+  "aws_sagemaker_model_package_group_policy": [
+    "model_package_group_name"
+  ],
+  "aws_sagemaker_monitoring_schedule": [
+    "name"
+  ],
+  "aws_sagemaker_notebook_instance": [
+    "direct_internet_access",
+    "kms_key_id",
+    "platform_identifier",
+    "security_groups",
+    "name",
+    "subnet_id"
+  ],
+  "aws_sagemaker_notebook_instance_lifecycle_configuration": [
+    "name"
+  ],
+  "aws_sagemaker_pipeline": [
+    "pipeline_name"
+  ],
+  "aws_sagemaker_project": [
+    "project_name",
+    "service_catalog_provisioning_details"
+  ],
+  "aws_sagemaker_servicecatalog_portfolio_status": [],
+  "aws_sagemaker_space": [
+    "domain_id",
+    "space_name"
+  ],
+  "aws_sagemaker_studio_lifecycle_config": [
+    "studio_lifecycle_config_name",
+    "studio_lifecycle_config_app_type",
+    "studio_lifecycle_config_content"
+  ],
+  "aws_sagemaker_user_profile": [
+    "domain_id",
+    "user_profile_name",
+    "single_sign_on_user_identifier",
+    "single_sign_on_user_value"
+  ],
+  "aws_sagemaker_workforce": [
+    "workforce_name",
+    "cognito_config"
+  ],
+  "aws_sagemaker_workteam": [
+    "workteam_name",
+    "workforce_name"
+  ],
+  "aws_scheduler_schedule": [
+    "name",
+    "name_prefix",
+    "group_name"
+  ],
+  "aws_scheduler_schedule_group": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_schemas_discoverer": [
+    "source_arn"
+  ],
+  "aws_schemas_registry": [
+    "name"
+  ],
+  "aws_schemas_registry_policy": [
+    "registry_name"
+  ],
+  "aws_schemas_schema": [
+    "name",
+    "registry_name"
+  ],
+  "aws_secretsmanager_secret": [
+    "name",
+    "name_prefix"
+  ],
+  "aws_secretsmanager_secret_policy": [
+    "secret_arn"
+  ],
+  "aws_secretsmanager_secret_rotation": [
+    "secret_id"
+  ],
+  "aws_secretsmanager_secret_version": [
+    "secret_id",
+    "secret_string_wo_version",
+    "secret_binary",
+    "secret_string"
+  ],
+  "aws_security_group": [
+    "name_prefix",
+    "vpc_id",
+    "description",
+    "name"
+  ],
+  "aws_security_group_rule": [
+    "self",
+    "source_security_group_id",
+    "to_port",
+    "type",
+    "from_port",
+    "prefix_list_ids",
+    "protocol",
+    "security_group_id",
+    "cidr_blocks",
+    "ipv6_cidr_blocks"
+  ],
+  "aws_securityhub_account": [
+    "enable_default_standards"
+  ],
+  "aws_securityhub_action_target": [
+    "identifier"
+  ],
+  "aws_securityhub_configuration_policy": [],
+  "aws_securityhub_configuration_policy_association": [
+    "target_id"
+  ],
+  "aws_securityhub_finding_aggregator": [],
+  "aws_securityhub_insight": [],
+  "aws_securityhub_invite_accepter": [
+    "master_id"
+  ],
+  "aws_securityhub_member": [
+    "invite",
+    "account_id",
+    "email"
+  ],
+  "aws_securityhub_organization_admin_account": [
+    "admin_account_id"
+  ],
+  "aws_securityhub_organization_configuration": [],
+  "aws_securityhub_product_subscription": [
+    "product_arn"
+  ],
+  "aws_securityhub_standards_control": [
+    "standards_control_arn"
+  ],
+  "aws_securityhub_standards_subscription": [
+    "standards_arn"
+  ],
+  "aws_serverlessapplicationrepository_cloudformation_stack": [
+    "application_id",
+    "name"
+  ],
+  "aws_service_discovery_http_namespace": [
+    "description",
+    "name"
+  ],
+  "aws_service_discovery_instance": [
+    "instance_id",
+    "service_id"
+  ],
+  "aws_service_discovery_private_dns_namespace": [
+    "name",
+    "vpc"
+  ],
+  "aws_service_discovery_public_dns_namespace": [
+    "name"
+  ],
+  "aws_service_discovery_service": [
+    "dns_config",
+    "health_check_config",
+    "type",
+    "health_check_custom_config",
+    "name",
+    "namespace_id"
+  ],
+  "aws_servicecatalog_budget_resource_association": [
+    "budget_name",
+    "resource_id"
+  ],
+  "aws_servicecatalog_constraint": [
+    "portfolio_id",
+    "product_id",
+    "type"
+  ],
+  "aws_servicecatalog_organizations_access": [
+    "enabled"
+  ],
+  "aws_servicecatalog_portfolio": [],
+  "aws_servicecatalog_portfolio_share": [
+    "portfolio_id",
+    "principal_id",
+    "type"
+  ],
+  "aws_servicecatalog_principal_portfolio_association": [
+    "accept_language",
+    "portfolio_id",
+    "principal_arn",
+    "principal_type"
+  ],
+  "aws_servicecatalog_product": [
+    "provisioning_artifact_parameters"
+  ],
+  "aws_servicecatalog_product_portfolio_association": [
+    "product_id",
+    "source_portfolio_id",
+    "accept_language",
+    "portfolio_id"
+  ],
+  "aws_servicecatalog_provisioned_product": [
+    "name",
+    "notification_arns"
+  ],
+  "aws_servicecatalog_provisioning_artifact": [
+    "template_url",
+    "type",
+    "disable_template_validation",
+    "template_physical_id"
+  ],
+  "aws_servicecatalog_service_action": [
+    "definition"
+  ],
+  "aws_servicecatalog_tag_option": [
+    "key"
+  ],
+  "aws_servicecatalog_tag_option_resource_association": [
+    "tag_option_id",
+    "resource_id"
+  ],
+  "aws_servicequotas_service_quota": [
+    "service_code",
+    "quota_code"
+  ],
+  "aws_ses_active_receipt_rule_set": [],
+  "aws_ses_configuration_set": [
+    "name"
+  ],
+  "aws_ses_domain_dkim": [
+    "domain"
+  ],
+  "aws_ses_domain_identity": [
+    "domain"
+  ],
+  "aws_ses_domain_identity_verification": [
+    "domain"
+  ],
+  "aws_ses_domain_mail_from": [
+    "domain"
+  ],
+  "aws_ses_email_identity": [
+    "email"
+  ],
+  "aws_ses_event_destination": [
+    "kinesis_destination",
+    "matching_types",
+    "name",
+    "sns_destination",
+    "cloudwatch_destination",
+    "configuration_set_name",
+    "enabled"
+  ],
+  "aws_ses_identity_notification_topic": [
+    "identity",
+    "notification_type"
+  ],
+  "aws_ses_identity_policy": [
+    "identity",
+    "name"
+  ],
+  "aws_ses_receipt_filter": [
+    "cidr",
+    "name",
+    "policy"
+  ],
+  "aws_ses_receipt_rule": [
+    "rule_set_name",
+    "name"
+  ],
+  "aws_ses_receipt_rule_set": [
+    "rule_set_name"
+  ],
+  "aws_ses_template": [
+    "name"
+  ],
+  "aws_sesv2_account_vdm_attributes": [],
+  "aws_sesv2_configuration_set": [
+    "configuration_set_name"
+  ],
+  "aws_sesv2_configuration_set_event_destination": [
+    "configuration_set_name",
+    "event_destination_name"
+  ],
+  "aws_sesv2_contact_list": [
+    "contact_list_name"
+  ],
+  "aws_sesv2_dedicated_ip_assignment": [
+    "destination_pool_name",
+    "ip"
+  ],
+  "aws_sesv2_dedicated_ip_pool": [
+    "pool_name",
+    "scaling_mode"
+  ],
+  "aws_sesv2_email_identity": [
+    "email_identity"
+  ],
+  "aws_sesv2_email_identity_feedback_attributes": [
+    "email_identity"
+  ],
+  "aws_sesv2_email_identity_mail_from_attributes": [
+    "email_identity"
+  ],
+  "aws_sesv2_email_identity_policy": [
+    "policy_name",
+    "email_identity"
+  ],
+  "aws_sfn_activity": [
+    "name"
+  ],
+  "aws_sfn_alias": [
+    "name"
+  ],
+  "aws_sfn_state_machine": [
+    "name_prefix",
+    "name",
+    "type"
+  ],
+  "aws_shield_protection": [
+    "name",
+    "resource_arn"
+  ],
+  "aws_shield_protection_group": [
+    "protection_group_id"
+  ],
+  "aws_shield_protection_health_check_association": [
+    "shield_protection_id",
+    "health_check_arn"
+  ],
+  "aws_signer_signing_job": [
+    "destination",
+    "profile_name",
+    "source",
+    "ignore_signing_job_failure"
+  ],
+  "aws_signer_signing_profile": [
+    "name_prefix",
+    "platform_id",
+    "signature_validity_period",
+    "signing_material",
+    "name"
+  ],
+  "aws_signer_signing_profile_permission": [
+    "principal",
+    "profile_name",
+    "profile_version",
+    "statement_id",
+    "statement_id_prefix",
+    "action"
+  ],
+  "aws_snapshot_create_volume_permission": [
+    "account_id",
+    "snapshot_id"
+  ],
+  "aws_sns_platform_application": [
+    "name",
+    "platform"
+  ],
+  "aws_sns_sms_preferences": [],
+  "aws_sns_topic": [
+    "name_prefix",
+    "fifo_topic",
+    "name"
+  ],
+  "aws_sns_topic_data_protection_policy": [
+    "arn"
+  ],
+  "aws_sns_topic_policy": [
+    "arn"
+  ],
+  "aws_sns_topic_subscription": [
+    "protocol",
+    "endpoint",
+    "topic_arn"
+  ],
+  "aws_spot_datafeed_subscription": [
+    "bucket",
+    "prefix"
+  ],
+  "aws_spot_fleet_request": [
+    "instance_interruption_behaviour",
+    "on_demand_allocation_strategy",
+    "replace_unhealthy_instances",
+    "valid_from",
+    "context",
+    "instance_pools_to_use_count",
+    "launch_specification",
+    "on_demand_max_total_price",
+    "target_capacity_unit_type",
+    "valid_until",
+    "spot_maintenance_strategies",
+    "fleet_type",
+    "load_balancers",
+    "target_group_arns",
+    "terminate_instances_with_expiration",
+    "allocation_strategy",
+    "iam_fleet_role",
+    "spot_price",
+    "launch_template_config"
+  ],
+  "aws_spot_instance_request": [
+    "vpc_security_group_ids",
+    "spot_price",
+    "enclave_options",
+    "ipv6_address_count",
+    "launch_template",
+    "enable_primary_ipv6",
+    "valid_until",
+    "iam_instance_profile",
+    "network_interface",
+    "block_duration_minutes",
+    "metadata_options",
+    "instance_interruption_behavior",
+    "associate_public_ip_address",
+    "credit_specification",
+    "maintenance_options",
+    "private_ip",
+    "root_block_device",
+    "secondary_private_ips",
+    "disable_api_stop",
+    "hibernation",
+    "instance_type",
+    "ebs_optimized",
+    "instance_initiated_shutdown_behavior",
+    "user_data_replace_on_change",
+    "capacity_reservation_specification",
+    "placement_group",
+    "security_groups",
+    "user_data_base64",
+    "cpu_options",
+    "host_id",
+    "tenancy",
+    "disable_api_termination",
+    "host_resource_group_arn",
+    "placement_partition_number",
+    "source_dest_check",
+    "availability_zone",
+    "ebs_block_device",
+    "ami",
+    "ephemeral_block_device",
+    "key_name",
+    "private_dns_name_options",
+    "valid_from",
+    "cpu_threads_per_core",
+    "get_password_data",
+    "monitoring",
+    "ipv6_addresses",
+    "subnet_id",
+    "cpu_core_count",
+    "user_data",
+    "launch_group"
+  ],
+  "aws_sqs_queue": [
+    "fifo_queue",
+    "name",
+    "name_prefix"
+  ],
+  "aws_sqs_queue_policy": [
+    "queue_url"
+  ],
+  "aws_sqs_queue_redrive_allow_policy": [
+    "queue_url"
+  ],
+  "aws_sqs_queue_redrive_policy": [
+    "queue_url"
+  ],
+  "aws_ssm_activation": [
+    "expiration_date",
+    "name",
+    "tags",
+    "description",
+    "iam_role",
+    "registration_limit"
+  ],
+  "aws_ssm_association": [
+    "instance_id",
+    "name"
+  ],
+  "aws_ssm_default_patch_baseline": [
+    "baseline_id",
+    "operating_system"
+  ],
+  "aws_ssm_document": [
+    "name"
+  ],
+  "aws_ssm_maintenance_window": [],
+  "aws_ssm_maintenance_window_target": [
+    "name",
+    "resource_type",
+    "window_id",
+    "description"
+  ],
+  "aws_ssm_maintenance_window_task": [
+    "window_id",
+    "task_type"
+  ],
+  "aws_ssm_parameter": [
+    "name",
+    "data_type"
+  ],
+  "aws_ssm_patch_baseline": [
+    "operating_system"
+  ],
+  "aws_ssm_patch_group": [
+    "baseline_id",
+    "patch_group"
+  ],
+  "aws_ssm_resource_data_sync": [
+    "name",
+    "s3_destination"
+  ],
+  "aws_ssm_service_setting": [],
+  "aws_ssmcontacts_contact": [
+    "alias",
+    "type"
+  ],
+  "aws_ssmcontacts_contact_channel": [
+    "type",
+    "contact_id"
+  ],
+  "aws_ssmcontacts_plan": [
+    "contact_id"
+  ],
+  "aws_ssmincidents_replication_set": [],
+  "aws_ssmincidents_response_plan": [
+    "name"
+  ],
+  "aws_ssoadmin_account_assignment": [
+    "instance_arn",
+    "permission_set_arn",
+    "principal_id",
+    "principal_type",
+    "target_id",
+    "target_type"
+  ],
+  "aws_ssoadmin_customer_managed_policy_attachment": [
+    "permission_set_arn",
+    "customer_managed_policy_reference",
+    "instance_arn"
+  ],
+  "aws_ssoadmin_instance_access_control_attributes": [
+    "instance_arn"
+  ],
+  "aws_ssoadmin_managed_policy_attachment": [
+    "permission_set_arn",
+    "instance_arn",
+    "managed_policy_arn"
+  ],
+  "aws_ssoadmin_permission_set": [
+    "instance_arn",
+    "name"
+  ],
+  "aws_ssoadmin_permission_set_inline_policy": [
+    "instance_arn",
+    "permission_set_arn"
+  ],
+  "aws_ssoadmin_permissions_boundary_attachment": [
+    "instance_arn",
+    "permission_set_arn",
+    "permissions_boundary"
+  ],
+  "aws_storagegateway_cache": [
+    "disk_id",
+    "gateway_arn"
+  ],
+  "aws_storagegateway_cached_iscsi_volume": [
+    "gateway_arn",
+    "kms_key",
+    "snapshot_id",
+    "kms_encrypted",
+    "network_interface_id",
+    "volume_size_in_bytes",
+    "source_volume_arn",
+    "target_name"
+  ],
+  "aws_storagegateway_file_system_association": [
+    "gateway_arn",
+    "location_arn"
+  ],
+  "aws_storagegateway_gateway": [
+    "gateway_ip_address",
+    "medium_changer_type",
+    "activation_key",
+    "gateway_vpc_endpoint",
+    "tape_drive_type",
+    "gateway_type"
+  ],
+  "aws_storagegateway_nfs_file_share": [
+    "gateway_arn",
+    "bucket_region",
+    "location_arn",
+    "role_arn",
+    "vpc_endpoint_dns_name"
+  ],
+  "aws_storagegateway_smb_file_share": [
+    "role_arn",
+    "location_arn",
+    "vpc_endpoint_dns_name",
+    "gateway_arn",
+    "authentication",
+    "bucket_region"
+  ],
+  "aws_storagegateway_stored_iscsi_volume": [
+    "kms_key",
+    "network_interface_id",
+    "snapshot_id",
+    "disk_id",
+    "kms_encrypted",
+    "preserve_existing_data",
+    "gateway_arn",
+    "target_name"
+  ],
+  "aws_storagegateway_tape_pool": [
+    "pool_name",
+    "retention_lock_time_in_days",
+    "retention_lock_type",
+    "storage_class"
+  ],
+  "aws_storagegateway_upload_buffer": [
+    "disk_path",
+    "gateway_arn",
+    "disk_id"
+  ],
+  "aws_storagegateway_working_storage": [
+    "gateway_arn",
+    "disk_id"
+  ],
+  "aws_subnet": [
+    "cidr_block",
+    "outpost_arn",
+    "vpc_id",
+    "availability_zone_id",
+    "ipv6_native",
+    "availability_zone"
+  ],
+  "aws_swf_domain": [
+    "workflow_execution_retention_period_in_days",
+    "description",
+    "name",
+    "name_prefix"
+  ],
+  "aws_synthetics_canary": [
+    "name"
+  ],
+  "aws_synthetics_group": [
+    "name"
+  ],
+  "aws_synthetics_group_association": [
+    "group_name",
+    "canary_arn"
+  ],
+  "aws_timestreamwrite_database": [
+    "database_name"
+  ],
+  "aws_timestreamwrite_table": [
+    "schema",
+    "table_name",
+    "database_name"
+  ],
+  "aws_transcribe_language_model": [
+    "base_model_name",
+    "input_data_config",
+    "language_code",
+    "model_name"
+  ],
+  "aws_transcribe_medical_vocabulary": [
+    "language_code",
+    "vocabulary_name"
+  ],
+  "aws_transcribe_vocabulary": [
+    "vocabulary_name",
+    "language_code"
+  ],
+  "aws_transcribe_vocabulary_filter": [
+    "language_code",
+    "vocabulary_filter_name"
+  ],
+  "aws_transfer_access": [
+    "server_id"
+  ],
+  "aws_transfer_agreement": [],
+  "aws_transfer_certificate": [
+    "usage",
+    "certificate",
+    "private_key",
+    "certificate_chain"
+  ],
+  "aws_transfer_connector": [],
+  "aws_transfer_profile": [
+    "as2_id",
+    "profile_type"
+  ],
+  "aws_transfer_server": [
+    "domain",
+    "identity_provider_type"
+  ],
+  "aws_transfer_ssh_key": [
+    "body",
+    "server_id",
+    "user_name"
+  ],
+  "aws_transfer_tag": [
+    "resource_arn",
+    "key"
+  ],
+  "aws_transfer_user": [
+    "server_id",
+    "user_name"
+  ],
+  "aws_transfer_workflow": [
+    "description",
+    "on_exception_steps",
+    "steps"
+  ],
+  "aws_verifiedaccess_endpoint": [
+    "endpoint_domain_prefix",
+    "domain_certificate_arn",
+    "load_balancer_options",
+    "network_interface_options",
+    "application_domain",
+    "cidr_options",
+    "rds_options",
+    "attachment_type",
+    "endpoint_type",
+    "security_group_ids"
+  ],
+  "aws_verifiedaccess_group": [],
+  "aws_verifiedaccess_instance": [
+    "fips_enabled"
+  ],
+  "aws_verifiedaccess_instance_logging_configuration": [
+    "verifiedaccess_instance_id"
+  ],
+  "aws_verifiedaccess_instance_trust_provider_attachment": [
+    "verifiedaccess_instance_id",
+    "verifiedaccess_trust_provider_id"
+  ],
+  "aws_verifiedaccess_trust_provider": [
+    "native_application_oidc_options",
+    "oidc_options",
+    "device_options",
+    "trust_provider_type",
+    "user_trust_provider_type",
+    "device_trust_provider_type",
+    "policy_reference_name"
+  ],
+  "aws_volume_attachment": [
+    "device_name",
+    "instance_id",
+    "volume_id"
+  ],
+  "aws_vpc": [
+    "cidr_block",
+    "ipv4_ipam_pool_id",
+    "ipv4_netmask_length"
+  ],
+  "aws_vpc_dhcp_options": [
+    "domain_name",
+    "domain_name_servers",
+    "netbios_name_servers",
+    "netbios_node_type",
+    "ntp_servers",
+    "ipv6_address_preferred_lease_time"
+  ],
+  "aws_vpc_dhcp_options_association": [
+    "vpc_id"
+  ],
+  "aws_vpc_endpoint": [
+    "service_network_arn",
+    "service_name",
+    "resource_configuration_arn",
+    "service_region",
+    "vpc_endpoint_type",
+    "vpc_id"
+  ],
+  "aws_vpc_endpoint_connection_accepter": [
+    "vpc_endpoint_id",
+    "vpc_endpoint_service_id"
+  ],
+  "aws_vpc_endpoint_connection_notification": [
+    "vpc_endpoint_id",
+    "vpc_endpoint_service_id"
+  ],
+  "aws_vpc_endpoint_policy": [
+    "vpc_endpoint_id"
+  ],
+  "aws_vpc_endpoint_route_table_association": [
+    "route_table_id",
+    "vpc_endpoint_id"
+  ],
+  "aws_vpc_endpoint_security_group_association": [
+    "replace_default_association",
+    "security_group_id",
+    "vpc_endpoint_id"
+  ],
+  "aws_vpc_endpoint_service": [],
+  "aws_vpc_endpoint_service_allowed_principal": [
+    "principal_arn",
+    "vpc_endpoint_service_id"
+  ],
+  "aws_vpc_endpoint_subnet_association": [
+    "subnet_id",
+    "vpc_endpoint_id"
+  ],
+  "aws_vpc_ipam": [],
+  "aws_vpc_ipam_organization_admin_account": [
+    "delegated_admin_account_id"
+  ],
+  "aws_vpc_ipam_pool": [
+    "ipam_scope_id",
+    "locale",
+    "publicly_advertisable",
+    "source_ipam_pool_id",
+    "address_family",
+    "aws_service",
+    "public_ip_source"
+  ],
+  "aws_vpc_ipam_pool_cidr": [
+    "netmask_length",
+    "cidr",
+    "cidr_authorization_context",
+    "ipam_pool_id"
+  ],
+  "aws_vpc_ipam_pool_cidr_allocation": [
+    "description",
+    "ipam_pool_id",
+    "cidr",
+    "disallowed_cidrs",
+    "netmask_length"
+  ],
+  "aws_vpc_ipam_preview_next_cidr": [
+    "disallowed_cidrs",
+    "ipam_pool_id",
+    "netmask_length"
+  ],
+  "aws_vpc_ipam_resource_discovery": [],
+  "aws_vpc_ipam_resource_discovery_association": [],
+  "aws_vpc_ipam_scope": [],
+  "aws_vpc_ipv4_cidr_block_association": [
+    "ipv4_netmask_length",
+    "vpc_id",
+    "cidr_block",
+    "ipv4_ipam_pool_id"
+  ],
+  "aws_vpc_ipv6_cidr_block_association": [
+    "ipv6_cidr_block",
+    "ipv6_ipam_pool_id",
+    "ipv6_netmask_length",
+    "ipv6_pool",
+    "vpc_id",
+    "assign_generated_ipv6_cidr_block"
+  ],
+  "aws_vpc_network_performance_metric_subscription": [
+    "statistic",
+    "destination",
+    "metric",
+    "source"
+  ],
+  "aws_vpc_peering_connection": [
+    "peer_region",
+    "peer_owner_id",
+    "peer_vpc_id",
+    "vpc_id"
+  ],
+  "aws_vpc_peering_connection_accepter": [
+    "vpc_peering_connection_id"
+  ],
+  "aws_vpc_peering_connection_options": [
+    "vpc_peering_connection_id"
+  ],
+  "aws_vpclattice_access_log_subscription": [
+    "destination_arn",
+    "resource_identifier",
+    "service_network_log_type"
+  ],
+  "aws_vpclattice_auth_policy": [],
+  "aws_vpclattice_listener": [
+    "name",
+    "port",
+    "protocol"
+  ],
+  "aws_vpclattice_listener_rule": [
+    "listener_identifier",
+    "name",
+    "service_identifier"
+  ],
+  "aws_vpclattice_resource_policy": [
+    "resource_arn"
+  ],
+  "aws_vpclattice_service": [
+    "custom_domain_name",
+    "name"
+  ],
+  "aws_vpclattice_service_network": [
+    "name"
+  ],
+  "aws_vpclattice_service_network_service_association": [
+    "service_identifier",
+    "service_network_identifier"
+  ],
+  "aws_vpclattice_service_network_vpc_association": [
+    "service_network_identifier",
+    "vpc_identifier"
+  ],
+  "aws_vpclattice_target_group": [
+    "config",
+    "name",
+    "type"
+  ],
+  "aws_vpclattice_target_group_attachment": [
+    "target",
+    "target_group_identifier"
+  ],
+  "aws_vpn_connection": [
+    "tunnel2_inside_ipv6_cidr",
+    "type",
+    "static_routes_only",
+    "tunnel2_inside_cidr",
+    "enable_acceleration",
+    "tunnel1_inside_ipv6_cidr",
+    "tunnel1_inside_cidr",
+    "tunnel_inside_ip_version"
+  ],
+  "aws_vpn_connection_route": [
+    "vpn_connection_id",
+    "destination_cidr_block"
+  ],
+  "aws_vpn_gateway": [
+    "amazon_side_asn",
+    "availability_zone"
+  ],
+  "aws_vpn_gateway_attachment": [
+    "vpc_id",
+    "vpn_gateway_id"
+  ],
+  "aws_vpn_gateway_route_propagation": [
+    "route_table_id",
+    "vpn_gateway_id"
+  ],
+  "aws_waf_byte_match_set": [
+    "name"
+  ],
+  "aws_waf_geo_match_set": [
+    "name"
+  ],
+  "aws_waf_ipset": [
+    "name"
+  ],
+  "aws_waf_rate_based_rule": [
+    "metric_name",
+    "name"
+  ],
+  "aws_waf_regex_match_set": [
+    "name"
+  ],
+  "aws_waf_regex_pattern_set": [
+    "name"
+  ],
+  "aws_waf_rule": [
+    "metric_name",
+    "name"
+  ],
+  "aws_waf_rule_group": [
+    "name",
+    "metric_name"
+  ],
+  "aws_waf_size_constraint_set": [
+    "name"
+  ],
+  "aws_waf_sql_injection_match_set": [
+    "name"
+  ],
+  "aws_waf_web_acl": [
+    "metric_name",
+    "name"
+  ],
+  "aws_waf_xss_match_set": [
+    "name"
+  ],
+  "aws_wafregional_byte_match_set": [
+    "name"
+  ],
+  "aws_wafregional_geo_match_set": [
+    "name"
+  ],
+  "aws_wafregional_ipset": [
+    "name"
+  ],
+  "aws_wafregional_rate_based_rule": [
+    "metric_name",
+    "name"
+  ],
+  "aws_wafregional_regex_match_set": [
+    "name"
+  ],
+  "aws_wafregional_regex_pattern_set": [
+    "name"
+  ],
+  "aws_wafregional_rule": [
+    "metric_name",
+    "name"
+  ],
+  "aws_wafregional_rule_group": [
+    "name",
+    "metric_name"
+  ],
+  "aws_wafregional_size_constraint_set": [
+    "name"
+  ],
+  "aws_wafregional_sql_injection_match_set": [
+    "name"
+  ],
+  "aws_wafregional_web_acl": [
+    "metric_name",
+    "name"
+  ],
+  "aws_wafregional_web_acl_association": [
+    "resource_arn",
+    "web_acl_id"
+  ],
+  "aws_wafregional_xss_match_set": [
+    "name"
+  ],
+  "aws_wafv2_ip_set": [
+    "name",
+    "name_prefix",
+    "scope",
+    "ip_address_version"
+  ],
+  "aws_wafv2_regex_pattern_set": [
+    "name",
+    "scope",
+    "name_prefix"
+  ],
+  "aws_wafv2_rule_group": [
+    "capacity",
+    "name_prefix",
+    "scope",
+    "name"
+  ],
+  "aws_wafv2_web_acl": [
+    "name",
+    "scope",
+    "name_prefix"
+  ],
+  "aws_wafv2_web_acl_association": [
+    "resource_arn",
+    "web_acl_arn"
+  ],
+  "aws_wafv2_web_acl_logging_configuration": [
+    "log_destination_configs",
+    "resource_arn"
+  ],
+  "aws_worklink_fleet": [
+    "name"
+  ],
+  "aws_worklink_website_certificate_authority_association": [
+    "fleet_arn",
+    "certificate",
+    "display_name"
+  ],
+  "aws_workspaces_directory": [
+    "workspace_directory_description",
+    "active_directory_config",
+    "subnet_ids",
+    "workspace_directory_name",
+    "user_identity_type",
+    "workspace_type",
+    "directory_id"
+  ],
+  "aws_workspaces_ip_group": [
+    "description",
+    "name"
+  ],
+  "aws_workspaces_workspace": [
+    "directory_id",
+    "user_name",
+    "user_volume_encryption_enabled",
+    "bundle_id",
+    "volume_encryption_key",
+    "root_volume_encryption_enabled"
+  ],
+  "aws_xray_encryption_config": [],
+  "aws_xray_group": [
+    "group_name"
+  ],
+  "aws_xray_sampling_rule": [
+    "version",
+    "rule_name"
+  ]
+}

@@ -1,0 +1,89 @@
+---
+title: Plan diff
+config:
+flowchart:
+    defaultRenderer: elk
+---
+flowchart BT
+classDef no-op  fill:#F5F5F5
+classDef create fill:#D5E8D4,stroke-width:2px,stroke-dasharray:5 5
+classDef delete fill:#FF9999,stroke-width:2px,stroke-dasharray:5 5
+classDef update fill:#FFF2CC
+classDef replace fill:#FF9999
+%% Nodes
+aws_api_gateway_integration_response.login_ko_integration:::update
+aws_api_gateway_integration_response.login_ok_integration:::update
+aws_api_gateway_method.login:::update
+aws_api_gateway_method_response.login_ko:::update
+aws_api_gateway_method_response.login_ok:::update
+aws_api_gateway_resource.auth:::update
+aws_api_gateway_rest_api.connect:::replace@{ shape: trap-b }
+aws_db_instance.default:::no-op
+aws_db_subnet_group.default:::no-op
+aws_elastic_beanstalk_application.application:::no-op
+aws_elastic_beanstalk_environment.environment:::no-op
+aws_iam_role.smarla_login_iam:::no-op
+aws_internet_gateway.internet:::no-op
+aws_nat_gateway.default:::no-op
+aws_route.private_internet:::no-op
+aws_route.public_internet:::no-op
+aws_route53_record.pesama_main:::no-op
+aws_route53_record.pesama_www:::no-op
+aws_route53_record.smarla_connect-ns:::no-op
+aws_route53_record.smarla_main-eb:::no-op
+aws_route53_record.smarla_www-eb:::no-op
+aws_route53_zone.pesama_main:::no-op
+aws_route53_zone.smarla_connect:::no-op
+aws_route53_zone.smarla_main:::no-op
+aws_route_table.private:::no-op
+aws_route_table.public:::no-op
+aws_route_table_association.private:::no-op
+aws_route_table_association.public:::no-op
+aws_subnet.private:::no-op
+aws_subnet.public:::no-op
+aws_vpc.smarla:::no-op
+%% Arcs
+aws_route.private_internet --> aws_nat_gateway.default
+aws_route53_record.smarla_www-eb --> aws_route53_zone.smarla_main
+aws_subnet.public --> aws_vpc.smarla
+aws_route53_record.smarla_main-eb --> aws_route53_zone.smarla_main
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_rest_api.connect
+aws_route53_record.pesama_www --> aws_route53_zone.pesama_main
+aws_route_table.private --> aws_vpc.smarla
+aws_api_gateway_method_response.login_ko --> aws_api_gateway_method.login
+aws_api_gateway_method_response.login_ko --> aws_api_gateway_resource.auth
+aws_route.public_internet --> aws_internet_gateway.internet
+aws_route53_record.pesama_www --> aws_route53_record.pesama_main
+aws_route_table_association.private --> aws_subnet.private
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_method_response.login_ko
+aws_route_table_association.private --> aws_route_table.private
+aws_api_gateway_method_response.login_ok --> aws_api_gateway_rest_api.connect
+aws_route53_record.pesama_main --> aws_elastic_beanstalk_environment.environment
+aws_route53_record.smarla_connect-ns --> aws_route53_zone.smarla_connect
+aws_api_gateway_method.login --> aws_api_gateway_resource.auth
+aws_route.public_internet --> aws_route_table.public
+aws_route_table_association.public --> aws_route_table.public
+aws_nat_gateway.default --> aws_vpc.smarla
+aws_subnet.private --> aws_vpc.smarla
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_method_response.login_ok
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_rest_api.connect
+aws_route53_record.smarla_connect-ns --> aws_route53_zone.smarla_main
+aws_route53_record.pesama_main --> aws_route53_zone.smarla_main
+aws_route_table_association.public --> aws_subnet.public
+aws_internet_gateway.internet --> aws_vpc.smarla
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_method.login
+aws_api_gateway_integration_response.login_ko_integration --> aws_api_gateway_resource.auth
+aws_api_gateway_method_response.login_ko --> aws_api_gateway_rest_api.connect
+aws_api_gateway_resource.auth --> aws_api_gateway_rest_api.connect
+aws_route_table.public --> aws_vpc.smarla
+aws_api_gateway_method_response.login_ok --> aws_api_gateway_resource.auth
+aws_route.private_internet --> aws_route_table.private
+aws_api_gateway_method_response.login_ok --> aws_api_gateway_method.login
+aws_api_gateway_method.login --> aws_api_gateway_rest_api.connect
+aws_route53_record.smarla_main-eb --> aws_elastic_beanstalk_environment.environment
+aws_elastic_beanstalk_environment.environment --> aws_elastic_beanstalk_application.application
+aws_route53_record.smarla_www-eb --> aws_route53_record.smarla_main-eb
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_method.login
+aws_api_gateway_integration_response.login_ok_integration --> aws_api_gateway_resource.auth
+aws_db_instance.default --> aws_db_subnet_group.default
+aws_db_subnet_group.default --> aws_subnet.private
