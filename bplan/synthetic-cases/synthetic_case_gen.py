@@ -1063,5 +1063,5 @@ if __name__ == "__main__":
                 exit(1)
             run_same_systematic_topological_cases(args.output_path[0], args.n)
         case 'scalable':
-            run_ranged_benchcases(output_path)
+            run_ranged_benchcases(args.output_path[0])
 
