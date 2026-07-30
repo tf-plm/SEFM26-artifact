@@ -5,7 +5,7 @@ The `synthetic_case_gen.py` file is the code to generate our systematic benchmar
 ## Systematic benchmark of all possible cases
 
 * Create an output directory, e.g. `mkdir bench-systematic`.
-* Run `python3 synthetic_case_gen.py systematic -n <n> <output_path>` with `<n>` between 2 and 4 and `<output_path>` the path where the cases will be generated.
+* Run `python3 synthetic_case_gen.py systematic -n <n> <output_path>` with `<n>` between 2 and 4 and `<output_path>` the path where the cases will be generated, e.g. `bench-systematic/`.
 
 The generated cases for 2 and 3 resources are already provided in `cases_same2.tar.gz` and `cases_same3.tar.gz`.
 
