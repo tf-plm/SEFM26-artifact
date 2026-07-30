@@ -3,7 +3,7 @@
 In the docker image (c.f. `../README.md`)
 
 * Navigate in the BPlan source directory: `cd /bplan/src/`
-* For a real module directory `<module>`, run `time python3 bplan.py ../real-modules/<module>/plan_stable.json` to time the model-checking of the stable change.
+* For a real module directory `<module>`, run `time python3 bplan.py check stable dep ../real-modules/<module>/plan_stable.json` to time the model-checking of the stable change.
 * Replace `plan_stable.json` with `plan_estable.json` to time the eventually stable change.
 
 

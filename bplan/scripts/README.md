@@ -4,8 +4,8 @@ Except for the first one, run these scripts in a Docker container, c.f. `../READ
 
 * (F2) `validate_trace.py` is the script that validates the correctness w.r.t. Terraform traces of (1) our action graph with a topological sort algorithm and (2) the execution rules using Maude's `search` command.
     1. For a directory `<cases>` containing subdirectories of all cases to validate (c.f. `../synthetic-cases/README.md` to generate the cases), e.g. `<cases>` could be `../synthetic-cases/bench-scalable/`.
-    1. Run `python3 validate_trace actiongraph <cases>` to validate the action graph,
-    1. And run `python3 validate_trace execrules <cases>` to validate the rules. Eleven cases does note terminate, but it turns out that after renaming they correspond to a total of four different cases.
+    1. Run `python3 validate_trace.py actiongraph <cases>` to validate the action graph,
+    1. And run `python3 validate_trace.py execrules <cases>` to validate the rules. Eleven cases does note terminate, but it turns out that after renaming they correspond to a total of four different cases.
 
 * (F3.1) `run_bplan_cases.sh` is a helper script to run BPlan on multiple cases in parallel.
     1. For a directory `<cases>` containing subdirectories of all cases, e.g. `../synthetic-cases/bench-scalable/`
