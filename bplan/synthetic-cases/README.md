@@ -21,7 +21,7 @@ The generated cases are already provided in `cases_scalable5.tar.gz`, `cases_sca
 ## Parameters
 
 * Topology
-    * (a) simple
+    * (a) bipartite
         * 2 groups, 1-1 links
     * (b) butterfly
         * 2 groups, n-1-n links
@@ -65,8 +65,8 @@ Total is 72 + 288 + 384 + 24 = 768, repeated twice.
 
 ## Naming scheme
 
-* (a) `simple{n}-{principal_op_percentage}{principal_op}-{top_changes_percentage}{bot_changes_percentage}`
-    * e.g. `simple5-70pNOOP-8020`
+* (a) `bipartite{n}-{principal_op_percentage}{principal_op}-{top_changes_percentage}{bot_changes_percentage}`
+    * e.g. `bipartite5-70pNOOP-8020`
 * (b) `butterfly{n}-{principal_op_percentage}{principal_op}-mid{mid_op}-{top_changes_percentage}{bot_changes_percentage}`
     * e.g. `butterfly10-70pUPDATE-midCD-5050`
 * (c) `diamond{n}-{principal_op_percentage}{principal_op}-top{top_op}-bot{bot_op}`

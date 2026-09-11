@@ -829,7 +829,7 @@ def gen_scalable_topology(layers=[1], connectivity=[], balance=False):
     return resources, topology_deps
 
 
-def gen_simple_benchcase(n, principal_op, principal_op_percentage, top_changes_percentage):
+def gen_bipartite_benchcase(n, principal_op, principal_op_percentage, top_changes_percentage):
 
     # number of resources must be even
     n = 2*(n//2)
@@ -856,7 +856,7 @@ def gen_simple_benchcase(n, principal_op, principal_op_percentage, top_changes_p
     if all([op == Operation.NOOP for op in bot_ops]):
         bot_ops[0] = random.choice(Operation.diff_change())
 
-    # compute the simple 2-stages topology
+    # compute the bipartite 2-stages topology
     top_resources, bot_resources = [], []
     resources, dependencies = [], []
     for i in range(n//2):
@@ -869,7 +869,7 @@ def gen_simple_benchcase(n, principal_op, principal_op_percentage, top_changes_p
         resources.append(RB)
         dependencies.append(D)
     assert len(resources) == n, \
-        "Bad construction of simple 2-stages topology"
+        "Bad construction of bipartite 2-stages topology"
 
     # construct the final operations map
     top_ops_map = dict(zip(top_resources, top_ops))
@@ -982,26 +982,26 @@ def gen_ranged_benchcases():
     principal_op_percentages = [70, 40]
 
     # parameters per-topologies
-    simple_butterfly_top_changes_percentages = [50, 80, 20]
+    bipartite_butterfly_top_changes_percentages = [50, 80, 20]
     butterfly_mid_ops = Operation.diffs()
     diamond_top_bot_ops = Operation.diffs()
 
     cases = []
 
-    # (a) simple 2-stages
+    # (a) bipartite 2-stages
     for n in ns:
         for principal_op in principal_ops:
             for principal_op_percentage in principal_op_percentages:
-                for top_changes_percentage in simple_butterfly_top_changes_percentages:
-                    case_name = f"simple{n}-{principal_op_percentage}p{principal_op}-{top_changes_percentage}{100-top_changes_percentage}"
-                    case = gen_simple_benchcase(n, principal_op, principal_op_percentage, top_changes_percentage)
+                for top_changes_percentage in bipartite_butterfly_top_changes_percentages:
+                    case_name = f"bipartite{n}-{principal_op_percentage}p{principal_op}-{top_changes_percentage}{100-top_changes_percentage}"
+                    case = gen_bipartite_benchcase(n, principal_op, principal_op_percentage, top_changes_percentage)
                     cases.append((case_name, case))
 
     # (b) butterflies
     for n in ns:
         for principal_op in principal_ops:
             for principal_op_percentage in principal_op_percentages:
-                for top_changes_percentage in simple_butterfly_top_changes_percentages:
+                for top_changes_percentage in bipartite_butterfly_top_changes_percentages:
                     for mid_op in butterfly_mid_ops:
                         case_name = f"butterfly{n}-{principal_op_percentage}p{principal_op}-mid{mid_op}-{top_changes_percentage}{100-top_changes_percentage}"
                         case = gen_butterfly_benchcase(n, principal_op, principal_op_percentage, mid_op, top_changes_percentage)

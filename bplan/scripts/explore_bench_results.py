@@ -128,18 +128,18 @@ HEADER = [
 ops_regex = "CREATE|DELETE|NOOP|UPDATE|CREATE_DELETE|DELETE_CREATE"
 CASE_NAME_SCALABLE_REGEX = fr"""
     ^.*
-    (?P<TOPOLOGY>simple|butterfly|diamond|chain)
+    (?P<TOPOLOGY>bipartite|butterfly|diamond|chain)
     (?P<N>\d+)-
     (?P<PRINCIPAL_OP_PERCENTAGE>\d+)p(?P<PRINCIPAL_OP>{ops_regex})
     (
         -mid(?P<MID_OP>{ops_regex})                                 # only for butterfly
         | -top(?P<TOP_OP>{ops_regex})-bot(?P<BOT_OP>{ops_regex})    # only for diamond
     )?
-    (-(?P<TOP_CHANGES_PERCENTAGE>\d\d)\d\d)?                        # only for simple and butterfly
+    (-(?P<TOP_CHANGES_PERCENTAGE>\d\d)\d\d)?                        # only for bipartite and butterfly
     (_(?P<SYNTH_ID>\d+))?                                           # optional id (only for chains ATM). FIXME, rename with -
     $
 """
-# e.g. `simple5-70pNOOP-8020`
+# e.g. `bipartite5-70pNOOP-8020`
 
 CASE_NAME_SYSTEMATIC_REGEX = fr"""
     ^.*
