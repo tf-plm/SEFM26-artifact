@@ -4,7 +4,7 @@
 Programs in this directory should be run in a Docker container.
 
 ```
-docker build . -t bplan
+docker build . --platform linux/amd64 -t bplan
 docker run -it bplan
 ```
 
